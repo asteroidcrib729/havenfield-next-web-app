@@ -17,7 +17,7 @@ Updated 2026-10-15 (Asia/Karachi). Live portfolio: [havenfield-portfolio.vercel.
 | Preview database | Independent Prisma Postgres `havenfield-preview`, schema 2, immutable Preview binding |
 | Production media | Public Blob `havenfield-production-media`, connected only to Production |
 | Preview media | Public Blob `havenfield-preview-media`, connected only to Preview |
-| Source | Local-source deployment; no Git commit, push or remote |
+| Source | Initial local-source release; GitHub publication and automatic deployment are recorded in [Git delivery](github-publication.md) |
 | Build | Corrected Production reached READY in 42.879 seconds |
 | Error review | Zero error/fatal runtime records in the five-minute reviewed window; no monitoring drain was configured by this task |
 
@@ -30,6 +30,8 @@ The platform treated this new project's first deployment as Production despite t
 Actual CLI dry-run selection contains 127 application/schema/asset/build files, 8,763,816 bytes. The upload allowlist excludes local databases, credentials, cached tools, plans, tests and build output. Source manifest SHA-256: `dfa3decee246237e4c4325f93ab40beb88252e221a91132a17e67bec625cf729`. [Source manifest](deployment-source-manifest.json), [hosted checks](deployment-hosted-evidence.json), [TLS checks](deployment-database-evidence.json), [migrations](deployment-migration-evidence.json), [isolation and fixture cleanup](deployment-isolation-evidence.json), [SEO audit](deployment-seo-evidence.json), [staging persistence](deployment-staging-evidence.json) and [release state](deployment-state.json) record the evidence without secret values.
 
 The 24 hosted check groups cover mobile/desktop pages and footer, publisher UI login, secure cookies, unauthorized access and origin rejection, real Blob upload/WebP delivery/reference protection/deletion, draft/schedule/publish/edit/slug redirect, populated editor, inquiry idempotency/review/deletion, maintenance authentication and manual retention, zero CSP violations and logout. The three original articles remain in each database. Local TypeScript, focused ESLint and all 55 tests also pass.
+
+The public repository is now [asteroidcrib729/havenfield-next-web-app](https://github.com/asteroidcrib729/havenfield-next-web-app), connected natively to this existing Vercel project. Its configured Production branch is `main`; other branches use Preview. The table above preserves the initial CLI release snapshot. [Git delivery](github-publication.md) records the subsequent pushed revisions, CI and automatic deployment verification. GitHub CI uses only synthetic loopback data; real hosted configuration remains private in Vercel.
 
 ## Section 02 — Local setup
 

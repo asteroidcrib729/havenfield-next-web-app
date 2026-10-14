@@ -23,6 +23,10 @@ The final application is validated as a complete tree; these scopes describe the
 
 ## Section 03 — Delivery verification
 
-Publication, clean-checkout CI and native Vercel Git integration are being completed in this iteration. This record will be updated with verified outcomes before delivery is declared complete. The existing Vercel project, separately bound databases, media stores and private environment settings are reused. Production should follow `main`; other pushed branches should create isolated Preview deployments.
+The public repository was created and all four iteration commits were pushed. The first delivery revision is `c5644ac2d878d97149b82d6db7fafab7090cc989`; local `HEAD` and `origin/main` match and the working tree is clean. The publishable snapshot, exact index and complete four-commit history each passed Gitleaks with zero findings. TypeScript, full ESLint, 55 service tests, 41 isolated PostgreSQL tests and the dependency audit pass locally.
+
+Native Vercel Git integration is connected and the project API confirms GitHub organization `asteroidcrib729`, repository `havenfield-next-web-app` and Production branch `main`. The existing Vercel project, separately bound databases, media stores and private environment settings are reused. Other pushed branches use Preview deployments. No deployment token or hosted database credential is added to GitHub Actions.
+
+The first [clean-checkout Actions run](https://github.com/asteroidcrib729/havenfield-next-web-app/actions/runs/38632322005) has passed its complete-history secret scan; the application checks are running. This documentation update is the first pushed change after connecting Vercel and will exercise automatic Production deployment. CI and deployment completion are verified before final delivery.
 
 The final verification compares local `HEAD`, `origin/main` and GitHub's branch SHA, checks the working tree, inspects Vercel's connected repository/production branch, and confirms a deployment caused by a pushed Git revision reaches READY on the portfolio domain. Independent backups, human accessibility acceptance and other remaining product gates are tracked separately in [release acceptance](release-acceptance.md).

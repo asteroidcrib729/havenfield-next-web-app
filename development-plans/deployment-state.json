@@ -25,7 +25,15 @@
       "protected": true,
       "timeToReadyMs": 55054
     },
-    "priorProduction": "dpl_4Ztm7ch8DUPbMMWFvxyova3k8e5z"
+    "priorProduction": "dpl_4Ztm7ch8DUPbMMWFvxyova3k8e5z",
+    "gitIntegration": {
+      "provider": "github",
+      "organization": "asteroidcrib729",
+      "repository": "havenfield-next-web-app",
+      "productionBranch": "main",
+      "connected": true,
+      "automaticDeploymentVerified": false
+    }
   },
   "prisma": {
     "region": "ap-southeast-1",
@@ -52,10 +60,12 @@
     }
   },
   "source": {
-    "gitCommit": null,
+    "gitCommit": "c5644ac2d878d97149b82d6db7fafab7090cc989",
     "sourceManifestSha256": "dfa3decee246237e4c4325f93ab40beb88252e221a91132a17e67bec625cf729",
     "files": 127,
-    "bytes": 8763816
+    "bytes": 8763816,
+    "gitCommitScope": "Initial published source revision; previous CLI deployment has its independent historical manifest",
+    "repository": "https://github.com/asteroidcrib729/havenfield-next-web-app"
   },
   "checks": {
     "localTests": 55,
