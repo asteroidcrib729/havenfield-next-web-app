@@ -1,0 +1,191 @@
+{
+  "date": "2026-10-15",
+  "timezone": "Asia/Karachi",
+  "status": "verified",
+  "sharedProject": "havenfield",
+  "repository": "asteroidcrib729/havenfield-next-web-app",
+  "gitConnection": "active",
+  "defaultBranch": "main",
+  "activeDatabases": {
+    "production": {
+      "name": "havenfield-production",
+      "state": "ready",
+      "branch": "main"
+    },
+    "preview": {
+      "name": "havenfield-preview",
+      "state": "ready",
+      "branch": "preview"
+    }
+  },
+  "sameProjectVerified": true,
+  "separateDatabaseIds": true,
+  "procedure": {
+    "reassignment": "Cross-project branch reassignment rejected with 404",
+    "clone": "Database clone endpoint returned HTTP 500; inventory verified no clone was created",
+    "completed": "Created empty Preview database in the shared project, restored fresh checksummed export and switched Vercel Preview"
+  },
+  "restoration": {
+    "fullTableComparison": true,
+    "migrationComparison": true,
+    "sourceStableAfterRestore": true,
+    "previewBinding": "preview",
+    "directTLSVerified": true,
+    "pooledRuntimeBindingVerified": true,
+    "rows": {
+      "posts": 3,
+      "post_revisions": 3,
+      "slug_redirects": 0,
+      "inquiries": 0,
+      "media": 2,
+      "media_references": 0,
+      "publisher_actions": 23,
+      "article_autosaves": 0,
+      "inquiry_receipts": 2
+    }
+  },
+  "cutover": {
+    "updatedVercelKeys": [
+      "DATABASE_URL"
+    ],
+    "environment": "preview",
+    "type": "secret",
+    "publisherAndMediaConfigurationPreserved": true,
+    "productionConfigurationPreserved": true,
+    "deployment": "dpl_A9yZiFMWAz1t6DDxN357N1KCbFSG",
+    "origin": "https://havenfield-1f0w4kgvl-farazhussain-5000s-projects.vercel.app",
+    "readyState": "READY",
+    "protection": "Vercel Authentication retained",
+    "checks": [
+      {
+        "name": "Preview health",
+        "passed": true
+      },
+      {
+        "name": "Three original articles retained",
+        "passed": true
+      },
+      {
+        "name": "Private API refuses anonymous access",
+        "passed": true
+      },
+      {
+        "name": "Publisher authentication",
+        "passed": true
+      },
+      {
+        "name": "Secure publisher cookie",
+        "passed": true
+      },
+      {
+        "name": "Restored editorial content",
+        "passed": true
+      },
+      {
+        "name": "Protected operations diagnostics",
+        "passed": true
+      },
+      {
+        "name": "Restored media registry is readable",
+        "passed": true
+      },
+      {
+        "name": "Draft creation in new Preview",
+        "passed": true
+      },
+      {
+        "name": "Created draft is durable through API",
+        "passed": true
+      },
+      {
+        "name": "Draft remains private",
+        "passed": true
+      },
+      {
+        "name": "Protected Preview browser /",
+        "passed": true
+      },
+      {
+        "name": "Narrow layout /",
+        "passed": true
+      },
+      {
+        "name": "Preview noindex /",
+        "passed": true
+      },
+      {
+        "name": "Protected Preview browser /journal",
+        "passed": true
+      },
+      {
+        "name": "Narrow layout /journal",
+        "passed": true
+      },
+      {
+        "name": "Preview noindex /journal",
+        "passed": true
+      },
+      {
+        "name": "Protected Preview browser /properties",
+        "passed": true
+      },
+      {
+        "name": "Narrow layout /properties",
+        "passed": true
+      },
+      {
+        "name": "Preview noindex /properties",
+        "passed": true
+      },
+      {
+        "name": "Protected Preview browser /admin/login",
+        "passed": true
+      },
+      {
+        "name": "Narrow layout /admin/login",
+        "passed": true
+      },
+      {
+        "name": "Preview noindex /admin/login",
+        "passed": true
+      },
+      {
+        "name": "Temporary draft removed",
+        "passed": true
+      },
+      {
+        "name": "Publisher logout",
+        "passed": true
+      },
+      {
+        "name": "Production remains healthy with three articles",
+        "passed": true
+      }
+    ],
+    "syntheticDraftRemoved": true
+  },
+  "finalDatabaseChecks": [
+    {
+      "environment": "production",
+      "articles": 3,
+      "revisions": 3,
+      "syntheticFixtures": 0,
+      "crossEnvironmentRefused": true
+    },
+    {
+      "environment": "preview",
+      "articles": 3,
+      "revisions": 3,
+      "syntheticFixtures": 0,
+      "crossEnvironmentRefused": true
+    }
+  ],
+  "rollback": {
+    "project": "havenfield-preview-rollback",
+    "sourceRetained": true,
+    "olderPreviewDeploymentsUseOriginalConnection": true,
+    "offCheckoutIndependentBackupGate": "still open"
+  },
+  "credentialsIncluded": false,
+  "privateResourceIdentifiersIncluded": false
+}

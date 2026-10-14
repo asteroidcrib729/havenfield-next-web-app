@@ -52,6 +52,7 @@ I keep all plans, progress, production instructions and asset records under [dev
 - [Performance and quota measurements](development-plans/performance-and-quotas.md)
 - [Release notes](development-plans/release-notes.md)
 - [GitHub publication and automatic Vercel deployments](development-plans/github-publication.md)
+- [Shared Prisma project and Preview database consolidation](development-plans/prisma-project-consolidation.md)
 
 I license the application source under [MIT](LICENSE). Font licenses and generated-media provenance are recorded separately in the asset register.
 

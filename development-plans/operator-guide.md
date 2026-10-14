@@ -2,6 +2,8 @@
 
 Updated 2026-10-15. Verified canonical origin: `https://havenfield-portfolio.vercel.app`. Production and an independent protected Preview are deployed. The [deployment record](deployment.md) identifies their resources and verification; [release acceptance](release-acceptance.md) retains backup, accessibility and performance gates. Public GitHub delivery, hosted CI and native automatic deployments are verified in [Git delivery](github-publication.md).
 
+Both active databases now belong to the GitHub-linked Prisma project `havenfield`: `havenfield-production` on `main`, and `havenfield-preview` on `preview`. The verified protected Preview after consolidation is [the new Preview origin](https://havenfield-1f0w4kgvl-farazhussain-5000s-projects.vercel.app). The former standalone preview project is labeled `havenfield-preview-rollback`; its original database is a rollback copy. Older immutable Preview URLs retain that old connection. See [project consolidation](prisma-project-consolidation.md) before using or retiring them.
+
 ## Section 01 — Environment matrix
 
 | Setting | Development | Vercel Preview | Vercel Production |

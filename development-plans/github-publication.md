@@ -33,4 +33,6 @@ Pushing `b946fd0499ab09f83d4a202ddeb4852577768986` after connection automaticall
 
 Native Vercel deployments and GitHub Actions both run on pushes. Vercel's integration is not configured to wait for the Actions jobs. Keep credentials out of source before committing; the CI scanner detects matches in published history and does not replace the pre-commit review.
 
+Prisma's GitHub repository association is also active on shared project `havenfield`. Production and Preview remain distinct databases on `main` and `preview` branches within that project; [project consolidation](prisma-project-consolidation.md) records the data-preserving migration and protected Preview checks. Prisma rejected a second association for the former standalone preview project because the repository was already linked. The application continues to deploy through Vercel; this association does not add automatic SQL migrations or a Prisma Compute deployment.
+
 The final verification compares local `HEAD`, `origin/main` and GitHub's branch SHA, checks the working tree, inspects Vercel's connected repository/production branch, and confirms a deployment caused by a pushed Git revision reaches READY on the portfolio domain. Independent backups, human accessibility acceptance and other remaining product gates are tracked separately in [release acceptance](release-acceptance.md).

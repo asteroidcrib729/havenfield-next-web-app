@@ -33,6 +33,8 @@ The 24 hosted check groups cover mobile/desktop pages and footer, publisher UI l
 
 The public repository is now [asteroidcrib729/havenfield-next-web-app](https://github.com/asteroidcrib729/havenfield-next-web-app), connected natively to this existing Vercel project. Its configured Production branch is `main`; other branches use Preview. The table above preserves the initial CLI release snapshot. [Git delivery](github-publication.md) records the subsequent pushed revisions, CI and automatic deployment verification. GitHub CI uses only synthetic loopback data; real hosted configuration remains private in Vercel.
 
+Subsequent [Prisma consolidation](prisma-project-consolidation.md) places the two active databases in shared GitHub-linked project `havenfield`, on separate `main` and `preview` branches. The new Preview cutover deployment is `dpl_A9yZiFMWAz1t6DDxN357N1KCbFSG`; the earlier Preview in the initial-release table is historical. Production configuration remains intact, and the original preview source is labeled as a rollback project.
+
 ## Section 02 — Local setup
 
 Use Node.js 24. Install the locked dependencies and prepare local content:

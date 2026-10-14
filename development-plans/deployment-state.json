@@ -22,11 +22,12 @@
       "timeToReadyMs": 37116
     },
     "preview": {
-      "id": "dpl_7xJkog4a178bxiiNXDH8C2F9J6Dh",
-      "url": "https://havenfield-lzrolawbc-farazhussain-5000s-projects.vercel.app",
+      "id": "dpl_A9yZiFMWAz1t6DDxN357N1KCbFSG",
+      "url": "https://havenfield-1f0w4kgvl-farazhussain-5000s-projects.vercel.app",
       "readyState": "READY",
       "protected": true,
-      "timeToReadyMs": 55054
+      "source": "cli",
+      "consolidatedDatabase": true
     },
     "priorProduction": "dpl_DgiRCmaxNBELUB3fKEqCtGvH6RMF",
     "gitIntegration": {
@@ -44,13 +45,22 @@
     "production": {
       "name": "havenfield-production",
       "binding": "production",
-      "articles": 3
+      "articles": 3,
+      "branch": "main",
+      "project": "havenfield"
     },
     "preview": {
       "name": "havenfield-preview",
       "binding": "preview",
-      "articles": 3
-    }
+      "articles": 3,
+      "branch": "preview",
+      "project": "havenfield"
+    },
+    "sharedProject": "havenfield",
+    "githubRepository": "asteroidcrib729/havenfield-next-web-app",
+    "githubConnection": "active",
+    "rollbackProject": "havenfield-preview-rollback",
+    "consolidationEvidence": "prisma-consolidation-evidence.json"
   },
   "blob": {
     "production": {
