@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-15",
+  "timezone": "Asia/Karachi",
+  "evidenceSnapshot": true,
+  "repository": "https://github.com/asteroidcrib729/havenfield-next-web-app",
+  "visibility": "PUBLIC",
+  "branch": "main",
+  "initialCommits": [
+    {
+      "sha": "4dbdbf7f38aea736563418976b30a6a05818c05e",
+      "scope": "Migration foundation"
+    },
+    {
+      "sha": "793ca15531b71deb92230cdd3e39a1ae4f7f20fb",
+      "scope": "Independent identity and public website"
+    },
+    {
+      "sha": "c7e39e05f011c23de0e031205aa13caa38173ea7",
+      "scope": "Publishing backend and recovery"
+    },
+    {
+      "sha": "c5644ac2d878d97149b82d6db7fafab7090cc989",
+      "scope": "Development records and CI"
+    }
+  ],
+  "secretScans": {
+    "publishableSnapshotFindings": 0,
+    "stagedFindings": 0,
+    "initialHistoryFindings": 0,
+    "hostedHistoryFindings": 0,
+    "version": "8.30.1"
+  },
+  "ci": [
+    {
+      "id": 38632322005,
+      "sha": "c5644ac2d878d97149b82d6db7fafab7090cc989",
+      "conclusion": "success"
+    },
+    {
+      "id": 38632523723,
+      "sha": "b946fd0499ab09f83d4a202ddeb4852577768986",
+      "conclusion": "success"
+    }
+  ],
+  "validation": {
+    "serviceTests": 55,
+    "postgresTests": 41,
+    "chromiumJourneys": 8,
+    "typecheck": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "dependencyAudit": "zero vulnerabilities",
+    "linuxTeardown": "passed"
+  },
+  "gitIntegration": {
+    "provider": "github",
+    "organization": "asteroidcrib729",
+    "repository": "havenfield-next-web-app",
+    "existingProject": "havenfield",
+    "productionBranch": "main",
+    "connected": true
+  },
+  "automaticDeployment": {
+    "id": "dpl_Cra1EEeBLyMCADx2cxNLCGtWRBgn",
+    "source": "git",
+    "sha": "b946fd0499ab09f83d4a202ddeb4852577768986",
+    "ref": "main",
+    "target": "production",
+    "state": "READY",
+    "origin": "https://havenfield-portfolio.vercel.app",
+    "domainAssigned": true
+  },
+  "smoke": {
+    "health": 200,
+    "homepage": 200,
+    "journalAPI": 200,
+    "robots": 200,
+    "sitemap": 200,
+    "articlesPreserved": 3
+  },
+  "privateHostedConfiguration": "preserved outside source control",
+  "note": "This is a verified deployment/CI snapshot. A later documentation-only commit records these outcomes; final HEAD/remote/deployment matching is verified after that push."
+}

@@ -1,6 +1,6 @@
 # Release acceptance and remaining external gates
 
-Updated 2026-10-15. Production is live at [havenfield-portfolio.vercel.app](https://havenfield-portfolio.vercel.app), with separately bound Production/Preview Prisma Postgres databases and separate Blob stores. The original requested domain was unavailable; the owner selected the assigned portfolio domain. [Deployment evidence](deployment.md) records completed hosted checks. Independent backups, hosted recovery, scheduled-job observation, human accessibility/performance acceptance and hosted CI remain open.
+Updated 2026-10-15. Production is live at [havenfield-portfolio.vercel.app](https://havenfield-portfolio.vercel.app), with separately bound Production/Preview Prisma Postgres databases and separate Blob stores. The original requested domain was unavailable; the owner selected the assigned portfolio domain. [Deployment evidence](deployment.md) records completed hosted checks. [Git delivery](github-publication.md) verifies public publication, passing clean-checkout CI and automatic Production deployment. Independent backups, hosted recovery, scheduled-job observation and human accessibility/performance acceptance remain open.
 
 ## Section 01 — Locally implemented scope
 
@@ -18,7 +18,7 @@ The executable checks and measurements are recorded in [execution progress](deve
 | Real Blob operations | Authenticated upload/reuse/reference denial/delete plus persistence after redeploy | Real upload, delivery, reference denial and deletion pass in both environments; explicit media persistence after another redeploy remains an acceptance exercise |
 | Independent recovery | Daily protected off-checkout export, rotation, actual Blob restore and content smoke check | Backup operator selects destination/scheduler and restores into independent services |
 | Hosted application | Cold invocation, schedule boundary, redirects, inquiry, logout, headers/cookies and persistence after redeploy | 24 hosted groups pass; staged Production reads existing articles after redeployment. Hosted exact-time publication/revision-restoration exercises and actual cron execution remain open |
-| CI/Git delivery | Chosen public remote, source/asset review, clean CI run and deployed commit | Owner requests Git delivery; no remote/publication has been inferred |
+| CI/Git delivery | Chosen public remote, source/asset review, clean CI run and deployed commit | Completed: public `havenfield-next-web-app`, passing full-history secret scan and Ubuntu CI, verified matching Git revision in an automatic Production deployment |
 
 Do not insert secrets into this file. Capture service names, domain, environment, deployed revision, dates and pass/fail observations only. Search Console requires the owner's selected domain/account and does not guarantee indexing.
 
@@ -39,6 +39,6 @@ Local Lighthouse results use simulated mobile throttling; they are not field Cor
 
 ## Section 04 — Source and asset release review
 
-Only README is authored root Markdown. Plans, operating notes and machine evidence live here; temporary hosted screenshots are in ignored cache storage. Runtime databases, uploads, exports, environment files, test traces, caches and credentials are ignored and excluded from deployment tracing. The repository has one root `.git`, no initial commit and no remote. A SHA-256 [source manifest](deployment-source-manifest.json) identifies the actual uploaded files without claiming a deployed Git commit.
+Only README is authored root Markdown. Plans, operating notes and machine evidence live here; temporary hosted screenshots are in ignored cache storage. Runtime databases, uploads, exports, environment files, test traces, caches and credentials are ignored and excluded from deployment tracing. The repository has one root `.git` and the public GitHub remote. Snapshot, index and complete history scans found no credentials. The initial CLI upload has a historical SHA-256 [source manifest](deployment-source-manifest.json); subsequent Git deployments have verified commit provenance in [delivery evidence](github-delivery-evidence.json).
 
 The new code/copy/vector identity is independent; font notices remain with retained Poppins/Playfair files. Generated images and the hero have provenance in [brand and assets](brand-and-assets.md). Review the user's generation-account sharing terms and publisher-upload rights before public delivery. The software license covers application source, not third-party fonts or a guarantee of exclusive rights in generated assets. No old client source, VPS keys or brand assets belong in the public repository.

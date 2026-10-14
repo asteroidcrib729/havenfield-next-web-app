@@ -1,6 +1,6 @@
 # Havenfield operator guide
 
-Updated 2026-10-15. Verified canonical origin: `https://havenfield-portfolio.vercel.app`. Production and an independent protected Preview are deployed. The [deployment record](deployment.md) identifies their resources and verification; [release acceptance](release-acceptance.md) retains backup, CI, accessibility and performance gates.
+Updated 2026-10-15. Verified canonical origin: `https://havenfield-portfolio.vercel.app`. Production and an independent protected Preview are deployed. The [deployment record](deployment.md) identifies their resources and verification; [release acceptance](release-acceptance.md) retains backup, accessibility and performance gates. Public GitHub delivery, hosted CI and native automatic deployments are verified in [Git delivery](github-publication.md).
 
 ## Section 01 — Environment matrix
 

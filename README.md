@@ -33,7 +33,7 @@ npm.cmd run test:postgres
 npm.cmd run test:e2e
 ```
 
-Local browser checks use installed Edge, temporary synthetic credentials, and isolated databases/uploads that the runner cleans up. I deployed the application to Vercel with separate Production/Preview Prisma Postgres databases and Vercel Blob stores in Singapore. Both hosted environments passed publishing, media, inquiry, session, responsive-layout and CSP checks; the [deployment record](development-plans/deployment.md) includes the exact deployment and source manifest. Prisma's free allowance remains finite. Independent scheduled backups, hosted recovery, human accessibility acceptance and hosted CI remain open release gates.
+Local browser checks use installed Edge, temporary synthetic credentials, and isolated databases/uploads that the runner cleans up. I deployed the application to Vercel with separate Production/Preview Prisma Postgres databases and Vercel Blob stores in Singapore. Both hosted environments passed publishing, media, inquiry, session, responsive-layout and CSP checks; the [deployment record](development-plans/deployment.md) includes the exact deployment and source manifest. Prisma's free allowance remains finite. I published this project to [GitHub](https://github.com/asteroidcrib729/havenfield-next-web-app) with passing clean-checkout CI and connected the existing Vercel project. Pushing to `main` now automatically deploys Production; other branches use Preview. Independent scheduled backups, hosted recovery and human accessibility/performance acceptance remain open release gates.
 
 I keep all plans, progress, production instructions and asset records under [development-plans](development-plans/). Only this README belongs at the root as authored Markdown.
 

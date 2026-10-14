@@ -1,6 +1,6 @@
 # Development plan 02: complete the Havenfield product
 
-Created 2026-10-14; deployment updated 2026-10-15 (Asia/Karachi). Status: implemented and deployed to Vercel; full release acceptance still requires independent recovery, hosted CI, human accessibility and performance evidence. See the [execution record](development-plan-02-progress.md), [deployment](deployment.md) and [database recovery procedure](database-recovery.md).
+Created 2026-10-14; deployment and GitHub delivery updated 2026-10-15 (Asia/Karachi). Status: implemented, published with passing hosted CI and automatically deployed from GitHub to Vercel; full release acceptance still requires independent recovery, human accessibility and performance evidence. See the [execution record](development-plan-02-progress.md), [Git delivery](github-publication.md), [deployment](deployment.md) and [database recovery procedure](database-recovery.md).
 
 Previous foundation: [development plan 01](development-plans-01.md). Supporting records: [implementation](implementation.md), [deployment](deployment.md), [database comparison](database-options.md), [cleanup](cleanup.md), [brand and assets](brand-and-assets.md), and [hero video generation](hero-video-generation.md).
 
@@ -129,13 +129,13 @@ Local evidence: public Lighthouse medians are performance 93/93/96, accessibilit
 ## Section 09 — P0/P1: validation, deployment and support
 
 - [x] Extend CI with disposable PostgreSQL, migration/restore checks, dependency review and complete browser journeys. Keep real production secrets and content out of test jobs and uploaded artifacts.
-- [ ] Make browser test processes shut down reliably on Windows and Linux; the recorded local runs needed explicit shutdown of an owned Windows test server after assertions completed.
+- [x] Make browser test processes shut down reliably on Windows and Linux. The revised isolated runner has local Windows evidence and two successful Ubuntu GitHub CI runs, each completing eight Chromium journeys and normal job teardown; earlier manually stopped local runs remain historical evidence.
 - [x] Test storage failures, database outages, interrupted uploads, concurrent edits and retries. Prefer tests proving user-visible recovery and data integrity over tests duplicating implementation details.
 - [x] Prepare release notes, application license/asset notices, updated setup instructions, environment matrix, migration instructions and operator guides under `development-plans/`; README remains the sole authored root Markdown file.
 - [x] Prepare the one root repository for GitHub: retain independent source/media provenance and font licenses, exclude secrets/runtime databases and review the staged scope. The owner authorized public delivery; four scoped commits are published to [havenfield-next-web-app](https://github.com/asteroidcrib729/havenfield-next-web-app). Snapshot/index/history secret scans pass; see [Git delivery](github-publication.md).
 - [ ] Configure an isolated Vercel Preview with hosted PostgreSQL and Blob. Verify real authenticated upload, publish, schedule, slug redirect, restore, inquiry and logout behavior, including cold invocation and persisted data after redeployment.
 - [ ] Prepare Production migration/deployment and a compatible application rollback. Demonstrate recovery from a bad release without silently discarding newly written content; destructive schema rollback is not the default.
-- [ ] Configure the canonical domain and HTTPS, verify headers/cookies/metadata, and record the deployed commit and successful smoke checks. Search Console setup requires the owner's chosen domain/account; submission does not guarantee indexing or ranking.
+- [x] Configure the canonical domain and HTTPS, verify headers/cookies/metadata, and record the deployed commit and successful smoke checks. The assigned portfolio domain serves the verified Git-triggered Production revision; [Git delivery](github-publication.md) records its SHA, CI and post-redeploy smoke checks. Search Console setup remains an owner-account task; submission does not guarantee indexing or ranking.
 - [ ] Establish error review, quota monitoring and backup/restore ownership, with a short operator checklist and incident procedure. Routine operation must not depend on editing production files manually.
 
 **Acceptance:** CI passes from a clean checkout; a real isolated Preview passes the full workflow; recovery is demonstrated; and the Production release has a documented deployed revision and verification record.

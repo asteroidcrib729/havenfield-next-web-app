@@ -7,7 +7,11 @@
     "windowsArchiveSha256": "d29144deff3a68aa93ced33dddf84b7fdc26070add4aa0f4513094c8332afc4e",
     "redacted": true,
     "initialSnapshotFiles": 205,
-    "initialFindings": 0
+    "initialFindings": 0,
+    "stagedFiles": 207,
+    "stagedFindings": 0,
+    "initialHistoryCommits": 4,
+    "initialHistoryFindings": 0
   },
   "manualReview": {
     "legacyClientIdentifiers": "absent",
@@ -23,7 +27,9 @@
     "lint": "passed",
     "serviceTests": 55,
     "postgresTests": 41,
-    "dependencyVulnerabilities": 0
+    "dependencyVulnerabilities": 0,
+    "hostedCI": "passed",
+    "browserJourneys": 8
   },
   "ci": {
     "secretScan": "pinned scanner and verified archive checksum; full Git history",

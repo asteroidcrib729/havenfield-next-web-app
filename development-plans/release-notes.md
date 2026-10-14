@@ -14,4 +14,8 @@ Nonce CSP requires dynamic page rendering. Metadata is resolved before streaming
 
 ## Section 03 — Validation
 
-The deployment completed on 2026-10-15 at [havenfield-portfolio.vercel.app](https://havenfield-portfolio.vercel.app). See [the deployment record](deployment.md) and [execution evidence](development-plan-02-progress.md) for exact identifiers, source provenance, 24 hosted check groups, 55 local tests and remaining limits. The configuration checker now supports Node ESM, and browser validation avoids dynamic compilation blocked by CSP. Human screen-reader acceptance, hosted recovery, hosted CI and field performance remain open.
+The deployment completed on 2026-10-15 at [havenfield-portfolio.vercel.app](https://havenfield-portfolio.vercel.app). See [the deployment record](deployment.md) and [execution evidence](development-plan-02-progress.md) for exact identifiers, source provenance, 24 hosted check groups, 55 local tests and remaining limits. The configuration checker now supports Node ESM, and browser validation avoids dynamic compilation blocked by CSP. Human screen-reader acceptance, hosted recovery and field performance remain open.
+
+## Section 04 — GitHub publication and automatic deployment
+
+Published the independent source and assets to the public `havenfield-next-web-app` repository after snapshot/index/history secret scans and manual review. Commits group the migration foundation, public brand/site, publishing backend and development evidence. Private configuration and identifiers remain outside Git; commits use a GitHub no-reply identity. Pinned GitHub Actions run complete-history credential scanning and clean-checkout application/PostgreSQL/Chromium checks. Both initial runs pass. The existing Vercel project is connected to GitHub with `main` as Production, and a pushed Git revision automatically reached READY on the live portfolio domain with all three seed articles retained. See [Git delivery](github-publication.md).
