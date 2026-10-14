@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-14",
+  "ownedBrowserDatabases": 9,
+  "confirmedTestMedia": 7,
+  "removedFiles": 34,
+  "removedBytes": 6471342,
+  "defaultReferencesProtected": 0,
+  "applied": true,
+  "protectedHashesUnchanged": true,
+  "ownedPreparationFilesRemoved": 41,
+  "cleanInstallCopyRemoved": true,
+  "nextJunctionsUnlinkedWithoutTraversingTargets": 2
+}

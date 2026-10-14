@@ -1,0 +1,177 @@
+{
+  "measuredAt": "2026-10-14T20:26:13.573Z",
+  "engine": "Actual local PostgreSQL 18",
+  "articles": 5000,
+  "pagination": {
+    "limit": 12,
+    "offset": 4800,
+    "elapsedMs": 24.491899999999987
+  },
+  "maximumObservedPoolConnections": 2,
+  "publicationPlan": [
+    {
+      "QUERY PLAN": [
+        {
+          "Plan": {
+            "Node Type": "Limit",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Startup Cost": 580.19,
+            "Total Cost": 580.22,
+            "Plan Rows": 12,
+            "Plan Width": 78,
+            "Actual Startup Time": 16.663,
+            "Actual Total Time": 16.666,
+            "Actual Rows": 12,
+            "Actual Loops": 1,
+            "Disabled": false,
+            "Shared Hit Blocks": 186,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0,
+            "Plans": [
+              {
+                "Node Type": "Sort",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Startup Cost": 568.19,
+                "Total Cost": 580.69,
+                "Plan Rows": 5000,
+                "Plan Width": 78,
+                "Actual Startup Time": 15.999,
+                "Actual Total Time": 16.432,
+                "Actual Rows": 4812,
+                "Actual Loops": 1,
+                "Disabled": false,
+                "Sort Key": [
+                  "(COALESCE(published_at, created_at)) DESC",
+                  "id"
+                ],
+                "Sort Method": "quicksort",
+                "Sort Space Used": 857,
+                "Sort Space Type": "Memory",
+                "Shared Hit Blocks": 186,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0,
+                "Plans": [
+                  {
+                    "Node Type": "Seq Scan",
+                    "Parent Relationship": "Outer",
+                    "Parallel Aware": false,
+                    "Async Capable": false,
+                    "Relation Name": "posts",
+                    "Alias": "posts",
+                    "Startup Cost": 0,
+                    "Total Cost": 261,
+                    "Plan Rows": 5000,
+                    "Plan Width": 78,
+                    "Actual Startup Time": 0.018,
+                    "Actual Total Time": 4.32,
+                    "Actual Rows": 5000,
+                    "Actual Loops": 1,
+                    "Disabled": false,
+                    "Filter": "((status = ANY ('{published,scheduled}'::text[])) AND (published_at <= '2026-10-14T00:00:00.000Z'::text))",
+                    "Rows Removed by Filter": 0,
+                    "Shared Hit Blocks": 186,
+                    "Shared Read Blocks": 0,
+                    "Shared Dirtied Blocks": 0,
+                    "Shared Written Blocks": 0,
+                    "Local Hit Blocks": 0,
+                    "Local Read Blocks": 0,
+                    "Local Dirtied Blocks": 0,
+                    "Local Written Blocks": 0,
+                    "Temp Read Blocks": 0,
+                    "Temp Written Blocks": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "Planning": {
+            "Shared Hit Blocks": 0,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          },
+          "Planning Time": 0.153,
+          "Triggers": [],
+          "Execution Time": 16.954
+        }
+      ]
+    }
+  ],
+  "slugPlan": [
+    {
+      "QUERY PLAN": [
+        {
+          "Plan": {
+            "Node Type": "Index Scan",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Scan Direction": "Forward",
+            "Index Name": "posts_slug_key",
+            "Relation Name": "posts",
+            "Alias": "posts",
+            "Startup Cost": 0.28,
+            "Total Cost": 8.3,
+            "Plan Rows": 1,
+            "Plan Width": 12,
+            "Actual Startup Time": 0.034,
+            "Actual Total Time": 0.035,
+            "Actual Rows": 1,
+            "Actual Loops": 1,
+            "Disabled": false,
+            "Index Cond": "(slug = 'fixture-100'::text)",
+            "Rows Removed by Index Recheck": 0,
+            "Index Searches": 1,
+            "Shared Hit Blocks": 3,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          },
+          "Planning": {
+            "Shared Hit Blocks": 0,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          },
+          "Planning Time": 0.117,
+          "Triggers": [],
+          "Execution Time": 0.052
+        }
+      ]
+    }
+  ]
+}

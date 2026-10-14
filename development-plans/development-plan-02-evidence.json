@@ -1,0 +1,122 @@
+{
+  "date": "2026-10-14",
+  "timezone": "Asia/Karachi",
+  "scope": "Local plan 02 product implementation; Production release acceptance remains open",
+  "checks": {
+    "typecheck": "passed",
+    "lint": "passed",
+    "localTests": {
+      "passed": 55,
+      "files": 9
+    },
+    "postgresTests": {
+      "passed": 41,
+      "files": 3,
+      "engine": "Actual PostgreSQL 18.4, isolated loopback cluster"
+    },
+    "productionBuild": "passed",
+    "browserJourneys": {
+      "passed": 8,
+      "exitCode": 0,
+      "browser": "Microsoft Edge",
+      "automaticShutdown": true,
+      "automaticFixtureCleanup": true
+    },
+    "freshInstall": {
+      "npmCi": "passed",
+      "fullCheck": "passed in isolated source copy with freshly installed locked dependencies",
+      "scope": "Local Windows clean source/install validation; hosted GitHub CI not run"
+    },
+    "dependencyAudit": {
+      "vulnerabilities": 0
+    },
+    "productionTraceFilesChecked": 48,
+    "privateOrTestTraceMatches": 0,
+    "dependencyTree": "npm ls --depth=0 passed"
+  },
+  "migrations": {
+    "currentVersion": 2,
+    "files": [
+      {
+        "name": "001-initial.sql",
+        "sha256": "7ebe77d516dd0cb3caa30ca7c15d9a1a8bcb7e43a393b22051dcb88112c43793"
+      },
+      {
+        "name": "002-product-operations.sql",
+        "sha256": "8966340bcf0c955936a583f7329c672a4a140c34f5d981657c1978267b2f84e2"
+      }
+    ]
+  },
+  "completedPlanCheckboxes": 46,
+  "totalPlanCheckboxes": 64,
+  "remainingPlanCheckboxes": 18,
+  "performanceMedians": [
+    {
+      "route": "/",
+      "scores": {
+        "performance": 93,
+        "accessibility": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "lcpMs": 3056.715775,
+        "cls": 0,
+        "tbtMs": 93,
+        "transferBytes": 520797
+      }
+    },
+    {
+      "route": "/properties",
+      "scores": {
+        "performance": 93,
+        "accessibility": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "lcpMs": 3026.0326,
+        "cls": 0,
+        "tbtMs": 87.5,
+        "transferBytes": 490053
+      }
+    },
+    {
+      "route": "/journal/a-clearer-guide-to-your-first-viewing",
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "lcpMs": 2651.2995,
+        "cls": 0,
+        "tbtMs": 80,
+        "transferBytes": 271483
+      }
+    }
+  ],
+  "sharedTestCountsOverlap": true,
+  "repository": {
+    "branch": "main",
+    "commits": 0,
+    "remotes": 0,
+    "delivery": "No commit/push/deployment requested or performed"
+  },
+  "intendedOrigin": "https://havenfield.vercel.app",
+  "remaining": [
+    "Account-owned PostgreSQL and current no-inactivity-pause/TLS/pool verification",
+    "Isolated Vercel Preview/Production and real Blob operations/restoration",
+    "Assigned domain, hosted SEO/HTTPS/cookie/client-address checks and deployed revision",
+    "Independent protected backup destination/scheduler/quota monitoring",
+    "Human screen-reader and 200 percent browser zoom review",
+    "Production LCP target of 2.5 seconds; local simulated medians exceed it",
+    "Field INP requires sufficient real usage; hosted CI/Linux browser teardown not yet verified",
+    "Owner review of generation-account sharing rights and requested Git delivery"
+  ],
+  "cleanup": {
+    "ownedPreparationFilesRemoved": 41,
+    "cleanInstallCopyRemoved": true,
+    "remainingOwnedFixtureDirectories": 0,
+    "remainingPortablePostgresProcesses": 0,
+    "protectedHashesUnchanged": true
+  }
+}

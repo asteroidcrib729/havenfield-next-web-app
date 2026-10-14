@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-14",
+  "timezone": "Asia/Karachi",
+  "generation": {
+    "provider": "Higgsfield",
+    "model": "minimax_hailuo",
+    "variant": "minimax-2.3",
+    "submittedJobs": 1,
+    "status": "completed",
+    "balanceBefore": 10,
+    "creditsSpent": 6,
+    "confirmedBalanceAfter": 4,
+    "trialStarted": false,
+    "paidEnhancement": false
+  },
+  "video": {
+    "path": "public/media/havenfield-hero.mp4",
+    "bytes": 1110172,
+    "sha256": "224665ce620e598d53833a035c5f6a0074d33d8d4ef276766542c3d365ca3e3e",
+    "durationSeconds": 5.875,
+    "width": 1280,
+    "height": 720,
+    "codec": "h264",
+    "framesPerSecond": 24,
+    "audioTracks": 0
+  },
+  "poster": {
+    "path": "public/media/havenfield-hero-poster.jpg",
+    "bytes": 123290,
+    "sha256": "677aad008caa77c2607be834a0a8aac7e94f9d1e6697385dae84528f65b2834b"
+  },
+  "checks": {
+    "typecheck": "passed",
+    "lint": "passed",
+    "productionBuild": "passed as Playwright web-server setup",
+    "browserTestsPassed": 2,
+    "browser": "Microsoft Edge",
+    "verified": [
+      "MP4 decoding and elapsed playback",
+      "1280x720 dimensions and mute",
+      "pause and resume controls",
+      "reduced-motion poster fallback",
+      "seven responsive routes at four widths",
+      "contact form automated accessibility"
+    ],
+    "documentationLinks": "all local targets exist"
+  },
+  "hostedDeploymentPerformed": false
+}

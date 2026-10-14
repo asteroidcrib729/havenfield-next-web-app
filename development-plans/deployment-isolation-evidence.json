@@ -1,0 +1,23 @@
+{
+  "verifiedAt": "2026-10-14T19:16:01.295Z",
+  "status": "passed",
+  "fixturesRemoved": true,
+  "results": [
+    {
+      "environment": "production",
+      "binding": "production",
+      "articles": 3,
+      "activeMedia": 0,
+      "inquiries": 0,
+      "crossEnvironmentRefused": true
+    },
+    {
+      "environment": "preview",
+      "binding": "preview",
+      "articles": 3,
+      "activeMedia": 0,
+      "inquiries": 0,
+      "crossEnvironmentRefused": true
+    }
+  ]
+}

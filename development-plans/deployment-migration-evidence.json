@@ -1,0 +1,47 @@
+{
+  "preparedAt": "2026-10-14T18:50:15.938Z",
+  "isolationVerified": true,
+  "cliOriginOnly": true,
+  "reports": [
+    {
+      "environment": "production",
+      "script": "config-check.ts",
+      "status": "passed"
+    },
+    {
+      "environment": "production",
+      "script": "database-migrate.ts",
+      "status": "passed"
+    },
+    {
+      "environment": "production",
+      "script": "database-bind.ts",
+      "status": "passed"
+    },
+    {
+      "environment": "production",
+      "script": "database-seed.ts",
+      "status": "passed"
+    },
+    {
+      "environment": "preview",
+      "script": "config-check.ts",
+      "status": "passed"
+    },
+    {
+      "environment": "preview",
+      "script": "database-migrate.ts",
+      "status": "passed"
+    },
+    {
+      "environment": "preview",
+      "script": "database-bind.ts",
+      "status": "passed"
+    },
+    {
+      "environment": "preview",
+      "script": "database-seed.ts",
+      "status": "passed"
+    }
+  ]
+}

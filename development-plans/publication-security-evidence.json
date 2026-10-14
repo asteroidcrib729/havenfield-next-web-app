@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-15",
+  "scope": "Publishable source tree, staging area and complete history before first push",
+  "scanner": {
+    "name": "gitleaks",
+    "version": "8.30.1",
+    "windowsArchiveSha256": "d29144deff3a68aa93ced33dddf84b7fdc26070add4aa0f4513094c8332afc4e",
+    "redacted": true,
+    "initialSnapshotFiles": 205,
+    "initialFindings": 0
+  },
+  "manualReview": {
+    "legacyClientIdentifiers": "absent",
+    "runtimeDatabasesAndUploads": "ignored",
+    "credentialsAndProviderAuthentication": "ignored",
+    "privateInfrastructureAndGenerationIdentifiers": "removed from public documentation",
+    "screenshots": "synthetic test identities and content only",
+    "fontNotices": "preserved",
+    "testCredentials": "disposable loopback fixtures only"
+  },
+  "validation": {
+    "typecheck": "passed",
+    "lint": "passed",
+    "serviceTests": 55,
+    "postgresTests": 41,
+    "dependencyVulnerabilities": 0
+  },
+  "ci": {
+    "secretScan": "pinned scanner and verified archive checksum; full Git history",
+    "applicationChecks": "clean checkout, Node 24, disposable PostgreSQL and Chromium"
+  },
+  "limits": "Pattern matching and manual review reduce exposure risk; they are not a mathematical proof that no sensitive information exists."
+}

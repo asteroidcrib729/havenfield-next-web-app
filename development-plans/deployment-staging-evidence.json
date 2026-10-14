@@ -1,0 +1,19 @@
+{
+  "verifiedAt": "2026-10-14T19:11:25.888Z",
+  "deploymentId": "dpl_DgiRCmaxNBELUB3fKEqCtGvH6RMF",
+  "url": "https://havenfield-h3c9rjlny-farazhussain-5000s-projects.vercel.app",
+  "status": "passed",
+  "access": "Authenticated CLI request; no shareable link",
+  "cliParserRestored": true,
+  "checks": [
+    {
+      "path": "/api/health",
+      "status": "passed"
+    },
+    {
+      "path": "/api/posts",
+      "status": "passed",
+      "persistedArticles": 3
+    }
+  ]
+}

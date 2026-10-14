@@ -1,0 +1,75 @@
+{
+  "verifiedAt": "2026-10-14T19:05:15.263Z",
+  "origin": "https://havenfield-portfolio.vercel.app",
+  "status": "passed",
+  "publishedSeedArticles": 3,
+  "robotsVerified": true,
+  "adminNoindex": true,
+  "socialImageVerified": true,
+  "checks": [
+    {
+      "path": "/",
+      "titleDescriptionCanonicalSocial": true,
+      "securityHeaders": true,
+      "articleStructuredData": false
+    },
+    {
+      "path": "/properties",
+      "titleDescriptionCanonicalSocial": true,
+      "securityHeaders": true,
+      "articleStructuredData": false
+    },
+    {
+      "path": "/about",
+      "titleDescriptionCanonicalSocial": true,
+      "securityHeaders": true,
+      "articleStructuredData": false
+    },
+    {
+      "path": "/amenities",
+      "titleDescriptionCanonicalSocial": true,
+      "securityHeaders": true,
+      "articleStructuredData": false
+    },
+    {
+      "path": "/contact",
+      "titleDescriptionCanonicalSocial": true,
+      "securityHeaders": true,
+      "articleStructuredData": false
+    },
+    {
+      "path": "/journal",
+      "titleDescriptionCanonicalSocial": true,
+      "securityHeaders": true,
+      "articleStructuredData": false
+    },
+    {
+      "path": "/journal/a-clearer-guide-to-your-first-viewing",
+      "titleDescriptionCanonicalSocial": true,
+      "securityHeaders": true,
+      "articleStructuredData": true
+    },
+    {
+      "path": "/journal/the-value-of-a-thoughtful-floor-plan",
+      "titleDescriptionCanonicalSocial": true,
+      "securityHeaders": true,
+      "articleStructuredData": true
+    },
+    {
+      "path": "/journal/a-home-that-fits-your-everyday",
+      "titleDescriptionCanonicalSocial": true,
+      "securityHeaders": true,
+      "articleStructuredData": true
+    },
+    {
+      "path": "/rss.xml",
+      "publishedArticlesOnly": true,
+      "canonicalOrigin": true
+    },
+    {
+      "path": "/sitemap.xml",
+      "publishedArticlesOnly": true,
+      "canonicalOrigin": true
+    }
+  ]
+}

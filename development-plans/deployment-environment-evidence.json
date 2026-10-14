@@ -1,0 +1,83 @@
+{
+  "configuredAt": "2026-10-14T18:48:16.259Z",
+  "origin": "https://havenfield-portfolio.vercel.app",
+  "secretsPrinted": false,
+  "results": [
+    {
+      "environment": "production",
+      "key": "ADMIN_EMAIL",
+      "type": "secret"
+    },
+    {
+      "environment": "production",
+      "key": "ADMIN_PASSWORD_HASH",
+      "type": "secret"
+    },
+    {
+      "environment": "production",
+      "key": "APP_ENV",
+      "type": "config"
+    },
+    {
+      "environment": "production",
+      "key": "CRON_SECRET",
+      "type": "secret"
+    },
+    {
+      "environment": "production",
+      "key": "DATABASE_URL",
+      "type": "secret"
+    },
+    {
+      "environment": "production",
+      "key": "NEXT_PUBLIC_SITE_URL",
+      "type": "config"
+    },
+    {
+      "environment": "production",
+      "key": "SESSION_SECRET",
+      "type": "secret"
+    },
+    {
+      "environment": "production",
+      "key": "SITE_URL",
+      "type": "config"
+    },
+    {
+      "environment": "preview",
+      "key": "ADMIN_EMAIL",
+      "type": "secret"
+    },
+    {
+      "environment": "preview",
+      "key": "ADMIN_PASSWORD_HASH",
+      "type": "secret"
+    },
+    {
+      "environment": "preview",
+      "key": "APP_ENV",
+      "type": "config"
+    },
+    {
+      "environment": "preview",
+      "key": "CRON_SECRET",
+      "type": "secret"
+    },
+    {
+      "environment": "preview",
+      "key": "DATABASE_URL",
+      "type": "secret"
+    },
+    {
+      "environment": "preview",
+      "key": "NEXT_PUBLIC_SITE_URL",
+      "type": "config"
+    },
+    {
+      "environment": "preview",
+      "key": "SESSION_SECRET",
+      "type": "secret"
+    }
+  ],
+  "blobConfiguration": "Independent automatically connected production/preview stores"
+}

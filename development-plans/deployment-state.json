@@ -1,0 +1,87 @@
+{
+  "updatedAt": "2026-10-15",
+  "timezone": "Asia/Karachi",
+  "status": "READY",
+  "origin": "https://havenfield-portfolio.vercel.app",
+  "vercel": {
+    "scope": "farazhussain-5000s-projects",
+    "projectName": "havenfield",
+    "plan": "hobby",
+    "framework": "nextjs",
+    "nodeVersion": "24.x",
+    "region": "sin1",
+    "cliVersion": "64.0.2",
+    "production": {
+      "id": "dpl_DgiRCmaxNBELUB3fKEqCtGvH6RMF",
+      "url": "https://havenfield-h3c9rjlny-farazhussain-5000s-projects.vercel.app",
+      "readyState": "READY",
+      "promoted": true,
+      "timeToReadyMs": 42879
+    },
+    "preview": {
+      "id": "dpl_7xJkog4a178bxiiNXDH8C2F9J6Dh",
+      "url": "https://havenfield-lzrolawbc-farazhussain-5000s-projects.vercel.app",
+      "readyState": "READY",
+      "protected": true,
+      "timeToReadyMs": 55054
+    },
+    "priorProduction": "dpl_4Ztm7ch8DUPbMMWFvxyova3k8e5z"
+  },
+  "prisma": {
+    "region": "ap-southeast-1",
+    "schemaVersion": 2,
+    "production": {
+      "name": "havenfield-production",
+      "binding": "production",
+      "articles": 3
+    },
+    "preview": {
+      "name": "havenfield-preview",
+      "binding": "preview",
+      "articles": 3
+    }
+  },
+  "blob": {
+    "production": {
+      "name": "havenfield-production-media",
+      "environment": "production"
+    },
+    "preview": {
+      "name": "havenfield-preview-media",
+      "environment": "preview"
+    }
+  },
+  "source": {
+    "gitCommit": null,
+    "sourceManifestSha256": "dfa3decee246237e4c4325f93ab40beb88252e221a91132a17e67bec625cf729",
+    "files": 127,
+    "bytes": 8763816
+  },
+  "checks": {
+    "localTests": 55,
+    "typecheck": "passed",
+    "focusedLint": "passed",
+    "hostedGroups": 24,
+    "hostedSeoRoutes": 11,
+    "crossEnvironmentBindingRefused": true,
+    "fixturesRemoved": true,
+    "errorReview": {
+      "recordsReturned": 0,
+      "startUTC": "2026-10-14T19:09:19.783Z",
+      "endUTC": "2026-10-14T19:14:19.783Z",
+      "paginationComplete": true,
+      "excludedIntervals": 0
+    }
+  },
+  "remaining": [
+    "Independent backups and hosted recovery",
+    "Observed scheduled cron execution",
+    "Hosted revision-restoration and exact-time publication acceptance",
+    "Explicit media persistence after another redeploy",
+    "Platform client-address validation",
+    "Human screen-reader and zoom acceptance",
+    "Hosted performance and field Core Web Vitals",
+    "Git commit/remote and hosted CI"
+  ],
+  "credentialsIncluded": false
+}

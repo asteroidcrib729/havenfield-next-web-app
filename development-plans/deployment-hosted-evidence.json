@@ -1,0 +1,146 @@
+{
+  "verifiedAt": "2026-10-14T19:14:24.105Z",
+  "status": "passed",
+  "environments": [
+    {
+      "verifiedAt": "2026-10-14T19:03:15.429Z",
+      "origin": "https://havenfield-lzrolawbc-farazhussain-5000s-projects.vercel.app",
+      "status": "passed",
+      "fixturesRemoved": true,
+      "scheduledCronExecutionVerified": false,
+      "checks": [
+        {
+          "environment": "preview",
+          "name": "database health",
+          "status": "passed"
+        },
+        {
+          "environment": "preview",
+          "name": "canonical metadata, CSP and indexing policy",
+          "status": "passed"
+        },
+        {
+          "environment": "preview",
+          "name": "mobile/desktop pages and footer",
+          "status": "passed"
+        },
+        {
+          "environment": "preview",
+          "name": "publisher UI login and secure session",
+          "status": "passed"
+        },
+        {
+          "environment": "preview",
+          "name": "mutation origin protection",
+          "status": "passed"
+        },
+        {
+          "environment": "preview",
+          "name": "real persistent Blob upload and WebP delivery",
+          "status": "passed"
+        },
+        {
+          "environment": "preview",
+          "name": "draft/schedule/publish/edit/slug redirect and populated editor",
+          "status": "passed"
+        },
+        {
+          "environment": "preview",
+          "name": "article and storage deletion with reference protection",
+          "status": "passed"
+        },
+        {
+          "environment": "preview",
+          "name": "durable inquiry, idempotent receipt, inbox review and deletion",
+          "status": "passed"
+        },
+        {
+          "environment": "preview",
+          "name": "maintenance authentication and manual retention invocation",
+          "status": "passed"
+        },
+        {
+          "environment": "preview",
+          "name": "zero browser CSP violations",
+          "status": "passed"
+        },
+        {
+          "environment": "preview",
+          "name": "logout invalidates publisher access",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "verifiedAt": "2026-10-14T19:13:20.219Z",
+      "origin": "https://havenfield-portfolio.vercel.app",
+      "status": "passed",
+      "fixturesRemoved": true,
+      "scheduledCronExecutionVerified": false,
+      "checks": [
+        {
+          "environment": "production",
+          "name": "database health",
+          "status": "passed"
+        },
+        {
+          "environment": "production",
+          "name": "canonical metadata, CSP and indexing policy",
+          "status": "passed"
+        },
+        {
+          "environment": "production",
+          "name": "mobile/desktop pages and footer",
+          "status": "passed"
+        },
+        {
+          "environment": "production",
+          "name": "publisher UI login and secure session",
+          "status": "passed"
+        },
+        {
+          "environment": "production",
+          "name": "mutation origin protection",
+          "status": "passed"
+        },
+        {
+          "environment": "production",
+          "name": "real persistent Blob upload and WebP delivery",
+          "status": "passed"
+        },
+        {
+          "environment": "production",
+          "name": "draft/schedule/publish/edit/slug redirect and populated editor",
+          "status": "passed"
+        },
+        {
+          "environment": "production",
+          "name": "article and storage deletion with reference protection",
+          "status": "passed"
+        },
+        {
+          "environment": "production",
+          "name": "durable inquiry, idempotent receipt, inbox review and deletion",
+          "status": "passed"
+        },
+        {
+          "environment": "production",
+          "name": "maintenance authentication and manual retention invocation",
+          "status": "passed"
+        },
+        {
+          "environment": "production",
+          "name": "zero browser CSP violations",
+          "status": "passed"
+        },
+        {
+          "environment": "production",
+          "name": "logout invalidates publisher access",
+          "status": "passed"
+        }
+      ]
+    }
+  ],
+  "checkGroups": 24,
+  "scheduledCronExecutionVerified": false
+}

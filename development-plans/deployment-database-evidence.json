@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-10-14T18:39:39.977Z",
+  "status": "passed",
+  "migrationsRun": false,
+  "environmentBound": false,
+  "checks": [
+    {
+      "environment": "production",
+      "endpoint": "direct",
+      "hostname": "db.prisma.io",
+      "reachable": true,
+      "tls": true,
+      "certificateVerification": true
+    },
+    {
+      "environment": "production",
+      "endpoint": "pooled",
+      "hostname": "pooled.db.prisma.io",
+      "reachable": true,
+      "tls": true,
+      "certificateVerification": true
+    },
+    {
+      "environment": "preview",
+      "endpoint": "direct",
+      "hostname": "db.prisma.io",
+      "reachable": true,
+      "tls": true,
+      "certificateVerification": true
+    },
+    {
+      "environment": "preview",
+      "endpoint": "pooled",
+      "hostname": "pooled.db.prisma.io",
+      "reachable": true,
+      "tls": true,
+      "certificateVerification": true
+    }
+  ]
+}

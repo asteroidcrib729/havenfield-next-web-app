@@ -1,0 +1,163 @@
+{
+  "date": "2026-10-13",
+  "timezone": "Asia/Karachi",
+  "phase": "source consolidation; framework migration not implemented",
+  "copiedSourceFiles": 179,
+  "copiedSourceBytes": 141194281,
+  "verifiedCopyHashes": 179,
+  "finalSourceFiles": 170,
+  "postCleanupNonGeneratedSourceHashesVerified": 169,
+  "dependencyFilesMovedAndHashVerified": 1450,
+  "dependencyBytesMoved": 21163649,
+  "removals": [
+    {
+      "Target": "retired-development-directory",
+      "Files": 19516,
+      "Bytes": 2821816529,
+      "Completed": true
+    },
+    {
+      "Target": "retired-old-website-backup",
+      "Files": 4118,
+      "Bytes": 665484693,
+      "Completed": true
+    },
+    {
+      "Target": "retired-production-directory",
+      "Files": 3981,
+      "Bytes": 1079040236,
+      "Completed": true
+    },
+    {
+      "Target": "retired-vps-credentials-directory",
+      "Files": 5,
+      "Bytes": 5348,
+      "Completed": true
+    },
+    {
+      "Target": "Styles/tailwind.config.css",
+      "Files": 1,
+      "Bytes": 22,
+      "Completed": true
+    },
+    {
+      "Target": "Admin_HTML/favicon.ico",
+      "Files": 1,
+      "Bytes": 125835,
+      "Completed": true
+    },
+    {
+      "Target": "favicon.ico",
+      "Files": 1,
+      "Bytes": 125835,
+      "Completed": true
+    },
+    {
+      "Target": "Images-Amenities/PRAYER AREA.jpg",
+      "Files": 1,
+      "Bytes": 265720,
+      "Completed": true
+    },
+    {
+      "Target": "Scripts/Contact-Script.js",
+      "Files": 1,
+      "Bytes": 0,
+      "Completed": true
+    },
+    {
+      "Target": "Scripts/Query-Form-Script.js",
+      "Files": 1,
+      "Bytes": 2686,
+      "Completed": true
+    },
+    {
+      "Target": "Styles/Backend-Style.css",
+      "Files": 1,
+      "Bytes": 3583,
+      "Completed": true
+    },
+    {
+      "Target": "Styles/Terms-&-Conditions.css",
+      "Files": 1,
+      "Bytes": 913,
+      "Completed": true
+    },
+    {
+      "Target": "Scripts/aos.js",
+      "Files": 1,
+      "Bytes": 14239,
+      "Completed": true
+    },
+    {
+      "Target": "Styles/aos.css",
+      "Files": 1,
+      "Bytes": 29892,
+      "Completed": true
+    }
+  ],
+  "removedFiles": 27630,
+  "removedLogicalBytes": 4566915531,
+  "dependencies": "npm.cmd ls --depth=0 passed",
+  "cssBuild": "npm.cmd run dev-build passed",
+  "sourceUtilitiesVerified": [
+    "md:hidden",
+    "grid"
+  ],
+  "inheritedMissingStaticReferences": [
+    {
+      "file": "Styles/slick-theme.min.css",
+      "reference": "ajax-loader.gif",
+      "target": "styles/ajax-loader.gif"
+    },
+    {
+      "file": "Styles/slick-theme.min.css",
+      "reference": "fonts/slick.eot",
+      "target": "styles/fonts/slick.eot"
+    },
+    {
+      "file": "Styles/slick-theme.min.css",
+      "reference": "fonts/slick.woff",
+      "target": "styles/fonts/slick.woff"
+    },
+    {
+      "file": "Styles/slick-theme.min.css",
+      "reference": "fonts/slick.ttf",
+      "target": "styles/fonts/slick.ttf"
+    },
+    {
+      "file": "Styles/slick-theme.min.css",
+      "reference": "fonts/slick.svg",
+      "target": "styles/fonts/slick.svg"
+    }
+  ],
+  "newMissingStaticReferences": 0,
+  "repositories": [
+    ".git"
+  ],
+  "branch": "main",
+  "configuredRemotes": [],
+  "trackedFiles": 0,
+  "defaultStagingCandidates": [
+    ".gitignore",
+    "README.md",
+    "development-plans/cleanup-evidence.json",
+    "development-plans/cleanup.md",
+    "development-plans/development-plans-01.md",
+    "package-lock.json",
+    "package.json",
+    "postcss.config.js"
+  ],
+  "rootMarkdown": [
+    "README.md"
+  ],
+  "remainingDuplicateContent": [],
+  "limitations": [
+    "Original branded source/media remain ignored local references.",
+    "PHP configuration is retired; no PHP service verification.",
+    "No Next.js application or TypeScript APIs implemented in this phase.",
+    "No browser rendering/accessibility/performance or live VPS verification.",
+    "Existing external backups were reported by the user, not independently inspected."
+  ],
+  "temporaryAuditRemoved": true,
+  "scope": "Historical consolidation evidence from phase 0; retained source was subsequently rewritten and removed. See cleanup.md and implementation.md for the final application state."
+}
