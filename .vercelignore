@@ -1,0 +1,26 @@
+# Upload only application source, assets, schema and build inputs.
+/*
+!src
+!public
+!database
+!/package.json
+!/package-lock.json
+!/next.config.ts
+!/next-env.d.ts
+!/tsconfig.json
+!/postcss.config.mjs
+!/vercel.json
+!/LICENSE
+!/.vercelignore
+
+# Exclude private files even if introduced inside an allowed directory.
+.env
+.env.*
+*.ppk
+*.pem
+*.key
+*.coreftp
+*Credentials*
+Password.txt
+*.log
+*.tsbuildinfo

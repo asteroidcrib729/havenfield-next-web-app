@@ -1,0 +1,30 @@
+# Generated dependencies/builds and local validation data.
+/.cache/
+/.data/
+/node_modules/
+/.next/
+/out/
+/dist/
+/coverage/
+*.tsbuildinfo
+/playwright-report/
+/test-results/
+/.vercel/
+
+# Operational credentials must stay outside source control and deployment uploads.
+.env
+.env.*
+!.env.example
+*.ppk
+*.pem
+*.key
+*.coreftp
+*Credentials*
+Password.txt
+
+# Editor and OS output.
+/.vscode/
+/.idea/
+Thumbs.db
+.DS_Store
+*.log
