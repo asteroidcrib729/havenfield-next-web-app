@@ -30,7 +30,11 @@
     "backup:prune": "tsx scripts/backup-prune.ts"
   },
   "dependencies": {
+    "@prisma/composer": "0.28.0",
+    "@prisma/composer-prisma-cloud": "0.28.0",
     "@vercel/blob": "^2.8.1",
+    "alchemy": "2.0.0-beta.78",
+    "effect": "4.0.0-rc.115",
     "lucide-react": "^1.56.0",
     "next": "^16.4.0",
     "pg": "^8.23.1",
@@ -51,16 +55,28 @@
     "@types/pg": "^8.23.1",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
+    "chrome-launcher": "^1.2.2",
     "embedded-postgres": "18.4.0-beta.17",
     "eslint": "^10.12.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "globals": "^17.13.0",
     "lighthouse": "^13.5.0",
+    "prisma": "8.0.0-rc.21",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.23.15",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.71.2",
-    "vitest": "^5.0.4",
-    "chrome-launcher": "^1.2.2"
+    "vitest": "^5.0.4"
+  },
+  "overrides": {
+    "@effect/platform-bun": "4.0.0-rc.115",
+    "@effect/platform-node": "4.0.0-rc.115",
+    "@effect/platform-node-shared": "4.0.0-rc.115",
+    "@effect/sql-d1": "4.0.0-rc.115",
+    "@effect/sql-mysql2": "4.0.0-rc.115",
+    "@effect/sql-pg": "4.0.0-rc.115",
+    "@effect/sql-sqlite-do": "4.0.0-rc.115",
+    "@effect/vitest": "4.0.0-rc.115",
+    "effect": "4.0.0-rc.115"
   }
 }

@@ -28,3 +28,5 @@ Password.txt
 Thumbs.db
 .DS_Store
 *.log
+.prisma-composer/
+.alchemy/
