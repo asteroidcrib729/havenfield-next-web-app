@@ -1,6 +1,6 @@
 # Database migrations and recovery
 
-Updated 2026-10-14 (Asia/Karachi).
+Updated 2026-10-16 (Asia/Karachi). [Free encrypted backups](free-backups.md) adds encryption and owner Drive-upload instructions. An isolated hosted database/private-image restoration passed; recovery of a deployed public website and independent Drive download verification remain open. See [current evidence](free-operations-evidence.json).
 
 ## Section 01 — Versioned schema operations
 
@@ -65,3 +65,7 @@ Alternatively, `TEST_DATABASE_URL` may identify a deliberately disposable loopba
 The same service/API tests run against SQLite and PostgreSQL. Migration/recovery tests prove fresh/repeat/incremental installation, changed/newer history rejection, legacy adoption, DDL rollback, overlapping PostgreSQL migration rejection, distinct backend connections, complete data restoration, corruption rejection and failed-restore rollback. Concurrency and exact scheduling-boundary cases exercise actual service behavior. Seeding runs twice through its real CLI and preserves publisher edits.
 
 Implementation references: [node-postgres transactions](https://node-postgres.com/features/transactions), [PostgreSQL locking](https://www.postgresql.org/docs/current/explicit-locking.html), [portable binary package](https://github.com/leinelissen/embedded-postgres). Local PostgreSQL tests do not prove a configured provider's TLS, pooled endpoint, quotas or availability policy.
+
+## Section 05 — Free owner backup and private hosted restoration
+
+[Free encrypted backups](free-backups.md) explains the selected Drive destination and `backup:key`, `backup:encrypt`, `backup:decrypt`. Current archives passed local decryption; a real-image bundle passed too. A separate temporary hosted PostgreSQL database restored article bodies, states, versions, revisions and media references; a private hosted Blob restored exact image bytes and refused unauthenticated access. The test resources and their temporary Development variables were removed. This exercise used the existing recovery functions with a private-object verification harness; the standard public-media restore CLI and a recovered public site were not claimed verified. Drive upload/download verification and scheduling remain open. [Evidence](free-operations-evidence.json).

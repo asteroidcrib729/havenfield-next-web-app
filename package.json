@@ -31,7 +31,10 @@
     "recovery:restore": "tsx scripts/recovery-restore.ts",
     "assets:generate": "tsx scripts/generate-brand-assets.ts",
     "measure": "node scripts/measure-performance.mjs --build",
-    "backup:prune": "tsx scripts/backup-prune.ts"
+    "backup:prune": "tsx scripts/backup-prune.ts",
+    "backup:key": "tsx scripts/backup-encrypted.ts key",
+    "backup:encrypt": "tsx scripts/backup-encrypted.ts encrypt",
+    "backup:decrypt": "tsx scripts/backup-encrypted.ts decrypt"
   },
   "dependencies": {
     "@vercel/blob": "^2.8.1",

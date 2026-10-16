@@ -1,6 +1,6 @@
 # Development plan 02: completion audit
 
-**Current follow-up: 56/64 checked; eight acceptance entries remain open.** [Delivered work and current evidence](development-plan-02-delivery.md) supersede the initial checklist count below. The initial audit remains as a dated comparison.
+**Current follow-up: 57/64 checked; seven acceptance entries remain open.** [Delivered work and current evidence](development-plan-02-delivery.md) supersede the initial checklist count below. The initial audit remains as a dated comparison. P02-07 is now closed by the owner-authorized [live rollback rehearsal](production-rollback-rehearsal.md); independent Drive backup verification, full recovered public-site delivery, established cold invocation and human accessibility remain open.
 
 Initial audit snapshot, 2026-10-16 (Asia/Karachi) against the current [Plan 02 checklist](development-plan-02.md), source, CI/release evidence and new-domain hosted checks. **Verdict: not fully complete. There are 53 checked items out of 64, with 11 unchecked composite acceptance items.** Checklist counts do not measure implementation effort, and earlier evidence was not all re-executed during the initial documentation review.
 
@@ -43,3 +43,7 @@ Private local exports are useful rollback artifacts but are not independent off-
 ## Section 05 — Follow-up delivery on 2026-10-16
 
 **Current status: 56/64 checked, eight open.** [The delivery follow-up](development-plan-02-delivery.md) supersedes the initial 53/64 count above. P02-02 is closed with current account usage, policy and certificate-verified TLS; P02-03 with a real Vercel spoofed-header/throttle exercise; P02-05 with nine passing hosted mobile lab runs. Field INP remains unmeasured and its conditional real-user requirement is not claimed passed. Additional hosted revision, timed-publication and media-persistence portions of P02-06 passed; independent hosted image recovery and established cold invocation remain open. See [sanitized evidence](audit-delivery-evidence.json) and [local Preview instructions](local-preview.md).
+
+## Section 06 — Free recovery and Production rollback follow-up
+
+**Current checklist: 57/64 checked; seven open.** P02-07 is closed by the [real Production rollback rehearsal](production-rollback-rehearsal.md), using a simulated incident and preserving newer private content. Private hosted data/image recovery passed; temporary resources were removed. [Free encrypted backups](free-backups.md) require owner Drive upload/download verification and daily operation. [Human accessibility review](accessibility-owner-review.md), recovered public-site image delivery and established cold invocation remain open. Earlier counts in this audit describe earlier snapshots.

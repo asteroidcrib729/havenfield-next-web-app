@@ -48,7 +48,9 @@ Local browser checks use installed Edge, temporary synthetic credentials, and is
 
 I published this project to [GitHub](https://github.com/asteroidcrib729/havenfield-next-web-app) with passing clean-checkout CI and connected the existing Vercel project. Pushing to `main` now automatically deploys Production; other branches use Preview.
 
-Plan 02 is not fully accepted: [the current audit](development-plans/development-plan-02-audit.md) records the initial snapshot; [the follow-up](development-plans/development-plan-02-delivery.md) brings the checklist to 56 of 64 checked items, with eight remaining. Independent scheduled backups, complete hosted recovery, human accessibility review and compatible Production rollback remain open release gates. Hosted mobile lab budgets pass; field INP remains unmeasured. I am planning the next content and product iteration in [Plan 03](development-plans/development-plan-03.md), including 28 new original images; these planned assets have not been generated yet.
+Plan 02 is not fully accepted: [the current audit](development-plans/development-plan-02-audit.md) records the initial snapshot; [the follow-up](development-plans/development-plan-02-delivery.md) brings the checklist to 57 of 64 checked items, with seven remaining. A real Production rollback rehearsal preserved newer content, and an isolated private hosted recovery restored database records and image bytes. Independent scheduled backups, full recovered-site image delivery, established cold invocation and human accessibility review remain open release gates. Hosted mobile lab budgets pass; field INP remains unmeasured. I am planning the next content and product iteration in [Plan 03](development-plans/development-plan-03.md), including 28 new original images; these planned assets have not been generated yet.
+
+I use [encrypted backup commands and a private Google Drive folder](development-plans/free-backups.md) for the no-card backup approach. The prepared local archives are verified; the owner still needs to upload them and verify a downloaded copy. My [accessibility checklist](development-plans/accessibility-owner-review.md) records the human review separately from automated tests.
 
 I keep all plans, progress, production instructions and asset records under [development-plans](development-plans/). Only this README belongs at the root as authored Markdown.
 
@@ -61,6 +63,9 @@ I keep all plans, progress, production instructions and asset records under [dev
 - [Administrator access and credential setup](development-plans/admin-access.md)
 - [Plan 02 execution record](development-plans/development-plan-02-progress.md)
 - [Database migrations and recovery](development-plans/database-recovery.md)
+- [Free encrypted backups](development-plans/free-backups.md)
+- [Owner accessibility review](development-plans/accessibility-owner-review.md)
+- [Production rollback rehearsal](development-plans/production-rollback-rehearsal.md)
 - [Generated hero footage and credit record](development-plans/hero-video-generation.md)
 - [Implementation and validation](development-plans/implementation.md)
 - [Cleanup record](development-plans/cleanup.md)

@@ -1,0 +1,112 @@
+{
+  "recordedAt": "2026-10-16T17:46:24.871Z",
+  "budget": { "freeOnly": true, "cardAuthorization": false, "paidUpgrade": false },
+  "productionRollback": {
+    "startedAt": "2026-10-16T17:31:06.381Z",
+    "rolledBackAt": "2026-10-16T17:31:16.890Z",
+    "finishedAt": "2026-10-16T17:32:08.529Z",
+    "startingDeployment": "dpl_FEGpznWimrbnwGSmqfjSC5F1q61A",
+    "previousDeployment": "dpl_B8x1YgV3E19jvKCgqS2t1HK7AtJ5",
+    "startingCommit": "3bc464302e74de77698f57e43188225ccc32090b",
+    "previousCommit": "4b3fb9dfcb120939943a26a840d31c7eef09dfde",
+    "simulatedIncident": true,
+    "faultyCodeDeployed": false,
+    "databaseRollback": false,
+    "olderRevision": {
+      "healthy": true,
+      "newDraftVersionTwoPreserved": true,
+      "bothRevisionsPreserved": true,
+      "draftNotPublic": true,
+      "publicArticles": 3
+    },
+    "currentDeploymentRestored": true,
+    "automaticProductionAssignment": true,
+    "syntheticDraftDeleted": true,
+    "originalContentHashUnchanged": true
+  },
+  "privateHostedRecovery": {
+    "completedAt": "2026-10-16T17:41:31.568Z",
+    "checks": [
+      {
+        "name": "Private hosted image recovered byte-for-byte",
+        "passed": true,
+        "bytes": 234042,
+        "sha256": "85f9fa7f25f811a4a0662418dca213e969499a915a7c908fb8e66bef0d13f814",
+        "unauthenticatedHttpStatus": 403
+      },
+      { "name": "Hosted restored posts inventory", "passed": true, "count": 4 },
+      { "name": "Hosted restored post_revisions inventory", "passed": true, "count": 8 },
+      { "name": "Hosted restored media inventory", "passed": true, "count": 3 },
+      { "name": "Hosted restored inquiries inventory", "passed": true, "count": 0 },
+      {
+        "name": "Hosted restored article retains body, cover reference, version and state",
+        "passed": true
+      }
+    ],
+    "storeAccess": "private",
+    "publicWebsiteImageDeliveryProven": false
+  },
+  "cleanup": {
+    "completedAt": "2026-10-16T17:43:46.139Z",
+    "temporaryPrivateStoreDeleted": true,
+    "temporaryDatabaseDeleted": true,
+    "temporaryEnvironmentKeysRemoved": true,
+    "activeStoreNames": ["havenfield-preview-media", "havenfield-production-media"]
+  },
+  "encryptedBackups": {
+    "createdAt": "2026-10-16T17:36:31.077Z",
+    "archives": [
+      {
+        "role": "production",
+        "bytes": 13441,
+        "mediaObjects": 0,
+        "sha256": "3d89ec31b0ef737a331969a811a6f2f99059bcda35aae7e40a358c69974b2d2c",
+        "encrypted": true,
+        "decryptedAndVerified": true,
+        "cloudUploaded": false
+      },
+      {
+        "role": "preview",
+        "bytes": 14567,
+        "mediaObjects": 0,
+        "sha256": "8113268e6c0d1290b8d3247bf80bfdab949490a14bcc9c5a5a8c6611a93912dd",
+        "encrypted": true,
+        "decryptedAndVerified": true,
+        "cloudUploaded": false
+      }
+    ],
+    "realHostedImageEncryptionRoundtrip": { "bytes": 250904, "mediaObjects": 1, "passed": true },
+    "destination": "Owner Restricted Google Drive folder",
+    "independentCloudCopyVerified": false,
+    "scheduled": false
+  },
+  "activeEnvironments": {
+    "at": "2026-10-16T17:45:33.932Z",
+    "databases": ["havenfield-preview", "havenfield-production"],
+    "bindings": [
+      { "environment": "production", "posts": 3, "revisions": 3, "activeMedia": 0 },
+      { "environment": "preview", "posts": 3, "revisions": 3, "activeMedia": 0 }
+    ],
+    "productionHealth": 200
+  },
+  "humanAccessibility": {
+    "reviewer": "Owner",
+    "completed": false,
+    "checklist": "accessibility-owner-review.md"
+  },
+  "remaining": {
+    "independentDriveUploadDownload": true,
+    "dailySchedulingRotation": true,
+    "humanScreenReaderAndNativeZoom": true,
+    "recoveredPublicWebsiteImageDelivery": true,
+    "coldInvocationProof": true
+  },
+  "validation": {
+    "serviceTests": 61,
+    "newSecurityTests": 2,
+    "typecheck": true,
+    "lint": true,
+    "formatting": true
+  },
+  "plan02": { "checked": 57, "total": 64, "open": 7 }
+}

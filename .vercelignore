@@ -19,6 +19,7 @@
 *.ppk
 *.pem
 *.key
+*.hfbackup
 *.coreftp
 *Credentials*
 Password.txt

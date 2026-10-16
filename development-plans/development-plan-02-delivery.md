@@ -1,6 +1,6 @@
 # Plan 02 audit: immediately deliverable follow-up
 
-Delivered 2026-10-16 (Asia/Karachi), following [the initial audit](development-plan-02-audit.md). **Current checklist: 56 checked of 64; eight remain open.** The change closes P02-02, P02-03 and the presently applicable laboratory portion of P02-05. It does not declare complete Production release acceptance.
+Delivered 2026-10-16 (Asia/Karachi), following [the initial audit](development-plan-02-audit.md). **Current checklist: 57 checked of 64; seven remain open.** The deliveries close P02-02, P02-03, the presently applicable laboratory portion of P02-05 and P02-07's compatible Production rollback rehearsal. They do not declare complete Production release acceptance.
 
 ## Section 01 — Delivered now
 
@@ -34,15 +34,24 @@ The Operations screen now exposes the last completed protected retention-mainten
 
 An automated populated-editor CSS 2× zoom/reflow check passed. This is not a native browser zoom session or a human assistive-technology review.
 
-## Section 04 — Eight acceptance entries still open
+## Section 04 — Seven acceptance entries still open
 
-- **P02-01:** independent protected backup destination, actual rotation/scheduler and complete independent hosted database/image restoration.
+- **P02-01:** Google Drive is selected and encrypted archives are prepared, but owner upload, independent download verification and actual daily backup/rotation remain open. Private hosted database/image recovery passes; recovered public-site delivery is not proven.
 - **P02-04:** a human keyboard/screen-reader/native-200%-zoom review with findings and corrections.
-- **P02-06:** remaining composite hosted acceptance, especially independent hosted image recovery and explicitly established cold invocation. Hosted revision/timing/media-redeploy portions are now proven.
-- **P02-07:** an observed compatible Production bad-release rollback that preserves new data. Rebuilding or deleting a rollback project does not demonstrate this.
+- **P02-06:** remaining composite hosted acceptance, especially recovered public-site image delivery and explicitly established cold invocation. Private hosted database/image recovery and hosted revision/timing/media-redeploy portions are now proven.
 - **P02-08:** confirmed independent backup/monitoring operations, automated quota/backup observation and unambiguous scheduled-invocation evidence.
 - **G3 Visitor:** human accessibility acceptance.
 - **G5 Operations:** independent backups and operational monitoring acceptance.
 - **G6 Delivery:** complete hosted recovery and compatible rollback acceptance.
 
 Those entries remain in Plan 02 rather than being moved out of scope. No account upgrade, new paid service, image-generation purchase or Production content/schema mutation was needed for this delivery. Sanitized checks are recorded in [delivery evidence](audit-delivery-evidence.json); private credentials, recovery objects and detailed operator artifacts remain ignored.
+
+## Section 05 — Owner-authorized free recovery and rollback follow-up
+
+The owner selected a strict no-payment/no-card budget and their existing personal Google account, accepted temporary resources only if free, volunteered to perform the human review, and authorized immediate Production testing. [Free backups](free-backups.md) documents the chosen Restricted Drive folder and the manual browser-upload path. Added `backup:key`, `backup:encrypt` and `backup:decrypt`; fresh Production/Preview archives and a real-image bundle passed local encryption/decryption. No Drive upload, scheduler or independent download verification is claimed.
+
+[Production rollback](production-rollback-rehearsal.md) used the actual immediately previous Production deployment. A newer synthetic private draft and both revisions survived rollback. The starting deployment was then promoted back, automatic Production domain assignment re-enabled, and only the synthetic draft deleted. Original article rows match their preflight hash. The incident was simulated; both revisions were healthy. This closes P02-07's compatible rollback exercise.
+
+Created a temporary Prisma database in the existing Free project and a private Vercel Hobby Blob store. Restored a previous complete bundle into that database, including article bodies, publication state, revisions and rewritten media references. The private restored image matched its original 234,042 bytes; unauthenticated access returned 403. This verifies hosted data/private-object recovery, not a deployed recovered public website. Afterward, removed the synthetic image, temporary database/store and their separately prefixed Development connection variables. Both active databases/stores remain separate. No plan upgrade or card authorization occurred.
+
+The original Section 04 closing paragraph describes the earlier delivery; this follow-up did create and remove synthetic Production content for the rehearsal, with no original-content or schema changes. [Sanitized evidence](free-operations-evidence.json) records the results and limits. The owner has a [human accessibility checklist](accessibility-owner-review.md); P02-04 and G3 remain open pending their findings. Unit/service coverage now totals 61 passing tests; type checking, lint and formatting pass.

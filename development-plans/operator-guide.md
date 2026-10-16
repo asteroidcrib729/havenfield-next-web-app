@@ -104,3 +104,7 @@ Production uses `https://havenfieldre.vercel.app`. Vercel Production `SITE_URL` 
 ## Section 09 — Verified local Preview and audit follow-up
 
 [Local Preview](local-preview.md) documents the configured Development scope and ignored `.env.local`, shared Preview publisher/media credentials, immutable binding guard and `db:status` / `dev:preview` commands. Production credentials remain separate. The Operations screen reports the last completed protected maintenance time. Hobby schedules execute within their configured hour; completed records alone do not independently establish scheduler origin. [The audit follow-up](development-plan-02-delivery.md) records the current 56/64 checklist and the eight remaining gates.
+
+## Section 12 — Free backup and rollback follow-up (2026-10-16)
+
+The owner selected no payments/cards and their existing personal Google account. Follow [free encrypted backups](free-backups.md) for the prepared archives, separate recovery key, manual browser upload and remaining daily-schedule requirement. Follow [human accessibility review](accessibility-owner-review.md) for owner testing. The [real Production rollback rehearsal](production-rollback-rehearsal.md) preserved a newer hidden draft/revisions and restored automatic deployment assignment. A temporary hosted database/private-image recovery passed; its resources and separately prefixed Development variables were removed. P02-07 is closed; P02-01, P02-04 and the remaining P02-06 conditions stay open.
