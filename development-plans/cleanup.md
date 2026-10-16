@@ -56,3 +56,7 @@ Actual hosted verification removed only the synthetic articles, uploads and inqu
 ## Public-source privacy cleanup (2026-10-15)
 
 Removed private Vercel project/team, Prisma project/database, Blob store and generation job identifiers from publishable documents. Preserved their operational reference map in ignored local cache storage. Real provider credentials, publisher secrets, runtime data and authentication remain ignored and were not committed. Font notices and public deployment/asset provenance remain intact. Full-history credential scanning is added to CI; sanitized results are recorded in [publication evidence](publication-security-evidence.json).
+
+## Retired Prisma rollback project (2026-10-16)
+
+The owner explicitly requested deletion of `havenfield-preview-rollback`. Verified its exact project identity, confirmed both active databases belonged to the shared Havenfield project, checked that the target contained only the original preview database and no Compute apps/object-store buckets, and created a fresh private checksummed export. Deleted the target project through the authenticated Prisma CLI and verified it disappeared from the project inventory. Production/Preview credentials and active databases were preserved; existing admin access and public content pass at the new domain. No local rollback exports, live Blob stores or active project resources were deleted. Historical immutable Preview URLs using the removed database are retired. [Maintenance evidence](maintenance-review-2026-10-16.json) records sanitized results.

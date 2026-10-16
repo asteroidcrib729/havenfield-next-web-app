@@ -1,6 +1,6 @@
 # Development plan 02: complete the Havenfield product
 
-Created 2026-10-14; deployment and GitHub delivery updated 2026-10-15 (Asia/Karachi). Status: implemented, published with passing hosted CI and automatically deployed from GitHub to Vercel; full release acceptance still requires independent recovery, human accessibility and performance evidence. See the [execution record](development-plan-02-progress.md), [Git delivery](github-publication.md), [deployment](deployment.md) and [database recovery procedure](database-recovery.md).
+Created 2026-10-14; deployment and GitHub delivery updated 2026-10-15 (Asia/Karachi). Status: implemented, published with passing hosted CI and automatically deployed from GitHub to Vercel; full release acceptance still requires independent recovery, human accessibility and performance evidence. The [2026-10-16 completion audit](development-plan-02-audit.md) confirms 53 checked of 64 total items; 11 remain open. See the [execution record](development-plan-02-progress.md), [Git delivery](github-publication.md), [deployment](deployment.md) and [database recovery procedure](database-recovery.md).
 
 Previous foundation: [development plan 01](development-plans-01.md). Supporting records: [implementation](implementation.md), [deployment](deployment.md), [database comparison](database-options.md), [cleanup](cleanup.md), [brand and assets](brand-and-assets.md), and [hero video generation](hero-video-generation.md).
 
@@ -151,7 +151,7 @@ Local evidence: public Lighthouse medians are performance 93/93/96, accessibilit
 | 5 | Performance measurements, complete CI and release documentation | Requires populated realistic test journeys |
 | 6 | Hosted Preview, backup restoration, Production smoke checks | Requires account-owned services and private environment configuration |
 
-The owner subsequently authorized service provisioning and deployment. `havenfield.vercel.app` was unavailable; the owner selected `havenfield-portfolio.vercel.app`, which is now live with independent Production/Preview databases and Blob stores. [Deployment evidence](deployment.md) supersedes the original absence of accounts. Independent backups and the remaining composite acceptance exercises stay open in [release acceptance](release-acceptance.md).
+The owner subsequently authorized service provisioning and deployment. `havenfield.vercel.app` was unavailable; the owner selected `havenfield-portfolio.vercel.app`, which was the initial live origin with independent Production/Preview databases and Blob stores. On 2026-10-16 the owner changed it to `havenfieldre.vercel.app`; current canonical and origin checks pass. [Deployment evidence](deployment.md) supersedes the original absence of accounts. Independent backups and the remaining composite acceptance exercises stay open in [release acceptance](release-acceptance.md).
 
 Account-dependent work uses private provider/Vercel settings. Never paste database passwords, session secrets or Blob tokens into this plan, chat, Git or screenshots. Account provisioning and paid services remain explicit choices; useful local implementation proceeds before those choices are needed.
 

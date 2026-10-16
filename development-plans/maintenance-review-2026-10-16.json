@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-16",
+  "timezone": "Asia/Karachi",
+  "origin": "https://havenfieldre.vercel.app",
+  "preview": "https://havenfield-riv3gj2i6-farazhussain-5000s-projects.vercel.app",
+  "removedDomains": [
+    {
+      "origin": "https://havenfield-five.vercel.app",
+      "status": 404
+    },
+    {
+      "origin": "https://havenfield-portfolio.vercel.app",
+      "status": 404
+    }
+  ],
+  "domainSettings": {
+    "productionSiteUrl": "https://havenfieldre.vercel.app",
+    "canonicalBothEnvironments": "https://havenfieldre.vercel.app",
+    "previewMutationOrigin": "deployment-specific"
+  },
+  "checks": [
+    {
+      "name": "production /",
+      "passed": true
+    },
+    {
+      "name": "production canonical /",
+      "passed": true
+    },
+    {
+      "name": "production /properties",
+      "passed": true
+    },
+    {
+      "name": "production canonical /properties",
+      "passed": true
+    },
+    {
+      "name": "production /journal",
+      "passed": true
+    },
+    {
+      "name": "production canonical /journal",
+      "passed": true
+    },
+    {
+      "name": "production /about",
+      "passed": true
+    },
+    {
+      "name": "production /amenities",
+      "passed": true
+    },
+    {
+      "name": "production /contact",
+      "passed": true
+    },
+    {
+      "name": "production /sitemap.xml",
+      "passed": true
+    },
+    {
+      "name": "production canonical feed /sitemap.xml",
+      "passed": true
+    },
+    {
+      "name": "production /rss.xml",
+      "passed": true
+    },
+    {
+      "name": "production canonical feed /rss.xml",
+      "passed": true
+    },
+    {
+      "name": "production /robots.txt",
+      "passed": true
+    },
+    {
+      "name": "production existing admin credentials",
+      "passed": true
+    },
+    {
+      "name": "production editorial articles retained",
+      "passed": true
+    },
+    {
+      "name": "production logout",
+      "passed": true
+    },
+    {
+      "name": "preview /",
+      "passed": true
+    },
+    {
+      "name": "preview canonical /",
+      "passed": true
+    },
+    {
+      "name": "Preview noindex /",
+      "passed": true
+    },
+    {
+      "name": "preview /properties",
+      "passed": true
+    },
+    {
+      "name": "preview canonical /properties",
+      "passed": true
+    },
+    {
+      "name": "Preview noindex /properties",
+      "passed": true
+    },
+    {
+      "name": "preview /journal",
+      "passed": true
+    },
+    {
+      "name": "preview canonical /journal",
+      "passed": true
+    },
+    {
+      "name": "Preview noindex /journal",
+      "passed": true
+    },
+    {
+      "name": "preview /about",
+      "passed": true
+    },
+    {
+      "name": "Preview noindex /about",
+      "passed": true
+    },
+    {
+      "name": "preview /amenities",
+      "passed": true
+    },
+    {
+      "name": "Preview noindex /amenities",
+      "passed": true
+    },
+    {
+      "name": "preview /contact",
+      "passed": true
+    },
+    {
+      "name": "Preview noindex /contact",
+      "passed": true
+    },
+    {
+      "name": "preview /sitemap.xml",
+      "passed": true
+    },
+    {
+      "name": "preview canonical feed /sitemap.xml",
+      "passed": true
+    },
+    {
+      "name": "Preview noindex /sitemap.xml",
+      "passed": true
+    },
+    {
+      "name": "preview /rss.xml",
+      "passed": true
+    },
+    {
+      "name": "preview canonical feed /rss.xml",
+      "passed": true
+    },
+    {
+      "name": "Preview noindex /rss.xml",
+      "passed": true
+    },
+    {
+      "name": "preview /robots.txt",
+      "passed": true
+    },
+    {
+      "name": "Preview noindex /robots.txt",
+      "passed": true
+    },
+    {
+      "name": "preview existing admin credentials",
+      "passed": true
+    },
+    {
+      "name": "preview editorial articles retained",
+      "passed": true
+    },
+    {
+      "name": "preview logout",
+      "passed": true
+    },
+    {
+      "name": "home-desktop.png no overflow",
+      "passed": true
+    },
+    {
+      "name": "home-desktop.png images loaded",
+      "passed": true
+    },
+    {
+      "name": "home-desktop.png footer at document end",
+      "passed": true
+    },
+    {
+      "name": "home-mobile.png no overflow",
+      "passed": true
+    },
+    {
+      "name": "home-mobile.png images loaded",
+      "passed": true
+    },
+    {
+      "name": "home-mobile.png footer at document end",
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "development-plans/screenshots/home-desktop.png",
+      "origin": "https://havenfieldre.vercel.app",
+      "fullPage": true,
+      "width": 1440,
+      "height": 3919,
+      "sha256": "b70d88be07553924f63b7bc66b5550c3e6eac2daff6178af95fc8a9fd1199415"
+    },
+    {
+      "path": "development-plans/screenshots/home-mobile.png",
+      "origin": "https://havenfieldre.vercel.app",
+      "fullPage": true,
+      "width": 390,
+      "height": 6924,
+      "sha256": "95fc3be2002bd62125eceb18ef6b597810a737decdc816a7c5db9f2517c442f7"
+    }
+  ],
+  "rollbackDeletion": {
+    "name": "havenfield-preview-rollback",
+    "deleted": true,
+    "activeDatabasesPreserved": true,
+    "activeCredentialsUnchanged": true,
+    "privateExportVerified": true,
+    "computeApps": 0,
+    "objectStoreBuckets": 0
+  },
+  "plan02": {
+    "checked": 53,
+    "unchecked": 11,
+    "total": 64,
+    "complete": false,
+    "audit": "development-plan-02-audit.md"
+  },
+  "plan03": {
+    "status": "planned",
+    "newSourceImageTarget": 28,
+    "generationExecuted": false
+  },
+  "admin": {
+    "existingCredentialsVerifiedBothEnvironments": true,
+    "credentialsChanged": false,
+    "privateCredentialFileIgnored": true,
+    "setupGuide": "admin-access.md"
+  },
+  "privateValuesIncluded": false
+}

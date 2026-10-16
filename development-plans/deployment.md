@@ -1,6 +1,6 @@
 # Vercel deployment and editorial operations
 
-Updated 2026-10-15 (Asia/Karachi). Live portfolio: [havenfield-portfolio.vercel.app](https://havenfield-portfolio.vercel.app). Supporting records: [operator guide](operator-guide.md), [release acceptance](release-acceptance.md) and [release notes](release-notes.md).
+Updated 2026-10-16 (Asia/Karachi). Live portfolio: [havenfieldre.vercel.app](https://havenfieldre.vercel.app). Supporting records: [operator guide](operator-guide.md), [release acceptance](release-acceptance.md) and [release notes](release-notes.md).
 
 ## Section 01 — Verified hosted release
 
@@ -9,7 +9,7 @@ Updated 2026-10-15 (Asia/Karachi). Live portfolio: [havenfield-portfolio.vercel.
 | Account/project | Vercel Hobby, `farazhussain-5000s-projects/havenfield` |
 | Project | `havenfield`; private infrastructure identifier retained outside Git |
 | Production deployment | `dpl_DgiRCmaxNBELUB3fKEqCtGvH6RMF`, READY, promoted after staging checks |
-| Canonical origin | `https://havenfield-portfolio.vercel.app` |
+| Initial canonical origin | `https://havenfield-portfolio.vercel.app` (historical; current origin is `https://havenfieldre.vercel.app`) |
 | Preview deployment | `dpl_7xJkog4a178bxiiNXDH8C2F9J6Dh`, READY, protected Preview |
 | Preview origin | `https://havenfield-lzrolawbc-farazhussain-5000s-projects.vercel.app` |
 | Runtime/region | Next.js, Node.js 24, functions and data configured for Singapore |
@@ -21,7 +21,7 @@ Updated 2026-10-15 (Asia/Karachi). Live portfolio: [havenfield-portfolio.vercel.
 | Build | Corrected Production reached READY in 42.879 seconds |
 | Error review | Zero error/fatal runtime records in the five-minute reviewed window; no monitoring drain was configured by this task |
 
-The requested `havenfield.vercel.app` returned 409 because another project owns it. The user selected `havenfield-portfolio.vercel.app`; Vercel accepted and verified it. The initially assigned `havenfield-five.vercel.app` remains an additional alias.
+The requested `havenfield.vercel.app` returned 409 because another project owns it. The user selected `havenfield-portfolio.vercel.app`; Vercel accepted and verified it. The initially assigned `havenfield-five.vercel.app` was removed by the owner. On 2026-10-16 both it and the former portfolio alias return 404; the current owner-selected domain is `havenfieldre.vercel.app`.
 
 Vercel's plugin tools became available but explicit account-scope requests returned 403. The owner completed login to Vercel CLI 64.0.2, installed only in ignored `.cache/deployment-tools`, and the CLI verified the correct account and Hobby scope. Prisma required separate Console approval for the two database creations; both were approved and are ready. No plan upgrade or domain purchase was performed.
 
@@ -33,7 +33,7 @@ The 24 hosted check groups cover mobile/desktop pages and footer, publisher UI l
 
 The public repository is now [asteroidcrib729/havenfield-next-web-app](https://github.com/asteroidcrib729/havenfield-next-web-app), connected natively to this existing Vercel project. Its configured Production branch is `main`; other branches use Preview. The table above preserves the initial CLI release snapshot. [Git delivery](github-publication.md) records the subsequent pushed revisions, CI and automatic deployment verification. GitHub CI uses only synthetic loopback data; real hosted configuration remains private in Vercel.
 
-Subsequent [Prisma consolidation](prisma-project-consolidation.md) places the two active databases in shared GitHub-linked project `havenfield`, on separate `main` and `preview` branches. The new Preview cutover deployment is `dpl_A9yZiFMWAz1t6DDxN357N1KCbFSG`; the earlier Preview in the initial-release table is historical. Production configuration remains intact, and the original preview source is labeled as a rollback project.
+Subsequent [Prisma consolidation](prisma-project-consolidation.md) places the two active databases in shared GitHub-linked project `havenfield`, on separate `main` and `preview` branches. The new Preview cutover deployment is `dpl_A9yZiFMWAz1t6DDxN357N1KCbFSG`; the earlier Preview in the initial-release table is historical. Production configuration remains intact, and the original preview source was retained for rollback at that time. It was deleted on 2026-10-16 after a fresh private export; see [current maintenance evidence](maintenance-review-2026-10-16.json).
 
 ## Section 02 — Local setup
 
@@ -102,3 +102,7 @@ CLI authentication is stored in ignored `.cache/vercel-auth`, and the root `.ver
 CLI 64.0.2 incorrectly forwards `--global-config` to native curl. The staging check temporarily corrected consumption of that single argument in the ignored installed parser and restored the original file afterward; authentication, scope and protection rules were unchanged. The protected staging URL was checked through authenticated requests. A share-link fetch was rejected by automatic approval review and no shareable URL was created.
 
 The previous application deployment is `dpl_4Ztm7ch8DUPbMMWFvxyova3k8e5z`; it uses the same schema and differs in browser validator behavior. It is recorded for deliberate application rollback, not promoted as a recovery exercise. Take an independent current backup before any future schema change; do not overwrite newer data with an old export. A live bad-release rollback and independent hosted recovery have not been demonstrated.
+
+## Section 07 — New domain and rollback retirement (2026-10-16)
+
+Current production is `https://havenfieldre.vercel.app`. Corrected Production `SITE_URL` and both environments' canonical setting, redeployed both, and verified canonical/feed/sitemap URLs and existing publisher access. The production deployment is `dpl_ApMseBkgT4pZhCNzcTyfyrjziMqr`; current protected Preview is `dpl_9ZQU6hFvjdGeG9Ckjz4skW76kqXB`. Captured fresh full desktop/mobile landing screenshots. Deleted only Prisma project `havenfield-preview-rollback`, preserving both active databases and all publisher/media settings. Historical release tables and JSON snapshots above retain their original deployment facts.

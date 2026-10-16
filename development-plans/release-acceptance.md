@@ -1,6 +1,6 @@
 # Release acceptance and remaining external gates
 
-Updated 2026-10-15. Production is live at [havenfield-portfolio.vercel.app](https://havenfield-portfolio.vercel.app), with separately bound Production/Preview Prisma Postgres databases and separate Blob stores. The original requested domain was unavailable; the owner selected the assigned portfolio domain. [Deployment evidence](deployment.md) records completed hosted checks. [Git delivery](github-publication.md) verifies public publication, passing clean-checkout CI and automatic Production deployment. Independent backups, hosted recovery, scheduled-job observation and human accessibility/performance acceptance remain open.
+Updated 2026-10-16. Production is live at [havenfieldre.vercel.app](https://havenfieldre.vercel.app), with separately bound Production/Preview Prisma Postgres databases and separate Blob stores. The original requested domain was unavailable; the owner selected the assigned portfolio domain. [Deployment evidence](deployment.md) records completed hosted checks. [Git delivery](github-publication.md) verifies public publication, passing clean-checkout CI and automatic Production deployment. Independent backups, hosted recovery, scheduled-job observation and human accessibility/performance acceptance remain open.
 
 ## Section 01 — Locally implemented scope
 
@@ -12,7 +12,7 @@ The executable checks and measurements are recorded in [execution progress](deve
 
 | Gate | Required evidence | Owner / next action |
 | --- | --- | --- |
-| Production origin | Assigned HTTPS domain; availability and redirects verified | Completed: owner-selected `havenfield-portfolio.vercel.app` |
+| Production origin | Assigned HTTPS domain; availability and redirects verified | Completed: owner-selected `havenfieldre.vercel.app`; canonical metadata and publisher origin were corrected and reverified on 2026-10-16 |
 | Durable PostgreSQL | Account-owned database, verified TLS/pool/limits and current no-inactivity-pause policy | Provisioned: separate Prisma databases, direct/pooled TLS and migrations/bindings verified; continue account quota review |
 | Preview isolation | Independent bound database, secrets and storage; Preview noindex and trusted origin verified | Completed: separate databases, secrets and stores; cross-environment database access is refused |
 | Real Blob operations | Authenticated upload/reuse/reference denial/delete plus persistence after redeploy | Real upload, delivery, reference denial and deletion pass in both environments; explicit media persistence after another redeploy remains an acceptance exercise |

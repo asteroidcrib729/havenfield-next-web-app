@@ -1,6 +1,6 @@
 # GitHub publication and continuous deployment
 
-Updated 2026-10-15 (Asia/Karachi). Publication is authorized by the project owner. Target: public repository [asteroidcrib729/havenfield-next-web-app](https://github.com/asteroidcrib729/havenfield-next-web-app), branch `main`, connected to the existing Vercel project `havenfield` and [portfolio origin](https://havenfield-portfolio.vercel.app).
+Updated 2026-10-16 (Asia/Karachi). Publication is authorized by the project owner. Target: public repository [asteroidcrib729/havenfield-next-web-app](https://github.com/asteroidcrib729/havenfield-next-web-app), branch `main`, connected to the existing Vercel project `havenfield` and [portfolio origin](https://havenfieldre.vercel.app).
 
 ## Section 01 — Pre-publication review
 

@@ -2,6 +2,8 @@
 
 Updated 2026-10-15 (Asia/Karachi). Status: active Production and Preview databases consolidated into Prisma project `havenfield`; the protected Preview cutover passed 26 hosted checks.
 
+Current maintenance note (2026-10-16): the owner-authorized retirement of `havenfield-preview-rollback` is complete after a fresh private export. Both active databases remain in `havenfield`; production is now `https://havenfieldre.vercel.app` and the verified protected Preview is [the current Preview](https://havenfield-riv3gj2i6-farazhussain-5000s-projects.vercel.app). The original cutover/rollback descriptions below preserve the 2026-10-15 snapshot. See [current maintenance evidence](maintenance-review-2026-10-16.json).
+
 ## Section 01 — Target organization
 
 The existing GitHub-linked project has been renamed from `havenfield-production` to `havenfield`, preserving its project ID and repository association. Its `main` branch retains database `havenfield-production`. The separate database `havenfield-preview` now belongs to its non-default `preview` branch. Both are ready in Singapore. The repository association remains `asteroidcrib729/havenfield-next-web-app`, active on default branch `main`.

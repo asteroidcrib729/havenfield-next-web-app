@@ -1,8 +1,8 @@
 # Havenfield operator guide
 
-Updated 2026-10-15. Verified canonical origin: `https://havenfield-portfolio.vercel.app`. Production and an independent protected Preview are deployed. The [deployment record](deployment.md) identifies their resources and verification; [release acceptance](release-acceptance.md) retains backup, accessibility and performance gates. Public GitHub delivery, hosted CI and native automatic deployments are verified in [Git delivery](github-publication.md).
+Updated 2026-10-16. Verified canonical origin: `https://havenfieldre.vercel.app`. Production and an independent protected Preview are deployed. The [deployment record](deployment.md) identifies their resources and verification; [release acceptance](release-acceptance.md) retains backup, accessibility and performance gates. Public GitHub delivery, hosted CI and native automatic deployments are verified in [Git delivery](github-publication.md).
 
-Both active databases now belong to the GitHub-linked Prisma project `havenfield`: `havenfield-production` on `main`, and `havenfield-preview` on `preview`. The verified protected Preview after consolidation is [the new Preview origin](https://havenfield-1f0w4kgvl-farazhussain-5000s-projects.vercel.app). The former standalone preview project is labeled `havenfield-preview-rollback`; its original database is a rollback copy. Older immutable Preview URLs retain that old connection. See [project consolidation](prisma-project-consolidation.md) before using or retiring them.
+Both active databases now belong to the GitHub-linked Prisma project `havenfield`: `havenfield-production` on `main`, and `havenfield-preview` on `preview`. The currently verified protected Preview is [the new-domain Preview](https://havenfield-riv3gj2i6-farazhussain-5000s-projects.vercel.app). The old `havenfield-preview-rollback` project was deleted on 2026-10-16 after a fresh private export. Older immutable Preview deployment URLs can contain its now-retired connection and must not be used for new editorial work. See [project consolidation](prisma-project-consolidation.md) before using or retiring them.
 
 ## Section 01 — Environment matrix
 
@@ -96,3 +96,7 @@ $havenfieldCli = '.\.cache\deployment-tools\node_modules\.bin\vercel.cmd'
 ```
 
 Initial generated publisher credentials are in ignored `.cache/deployment/owner-access.json`. Production and Preview private CLI environments are in their respective `.cache/deployment/*.env` files. Move deliberate access details to private password storage before clearing these caches. None belongs in Git, screenshots, public evidence or deployment uploads. This installed CLI and cached configuration are local operational state, not application source that a clone must ship.
+
+## Section 08 — Current domain and administrator access (2026-10-16)
+
+Production uses `https://havenfieldre.vercel.app`. Vercel Production `SITE_URL` and both environments' `NEXT_PUBLIC_SITE_URL` were corrected and rebuilt; Preview still uses its deployment-specific mutation origin. Both previous `havenfield-five.vercel.app` and `havenfield-portfolio.vercel.app` return 404. Follow [admin access](admin-access.md) to retrieve the existing private credentials or deliberately rotate them. [The maintenance record](maintenance-review-2026-10-16.json) contains sanitized current-domain, screenshot and rollback-deletion evidence.

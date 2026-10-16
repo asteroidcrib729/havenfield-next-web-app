@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-15",
+  "updatedAt": "2026-10-16",
   "timezone": "Asia/Karachi",
   "status": "READY",
-  "origin": "https://havenfield-portfolio.vercel.app",
+  "origin": "https://havenfieldre.vercel.app",
   "vercel": {
     "scope": "farazhussain-5000s-projects",
     "projectName": "havenfield",
@@ -12,18 +12,16 @@
     "region": "sin1",
     "cliVersion": "64.0.2",
     "production": {
-      "id": "dpl_Cra1EEeBLyMCADx2cxNLCGtWRBgn",
-      "url": "https://havenfield-l6hnqgy75-farazhussain-5000s-projects.vercel.app",
+      "id": "dpl_ApMseBkgT4pZhCNzcTyfyrjziMqr",
+      "url": "https://havenfield-mfoxbt7l9-farazhussain-5000s-projects.vercel.app",
       "readyState": "READY",
-      "source": "git",
-      "gitSha": "b946fd0499ab09f83d4a202ddeb4852577768986",
-      "gitRef": "main",
-      "automatic": true,
-      "timeToReadyMs": 37116
+      "source": "cli",
+      "gitSha": "fe721db1172d539c489f74882031f964bcaf8d84",
+      "domainUpdateVerified": true
     },
     "preview": {
-      "id": "dpl_A9yZiFMWAz1t6DDxN357N1KCbFSG",
-      "url": "https://havenfield-1f0w4kgvl-farazhussain-5000s-projects.vercel.app",
+      "id": "dpl_9ZQU6hFvjdGeG9Ckjz4skW76kqXB",
+      "url": "https://havenfield-riv3gj2i6-farazhussain-5000s-projects.vercel.app",
       "readyState": "READY",
       "protected": true,
       "source": "cli",
@@ -59,8 +57,12 @@
     "sharedProject": "havenfield",
     "githubRepository": "asteroidcrib729/havenfield-next-web-app",
     "githubConnection": "active",
-    "rollbackProject": "havenfield-preview-rollback",
-    "consolidationEvidence": "prisma-consolidation-evidence.json"
+    "consolidationEvidence": "prisma-consolidation-evidence.json",
+    "retiredRollbackProject": {
+      "name": "havenfield-preview-rollback",
+      "deletedOn": "2026-10-16",
+      "privateExportPreserved": true
+    }
   },
   "blob": {
     "production": {
@@ -73,11 +75,11 @@
     }
   },
   "source": {
-    "gitCommit": "b946fd0499ab09f83d4a202ddeb4852577768986",
+    "gitCommit": "fe721db1172d539c489f74882031f964bcaf8d84",
     "sourceManifestSha256": "dfa3decee246237e4c4325f93ab40beb88252e221a91132a17e67bec625cf729",
     "files": 127,
     "bytes": 8763816,
-    "gitCommitScope": "Verified Git deployment snapshot before the subsequent documentation-only completion commit",
+    "gitCommitScope": "Application revision used for the 2026-10-16 domain correction; a later documentation-only commit records the maintenance",
     "repository": "https://github.com/asteroidcrib729/havenfield-next-web-app",
     "sourceManifestScope": "Historical initial CLI-upload source selection, preserved as prior release evidence"
   },
@@ -106,7 +108,8 @@
       "postgresTests": 41,
       "browserJourneys": 8,
       "secretFindings": 0
-    }
+    },
+    "currentDomainReview": "maintenance-review-2026-10-16.json"
   },
   "remaining": [
     "Independent backups and hosted recovery",
