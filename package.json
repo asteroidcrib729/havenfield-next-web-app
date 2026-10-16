@@ -8,6 +8,7 @@
   },
   "scripts": {
     "dev": "next dev",
+    "dev:preview": "tsx scripts/dev-preview.ts",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
@@ -18,6 +19,7 @@
     "test:e2e": "node scripts/test-browser.mjs",
     "check": "npm run format:check && npm run typecheck && npm run lint && npm run test && npm run build",
     "db:migrate": "tsx scripts/database-migrate.ts",
+    "db:status": "tsx scripts/database-status.ts",
     "db:seed": "tsx scripts/database-seed.ts",
     "admin:password": "node scripts/admin-password.mjs",
     "test:postgres": "tsx scripts/test-postgres.ts",

@@ -12,20 +12,21 @@
     "region": "sin1",
     "cliVersion": "64.0.2",
     "production": {
-      "id": "dpl_ApMseBkgT4pZhCNzcTyfyrjziMqr",
-      "url": "https://havenfield-mfoxbt7l9-farazhussain-5000s-projects.vercel.app",
+      "id": "dpl_B8x1YgV3E19jvKCgqS2t1HK7AtJ5",
+      "url": "https://havenfield-6cvk12fza-farazhussain-5000s-projects.vercel.app",
       "readyState": "READY",
-      "source": "cli",
-      "gitSha": "fe721db1172d539c489f74882031f964bcaf8d84",
-      "domainUpdateVerified": true
+      "source": "git",
+      "gitSha": "4b3fb9dfcb120939943a26a840d31c7eef09dfde",
+      "automatic": true
     },
     "preview": {
-      "id": "dpl_9ZQU6hFvjdGeG9Ckjz4skW76kqXB",
-      "url": "https://havenfield-riv3gj2i6-farazhussain-5000s-projects.vercel.app",
+      "id": "dpl_BRa61m1XUqUjBxTysbLsNYar3Hdx",
+      "url": "https://havenfieldre-preview.vercel.app",
+      "immutableUrl": "https://havenfield-1q0o03q90-farazhussain-5000s-projects.vercel.app",
       "readyState": "READY",
       "protected": true,
       "source": "cli",
-      "consolidatedDatabase": true
+      "sourceScope": "Reviewed working-tree audit changes; subsequent main Git delivery records the final revision"
     },
     "priorProduction": "dpl_DgiRCmaxNBELUB3fKEqCtGvH6RMF",
     "gitIntegration": {
@@ -35,6 +36,12 @@
       "productionBranch": "main",
       "connected": true,
       "automaticDeploymentVerified": true
+    },
+    "development": {
+      "environment": "preview",
+      "localPreview": true,
+      "database": "havenfield-preview",
+      "sharedPreviewMedia": true
     }
   },
   "prisma": {
@@ -75,11 +82,11 @@
     }
   },
   "source": {
-    "gitCommit": "fe721db1172d539c489f74882031f964bcaf8d84",
+    "gitCommit": "4b3fb9dfcb120939943a26a840d31c7eef09dfde",
     "sourceManifestSha256": "dfa3decee246237e4c4325f93ab40beb88252e221a91132a17e67bec625cf729",
     "files": 127,
     "bytes": 8763816,
-    "gitCommitScope": "Application revision used for the 2026-10-16 domain correction; a later documentation-only commit records the maintenance",
+    "gitCommitScope": "Production snapshot before the subsequent audit-delivery Git commit",
     "repository": "https://github.com/asteroidcrib729/havenfield-next-web-app",
     "sourceManifestScope": "Historical initial CLI-upload source selection, preserved as prior release evidence"
   },
@@ -109,14 +116,13 @@
     "currentDomainReview": "maintenance-review-2026-10-16.json"
   },
   "remaining": [
-    "Independent backups and hosted recovery",
-    "Observed scheduled cron execution",
-    "Hosted revision-restoration and exact-time publication acceptance",
-    "Explicit media persistence after another redeploy",
-    "Platform client-address validation",
-    "Human screen-reader and zoom acceptance",
-    "Hosted performance and field Core Web Vitals"
+    "Independent backups and complete independent hosted recovery",
+    "Unambiguous scheduled-origin evidence and automated monitoring",
+    "Established cold invocation and compatible Production rollback",
+    "Human screen-reader/native zoom acceptance",
+    "Field INP when sufficient real-user data exists"
   ],
   "credentialsIncluded": false,
-  "evidenceSnapshot": true
+  "evidenceSnapshot": true,
+  "auditDelivery": "audit-delivery-evidence.json"
 }

@@ -40,6 +40,30 @@ describe("environment capability boundaries", () => {
       "/properties?region=Woodland&sort=space",
     );
   });
+  it("allows only an explicit loopback Preview while retaining hosted data requirements", () => {
+    const values = {
+      ...hosted,
+      APP_ENV: "preview",
+      LOCAL_PREVIEW: "1",
+      NEXT_PUBLIC_SITE_URL: "http://localhost:3000",
+      SITE_URL: "http://localhost:3000",
+    };
+    expect(serverEnvironment(values)).toMatchObject({
+      environment: "preview",
+      localPreview: true,
+      hosted: true,
+      mutationOrigin: "http://localhost:3000",
+    });
+    for (const invalid of [
+      { ...values, VERCEL: "1" },
+      { ...values, APP_ENV: "production" },
+      { ...values, APP_ENV: "development" },
+      { ...values, NEXT_PUBLIC_SITE_URL: "https://attacker.test" },
+      { ...values, SITE_URL: "https://attacker.test" },
+      { ...values, SESSION_SECRET: "" },
+    ])
+      expect(() => serverEnvironment(invalid)).toThrow();
+  });
   it("deduplicates article anchors and ignores fenced code", () => {
     expect(
       articleHeadings("## Daylight\n\n```md\n## Hidden\n```\n## Daylight\n### A quiet room").map(

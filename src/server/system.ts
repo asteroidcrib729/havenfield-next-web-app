@@ -22,5 +22,17 @@ export async function systemSummary() {
   const migrations = db
     ? await db.query("SELECT version,name,applied_at FROM schema_migrations ORDER BY version")
     : [];
-  return { configuration: config, databaseReady: database, actions, migrations };
+  const [maintenance] = db
+    ? await db.query(
+        "SELECT created_at FROM publisher_actions WHERE actor=? AND action=? ORDER BY created_at DESC,id DESC LIMIT 1",
+        ["maintenance", "inquiry.expiry"],
+      )
+    : [];
+  return {
+    configuration: config,
+    databaseReady: database,
+    actions,
+    migrations,
+    lastMaintenanceAt: maintenance ? String(maintenance.created_at) : null,
+  };
 }

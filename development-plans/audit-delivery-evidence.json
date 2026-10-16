@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-16",
+  "production": "https://havenfieldre.vercel.app",
+  "preview": "https://havenfieldre-preview.vercel.app",
+  "prisma": {
+    "project": "havenfield",
+    "computeApps": 0,
+    "production": { "database": "havenfield-production", "branch": "main", "status": "ready" },
+    "preview": { "database": "havenfield-preview", "branch": "preview", "status": "ready" },
+    "freePlanPolicy": {
+      "monthlyOperations": 200000,
+      "storageGb": 2,
+      "databases": 50,
+      "pooledConnections": 10,
+      "automatedBackups": false,
+      "inactivityPausing": false,
+      "vendorClaim": true
+    },
+    "usageSnapshot": {
+      "production": { "operations": 590, "sampledAt": "2026-10-16T16:05:00.620Z" },
+      "preview": { "operations": 202, "sampledAt": "2026-10-16T16:09:15.747Z" },
+      "scope": "Account-owned database CLI metrics; sampled before the remaining synthetic exercises, not a live counter"
+    }
+  },
+  "connections": {
+    "productionBindingRefused": true,
+    "tls": [
+      { "environment": "production", "encrypted": true, "authorized": true },
+      { "environment": "preview", "encrypted": true, "authorized": true }
+    ],
+    "developmentUsesPreviewDatabase": true,
+    "developmentUsesPreviewBlob": true,
+    "productionSecretsCopiedToLocalAppProfile": false
+  },
+  "checks": [
+    { "name": "Local Preview publisher UI login", "passed": true },
+    { "name": "Local request uses bound Preview PostgreSQL", "passed": true },
+    { "name": "Local upload uses hosted Preview Blob", "passed": true },
+    { "name": "Local draft creation persists to Preview", "passed": true },
+    { "name": "Actual Preview revision restoration creates a new draft", "passed": true },
+    { "name": "Scheduled article hidden before real UTC deadline", "passed": true },
+    { "name": "Scheduled article public after real UTC deadline", "passed": true },
+    { "name": "Verification article returned to private draft", "passed": true },
+    { "name": "Referenced media refuses deletion", "passed": true },
+    { "name": "Populated editor CSS 2x zoom has no horizontal document overflow", "passed": true },
+    { "name": "New hosted Preview database health", "passed": true },
+    { "name": "Hosted Preview publisher login", "passed": true },
+    { "name": "Hosted Preview sees locally created draft and hosted cover", "passed": true },
+    { "name": "Hosted revision restore preserves original content as draft", "passed": true },
+    { "name": "Hosted UTC publication hidden before deadline", "passed": true },
+    { "name": "Hosted UTC publication visible after deadline", "passed": true },
+    { "name": "Hosted private article noindex", "passed": true },
+    { "name": "Hosted image bytes match local upload", "passed": true },
+    { "name": "Synthetic spoof probe remains unauthorized", "passed": true },
+    { "name": "Synthetic spoof probe remains unauthorized", "passed": true },
+    {
+      "name": "Vercel overwrites spoofed forwarding addresses into one throttle identity",
+      "passed": true
+    },
+    { "name": "Spoofed addresses create no attacker-selected throttle keys", "passed": true },
+    { "name": "Production publisher still authenticates", "passed": true },
+    { "name": "Production cannot see the Preview-only draft", "passed": true },
+    { "name": "Production retains exactly three original public articles", "passed": true },
+    { "name": "Stable Preview remains protected", "passed": true },
+    { "name": "Browser login works on stable Preview origin", "passed": true },
+    { "name": "Draft and version survive real Preview redeploy", "passed": true },
+    { "name": "Referenced hosted image bytes survive redeploy", "passed": true },
+    { "name": "Referenced media still refuses deletion after redeploy", "passed": true },
+    { "name": "Redeployed Preview has isolated binding and operations timestamp", "passed": true },
+    { "name": "Operations UI exposes retained maintenance status", "passed": true },
+    { "name": "Synthetic draft cleanup", "passed": true },
+    { "name": "Synthetic hosted image cleanup after references removed", "passed": true },
+    { "name": "Preview returns to three original articles", "passed": true }
+  ],
+  "firstObservedPreviewHealthMs": 1199.6412000000003,
+  "coldStartProven": false,
+  "recovery": {
+    "privateBundleVerified": true,
+    "activeImageObjects": 1,
+    "totalImageBytes": 234042,
+    "databaseChecksum": "819b084db341e1da3b8afb4886f4288ac3af58fcf31fb7edc20975ecfff9cdf2",
+    "independentDestination": false
+  },
+  "syntheticResourcesRemoved": true,
+  "maintenance": {
+    "observedCompletedRuns": ["2026-10-15T03:17:08.386Z", "2026-10-16T03:17:08.194Z"],
+    "schedulerOriginIndependentlyProven": false,
+    "providerRequestLogQuery": "Denied for records older than 12 hours on the existing entitlement; no plan upgrade"
+  },
+  "plan02": {
+    "checked": 56,
+    "total": 64,
+    "remaining": 8,
+    "closedAuditItems": ["P02-02", "P02-03", "P02-05"],
+    "fieldInpMeasured": false,
+    "humanAccessibilitySignedOff": false
+  },
+  "privateValuesIncluded": false,
+  "dataAfterCleanup": [
+    { "environment": "production", "posts": 3, "revisions": 3, "activeMedia": 0, "inquiries": 0 },
+    { "environment": "preview", "posts": 3, "revisions": 3, "activeMedia": 0, "inquiries": 0 }
+  ],
+  "validation": {
+    "serviceTests": 59,
+    "postgresTests": 41,
+    "browserJourneys": 8,
+    "formatting": true,
+    "typecheck": true,
+    "lint": true,
+    "productionBuild": true
+  }
+}

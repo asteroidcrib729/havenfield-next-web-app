@@ -14,7 +14,7 @@ All brand copy, property data, article text, logos, and media are newly created.
 
 ## Run locally
 
-Use Node.js 24:
+For a fresh isolated SQLite setup, use Node.js 24 with blank database URLs, `APP_ENV=development` and `LOCAL_PREVIEW=0`:
 
 ```powershell
 npm.cmd ci
@@ -24,6 +24,8 @@ npm.cmd run dev
 ```
 
 Open `http://localhost:3000`. Without a PostgreSQL URL, local development uses an ignored SQLite database. The seed preserves existing edited articles.
+
+My current private operator profile instead connects localhost to the shared hosted Preview database and media store. I use `npm.cmd run db:status` to verify its binding and `npm.cmd run dev:preview` to start it without migrations or seeds. [Local Preview setup](development-plans/local-preview.md) explains the environment mapping and why Prisma shows “No deploy” for this Vercel-hosted application.
 
 For local editorial access, create `.env.local` from `.env.example` only if it does not already exist, set `ADMIN_EMAIL`, and run `npm.cmd run admin:password` in an interactive terminal. Save the generated password hash and session secret privately, restart the server and open `/admin/login`. My hosted Production and Preview accounts are already configured with separate passwords; the ignored local owner-access file holds those credentials. The [admin access guide](development-plans/admin-access.md) explains retrieval, setup and rotation. I do not publish default credentials.
 
@@ -46,12 +48,14 @@ Local browser checks use installed Edge, temporary synthetic credentials, and is
 
 I published this project to [GitHub](https://github.com/asteroidcrib729/havenfield-next-web-app) with passing clean-checkout CI and connected the existing Vercel project. Pushing to `main` now automatically deploys Production; other branches use Preview.
 
-Plan 02 is not fully accepted: [the current audit](development-plans/development-plan-02-audit.md) records 53 of 64 checked items and the 11 remaining composite requirements. Independent scheduled backups, complete hosted recovery and human accessibility/performance acceptance remain open release gates. I am planning the next content and product iteration in [Plan 03](development-plans/development-plan-03.md), including 28 new original images; these planned assets have not been generated yet.
+Plan 02 is not fully accepted: [the current audit](development-plans/development-plan-02-audit.md) records the initial snapshot; [the follow-up](development-plans/development-plan-02-delivery.md) brings the checklist to 56 of 64 checked items, with eight remaining. Independent scheduled backups, complete hosted recovery, human accessibility review and compatible Production rollback remain open release gates. Hosted mobile lab budgets pass; field INP remains unmeasured. I am planning the next content and product iteration in [Plan 03](development-plans/development-plan-03.md), including 28 new original images; these planned assets have not been generated yet.
 
 I keep all plans, progress, production instructions and asset records under [development-plans](development-plans/). Only this README belongs at the root as authored Markdown.
 
 - [Development plan 01](development-plans/development-plans-01.md)
 - [Development plan 02: product completion](development-plans/development-plan-02.md)
+- [Connected local Preview](development-plans/local-preview.md)
+- [Plan 02 immediate delivery](development-plans/development-plan-02-delivery.md)
 - [Plan 02 completion audit](development-plans/development-plan-02-audit.md)
 - [Development plan 03: content, imagery and improvements](development-plans/development-plan-03.md)
 - [Administrator access and credential setup](development-plans/admin-access.md)

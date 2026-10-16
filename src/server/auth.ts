@@ -1,5 +1,6 @@
 import "server-only";
 import { createHmac, randomBytes, scryptSync, timingSafeEqual } from "node:crypto";
+import { isIP } from "node:net";
 import { cookies } from "next/headers";
 import { AppError } from "./errors";
 import { getDatabase } from "./database";
@@ -121,9 +122,13 @@ export async function rateLimit(key: string, maximum: number, windowMs: number, 
   });
 }
 export function clientAddress(request: Request): string {
-  return process.env.VERCEL
-    ? request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown"
-    : "local-client";
+  // Only the Vercel ingress is trusted. Locally, forwarded headers are user input.
+  if (!process.env.VERCEL) return "local-client";
+  const address = (
+    request.headers.get("x-vercel-forwarded-for") || request.headers.get("x-forwarded-for")
+  )?.trim();
+  // Reject chains and malformed values rather than selecting an attacker-controlled hop.
+  return address && isIP(address) ? address : "unknown";
 }
 export async function login(request: Request, email: string, password: string): Promise<string> {
   sessionSecret();

@@ -37,6 +37,7 @@ export default defineConfig({
         ? `${process.env.E2E_OWNED_DIRECTORY}/uploads`
         : `${sqlitePath}.uploads`,
       APP_ENV: "development",
+      LOCAL_PREVIEW: "0",
       VERCEL_ENV: "",
       VERCEL_URL: "",
     },

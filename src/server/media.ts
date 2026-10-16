@@ -115,7 +115,7 @@ export async function storeImage(bytes: Buffer, alt = "", owner = "system"): Pro
     await finishMedia(id, blob.url, owner);
     return blob.url;
   }
-  if (process.env.VERCEL)
+  if (serverEnvironment().hosted)
     throw new AppError(503, "media_configuration", "Media storage is not configured");
   const directory = resolve(
     /* turbopackIgnore: true */ process.env.LOCAL_UPLOAD_DIR || ".data/uploads",

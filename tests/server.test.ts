@@ -32,6 +32,7 @@ import {
 import { saveAutosave, getAutosave, discardAutosave } from "../src/server/autosaves";
 import { listMedia, deleteMedia, reserveMedia } from "../src/server/media-registry";
 import { storeImage } from "../src/server/media";
+import { systemSummary } from "../src/server/system";
 import { exportDatabase, restoreDatabase } from "../src/server/backup";
 import { createDatabase } from "../src/server/database";
 import { apiError } from "../src/server/http";
@@ -642,7 +643,11 @@ describe("inquiry lifecycle and operational diagnostics", () => {
   it("purges expired records while preserving current records and excluding bodies from audit", async () => {
     const db = await getDatabase();
     await db.execute("UPDATE inquiries SET expires_at=?", ["2020-01-01T00:00:00.000Z"]);
-    expect(await purgeExpiredInquiries("editor@example.test")).toBeGreaterThan(0);
+    const maintenanceStarted = Date.now();
+    expect(await purgeExpiredInquiries("maintenance")).toBeGreaterThan(0);
+    const operations = await systemSummary();
+    expect(operations.databaseReady).toBe(true);
+    expect(Date.parse(operations.lastMaintenanceAt!)).toBeGreaterThanOrEqual(maintenanceStarted);
     expect((await listInquiries()).total).toBe(0);
     const actions = await db.query("SELECT * FROM publisher_actions");
     expect(actions.some((row) => row.action === "article.restore")).toBe(true);

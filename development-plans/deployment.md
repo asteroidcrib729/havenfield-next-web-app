@@ -61,7 +61,7 @@ Configure these values privately in Vercel for the intended environment:
 - `NEXT_PUBLIC_SITE_URL`: the actual canonical HTTPS production origin, set before building. The local default is localhost and must not become production SEO output.
 - `DATABASE_URL`: the provider's pooled standard PostgreSQL connection URL. Remote certificates and hostnames are verified. `DATABASE_CA_CERT` is available for a private CA; insecure TLS disabling is not supported.
 - `ADMIN_EMAIL`, `ADMIN_PASSWORD_HASH`, `SESSION_SECRET`: the deliberate publisher identity and private authentication settings.
-- `SITE_URL`: exact trusted mutation origin; Preview can omit it to use `https://${VERCEL_URL}` independently of the canonical Production origin.
+- `SITE_URL`: exact trusted mutation origin; current hosted Preview uses `https://havenfieldre-preview.vercel.app`; explicit local Preview uses localhost. A deployment-specific Preview without a stable alias may omit it to use `https://${VERCEL_URL}`.
 - `CRON_SECRET`: independent private secret for the daily retention job.
 - `BLOB_READ_WRITE_TOKEN`: access to a public Vercel Blob store, required for image uploads on Vercel. Review storage quota/billing before connecting a store. Existing approved `/media/` assets or HTTPS cover URLs remain usable without uploads.
 
@@ -91,7 +91,7 @@ Production functions exclude local databases, environment files, test artifacts,
 
 Run `npm.cmd run check`, `npm.cmd run test:postgres` and `npm.cmd run test:e2e` before delivery. The PostgreSQL target uses an isolated loopback test cluster or an explicitly disposable local service. Browser tests use synthetic temporary credentials and local SQLite, not production accounts. They launch the installed Edge browser; change the Playwright channel to a locally installed Chromium browser if necessary.
 
-Production and protected Preview passed real browser/API/database/Blob verification on 2026-10-15. The corrected Production build was checked through authenticated staging requests and promoted without rebuilding. Cross-environment database bindings reject accidental access, and all synthetic articles, images and inquiries were removed. Independent backups, hosted recovery, human accessibility acceptance, real field performance and hosted CI remain open; see [release acceptance](release-acceptance.md). The configured daily maintenance job has been manually invoked with its private credential, but scheduled execution itself has not yet been observed.
+Production and protected Preview passed real browser/API/database/Blob verification on 2026-10-15. The corrected Production build was checked through authenticated staging requests and promoted without rebuilding. Cross-environment database bindings reject accidental access, and all synthetic articles, images and inquiries were removed. Independent backups, complete hosted recovery, human accessibility acceptance and real field performance remain open; hosted CI is now proven in the later delivery records; see [release acceptance](release-acceptance.md). The configured daily maintenance job has been manually invoked with its private credential, but scheduled execution itself has not yet been observed.
 
 ## Section 06 — Access, future releases and rollback
 
@@ -106,3 +106,7 @@ The previous application deployment is `dpl_4Ztm7ch8DUPbMMWFvxyova3k8e5z`; it us
 ## Section 07 — New domain and rollback retirement (2026-10-16)
 
 Current production is `https://havenfieldre.vercel.app`. Corrected Production `SITE_URL` and both environments' canonical setting, redeployed both, and verified canonical/feed/sitemap URLs and existing publisher access. The production deployment is `dpl_ApMseBkgT4pZhCNzcTyfyrjziMqr`; current protected Preview is `dpl_9ZQU6hFvjdGeG9Ckjz4skW76kqXB`. Captured fresh full desktop/mobile landing screenshots. Deleted only Prisma project `havenfield-preview-rollback`, preserving both active databases and all publisher/media settings. Historical release tables and JSON snapshots above retain their original deployment facts.
+
+## Section 08 — Local Preview and current hosted verification (2026-10-16)
+
+The stable protected Preview is `https://havenfieldre-preview.vercel.app`, with explicit `SITE_URL` matching that alias. Development is configured privately for localhost with the same Preview PostgreSQL/Blob/publisher settings. Production remains independent. [Local setup](local-preview.md), [audit delivery](development-plan-02-delivery.md) and [sanitized checks](audit-delivery-evidence.json) supersede the earlier Preview-origin instructions and open lab-performance assumptions. The latest CLI Preview snapshot is `dpl_BRa61m1XUqUjBxTysbLsNYar3Hdx`; real revision restoration, UTC publication and retained image bytes across redeployment pass.

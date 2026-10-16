@@ -4,6 +4,7 @@ import { adminApi, buttonClass } from "./api";
 type Summary = {
   configuration: Record<string, string | number | boolean>;
   databaseReady: boolean;
+  lastMaintenanceAt: string | null;
   actions: { actor: string; action: string; target: string; created_at: string }[];
   migrations: { version: number; name: string; applied_at: string }[];
 };
@@ -45,16 +46,43 @@ export function SystemPanel() {
                 <div key={key}>
                   <dt className="text-sm text-muted">{key}</dt>
                   <dd className="mt-1 font-medium">
-                    {typeof value === "boolean"
+                    {key === "localPreview"
                       ? value
-                        ? "Ready"
-                        : "Not configured / unavailable"
-                      : String(value)}
+                        ? "Enabled"
+                        : "Disabled"
+                      : typeof value === "boolean"
+                        ? value
+                          ? "Ready"
+                          : "Not configured / unavailable"
+                        : String(value)}
                   </dd>
                 </div>
               ),
             )}
           </dl>
+          <section
+            className="rounded-2xl border border-line bg-white p-5"
+            aria-labelledby="maintenance-heading"
+          >
+            <h2 id="maintenance-heading" className="font-display text-2xl">
+              Retention maintenance
+            </h2>
+            <p className="mt-3 text-sm leading-6">
+              Last completed protected run (UTC):{" "}
+              {data.lastMaintenanceAt ? (
+                <time dateTime={data.lastMaintenanceAt}>
+                  {new Date(data.lastMaintenanceAt).toISOString()}
+                </time>
+              ) : (
+                "No completed run recorded"
+              )}
+              .
+            </p>
+            <p className="mt-2 text-xs leading-6 text-muted">
+              Production is scheduled daily during the 03:00 UTC hour; Preview runs on demand.
+              Review the operator guide when checking scheduled execution and backups.
+            </p>
+          </section>
           <h2 className="font-display text-2xl">Applied migrations</h2>
           <ul className="space-y-2 text-sm">
             {data.migrations.map((m) => (

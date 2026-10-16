@@ -154,6 +154,7 @@ try {
         DATABASE_URL: "",
         DIRECT_DATABASE_URL: "",
         APP_ENV: "development",
+        LOCAL_PREVIEW: "0",
         VERCEL_ENV: "",
         VERCEL_URL: "",
         NEXT_PUBLIC_SITE_URL: "",

@@ -19,6 +19,7 @@ try {
         E2E_OWNED_DIRECTORY: directory,
         E2E_SQLITE_PATH: resolve(directory, "database.sqlite"),
         APP_ENV: "development",
+        LOCAL_PREVIEW: "0",
         VERCEL_ENV: "",
         VERCEL: "",
         VERCEL_URL: "",

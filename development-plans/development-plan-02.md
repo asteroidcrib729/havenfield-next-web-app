@@ -1,5 +1,7 @@
 # Development plan 02: complete the Havenfield product
 
+Current follow-up (2026-10-16): **56/64 checked; eight open**. [Immediate delivery evidence](development-plan-02-delivery.md) closes PostgreSQL policy/quota verification, hosted client-address validation and current hosted lab performance. Field INP is not measured; human accessibility and recovery/operations gates remain open.
+
 Created 2026-10-14; deployment and GitHub delivery updated 2026-10-15 (Asia/Karachi). Status: implemented, published with passing hosted CI and automatically deployed from GitHub to Vercel; full release acceptance still requires independent recovery, human accessibility and performance evidence. The [2026-10-16 completion audit](development-plan-02-audit.md) confirms 53 checked of 64 total items; 11 remain open. See the [execution record](development-plan-02-progress.md), [Git delivery](github-publication.md), [deployment](deployment.md) and [database recovery procedure](database-recovery.md).
 
 Previous foundation: [development plan 01](development-plans-01.md). Supporting records: [implementation](implementation.md), [deployment](deployment.md), [database comparison](database-options.md), [cleanup](cleanup.md), [brand and assets](brand-and-assets.md), and [hero video generation](hero-video-generation.md).
@@ -46,7 +48,7 @@ The recorded foundation checks passed 21 service/content tests and three browser
 - [x] Test a fresh installation and an upgrade from the existing version-1 schema with content, revisions and redirects intact. Keep seeding idempotent and separate from migrations.
 - [ ] Establish independent database exports and a restoration command/procedure. Choose explicit backup frequency and retention, and restore into an isolated database before calling recovery ready.
 - [x] Include media metadata and object inventories in recovery planning; database backup alone does not preserve Blob objects.
-- [ ] Configure the account-owned production PostgreSQL service and verify TLS, pooled connections, quotas and the explicit no-inactivity-pause requirement. Prisma Postgres is the documented candidate, subject to its current account policy and limits; do not claim unlimited free availability.
+- [x] Configure the account-owned production PostgreSQL service and verify TLS, pooled connections, quotas and the explicit no-inactivity-pause requirement. Prisma Postgres is the documented candidate, subject to its current account policy and limits; do not claim unlimited free availability.
 
 Progress: version-2 database exports, historical-format upgrades, complete media inventories, checksummed byte bundles, isolated CLI restoration and seven-daily/four-weekly retention tooling pass locally. The owner is the initial backup operator. Independent protected storage, actual daily scheduling and hosted Blob restoration remain open (items 6/8 and hosted release gates).
 
@@ -59,7 +61,7 @@ Keep the current Node.js Next.js Route Handlers and reusable `src/server` servic
 - [x] Centralize typed environment validation for canonical origin, allowed mutation origins, database, publisher secrets and media storage. Distinguish required capabilities from optional integrations; produce actionable configuration errors without exposing values.
 - [x] Separate development, Preview and Production secrets/data. Preview publishing, deletions and uploads must not mutate production content. Validate trusted preview request origins independently of the production canonical URL.
 - [x] Prevent Preview indexing with deployment-aware metadata/response headers and robots behavior. Authentication continues to protect private routes independently of indexing controls.
-- [ ] Require a non-default rate-limit hashing secret for hosted deployments; remove the current development-secret fallback from hosted operation. Verify client-address handling in the actual Vercel environment.
+- [x] Require a non-default rate-limit hashing secret for hosted deployments; remove the current development-secret fallback from hosted operation. Verify client-address handling in the actual Vercel environment.
 - [x] Exercise invalid credentials, expired/tampered sessions, wrong origins, absent mutation headers, throttling and password/secret rotation on real route handlers. Document deliberate publisher recovery without adding public signup or shipping reset credentials.
 - [x] Add durable publisher action records for publish/unpublish, scheduling, revision restoration, deletion and media cleanup. Record actor/action/time/target; exclude passwords, secrets and complete inquiry or article bodies from logs.
 - [x] Add sanitized structured errors and request IDs. Preserve useful operator diagnostics while keeping public responses generic. Add bounded database/query timeouts and accurate rate-limit retry information.
@@ -117,7 +119,7 @@ Preserve the existing blog lifecycle, SEO fields, safe rendering and optimistic 
 - [x] Expand accessibility checks beyond the contact form to public navigation, property filters/galleries, article pages, login, populated editor, revision dialogs, media picker and inquiry inbox.
 - [ ] Perform manual keyboard and screen-reader checks for labels, announcements, focus order/restoration, modal containment, gallery changes, error summaries and video controls. Include 200% zoom and narrow populated states.
 - [x] Preserve reduced-motion/data-saving behavior and verify that fallback media remains visible after a video load/decode failure.
-- [ ] Measure a real mobile production run before setting budgets. Initial targets: Lighthouse performance/accessibility/SEO at least 90 on representative public routes; LCP at most 2.5 seconds, CLS at most 0.1, and INP at most 200 ms when sufficient field data exists. Treat lab results as measurements, not field guarantees.
+- [x] Measure a real mobile production run before setting budgets. Initial targets: Lighthouse performance/accessibility/SEO at least 90 on representative public routes; LCP at most 2.5 seconds, CLS at most 0.1, and INP at most 200 ms when sufficient field data exists. Treat lab results as measurements, not field guarantees.
 - [x] Optimize image sizes, fonts, hero loading and unnecessary client bundles in response to measured bottlenecks. Avoid a heavier animation stack without a demonstrated product benefit.
 - [x] Bound repeated journal queries with request-scoped deduplication and carefully designed caching. Test publication changes and scheduled visibility under any cache; do not trade correctness for lower query usage.
 - [x] Test larger synthetic datasets, query plans, pagination and pool limits, and document expected monthly database/storage operation use against the selected free allowance.

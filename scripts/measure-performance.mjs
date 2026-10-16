@@ -11,6 +11,7 @@ const directory = await mkdtemp(resolve(".data/performance-test-"));
 const environment = {
   ...process.env,
   APP_ENV: "development",
+  LOCAL_PREVIEW: "0",
   VERCEL: "",
   VERCEL_ENV: "",
   VERCEL_URL: "",

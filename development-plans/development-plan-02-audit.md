@@ -1,6 +1,8 @@
 # Development plan 02: completion audit
 
-Audited 2026-10-16 (Asia/Karachi) against the current [Plan 02 checklist](development-plan-02.md), source, CI/release evidence and new-domain hosted checks. **Verdict: not fully complete. There are 53 checked items out of 64, with 11 unchecked composite acceptance items.** This is a checklist count, not a claim that 83% of implementation effort remains measurable or that every checked item was re-executed during this documentation review.
+**Current follow-up: 56/64 checked; eight acceptance entries remain open.** [Delivered work and current evidence](development-plan-02-delivery.md) supersede the initial checklist count below. The initial audit remains as a dated comparison.
+
+Initial audit snapshot, 2026-10-16 (Asia/Karachi) against the current [Plan 02 checklist](development-plan-02.md), source, CI/release evidence and new-domain hosted checks. **Verdict: not fully complete. There are 53 checked items out of 64, with 11 unchecked composite acceptance items.** Checklist counts do not measure implementation effort, and earlier evidence was not all re-executed during the initial documentation review.
 
 ## Section 01 — What is delivered and verified
 
@@ -10,7 +12,7 @@ Hosted evidence includes 24 initial release check groups, 26 post-consolidation 
 
 Current production is [havenfieldre.vercel.app](https://havenfieldre.vercel.app). Both active databases are in Prisma project `havenfield`, with production on `main` and preview on `preview`. The retired rollback project was deleted only after a fresh private export and active-resource/dependency checks. Current domain and deletion evidence is in [the maintenance record](maintenance-review-2026-10-16.json).
 
-## Section 02 — Eleven outstanding checklist entries
+## Section 02 — Eleven entries outstanding at the initial snapshot
 
 | ID     | Plan 02 item / gate                                                      | Delivered portion                                                                                    | Evidence still required                                                                                                                                                     |
 | ------ | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -37,3 +39,7 @@ Private local exports are useful rollback artifacts but are not independent off-
 ## Section 04 — Follow-through
 
 [Plan 03](development-plan-03.md) starts by carrying forward these acceptance requirements, then adds 28 original images, richer per-page content and selected product features. Update Plan 02's individual checkboxes only when the corresponding missing evidence is recorded. Keep this dated audit as the snapshot of what was verified on 2026-10-16.
+
+## Section 05 — Follow-up delivery on 2026-10-16
+
+**Current status: 56/64 checked, eight open.** [The delivery follow-up](development-plan-02-delivery.md) supersedes the initial 53/64 count above. P02-02 is closed with current account usage, policy and certificate-verified TLS; P02-03 with a real Vercel spoofed-header/throttle exercise; P02-05 with nine passing hosted mobile lab runs. Field INP remains unmeasured and its conditional real-user requirement is not claimed passed. Additional hosted revision, timed-publication and media-persistence portions of P02-06 passed; independent hosted image recovery and established cold invocation remain open. See [sanitized evidence](audit-delivery-evidence.json) and [local Preview instructions](local-preview.md).

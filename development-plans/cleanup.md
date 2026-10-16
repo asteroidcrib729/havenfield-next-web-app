@@ -60,3 +60,7 @@ Removed private Vercel project/team, Prisma project/database, Blob store and gen
 ## Retired Prisma rollback project (2026-10-16)
 
 The owner explicitly requested deletion of `havenfield-preview-rollback`. Verified its exact project identity, confirmed both active databases belonged to the shared Havenfield project, checked that the target contained only the original preview database and no Compute apps/object-store buckets, and created a fresh private checksummed export. Deleted the target project through the authenticated Prisma CLI and verified it disappeared from the project inventory. Production/Preview credentials and active databases were preserved; existing admin access and public content pass at the new domain. No local rollback exports, live Blob stores or active project resources were deleted. Historical immutable Preview URLs using the removed database are retired. [Maintenance evidence](maintenance-review-2026-10-16.json) records sanitized results.
+
+## Synthetic audit resources (2026-10-16)
+
+Removed only the synthetic Preview article and uploaded image created for the local/hosted revision, timing and redeployment exercises. Both environments retain their original three articles; Production content/schema and credentials were preserved. Kept the private recovery bundle, previous local profile and operator verification artifacts in ignored storage. Existing maintenance/action history and legitimate rate-limit buckets were retained; synthetic failed-login email keys were removed. No paid resource or extra database was created.

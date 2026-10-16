@@ -8,6 +8,15 @@ export default defineConfig({
     },
   },
   test: {
+    env: {
+      APP_ENV: "development",
+      LOCAL_PREVIEW: "0",
+      DATABASE_URL: "",
+      DIRECT_DATABASE_URL: "",
+      BLOB_READ_WRITE_TOKEN: "",
+      VERCEL: "",
+      VERCEL_ENV: "",
+    },
     environment: "node",
     include: ["tests/**/*.test.ts"],
     exclude: ["tests/postgres/**"],

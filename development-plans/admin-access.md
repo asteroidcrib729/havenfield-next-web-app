@@ -25,13 +25,13 @@ With no `DATABASE_URL`, local development uses the ignored SQLite database. Prep
 
 In Vercel, open project **havenfield → Settings → Environment Variables**. Select exactly the environment being changed, then privately configure:
 
-| Variable               | Value / purpose                                                                                                                            |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `ADMIN_EMAIL`          | Deliberate editor email; use the exact intended identity                                                                                   |
-| `ADMIN_PASSWORD_HASH`  | The full scrypt value produced by `npm.cmd run admin:password`; store as Secret                                                            |
-| `SESSION_SECRET`       | An independent random value of at least 32 characters; the generator provides one; store as Secret                                         |
-| `NEXT_PUBLIC_SITE_URL` | `https://havenfieldre.vercel.app` for Production and Preview canonical metadata                                                            |
-| `SITE_URL`             | `https://havenfieldre.vercel.app` in Production; leave unset in Preview so Vercel's deployment-specific URL determines the mutation origin |
+| Variable               | Value / purpose                                                                                                                                   |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ADMIN_EMAIL`          | Deliberate editor email; use the exact intended identity                                                                                          |
+| `ADMIN_PASSWORD_HASH`  | The full scrypt value produced by `npm.cmd run admin:password`; store as Secret                                                                   |
+| `SESSION_SECRET`       | An independent random value of at least 32 characters; the generator provides one; store as Secret                                                |
+| `NEXT_PUBLIC_SITE_URL` | `https://havenfieldre.vercel.app` for Production and Preview canonical metadata                                                                   |
+| `SITE_URL`             | `https://havenfieldre.vercel.app` in Production; `https://havenfieldre-preview.vercel.app` in hosted Preview; localhost in explicit local Preview |
 
 Use independent production and preview passwords/session secrets. Preserve `DATABASE_URL`, Blob credentials and maintenance settings when rotating an editor credential. Redeploy the selected environment after saving: editing a Vercel variable does not update an already built deployment. Verify login, article access, logout and old-session rejection. A password-hash or session-secret change invalidates existing publisher sessions by design.
 
@@ -43,8 +43,12 @@ If you automate updates, pass secrets using a private file/stdin rather than a c
 | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | Incorrect credentials                                | Correct environment/password, trimmed configured email and complete scrypt hash; do not try to sign in with the hash     |
 | Editorial account is not configured                  | All three auth variables are present on that deployment, and the deployment was rebuilt after saving them                |
-| Request origin is not allowed after changing domains | Production `SITE_URL`, public canonical and the browser origin agree; Preview uses its exact deployment origin           |
+| Request origin is not allowed after changing domains | Production `SITE_URL`, public canonical and the browser origin agree; Preview uses its configured stable alias origin    |
 | Programmatic write is rejected                       | Send the exact `Origin`, `x-requested-with: Havenfield`, valid session cookie and the route's documented payload/version |
 | Private Preview shows Vercel login                   | Use an authorized Vercel account; platform protection and the application's publisher session are separate               |
 
 The current account remains a single publisher. Multiple editors, roles and invitation/recovery flows need a separate security design before implementation.
+
+## Section 05 — Current local Preview profile
+
+The current ignored `.env.local` uses the Preview publisher/hash/session settings and Preview PostgreSQL/Blob services. Sign into localhost with the saved Preview password; Production retains its separate password. Use [the local Preview guide](local-preview.md) before changing this profile or pulling Vercel variables.

@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-16",
+  "origin": "https://havenfieldre.vercel.app",
+  "measuredAt": "2026-10-16T16:10:14.606Z",
+  "applicationBaseRevision": "4b3fb9dfcb120939943a26a840d31c7eef09dfde",
+  "environment": "Actual Vercel Production, Edge headless Lighthouse mobile simulated throttling, three sequential runs per route; lab measurements, not field data",
+  "medians": [
+    {
+      "route": "/",
+      "performance": 100,
+      "accessibility": 100,
+      "seo": 100,
+      "lcpMs": 1640.2227,
+      "cls": 0,
+      "minimumPerformance": 96,
+      "maximumLcpMs": 2308.4075000000003
+    },
+    {
+      "route": "/properties",
+      "performance": 99,
+      "accessibility": 100,
+      "seo": 100,
+      "lcpMs": 1594.1117,
+      "cls": 0,
+      "minimumPerformance": 97,
+      "maximumLcpMs": 1874.0242
+    },
+    {
+      "route": "/journal/a-clearer-guide-to-your-first-viewing",
+      "performance": 96,
+      "accessibility": 100,
+      "seo": 100,
+      "lcpMs": 2413.6041999999998,
+      "cls": 0,
+      "minimumPerformance": 93,
+      "maximumLcpMs": 2470.4932
+    }
+  ],
+  "runs": [
+    {
+      "run": 1,
+      "route": "/",
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "seo": 100
+      },
+      "lcpMs": 2308.4075000000003,
+      "cls": 0,
+      "tbtMs": 138
+    },
+    {
+      "run": 1,
+      "route": "/properties",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "seo": 100
+      },
+      "lcpMs": 1874.0242,
+      "cls": 0.07290400972053462,
+      "tbtMs": 137.99999999999977
+    },
+    {
+      "run": 1,
+      "route": "/journal/a-clearer-guide-to-your-first-viewing",
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "seo": 100
+      },
+      "lcpMs": 2413.6041999999998,
+      "cls": 0,
+      "tbtMs": 161
+    },
+    {
+      "run": 2,
+      "route": "/",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "seo": 100
+      },
+      "lcpMs": 1640.2227,
+      "cls": 0,
+      "tbtMs": 60
+    },
+    {
+      "run": 2,
+      "route": "/properties",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "seo": 100
+      },
+      "lcpMs": 1594.1117,
+      "cls": 0,
+      "tbtMs": 67
+    },
+    {
+      "run": 2,
+      "route": "/journal/a-clearer-guide-to-your-first-viewing",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "seo": 100
+      },
+      "lcpMs": 1482.7678,
+      "cls": 0,
+      "tbtMs": 67.5
+    },
+    {
+      "run": 3,
+      "route": "/",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "seo": 100
+      },
+      "lcpMs": 1598.8429999999998,
+      "cls": 0,
+      "tbtMs": 59.5
+    },
+    {
+      "run": 3,
+      "route": "/properties",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "seo": 100
+      },
+      "lcpMs": 1577.4823000000001,
+      "cls": 0,
+      "tbtMs": 55
+    },
+    {
+      "run": 3,
+      "route": "/journal/a-clearer-guide-to-your-first-viewing",
+      "scores": {
+        "performance": 93,
+        "accessibility": 100,
+        "seo": 100
+      },
+      "lcpMs": 2470.4932,
+      "cls": 0,
+      "tbtMs": 219.5
+    }
+  ],
+  "fieldInpMs": null
+}

@@ -29,3 +29,7 @@ The first documentation delivery's browser run caught a transient upload-button 
 ## Section 06 — Repository-wide formatting (2026-10-16)
 
 Added pinned Prettier and SQL formatting tooling, root-recursive `format`/`format:check` scripts, shared configuration and cross-platform LF checkout rules. Applied the initial formatting pass to applicable source, tests, scripts, configuration, documentation, SVG assets and the mutable SQL schema. The standard `check` command and existing CI now enforce formatting. Applied migration files 001/002 retain their original bytes and ledger checksums; generated/private/runtime files remain excluded. See [formatting coverage and migration rules](formatting.md).
+
+## Section 07 — Audit delivery and connected local Preview (2026-10-16)
+
+Added explicit safe local Preview configuration and launcher/readiness commands, with separate Production data and test isolation. Strengthened Vercel client-address validation and added ingress/localhost regression coverage. The Operations screen now exposes the latest completed retention-maintenance timestamp. Verified both PostgreSQL client TLS connections, current account usage/policy, real hosted revision/scheduling flows, media persistence across redeployment and passing hosted mobile lab budgets. Three Plan 02 entries close; eight remain open. See [audit delivery](development-plan-02-delivery.md) and [local Preview](local-preview.md).
