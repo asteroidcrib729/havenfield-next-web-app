@@ -1,14 +1,196 @@
-import {it,expect} from 'vitest';
-import {mkdtemp,mkdir,rm,writeFile,readdir,readFile} from 'node:fs/promises';
-import {resolve} from 'node:path';
-import {createHash,randomUUID} from 'node:crypto';
-import {execFile} from 'node:child_process';
-import {promisify} from 'node:util';
-import sharp from 'sharp';
-import {exportDatabase} from '../src/server/backup';
-import {remapRecoveryMedia} from '../src/server/recovery-media';
-import {createDatabase} from '../src/server/database';
-const run=promisify(execFile);
-it('exports and restores real image bytes through the independent recovery CLIs',async()=>{await mkdir('.data',{recursive:true});const root=await mkdtemp(resolve('.data/recovery-cli-test-'));const source=resolve(root,'source.sqlite'),uploads=resolve(root,'uploads'),destination=resolve(root,'backups'),target=resolve(root,'restored.sqlite'),restoredImages=resolve(root,'restored-images');await mkdir(uploads);const id=randomUUID(),key=id+'.webp';const bytes=await sharp({create:{width:8,height:8,channels:3,background:'#875a40'}}).webp().toBuffer();await writeFile(resolve(uploads,key),bytes);const db=await createDatabase({url:'',sqlitePath:source});await db.execute("INSERT INTO media(id,object_key,url,storage,width,height,bytes,content_type,alt,owner,created_at,state) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)",[id,key,'/api/media/'+key,'local',8,8,bytes.length,'image/webp','Synthetic CLI image','test','2026-10-14T00:00:00.000Z','active']);const articleId=randomUUID(),now="2026-10-14T00:00:00.000Z",url="/api/media/"+key;const snapshot={id:articleId,slug:"recovery-media-story",title:"Original recovery story",excerpt:"A synthetic article tied to verified local image bytes.",body:"## A restored image\n\nOriginal test writing with ![A synthetic image]("+url+").",author:"Havenfield",category:"Design",tags:[],coverImage:url,coverAlt:"Synthetic CLI image",status:"published",publishedAt:now,seoTitle:"",seoDescription:"",canonicalUrl:"",noindex:false,version:1,createdAt:now,updatedAt:now};await db.execute("INSERT INTO posts(id,slug,title,excerpt,body,author,category,tags,cover_image,cover_alt,status,published_at,seo_title,seo_description,canonical_url,noindex,version,created_at,updated_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",[articleId,snapshot.slug,snapshot.title,snapshot.excerpt,snapshot.body,snapshot.author,snapshot.category,"[]",url,snapshot.coverAlt,"published",now,"","","",0,1,now,now]);await db.execute("INSERT INTO post_revisions(id,post_id,version,snapshot,created_at) VALUES(?,?,?,?,?)",[randomUUID(),articleId,1,JSON.stringify(snapshot),now]);await db.execute("INSERT INTO slug_redirects(slug,post_id) VALUES(?,?)",["previous-recovery-story",articleId]);for(const kind of ["cover","inline","revision"])await db.execute("INSERT INTO media_references(media_id,post_id,kind) VALUES(?,?,?)",[id,articleId,kind]);await db.close();const env={...process.env,APP_ENV:'development',VERCEL_ENV:'',VERCEL:'',DATABASE_URL:'',DIRECT_DATABASE_URL:'',SQLITE_PATH:source,LOCAL_UPLOAD_DIR:uploads,BACKUP_DESTINATION:destination,BLOB_READ_WRITE_TOKEN:'',RESTORE_DATABASE_URL:'',RESTORE_SQLITE_PATH:target,RESTORE_UPLOAD_DIR:restoredImages};
-  try{await run(process.execPath,['--import','tsx','scripts/recovery-export.ts'],{env,timeout:30000});const [name]=await readdir(destination);await run(process.execPath,['--import','tsx','scripts/recovery-restore.ts',resolve(destination,name)],{env,timeout:30000});expect(await readFile(resolve(restoredImages,key))).toEqual(bytes);const restored=await createDatabase({url:'',sqlitePath:target});try{expect((await restored.query('SELECT url FROM media'))[0].url).toBe('/api/media/'+key);expect((await restored.query('SELECT cover_image,body,status FROM posts'))[0]).toEqual({cover_image:url,body:snapshot.body,status:'published'});expect(await restored.query('SELECT * FROM post_revisions')).toHaveLength(1);expect((await restored.query('SELECT post_id FROM slug_redirects'))[0].post_id).toBe(articleId);expect(await restored.query('SELECT * FROM media_references')).toHaveLength(3);const original=await exportDatabase(restored);const promoted=remapRecoveryMedia(original,new Map([[id,{url:"https://restore.public.blob.vercel-storage.com/journal/production/"+key,objectKey:"journal/production/"+key}]]));expect(promoted.payload.tables.media[0].storage).toBe("blob");expect(promoted.payload.tables.posts[0].cover_image).toContain("https://restore.");expect(promoted.payload.tables.post_revisions[0].snapshot).toContain("https://restore.");expect(original.payload.tables.media[0].storage).toBe("local");const encoded=structuredClone(original);encoded.payload.tables.posts[0].body="![Description](/api/%6dedia/"+key+")";encoded.checksum=createHash("sha256").update(JSON.stringify(encoded.payload)).digest("hex");expect(remapRecoveryMedia(encoded,new Map([[id,{url:"https://restore.public.blob.vercel-storage.com/"+key,objectKey:"journal/production/"+key}]])).payload.tables.posts[0].body).toContain("https://restore.");}finally{await restored.close();}await expect(run(process.execPath,['--import','tsx','scripts/recovery-restore.ts',resolve(destination,name)],{env,timeout:30000})).rejects.toThrow();}finally{if(root.startsWith(resolve('.data/recovery-cli-test-')))await rm(root,{recursive:true,force:true,maxRetries:5});}
-},60000);
+import { it, expect } from "vitest";
+import { mkdtemp, mkdir, rm, writeFile, readdir, readFile } from "node:fs/promises";
+import { resolve } from "node:path";
+import { createHash, randomUUID } from "node:crypto";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
+import sharp from "sharp";
+import { exportDatabase } from "../src/server/backup";
+import { remapRecoveryMedia } from "../src/server/recovery-media";
+import { createDatabase } from "../src/server/database";
+const run = promisify(execFile);
+it("exports and restores real image bytes through the independent recovery CLIs", async () => {
+  await mkdir(".data", { recursive: true });
+  const root = await mkdtemp(resolve(".data/recovery-cli-test-"));
+  const source = resolve(root, "source.sqlite"),
+    uploads = resolve(root, "uploads"),
+    destination = resolve(root, "backups"),
+    target = resolve(root, "restored.sqlite"),
+    restoredImages = resolve(root, "restored-images");
+  await mkdir(uploads);
+  const id = randomUUID(),
+    key = id + ".webp";
+  const bytes = await sharp({ create: { width: 8, height: 8, channels: 3, background: "#875a40" } })
+    .webp()
+    .toBuffer();
+  await writeFile(resolve(uploads, key), bytes);
+  const db = await createDatabase({ url: "", sqlitePath: source });
+  await db.execute(
+    "INSERT INTO media(id,object_key,url,storage,width,height,bytes,content_type,alt,owner,created_at,state) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)",
+    [
+      id,
+      key,
+      "/api/media/" + key,
+      "local",
+      8,
+      8,
+      bytes.length,
+      "image/webp",
+      "Synthetic CLI image",
+      "test",
+      "2026-10-14T00:00:00.000Z",
+      "active",
+    ],
+  );
+  const articleId = randomUUID(),
+    now = "2026-10-14T00:00:00.000Z",
+    url = "/api/media/" + key;
+  const snapshot = {
+    id: articleId,
+    slug: "recovery-media-story",
+    title: "Original recovery story",
+    excerpt: "A synthetic article tied to verified local image bytes.",
+    body: "## A restored image\n\nOriginal test writing with ![A synthetic image](" + url + ").",
+    author: "Havenfield",
+    category: "Design",
+    tags: [],
+    coverImage: url,
+    coverAlt: "Synthetic CLI image",
+    status: "published",
+    publishedAt: now,
+    seoTitle: "",
+    seoDescription: "",
+    canonicalUrl: "",
+    noindex: false,
+    version: 1,
+    createdAt: now,
+    updatedAt: now,
+  };
+  await db.execute(
+    "INSERT INTO posts(id,slug,title,excerpt,body,author,category,tags,cover_image,cover_alt,status,published_at,seo_title,seo_description,canonical_url,noindex,version,created_at,updated_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+    [
+      articleId,
+      snapshot.slug,
+      snapshot.title,
+      snapshot.excerpt,
+      snapshot.body,
+      snapshot.author,
+      snapshot.category,
+      "[]",
+      url,
+      snapshot.coverAlt,
+      "published",
+      now,
+      "",
+      "",
+      "",
+      0,
+      1,
+      now,
+      now,
+    ],
+  );
+  await db.execute(
+    "INSERT INTO post_revisions(id,post_id,version,snapshot,created_at) VALUES(?,?,?,?,?)",
+    [randomUUID(), articleId, 1, JSON.stringify(snapshot), now],
+  );
+  await db.execute("INSERT INTO slug_redirects(slug,post_id) VALUES(?,?)", [
+    "previous-recovery-story",
+    articleId,
+  ]);
+  for (const kind of ["cover", "inline", "revision"])
+    await db.execute("INSERT INTO media_references(media_id,post_id,kind) VALUES(?,?,?)", [
+      id,
+      articleId,
+      kind,
+    ]);
+  await db.close();
+  const env = {
+    ...process.env,
+    APP_ENV: "development",
+    VERCEL_ENV: "",
+    VERCEL: "",
+    DATABASE_URL: "",
+    DIRECT_DATABASE_URL: "",
+    SQLITE_PATH: source,
+    LOCAL_UPLOAD_DIR: uploads,
+    BACKUP_DESTINATION: destination,
+    BLOB_READ_WRITE_TOKEN: "",
+    RESTORE_DATABASE_URL: "",
+    RESTORE_SQLITE_PATH: target,
+    RESTORE_UPLOAD_DIR: restoredImages,
+  };
+  try {
+    await run(process.execPath, ["--import", "tsx", "scripts/recovery-export.ts"], {
+      env,
+      timeout: 30000,
+    });
+    const [name] = await readdir(destination);
+    await run(
+      process.execPath,
+      ["--import", "tsx", "scripts/recovery-restore.ts", resolve(destination, name)],
+      { env, timeout: 30000 },
+    );
+    expect(await readFile(resolve(restoredImages, key))).toEqual(bytes);
+    const restored = await createDatabase({ url: "", sqlitePath: target });
+    try {
+      expect((await restored.query("SELECT url FROM media"))[0].url).toBe("/api/media/" + key);
+      expect((await restored.query("SELECT cover_image,body,status FROM posts"))[0]).toEqual({
+        cover_image: url,
+        body: snapshot.body,
+        status: "published",
+      });
+      expect(await restored.query("SELECT * FROM post_revisions")).toHaveLength(1);
+      expect((await restored.query("SELECT post_id FROM slug_redirects"))[0].post_id).toBe(
+        articleId,
+      );
+      expect(await restored.query("SELECT * FROM media_references")).toHaveLength(3);
+      const original = await exportDatabase(restored);
+      const promoted = remapRecoveryMedia(
+        original,
+        new Map([
+          [
+            id,
+            {
+              url: "https://restore.public.blob.vercel-storage.com/journal/production/" + key,
+              objectKey: "journal/production/" + key,
+            },
+          ],
+        ]),
+      );
+      expect(promoted.payload.tables.media[0].storage).toBe("blob");
+      expect(promoted.payload.tables.posts[0].cover_image).toContain("https://restore.");
+      expect(promoted.payload.tables.post_revisions[0].snapshot).toContain("https://restore.");
+      expect(original.payload.tables.media[0].storage).toBe("local");
+      const encoded = structuredClone(original);
+      encoded.payload.tables.posts[0].body = "![Description](/api/%6dedia/" + key + ")";
+      encoded.checksum = createHash("sha256").update(JSON.stringify(encoded.payload)).digest("hex");
+      expect(
+        remapRecoveryMedia(
+          encoded,
+          new Map([
+            [
+              id,
+              {
+                url: "https://restore.public.blob.vercel-storage.com/" + key,
+                objectKey: "journal/production/" + key,
+              },
+            ],
+          ]),
+        ).payload.tables.posts[0].body,
+      ).toContain("https://restore.");
+    } finally {
+      await restored.close();
+    }
+    await expect(
+      run(
+        process.execPath,
+        ["--import", "tsx", "scripts/recovery-restore.ts", resolve(destination, name)],
+        { env, timeout: 30000 },
+      ),
+    ).rejects.toThrow();
+  } finally {
+    if (root.startsWith(resolve(".data/recovery-cli-test-")))
+      await rm(root, { recursive: true, force: true, maxRetries: 5 });
+  }
+}, 60000);

@@ -45,9 +45,7 @@
     }
   },
   "cutover": {
-    "updatedVercelKeys": [
-      "DATABASE_URL"
-    ],
+    "updatedVercelKeys": ["DATABASE_URL"],
     "environment": "preview",
     "type": "secret",
     "publisherAndMediaConfigurationPreserved": true,

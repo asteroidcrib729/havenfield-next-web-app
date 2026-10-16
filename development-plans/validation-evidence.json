@@ -27,9 +27,7 @@
     "legacyPhpHtmlComposerFiles": 0,
     "formerBrandMatches": 0,
     "brokenDocumentationLinks": 0,
-    "rootMarkdown": [
-      "README.md"
-    ],
+    "rootMarkdown": ["README.md"],
     "productionTraceFilesChecked": 36,
     "privateArtifactTraceMatches": 0
   },

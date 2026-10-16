@@ -6,15 +6,15 @@ Both active databases now belong to the GitHub-linked Prisma project `havenfield
 
 ## Section 01 — Environment matrix
 
-| Setting | Development | Vercel Preview | Vercel Production |
-| --- | --- | --- | --- |
-| Environment | `APP_ENV=development` | Vercel supplies `VERCEL_ENV=preview` | Vercel supplies `VERCEL_ENV=production` |
-| Canonical | `http://localhost:3000` | Intended Production HTTPS origin | Actual assigned HTTPS origin |
-| Mutation origin | `SITE_URL=http://localhost:3000` | Leave `SITE_URL` unset to use the deployment's `VERCEL_URL`; set an exact origin for a stable Preview alias | Actual Production HTTPS origin |
-| Database | Ignored SQLite, or a separately bound development PostgreSQL database | Separate database bound `preview` | Account-owned database bound `production` |
-| Publisher and session | Deliberately generated local values | Independent private values | Independent private values |
-| Blob | Ignored local upload directory | Independent store token, `journal/preview/` object prefix | Independent store token, `journal/production/` prefix |
-| Maintenance | Publisher expiry button; optional private local invocation | Publisher expiry button; Vercel scheduled jobs run on Production | Private `CRON_SECRET`, daily job in `vercel.json` |
+| Setting               | Development                                                           | Vercel Preview                                                                                              | Vercel Production                                     |
+| --------------------- | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| Environment           | `APP_ENV=development`                                                 | Vercel supplies `VERCEL_ENV=preview`                                                                        | Vercel supplies `VERCEL_ENV=production`               |
+| Canonical             | `http://localhost:3000`                                               | Intended Production HTTPS origin                                                                            | Actual assigned HTTPS origin                          |
+| Mutation origin       | `SITE_URL=http://localhost:3000`                                      | Leave `SITE_URL` unset to use the deployment's `VERCEL_URL`; set an exact origin for a stable Preview alias | Actual Production HTTPS origin                        |
+| Database              | Ignored SQLite, or a separately bound development PostgreSQL database | Separate database bound `preview`                                                                           | Account-owned database bound `production`             |
+| Publisher and session | Deliberately generated local values                                   | Independent private values                                                                                  | Independent private values                            |
+| Blob                  | Ignored local upload directory                                        | Independent store token, `journal/preview/` object prefix                                                   | Independent store token, `journal/production/` prefix |
+| Maintenance           | Publisher expiry button; optional private local invocation            | Publisher expiry button; Vercel scheduled jobs run on Production                                            | Private `CRON_SECRET`, daily job in `vercel.json`     |
 
 `NEXT_PUBLIC_SITE_URL` is public build-time configuration. All database URLs, publisher hashes, session secrets, restore tokens and cron secrets are server-only. Keep them in private provider settings or ignored environment files. Do not print them in build logs or put them in CLI arguments. `DIRECT_DATABASE_URL` is an optional direct connection used only by database CLI commands.
 

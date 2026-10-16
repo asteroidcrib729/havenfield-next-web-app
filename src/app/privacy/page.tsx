@@ -1,4 +1,74 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-export const metadata: Metadata = {title: "Privacy", description: "How the Havenfield portfolio demonstration handles inquiry and publishing data.", alternates: { canonical: '/privacy' } };
-export default function PrivacyPage() { return <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8"><p className="text-xs uppercase tracking-[0.2em] text-brand">Project information</p><h1 className="mt-4 font-display text-5xl">Privacy</h1><div className="mt-10 space-y-8 leading-relaxed text-muted"><section><h2 className="font-display text-2xl text-ink">A demonstration with real data boundaries</h2><p className="mt-3">Havenfield is a fictional portfolio website. Browsing its public pages does not require an account. Please use invented contact details when trying the inquiry form and avoid sending confidential or sensitive information.</p></section><section><h2 className="font-display text-2xl text-ink">Inquiry records</h2><p className="mt-3">An enabled inquiry form sends your name, email address, optional phone number, selected home, and message to this site’s TypeScript API. The configured relational database stores accepted submissions. The form reports whether a record was accepted; it does not promise email delivery or a reply.</p></section><section><h2 className="font-display text-2xl text-ink">Administration</h2><p className="mt-3">The private publishing area uses an authentication cookie to maintain the administrator’s session. Only authorized administrators can manage articles or view inquiry records. Articles intentionally published by an administrator become public, including their author attribution.</p></section><section><h2 className="font-display text-2xl text-ink">Hosting and retention</h2><p className="mt-3">A deployed instance may process technical request information through its hosting and database providers. Their operational logging and retention settings depend on the deployment. Inquiry records expire after 30 days and are removed by the configured daily maintenance job or publisher expiry action. Retry receipts expire after 24 hours; recovery drafts expire after 30 days. Independent backups use seven daily and four weekly retained copies, so deletion from the active database does not immediately erase those copies. Provider logs have separate retention settings.</p><p className="mt-3">Before accepting real personal information, the operator must publish a reachable privacy contact, verify the scheduled expiry and backup deletion procedures, and review the actual hosting configuration. This demonstration is not configured as a production customer service.</p></section><section><h2 className="font-display text-2xl text-ink">Cookies</h2><p className="mt-3">Read the <Link href="/cookies" className="text-ink underline underline-offset-4">cookie information</Link> for this project’s session behavior. No advertising or analytics scripts are included in the application by default.</p></section></div></div>; }
+export const metadata: Metadata = {
+  title: "Privacy",
+  description: "How the Havenfield portfolio demonstration handles inquiry and publishing data.",
+  alternates: { canonical: "/privacy" },
+};
+export default function PrivacyPage() {
+  return (
+    <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8">
+      <p className="text-xs uppercase tracking-[0.2em] text-brand">Project information</p>
+      <h1 className="mt-4 font-display text-5xl">Privacy</h1>
+      <div className="mt-10 space-y-8 leading-relaxed text-muted">
+        <section>
+          <h2 className="font-display text-2xl text-ink">
+            A demonstration with real data boundaries
+          </h2>
+          <p className="mt-3">
+            Havenfield is a fictional portfolio website. Browsing its public pages does not require
+            an account. Please use invented contact details when trying the inquiry form and avoid
+            sending confidential or sensitive information.
+          </p>
+        </section>
+        <section>
+          <h2 className="font-display text-2xl text-ink">Inquiry records</h2>
+          <p className="mt-3">
+            An enabled inquiry form sends your name, email address, optional phone number, selected
+            home, and message to this site’s TypeScript API. The configured relational database
+            stores accepted submissions. The form reports whether a record was accepted; it does not
+            promise email delivery or a reply.
+          </p>
+        </section>
+        <section>
+          <h2 className="font-display text-2xl text-ink">Administration</h2>
+          <p className="mt-3">
+            The private publishing area uses an authentication cookie to maintain the
+            administrator’s session. Only authorized administrators can manage articles or view
+            inquiry records. Articles intentionally published by an administrator become public,
+            including their author attribution.
+          </p>
+        </section>
+        <section>
+          <h2 className="font-display text-2xl text-ink">Hosting and retention</h2>
+          <p className="mt-3">
+            A deployed instance may process technical request information through its hosting and
+            database providers. Their operational logging and retention settings depend on the
+            deployment. Inquiry records expire after 30 days and are removed by the configured daily
+            maintenance job or publisher expiry action. Retry receipts expire after 24 hours;
+            recovery drafts expire after 30 days. Independent backups use seven daily and four
+            weekly retained copies, so deletion from the active database does not immediately erase
+            those copies. Provider logs have separate retention settings.
+          </p>
+          <p className="mt-3">
+            Before accepting real personal information, the operator must publish a reachable
+            privacy contact, verify the scheduled expiry and backup deletion procedures, and review
+            the actual hosting configuration. This demonstration is not configured as a production
+            customer service.
+          </p>
+        </section>
+        <section>
+          <h2 className="font-display text-2xl text-ink">Cookies</h2>
+          <p className="mt-3">
+            Read the{" "}
+            <Link href="/cookies" className="text-ink underline underline-offset-4">
+              cookie information
+            </Link>{" "}
+            for this project’s session behavior. No advertising or analytics scripts are included in
+            the application by default.
+          </p>
+        </section>
+      </div>
+    </div>
+  );
+}

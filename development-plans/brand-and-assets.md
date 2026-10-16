@@ -8,14 +8,14 @@ The brand presents considered architecture, natural light, landscape and useful 
 
 The new logo uses an original geometric home/courtyard motif. Its open roof and interior doorway suggest shelter without a borrowed building silhouette. The wordmark is implemented in the shared TSX logo; standalone SVG mark/wordmark assets are under `public/brand/`. No previous logo, favicon, texture, brochure, phone number, domain, social profile or company copy is used.
 
-| Token | Value | Purpose |
-| --- | --- | --- |
-| Paper | `#f8f6f1` | Warm primary canvas |
-| Ink | `#242b27` | Text and dark sections |
-| Brand | `#875a40` | Terracotta accent |
-| Muted | `#626b63` | Supporting text |
-| Line | `#dcded5` | Quiet dividers |
-| Soft | `#eeeee6` | Secondary surfaces |
+| Token | Value     | Purpose                |
+| ----- | --------- | ---------------------- |
+| Paper | `#f8f6f1` | Warm primary canvas    |
+| Ink   | `#242b27` | Text and dark sections |
+| Brand | `#875a40` | Terracotta accent      |
+| Muted | `#626b63` | Supporting text        |
+| Line  | `#dcded5` | Quiet dividers         |
+| Soft  | `#eeeee6` | Secondary surfaces     |
 
 Typography uses the physically available **Playfair Display Regular** for expressive headings and **Poppins Regular** for interface/body text. Files were copied unchanged and SHA-256 verified before the old font folder was removed. Commercial-looking font families and all unused formats were retired. Fonts are self-hosted with `next/font/local`, so a build does not fetch fonts from Google.
 
@@ -23,15 +23,15 @@ Family license notices were retrieved from the official Google Fonts repository:
 
 ## New media
 
-| Local asset | Source | Use |
-| --- | --- | --- |
-| `public/brand/mark.svg`, `logo.svg` | Original project-authored SVG geometry/type | Favicon and brand reference |
-| `public/media/courtyard.jpg` | New built-in image generation, optimized to JPEG | Fictional courtyard home |
-| `public/media/coastal.jpg` | New built-in image generation, optimized to JPEG | Fictional coastal residence |
-| `public/media/woodland.jpg` | New built-in image generation, optimized to JPEG | Fictional woodland pavilion |
-| `public/media/interior.jpg` | New built-in image generation, optimized to JPEG | Interior, approach section, and journal cover |
-| `public/media/havenfield-hero.mp4` | New Higgsfield/Hailuo 2.3 generated footage, locally optimized with FFmpeg | Muted, controllable hero film |
-| `public/media/havenfield-hero-poster.jpg` | First frame extracted from the new hero footage | Matching initial/reduced-motion/data-saving still |
+| Local asset                               | Source                                                                     | Use                                               |
+| ----------------------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------- |
+| `public/brand/mark.svg`, `logo.svg`       | Original project-authored SVG geometry/type                                | Favicon and brand reference                       |
+| `public/media/courtyard.jpg`              | New built-in image generation, optimized to JPEG                           | Fictional courtyard home                          |
+| `public/media/coastal.jpg`                | New built-in image generation, optimized to JPEG                           | Fictional coastal residence                       |
+| `public/media/woodland.jpg`               | New built-in image generation, optimized to JPEG                           | Fictional woodland pavilion                       |
+| `public/media/interior.jpg`               | New built-in image generation, optimized to JPEG                           | Interior, approach section, and journal cover     |
+| `public/media/havenfield-hero.mp4`        | New Higgsfield/Hailuo 2.3 generated footage, locally optimized with FFmpeg | Muted, controllable hero film                     |
+| `public/media/havenfield-hero-poster.jpg` | First frame extracted from the new hero footage                            | Matching initial/reduced-motion/data-saving still |
 
 The mobile hero starts with its poster and offers opt-in playback; desktop autoplay, reduced-motion/data-saving fallback and decode-failure fallback are tested. Raster 32/180/192/512 icons and the 1200 × 630 social card are generated from the original brand geometry by `scripts/generate-brand-assets.ts`.
 

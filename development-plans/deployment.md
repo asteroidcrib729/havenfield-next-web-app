@@ -4,22 +4,22 @@ Updated 2026-10-16 (Asia/Karachi). Live portfolio: [havenfieldre.vercel.app](htt
 
 ## Section 01 — Verified hosted release
 
-| Item | Verified result |
-| --- | --- |
-| Account/project | Vercel Hobby, `farazhussain-5000s-projects/havenfield` |
-| Project | `havenfield`; private infrastructure identifier retained outside Git |
-| Production deployment | `dpl_DgiRCmaxNBELUB3fKEqCtGvH6RMF`, READY, promoted after staging checks |
-| Initial canonical origin | `https://havenfield-portfolio.vercel.app` (historical; current origin is `https://havenfieldre.vercel.app`) |
-| Preview deployment | `dpl_7xJkog4a178bxiiNXDH8C2F9J6Dh`, READY, protected Preview |
-| Preview origin | `https://havenfield-lzrolawbc-farazhussain-5000s-projects.vercel.app` |
-| Runtime/region | Next.js, Node.js 24, functions and data configured for Singapore |
-| Production database | Prisma Postgres `havenfield-production`, schema 2, immutable Production binding |
-| Preview database | Independent Prisma Postgres `havenfield-preview`, schema 2, immutable Preview binding |
-| Production media | Public Blob `havenfield-production-media`, connected only to Production |
-| Preview media | Public Blob `havenfield-preview-media`, connected only to Preview |
-| Source | Initial local-source release; GitHub publication and automatic deployment are recorded in [Git delivery](github-publication.md) |
-| Build | Corrected Production reached READY in 42.879 seconds |
-| Error review | Zero error/fatal runtime records in the five-minute reviewed window; no monitoring drain was configured by this task |
+| Item                     | Verified result                                                                                                                 |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| Account/project          | Vercel Hobby, `farazhussain-5000s-projects/havenfield`                                                                          |
+| Project                  | `havenfield`; private infrastructure identifier retained outside Git                                                            |
+| Production deployment    | `dpl_DgiRCmaxNBELUB3fKEqCtGvH6RMF`, READY, promoted after staging checks                                                        |
+| Initial canonical origin | `https://havenfield-portfolio.vercel.app` (historical; current origin is `https://havenfieldre.vercel.app`)                     |
+| Preview deployment       | `dpl_7xJkog4a178bxiiNXDH8C2F9J6Dh`, READY, protected Preview                                                                    |
+| Preview origin           | `https://havenfield-lzrolawbc-farazhussain-5000s-projects.vercel.app`                                                           |
+| Runtime/region           | Next.js, Node.js 24, functions and data configured for Singapore                                                                |
+| Production database      | Prisma Postgres `havenfield-production`, schema 2, immutable Production binding                                                 |
+| Preview database         | Independent Prisma Postgres `havenfield-preview`, schema 2, immutable Preview binding                                           |
+| Production media         | Public Blob `havenfield-production-media`, connected only to Production                                                         |
+| Preview media            | Public Blob `havenfield-preview-media`, connected only to Preview                                                               |
+| Source                   | Initial local-source release; GitHub publication and automatic deployment are recorded in [Git delivery](github-publication.md) |
+| Build                    | Corrected Production reached READY in 42.879 seconds                                                                            |
+| Error review             | Zero error/fatal runtime records in the five-minute reviewed window; no monitoring drain was configured by this task            |
 
 The requested `havenfield.vercel.app` returned 409 because another project owns it. The user selected `havenfield-portfolio.vercel.app`; Vercel accepted and verified it. The initially assigned `havenfield-five.vercel.app` was removed by the owner. On 2026-10-16 both it and the former portfolio alias return 404; the current owner-selected domain is `havenfieldre.vercel.app`.
 

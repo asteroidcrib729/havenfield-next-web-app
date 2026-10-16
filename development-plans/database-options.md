@@ -2,13 +2,13 @@
 
 Reviewed 2026-10-14. The requirement is a free relational service without automatic inactivity-based pausing. The application remains on Vercel; database hosting is independent.
 
-| Provider | Current idle policy | Fit |
-| --- | --- | --- |
-| Prisma Postgres Free | Prisma describes the database as staying ready without scale-to-zero or cold starts. | Recommended candidate, within its free quota. |
-| Supabase Free | Projects with low activity can pause after a seven-day window and require resumption. | Does not meet the requirement. |
-| Neon Free | Compute suspends after five idle minutes; the free plan cannot disable this. | Automatic wake-up is insufficient for the stated requirement. |
-| Aiven Free PostgreSQL | Aiven reserves the right to power off services lacking continuing activity. | Does not meet the requirement. |
-| Turso Free | Its CLI documentation describes inactivity archiving for free-plan groups. | Do not treat automatic wake-up or new architecture announcements as a guarantee of no pausing. |
+| Provider              | Current idle policy                                                                   | Fit                                                                                            |
+| --------------------- | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Prisma Postgres Free  | Prisma describes the database as staying ready without scale-to-zero or cold starts.  | Recommended candidate, within its free quota.                                                  |
+| Supabase Free         | Projects with low activity can pause after a seven-day window and require resumption. | Does not meet the requirement.                                                                 |
+| Neon Free             | Compute suspends after five idle minutes; the free plan cannot disable this.          | Automatic wake-up is insufficient for the stated requirement.                                  |
+| Aiven Free PostgreSQL | Aiven reserves the right to power off services lacking continuing activity.           | Does not meet the requirement.                                                                 |
+| Turso Free            | Its CLI documentation describes inactivity archiving for free-plan groups.            | Do not treat automatic wake-up or new architecture announcements as a guarantee of no pausing. |
 
 Prisma's [current provider comparison](https://www.prisma.io/blog/serverless-postgres) explicitly identifies its no-scale-to-zero/no-cold-start behavior as a vendor claim. This was not independently benchmarked against a configured account. The [pricing page](https://www.prisma.io/pricing) lists 200,000 monthly operations, 1.01 GB of storage, and up to 50 databases across a free workspace. The [FAQ](https://www.prisma.io/docs/postgres/faq) explains that exhausting the free allowance stops queries until a reset or upgrade. Free storage is not an availability SLA, and free backup automation is not included.
 

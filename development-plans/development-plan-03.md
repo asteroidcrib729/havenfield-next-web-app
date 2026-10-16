@@ -26,18 +26,18 @@ These carryovers are acceptance requirements, not evidence that the implemented 
 
 Generate a contact sheet for review, retain the selected source files privately, and publish only the approved optimized assets. IDs are stable asset identities; final filenames use lowercase descriptive names. All scenes are invented. The four sets below must show the **same corresponding fictional building**, with consistent materials, rooflines, glazing, landscape and light.
 
-| IDs | Count | Subject and required shots | Primary placements |
-| --- | ---: | --- | --- |
-| HF03-01–04 | 4 | Courtyard House: limestone arrival/exterior, courtyard-facing living room, oak kitchen/dining, planted courtyard/pool | Courtyard detail hero + three gallery images; collection/home card uses exterior |
-| HF03-05–08 | 4 | Saltwater Residence: coastal exterior/terrace, horizon-facing lounge, compact kitchen/dining, sheltered bedroom/balcony | Saltwater detail hero + gallery; collection card |
-| HF03-09–12 | 4 | Woodland Pavilion: dark-timber exterior, woodland-facing living room, reading/study room, covered forest deck | Woodland detail hero + gallery; collection/home card |
-| HF03-13–16 | 4 | Atelier Loft: fictional brick courtyard/street arrival, tall-window living/studio, flexible work/dining room, rooftop garden | Loft detail hero + gallery; collection card |
-| HF03-17–18 | 2 | Brand/home: sheltered arrival with landscape; intimate everyday breakfast/interior scene | Home editorial/approach and conversation sections; collection introduction |
-| HF03-19–20 | 2 | About: tactile stone/oak/plaster material study; architectural workshop table without identifiable people or text | About hero/story/value sections; restrained login/legal visual variants |
-| HF03-21–23 | 3 | Amenities: shared garden/seating, reflective water/quiet terrace, walkable shaded path with bicycle storage | Amenities hero + three subject cards; property related-feature sections |
-| HF03-24–27 | 4 | Journal: distinctive editorial still life; viewing/light-study interior; connected floor-plan/circulation scene; flexible everyday home scene | Journal masthead plus a unique cover for each of the three existing articles |
-| HF03-28 | 1 | Contact: a welcoming imagined studio threshold and garden bench, no address or branded signage | Contact hero/sidebar; restrained empty/error-state crops |
-| **Total** | **28** | **28 independently generated, approved source images** | Reuse is deliberate; responsive crops are not counted twice |
+| IDs        |  Count | Subject and required shots                                                                                                                    | Primary placements                                                               |
+| ---------- | -----: | --------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| HF03-01–04 |      4 | Courtyard House: limestone arrival/exterior, courtyard-facing living room, oak kitchen/dining, planted courtyard/pool                         | Courtyard detail hero + three gallery images; collection/home card uses exterior |
+| HF03-05–08 |      4 | Saltwater Residence: coastal exterior/terrace, horizon-facing lounge, compact kitchen/dining, sheltered bedroom/balcony                       | Saltwater detail hero + gallery; collection card                                 |
+| HF03-09–12 |      4 | Woodland Pavilion: dark-timber exterior, woodland-facing living room, reading/study room, covered forest deck                                 | Woodland detail hero + gallery; collection/home card                             |
+| HF03-13–16 |      4 | Atelier Loft: fictional brick courtyard/street arrival, tall-window living/studio, flexible work/dining room, rooftop garden                  | Loft detail hero + gallery; collection card                                      |
+| HF03-17–18 |      2 | Brand/home: sheltered arrival with landscape; intimate everyday breakfast/interior scene                                                      | Home editorial/approach and conversation sections; collection introduction       |
+| HF03-19–20 |      2 | About: tactile stone/oak/plaster material study; architectural workshop table without identifiable people or text                             | About hero/story/value sections; restrained login/legal visual variants          |
+| HF03-21–23 |      3 | Amenities: shared garden/seating, reflective water/quiet terrace, walkable shaded path with bicycle storage                                   | Amenities hero + three subject cards; property related-feature sections          |
+| HF03-24–27 |      4 | Journal: distinctive editorial still life; viewing/light-study interior; connected floor-plan/circulation scene; flexible everyday home scene | Journal masthead plus a unique cover for each of the three existing articles     |
+| HF03-28    |      1 | Contact: a welcoming imagined studio threshold and garden bench, no address or branded signage                                                | Contact hero/sidebar; restrained empty/error-state crops                         |
+| **Total**  | **28** | **28 independently generated, approved source images**                                                                                        | Reuse is deliberate; responsive crops are not counted twice                      |
 
 - [ ] Create an asset manifest before generation: ID, prompt version, provider/model, quoted cost/credits, dimensions, output path, SHA-256, approval status, alt text, focal point and intended routes.
 - [ ] Generate a four-image pilot, review it in real page layouts, and lock each property's visual reference before continuing.
@@ -61,20 +61,20 @@ Base prompt to specialize for each register entry:
 
 ## Section 05 — Coverage for every page
 
-| Page family / routes | Planned content and visual treatment | Completion evidence |
-| --- | --- | --- |
-| Home `/` | Keep the existing film unless a separate replacement is approved; new scene 17/18, unique property cards, unique journal covers and stronger section transitions | Desktop/mobile review; no repeated article-cover strip; LCP/CLS checked |
-| Collection `/properties` | Four distinct property exteriors, useful search/filter intro, clear sorting/result state, saved/compare entry points | Filters/back links still work; each card corresponds to its property's gallery |
-| Four `/properties/[slug]` routes | Dedicated four-view visual set per home, consistent gallery captions/alt text, original room-by-room narrative, amenities and neighborhood context | No cross-property image substitution; keyboard/gallery tests and accurate fictional specifications |
-| About `/about` | Material/workshop images 19/20, original studio principles and an illustrated design process | Clear fictional-studio explanation; no invented staff testimonials or business history |
-| Amenities `/amenities` | Garden, retreat and mobility images 21–23, grouped feature stories and links to matching homes | No implication that every fictional home has every facility |
-| Journal `/journal` | Editorial masthead image 24, three distinct current covers 25–27, topic introductions and better discovery | Search/pagination preserved; readable thumbnails and unique metadata |
-| Current and new `/journal/[slug]` routes | Unique cover, meaningful inline imagery where it supports the story, captions, related stories and property links | Publication visibility, RSS, sitemap, headings and structured data remain consistent |
-| Contact `/contact` | Studio threshold 28, a clear demo-inquiry explanation and accessible form feedback | Form still promises a stored demo receipt, not an email or real viewing |
-| `/privacy`, `/terms`, `/cookies` | Updated operator/domain facts and a small, restrained crop/motif from approved brand imagery; readable long-form layout | Accurate storage/retention/favorites descriptions; imagery does not delay or obscure policy text |
-| Not-found/error/loading states | Lightweight brand illustration/thumbnail variants from approved assets, clear recovery links and honest availability states | Useful keyboard navigation and no oversized decorative download |
-| `/admin/login`, editorial list/editor/preview, media, inquiries and operations | Restrained brand treatment at login; real property/article thumbnails where useful; administrative tables/forms retain a clear functional layout | Accessible populated screens, draft privacy and session recovery; no private content in public screenshots |
-| API, robots, RSS and sitemap endpoints | Remain machine-readable; images belong in valid article/social metadata, not injected decorative markup | Content types, publication visibility and canonical URLs validated |
+| Page family / routes                                                           | Planned content and visual treatment                                                                                                                             | Completion evidence                                                                                        |
+| ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Home `/`                                                                       | Keep the existing film unless a separate replacement is approved; new scene 17/18, unique property cards, unique journal covers and stronger section transitions | Desktop/mobile review; no repeated article-cover strip; LCP/CLS checked                                    |
+| Collection `/properties`                                                       | Four distinct property exteriors, useful search/filter intro, clear sorting/result state, saved/compare entry points                                             | Filters/back links still work; each card corresponds to its property's gallery                             |
+| Four `/properties/[slug]` routes                                               | Dedicated four-view visual set per home, consistent gallery captions/alt text, original room-by-room narrative, amenities and neighborhood context               | No cross-property image substitution; keyboard/gallery tests and accurate fictional specifications         |
+| About `/about`                                                                 | Material/workshop images 19/20, original studio principles and an illustrated design process                                                                     | Clear fictional-studio explanation; no invented staff testimonials or business history                     |
+| Amenities `/amenities`                                                         | Garden, retreat and mobility images 21–23, grouped feature stories and links to matching homes                                                                   | No implication that every fictional home has every facility                                                |
+| Journal `/journal`                                                             | Editorial masthead image 24, three distinct current covers 25–27, topic introductions and better discovery                                                       | Search/pagination preserved; readable thumbnails and unique metadata                                       |
+| Current and new `/journal/[slug]` routes                                       | Unique cover, meaningful inline imagery where it supports the story, captions, related stories and property links                                                | Publication visibility, RSS, sitemap, headings and structured data remain consistent                       |
+| Contact `/contact`                                                             | Studio threshold 28, a clear demo-inquiry explanation and accessible form feedback                                                                               | Form still promises a stored demo receipt, not an email or real viewing                                    |
+| `/privacy`, `/terms`, `/cookies`                                               | Updated operator/domain facts and a small, restrained crop/motif from approved brand imagery; readable long-form layout                                          | Accurate storage/retention/favorites descriptions; imagery does not delay or obscure policy text           |
+| Not-found/error/loading states                                                 | Lightweight brand illustration/thumbnail variants from approved assets, clear recovery links and honest availability states                                      | Useful keyboard navigation and no oversized decorative download                                            |
+| `/admin/login`, editorial list/editor/preview, media, inquiries and operations | Restrained brand treatment at login; real property/article thumbnails where useful; administrative tables/forms retain a clear functional layout                 | Accessible populated screens, draft privacy and session recovery; no private content in public screenshots |
+| API, robots, RSS and sitemap endpoints                                         | Remain machine-readable; images belong in valid article/social metadata, not injected decorative markup                                                          | Content types, publication visibility and canonical URLs validated                                         |
 
 ## Section 06 — New content and features
 
@@ -96,14 +96,14 @@ Base prompt to specialize for each register entry:
 
 ## Section 08 — Execution order and acceptance
 
-| Iteration | Deliverable | Gate |
-| --- | --- | --- |
-| 03A | Complete actionable Plan 02 operations gaps; confirm image budget, page briefs and four-image pilot | No false release-complete claim; reviewed style and current provider limits |
-| 03B | Generate/approve all 28 images, build derivatives/manifest and integrate property-specific galleries | Original consistent scenes, distinct covers, all page families assigned visuals |
-| 03C | Expand property copy and publish reviewed journal drafts through the existing editor | Independent content, correct visibility/SEO and retained revisions |
-| 03D | Saved/compare and collection/discovery improvements | Responsive, accessible, URL/persistence behavior documented and tested |
-| 03E | Reviewed property-authoring/media improvements | Migration/recovery and authorization evidence before moving live inventory |
-| 03F | Hosted performance/accessibility/recovery acceptance, refreshed full-page screenshots, README and release evidence | Passing CI and hosted flows; unresolved human/field gates explicitly listed |
+| Iteration | Deliverable                                                                                                        | Gate                                                                            |
+| --------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
+| 03A       | Complete actionable Plan 02 operations gaps; confirm image budget, page briefs and four-image pilot                | No false release-complete claim; reviewed style and current provider limits     |
+| 03B       | Generate/approve all 28 images, build derivatives/manifest and integrate property-specific galleries               | Original consistent scenes, distinct covers, all page families assigned visuals |
+| 03C       | Expand property copy and publish reviewed journal drafts through the existing editor                               | Independent content, correct visibility/SEO and retained revisions              |
+| 03D       | Saved/compare and collection/discovery improvements                                                                | Responsive, accessible, URL/persistence behavior documented and tested          |
+| 03E       | Reviewed property-authoring/media improvements                                                                     | Migration/recovery and authorization evidence before moving live inventory      |
+| 03F       | Hosted performance/accessibility/recovery acceptance, refreshed full-page screenshots, README and release evidence | Passing CI and hosted flows; unresolved human/field gates explicitly listed     |
 
 - [ ] Count 28 approved **new source images**, including sixteen property-specific views and three distinct existing-article covers; no recycled crop is counted as a new generation.
 - [ ] Confirm every page family in Section 05 has its assigned content/visual treatment; remove unused generated outputs from the publishable tree.

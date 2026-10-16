@@ -99,10 +99,7 @@
   "removedLogicalBytes": 4566915531,
   "dependencies": "npm.cmd ls --depth=0 passed",
   "cssBuild": "npm.cmd run dev-build passed",
-  "sourceUtilitiesVerified": [
-    "md:hidden",
-    "grid"
-  ],
+  "sourceUtilitiesVerified": ["md:hidden", "grid"],
   "inheritedMissingStaticReferences": [
     {
       "file": "Styles/slick-theme.min.css",
@@ -131,9 +128,7 @@
     }
   ],
   "newMissingStaticReferences": 0,
-  "repositories": [
-    ".git"
-  ],
+  "repositories": [".git"],
   "branch": "main",
   "configuredRemotes": [],
   "trackedFiles": 0,
@@ -147,9 +142,7 @@
     "package.json",
     "postcss.config.js"
   ],
-  "rootMarkdown": [
-    "README.md"
-  ],
+  "rootMarkdown": ["README.md"],
   "remainingDuplicateContent": [],
   "limitations": [
     "Original branded source/media remain ignored local references.",

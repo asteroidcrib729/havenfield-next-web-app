@@ -10,11 +10,11 @@ The next milestone is a complete, maintainable portfolio product: visitors can b
 
 Havenfield remains an independent fictional brand. Real listings, transactions, payments, appointments with real agents, and investment advice are outside this milestone. A portfolio inquiry must never imply that a real agency will respond.
 
-| Priority | Work | Completion evidence |
-| --- | --- | --- |
-| P0: release blockers | PostgreSQL verification, versioned migrations and recovery, production/preview configuration, publisher security, storage limits and operational diagnostics | Repeatable database tests, tested restoration, isolated environments, real hosted smoke checks |
-| P1: complete the product | Media library, inquiry inbox, editorial reliability, public journey polish, SEO, accessibility and performance | Publisher completes the whole workflow through the UI; all supported public journeys work |
-| P2: later expansion | Multiple publishers, property CMS, advanced search, optional email delivery and additional presentation features | Separate scoped decision after P0/P1 acceptance |
+| Priority                 | Work                                                                                                                                                         | Completion evidence                                                                            |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| P0: release blockers     | PostgreSQL verification, versioned migrations and recovery, production/preview configuration, publisher security, storage limits and operational diagnostics | Repeatable database tests, tested restoration, isolated environments, real hosted smoke checks |
+| P1: complete the product | Media library, inquiry inbox, editorial reliability, public journey polish, SEO, accessibility and performance                                               | Publisher completes the whole workflow through the UI; all supported public journeys work      |
+| P2: later expansion      | Multiple publishers, property CMS, advanced search, optional email delivery and additional presentation features                                             | Separate scoped decision after P0/P1 acceptance                                                |
 
 Implementation includes the media/editor/inquiry workflows and operations/recovery tooling. Checked items denote verified implementation or the linked hosted acceptance evidence. Unchecked composite items retain their outstanding operator, hosted or human sign-off requirements. See [release acceptance](release-acceptance.md), [operator guide](operator-guide.md) and [performance/quotas](performance-and-quotas.md).
 
@@ -26,16 +26,16 @@ The baseline below describes the source at the start of execution; the linked ex
 
 The recorded foundation checks passed 21 service/content tests and three browser journeys. A later focused run passed hero playback and responsive/accessibility checks. These are historical local results, primarily against SQLite; hosted CI, PostgreSQL, Vercel deployment and Blob writes are not verified by those records.
 
-| Current implementation | Product gap | Relevant source |
-| --- | --- | --- |
-| PostgreSQL adapter plus local SQLite adapter | Real PostgreSQL behavior and concurrency have not been integration-tested | `src/server/database.ts`, `tests/server.test.ts` |
-| One schema file; migration function reapplies it and records version 1 | No ordered incremental migrations, checksums or tested upgrade/recovery path | `database/schema.sql`, `scripts/database-migrate.ts` |
-| Upload returns a public URL | No media inventory, reference tracking, reuse picker or safe orphan cleanup | `src/server/media.ts`, `src/components/admin/post-editor.tsx` |
-| Inquiry endpoint inserts rows | No publisher inbox, lifecycle, retention tooling or duplicate-submission protection | `src/server/inquiries.ts`, `database/schema.sql` |
-| Deliberate publisher secrets and signed sessions | No startup configuration report, operational recovery exercise or durable action audit | `src/server/auth.ts`, `.env.example` |
-| Safe Markdown, explicit saves and conflict checks | No draft autosave/recovery or complete media/taxonomy workflow | `src/components/admin/post-editor.tsx` |
-| Generic 503 response for unexpected failures | No request correlation or sanitized operational error reporting | `src/server/http.ts` |
-| CI workflow exists; root repository has no configured remote or initial commit | Hosted CI and reproducible release delivery remain unproven | `.github/workflows/checks.yml` |
+| Current implementation                                                         | Product gap                                                                            | Relevant source                                               |
+| ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| PostgreSQL adapter plus local SQLite adapter                                   | Real PostgreSQL behavior and concurrency have not been integration-tested              | `src/server/database.ts`, `tests/server.test.ts`              |
+| One schema file; migration function reapplies it and records version 1         | No ordered incremental migrations, checksums or tested upgrade/recovery path           | `database/schema.sql`, `scripts/database-migrate.ts`          |
+| Upload returns a public URL                                                    | No media inventory, reference tracking, reuse picker or safe orphan cleanup            | `src/server/media.ts`, `src/components/admin/post-editor.tsx` |
+| Inquiry endpoint inserts rows                                                  | No publisher inbox, lifecycle, retention tooling or duplicate-submission protection    | `src/server/inquiries.ts`, `database/schema.sql`              |
+| Deliberate publisher secrets and signed sessions                               | No startup configuration report, operational recovery exercise or durable action audit | `src/server/auth.ts`, `.env.example`                          |
+| Safe Markdown, explicit saves and conflict checks                              | No draft autosave/recovery or complete media/taxonomy workflow                         | `src/components/admin/post-editor.tsx`                        |
+| Generic 503 response for unexpected failures                                   | No request correlation or sanitized operational error reporting                        | `src/server/http.ts`                                          |
+| CI workflow exists; root repository has no configured remote or initial commit | Hosted CI and reproducible release delivery remain unproven                            | `.github/workflows/checks.yml`                                |
 
 ## Section 03 — P0: persistence, migrations and recovery
 
@@ -142,14 +142,14 @@ Local evidence: public Lighthouse medians are performance 93/93/96, accessibilit
 
 ## Section 10 — Execution order and release gates
 
-| Order | Deliverable | Dependency / gate |
-| --- | --- | --- |
-| 1 | PostgreSQL test target, versioned migrations, version-1 upgrade tests | Local work can start immediately; no production credentials needed |
-| 2 | Environment validation, security/error diagnostics, recovery tools | Builds on the persistence foundation |
-| 3 | Media registry/library and inquiry lifecycle/inbox | Requires migrations and protected publisher APIs |
-| 4 | Editorial reliability and public journey/SEO/accessibility polish | Uses completed media/inquiry services |
-| 5 | Performance measurements, complete CI and release documentation | Requires populated realistic test journeys |
-| 6 | Hosted Preview, backup restoration, Production smoke checks | Requires account-owned services and private environment configuration |
+| Order | Deliverable                                                           | Dependency / gate                                                     |
+| ----- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| 1     | PostgreSQL test target, versioned migrations, version-1 upgrade tests | Local work can start immediately; no production credentials needed    |
+| 2     | Environment validation, security/error diagnostics, recovery tools    | Builds on the persistence foundation                                  |
+| 3     | Media registry/library and inquiry lifecycle/inbox                    | Requires migrations and protected publisher APIs                      |
+| 4     | Editorial reliability and public journey/SEO/accessibility polish     | Uses completed media/inquiry services                                 |
+| 5     | Performance measurements, complete CI and release documentation       | Requires populated realistic test journeys                            |
+| 6     | Hosted Preview, backup restoration, Production smoke checks           | Requires account-owned services and private environment configuration |
 
 The owner subsequently authorized service provisioning and deployment. `havenfield.vercel.app` was unavailable; the owner selected `havenfield-portfolio.vercel.app`, which was the initial live origin with independent Production/Preview databases and Blob stores. On 2026-10-16 the owner changed it to `havenfieldre.vercel.app`; current canonical and origin checks pass. [Deployment evidence](deployment.md) supersedes the original absence of accounts. Independent backups and the remaining composite acceptance exercises stay open in [release acceptance](release-acceptance.md).
 

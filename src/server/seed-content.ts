@@ -1,8 +1,27 @@
 import type { BlogPostInput } from "../lib/blog-types";
 
-const shared = {author:"Havenfield Editorial",coverAlt:"A sunlit contemporary living room with natural materials",coverImage:"/media/interior.jpg",status:"published" as const,canonicalUrl:"",noindex:false};
+const shared = {
+  author: "Havenfield Editorial",
+  coverAlt: "A sunlit contemporary living room with natural materials",
+  coverImage: "/media/interior.jpg",
+  status: "published" as const,
+  canonicalUrl: "",
+  noindex: false,
+};
 export const editorialSeed: BlogPostInput[] = [
-  {...shared,slug:"a-home-that-fits-your-everyday",title:"A home that fits your everyday",excerpt:"Look past the floor plan and ask how a place supports the ordinary moments that make a life.",category:"Living well",tags:["Home search","Neighbourhoods"],publishedAt:"2026-09-21T09:00:00.000Z",seoTitle:"A home that fits your everyday | Havenfield",seoDescription:"A practical guide to assessing light, layout, neighbourhoods, and the routines that make a home feel right.",body:`The first viewing often begins with a photograph. The better decision begins with a question: what does a normal Tuesday look like here?
+  {
+    ...shared,
+    slug: "a-home-that-fits-your-everyday",
+    title: "A home that fits your everyday",
+    excerpt:
+      "Look past the floor plan and ask how a place supports the ordinary moments that make a life.",
+    category: "Living well",
+    tags: ["Home search", "Neighbourhoods"],
+    publishedAt: "2026-09-21T09:00:00.000Z",
+    seoTitle: "A home that fits your everyday | Havenfield",
+    seoDescription:
+      "A practical guide to assessing light, layout, neighbourhoods, and the routines that make a home feel right.",
+    body: `The first viewing often begins with a photograph. The better decision begins with a question: what does a normal Tuesday look like here?
 
 A home is more than the sum of its finishes. The way you arrive, find a quiet corner, share a meal, and step outside matters just as much as the number of rooms. Before comparing listings, write down the routines you want your next home to support.
 
@@ -28,8 +47,21 @@ Ask about shared spaces and their maintenance. A garden that looks appealing tod
 
 After each viewing, record three strengths, three compromises, and any unanswered questions. Compare the same criteria across properties rather than allowing the most recent visit to dominate your memory.
 
-Havenfield is a fictional portfolio experience. Its listings illustrate a thoughtful search process; they are not offers of real property. For a real purchase or tenancy, verify documents, costs, condition, and suitability with qualified local professionals.`},
-  {...shared,slug:"the-value-of-a-thoughtful-floor-plan",title:"The value of a thoughtful floor plan",excerpt:"Good layouts make space work harder. Here is how to spot the details that turn square metres into everyday comfort.",category:"Design notes",tags:["Architecture","Interiors"],publishedAt:"2026-09-28T09:00:00.000Z",seoTitle:"The value of a thoughtful floor plan | Havenfield",seoDescription:"Understand circulation, flexible rooms, storage, and privacy when comparing residential floor plans.",body:`A floor plan is a promise about how a home might work. Reading it carefully helps you see beyond a total area figure and understand the relationship between rooms.
+Havenfield is a fictional portfolio experience. Its listings illustrate a thoughtful search process; they are not offers of real property. For a real purchase or tenancy, verify documents, costs, condition, and suitability with qualified local professionals.`,
+  },
+  {
+    ...shared,
+    slug: "the-value-of-a-thoughtful-floor-plan",
+    title: "The value of a thoughtful floor plan",
+    excerpt:
+      "Good layouts make space work harder. Here is how to spot the details that turn square metres into everyday comfort.",
+    category: "Design notes",
+    tags: ["Architecture", "Interiors"],
+    publishedAt: "2026-09-28T09:00:00.000Z",
+    seoTitle: "The value of a thoughtful floor plan | Havenfield",
+    seoDescription:
+      "Understand circulation, flexible rooms, storage, and privacy when comparing residential floor plans.",
+    body: `A floor plan is a promise about how a home might work. Reading it carefully helps you see beyond a total area figure and understand the relationship between rooms.
 
 The largest home is not automatically the most useful. A smaller plan with clear circulation, practical storage, and spaces that suit your routine can feel calmer and more generous than a bigger plan that makes everyday tasks awkward.
 
@@ -57,8 +89,21 @@ Plans rarely reveal acoustic performance, ventilation quality, or the condition 
 
 A considered layout should make the ordinary feel effortless. It supports the things you do often, leaves room for change, and offers a useful balance between connection and retreat.
 
-The homes and plans in Havenfield are fictional examples for this portfolio. Obtain verified measurements and professional advice when evaluating a real property.`},
-  {...shared,slug:"a-clearer-guide-to-your-first-viewing",title:"A clearer guide to your first viewing",excerpt:"A simple viewing checklist helps you ask useful questions, compare homes fairly, and leave with fewer unknowns.",category:"Field guide",tags:["Viewings","Home search"],publishedAt:"2026-10-05T09:00:00.000Z",seoTitle:"A clearer guide to your first viewing | Havenfield",seoDescription:"Prepare for a property viewing with practical questions about condition, costs, access, and everyday use.",body:`A viewing is a chance to replace assumptions with observations. You do not need to become a building expert in an afternoon, but you can arrive prepared and leave with a clearer set of questions.
+The homes and plans in Havenfield are fictional examples for this portfolio. Obtain verified measurements and professional advice when evaluating a real property.`,
+  },
+  {
+    ...shared,
+    slug: "a-clearer-guide-to-your-first-viewing",
+    title: "A clearer guide to your first viewing",
+    excerpt:
+      "A simple viewing checklist helps you ask useful questions, compare homes fairly, and leave with fewer unknowns.",
+    category: "Field guide",
+    tags: ["Viewings", "Home search"],
+    publishedAt: "2026-10-05T09:00:00.000Z",
+    seoTitle: "A clearer guide to your first viewing | Havenfield",
+    seoDescription:
+      "Prepare for a property viewing with practical questions about condition, costs, access, and everyday use.",
+    body: `A viewing is a chance to replace assumptions with observations. You do not need to become a building expert in an afternoon, but you can arrive prepared and leave with a clearer set of questions.
 
 Before the appointment, review the available details and identify what you still need to understand. Keep a short checklist on your phone so that a striking interior does not distract you from the practical questions.
 
@@ -86,5 +131,6 @@ Write your notes while the visit is fresh. Separate observed facts from statemen
 
 If a question matters to your decision, request the answer in writing. There is no need to make a rushed choice because a room photographed well. A thoughtful decision can acknowledge both what you love and what you need to check.
 
-Havenfield demonstrates an editorial approach to property discovery. It is a fictional portfolio, and its inquiry form does not connect to a real brokerage or make a booking.`},
+Havenfield demonstrates an editorial approach to property discovery. It is a fictional portfolio, and its inquiry form does not connect to a real brokerage or make a booking.`,
+  },
 ];

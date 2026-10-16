@@ -44,18 +44,18 @@ The next product milestone is [development plan 02](development-plan-02.md). Fut
 
 Earlier source review identified a conventional luxury marketing layout: material textures, videos, sliders and decorative animation. The later legacy version added cards, responsive grids and a localized blur effect. These observations came from source inspection, not a rendered comparison.
 
-| Design family | Legacy finding | Havenfield decision |
-| --- | --- | --- |
-| Skeuomorphism | Limited material/texture cues, not physical-control imitation | Replace with flat semantic surfaces and photography |
-| Neumorphism | Ordinary shadows did not form a paired inset/outset system | Avoid unclear control boundaries |
-| Glassmorphism | One local blur treatment | Restrained image caption glass; opaque controls |
-| Claymorphism | No coherent inflated 3D treatment | Not adopted |
-| Brutalism | Polished commercial presentation rather than raw structure | Not adopted |
-| Minimalism | Spacious sections mixed with competing decoration | Main editorial typography/spacing foundation |
-| Maximalism | Visual complexity did not prove a coherent maximalist system | Curated content rather than accumulated effects |
-| Liquid Glass | Ripples/blur were not refractive glass UI | No experimental refraction in core navigation/forms |
-| Bento Grid | Repeated cards were mostly uniform grids | Intentional compact approach section with asymmetric tiles |
-| Spatial UI | Tour links/utility CSS did not establish a spatial navigation model | Ordinary accessible galleries, without 3D dependency |
+| Design family | Legacy finding                                                      | Havenfield decision                                        |
+| ------------- | ------------------------------------------------------------------- | ---------------------------------------------------------- |
+| Skeuomorphism | Limited material/texture cues, not physical-control imitation       | Replace with flat semantic surfaces and photography        |
+| Neumorphism   | Ordinary shadows did not form a paired inset/outset system          | Avoid unclear control boundaries                           |
+| Glassmorphism | One local blur treatment                                            | Restrained image caption glass; opaque controls            |
+| Claymorphism  | No coherent inflated 3D treatment                                   | Not adopted                                                |
+| Brutalism     | Polished commercial presentation rather than raw structure          | Not adopted                                                |
+| Minimalism    | Spacious sections mixed with competing decoration                   | Main editorial typography/spacing foundation               |
+| Maximalism    | Visual complexity did not prove a coherent maximalist system        | Curated content rather than accumulated effects            |
+| Liquid Glass  | Ripples/blur were not refractive glass UI                           | No experimental refraction in core navigation/forms        |
+| Bento Grid    | Repeated cards were mostly uniform grids                            | Intentional compact approach section with asymmetric tiles |
+| Spatial UI    | Tour links/utility CSS did not establish a spatial navigation model | Ordinary accessible galleries, without 3D dependency       |
 
 Motion Primitives, Haikei and Realtime Colors were evaluated as motion, decorative-shape and palette workflow references. The implementation uses original SVG geometry, semantic Tailwind tokens and motion-safe CSS transitions; it does not load those design services at runtime or claim copied components. See [brand-and-assets.md](brand-and-assets.md) for identity, prompts, font licenses and media provenance.
 

@@ -50,10 +50,7 @@
                 "Actual Rows": 4812,
                 "Actual Loops": 1,
                 "Disabled": false,
-                "Sort Key": [
-                  "(COALESCE(published_at, created_at)) DESC",
-                  "id"
-                ],
+                "Sort Key": ["(COALESCE(published_at, created_at)) DESC", "id"],
                 "Sort Method": "quicksort",
                 "Sort Space Used": 857,
                 "Sort Space Type": "Memory",

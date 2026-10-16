@@ -29,6 +29,13 @@ For local editorial access, create `.env.local` from `.env.example` only if it d
 
 ## Validate and deploy
 
+I format all applicable source, scripts, tests, configuration, documentation, SVG and SQL files with pinned Prettier tooling. The [formatting guide](development-plans/formatting.md) explains coverage and the immutable-migration/generated-file exceptions. Formatting is checked by `npm.cmd run check` and CI.
+
+```powershell
+npm.cmd run format
+npm.cmd run format:check
+```
+
 ```powershell
 npm.cmd run check
 npm.cmd run test:postgres

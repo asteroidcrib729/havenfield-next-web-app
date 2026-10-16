@@ -30,4 +30,9 @@ export interface BlogRevision {
   createdAt: string;
   snapshot: BlogPost;
 }
-export interface PostList { posts: BlogPost[]; total: number; page: number; limit: number }
+export interface PostList {
+  posts: BlogPost[];
+  total: number;
+  page: number;
+  limit: number;
+}

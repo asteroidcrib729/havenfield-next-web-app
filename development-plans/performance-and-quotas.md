@@ -20,14 +20,14 @@ Prisma's [pricing](https://www.prisma.io/pricing) currently lists 200,000 operat
 
 Budget conservatively for SQL queries, transaction control, connection binding checks and publisher writes; actual provider metering is authoritative. Illustrative planning assumptions:
 
-| Monthly activity | Budget assumption | Planned operations |
-| --- | --- | --- |
-| 10,000 homepage/journal/article visits | Up to 5 each, including related stories/taxonomy | 50,000 |
-| 100 explicit article writes/restores | Up to 35 statements including revisions/references/audit | 3,500 |
-| 500 recovery saves | Up to 10 statements each | 5,000 |
-| 100 inquiries | Up to 20 statements with limits/receipts/transactions | 2,000 |
-| Publisher views, cron, exports and cold bindings | Reserved operational headroom | 10,000 |
-| Planning total | Estimates, not measurements of billing | 70,500 |
+| Monthly activity                                 | Budget assumption                                        | Planned operations |
+| ------------------------------------------------ | -------------------------------------------------------- | ------------------ |
+| 10,000 homepage/journal/article visits           | Up to 5 each, including related stories/taxonomy         | 50,000             |
+| 100 explicit article writes/restores             | Up to 35 statements including revisions/references/audit | 3,500              |
+| 500 recovery saves                               | Up to 10 statements each                                 | 5,000              |
+| 100 inquiries                                    | Up to 20 statements with limits/receipts/transactions    | 2,000              |
+| Publisher views, cron, exports and cold bindings | Reserved operational headroom                            | 10,000             |
+| Planning total                                   | Estimates, not measurements of billing                   | 70,500             |
 
 Do not interpret this estimate as capacity promised by the application or provider. Many media objects or large histories increase publisher work. Serverless instances each own a two-connection pool, so five busy processes can reach a ten-connection provider limit. Monitor provider metrics and reduce concurrent Preview traffic or choose a different allowance before approaching limits. Health checks and the operations screen do not poll continuously.
 

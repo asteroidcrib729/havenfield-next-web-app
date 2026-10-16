@@ -30,26 +30,26 @@ Daily/pre-release export, seven daily/four weekly retained copies, reviewed prun
 
 ## Section 04 — Final checks and measurements
 
-| Check | Result |
-| --- | --- |
-| Strict TypeScript, ESLint and optimized production build | Passed |
-| Local tests | 55 passed across nine files |
-| Actual PostgreSQL tests | 41 passed across three files, isolated loopback PostgreSQL 18.4 |
-| Production browser journeys | Eight passed, Edge, automatic owned-server and fixture cleanup |
-| Fresh source/install check | npm ci plus complete check passed in an isolated copy with freshly installed locked dependencies |
-| Dependency audit | Zero reported vulnerabilities |
-| Production tracing | 48 trace files checked; zero private/runtime/test/cache or portable-database/Lighthouse matches |
-| Larger PostgreSQL fixture | 5,000 articles, bounded page/query plans and at most two observed pool connections |
+| Check                                                    | Result                                                                                           |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Strict TypeScript, ESLint and optimized production build | Passed                                                                                           |
+| Local tests                                              | 55 passed across nine files                                                                      |
+| Actual PostgreSQL tests                                  | 41 passed across three files, isolated loopback PostgreSQL 18.4                                  |
+| Production browser journeys                              | Eight passed, Edge, automatic owned-server and fixture cleanup                                   |
+| Fresh source/install check                               | npm ci plus complete check passed in an isolated copy with freshly installed locked dependencies |
+| Dependency audit                                         | Zero reported vulnerabilities                                                                    |
+| Production tracing                                       | 48 trace files checked; zero private/runtime/test/cache or portable-database/Lighthouse matches  |
+| Larger PostgreSQL fixture                                | 5,000 articles, bounded page/query plans and at most two observed pool connections               |
 
 The SQLite/PostgreSQL suites share service tests; their counts must not be added as distinct tests. Hosted GitHub CI and Linux browser teardown have not run. The fresh-install result is local Windows evidence. Browser cases cover hero playback/failure/data-saving, collection/inquiry/discovery, 320–1440 pixel widths, editorial lifecycle/revisions, URL/navigation/gallery keyboard/CSP, interrupted writing/media/inbox/operations and real handler authorization. Axe checks include login, populated editor, revision dialog, media picker/library, inbox and public screens.
 
 Three sequential mobile Lighthouse runs per representative public route produced these medians:
 
-| Route | Performance | Accessibility | SEO | LCP | CLS |
-| --- | --- | --- | --- | --- | --- |
-| Home | 93 | 100 | 100 | 3.06 s | 0 |
-| Collection | 93 | 100 | 100 | 3.03 s | 0 |
-| Representative article | 96 | 100 | 100 | 2.65 s | 0 |
+| Route                  | Performance | Accessibility | SEO | LCP    | CLS |
+| ---------------------- | ----------- | ------------- | --- | ------ | --- |
+| Home                   | 93          | 100           | 100 | 3.06 s | 0   |
+| Collection             | 93          | 100           | 100 | 3.03 s | 0   |
+| Representative article | 96          | 100           | 100 | 2.65 s | 0   |
 
 Mobile initial homepage transfer fell from about 1.75 MB to 0.52 MB by deferring video playback. Cover priority/compression, contrast and accessible names were corrected from measured findings. The 2.5-second LCP target is not met by these simulated medians and remains open; no field INP or hosted performance guarantee is claimed. Human screen-reader and 200% browser zoom sign-off remain in [release acceptance](release-acceptance.md).
 
@@ -66,6 +66,7 @@ At this earlier local milestone, the intended origin was https://havenfield.verc
 The reported blank button below the footer was the Next.js development indicator. Its shadow-root styles were rejected by the nonce-only style policy, leaving a static 56 × 46 pixel button in normal document flow. Disabled the indicator through `devIndicators: false` and allowed inline style elements only in development, as required for the framework's development overlays and style injection. Production retains nonce-based styles and excludes development-only script evaluation.
 
 Verified the running development server on home, collection, journal and contact at 375/1440 pixels: no indicator, no horizontal overflow, footer aligned with the document end within subpixel rounding, and zero style-policy violations. TypeScript and focused ESLint checks passed. Direct framework-response checks confirmed the distinct development/production policies. The existing development server restarted automatically after the config change; no user process was terminated.
+
 ## Section 07 — Deployment access and upload preparation (2026-10-14)
 
 At the first connection check, the user authorized deployment but the agent session exposed no Vercel/Prisma tools or authenticated CLI. Only local upload preparation was performed at that stage. The tools later became available and Section 08 records the subsequent provisioning and deployment.

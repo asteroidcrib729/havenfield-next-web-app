@@ -100,10 +100,7 @@
     },
     "hostedCI": {
       "status": "passed",
-      "runs": [
-        38632322005,
-        38632523723
-      ],
+      "runs": [38632322005, 38632523723],
       "serviceTests": 55,
       "postgresTests": 41,
       "browserJourneys": 8,
