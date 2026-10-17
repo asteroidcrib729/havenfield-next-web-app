@@ -17,7 +17,7 @@ export function SavedHomes({ properties }: { properties: Property[] }) {
           {homes.length} saved {homes.length === 1 ? "home" : "homes"}. These choices stay in this
           browser.
         </p>
-        {homes.length ? (
+        {choices.saved.length ? (
           <button className={action} onClick={() => choices.clear("saved")}>
             Clear saved homes
           </button>
@@ -70,7 +70,7 @@ export function CompareHomes({ properties }: { properties: Property[] }) {
   ] as const;
   return (
     <div>
-      <HomeChoiceLinks />
+      <HomeChoiceLinks properties={properties} />
       <p className="mb-6 max-w-2xl text-sm leading-7 text-muted">
         Compare up to three fictional homes side by side. Prices and specifications are
         illustrative. Your selection stays in this browser.

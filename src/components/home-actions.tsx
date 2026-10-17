@@ -78,6 +78,20 @@ export function HomeChoiceLinks({ properties }: { properties?: Property[] }) {
           Compare homes ({available(choices.compare).length}/3)
         </Link>
       </div>
+      {properties &&
+        (available(choices.saved).length !== choices.saved.length ||
+          available(choices.compare).length !== choices.compare.length) && (
+          <p className="basis-full text-xs leading-6 text-muted">
+            Some saved or comparison choices are no longer available.{" "}
+            <button
+              type="button"
+              className="min-h-11 underline underline-offset-4"
+              onClick={() => choices.removeUnavailable(properties.map((home) => home.id))}
+            >
+              Remove unavailable choices
+            </button>
+          </p>
+        )}
       {choices.temporary ? (
         <p role="status" className="basis-full text-xs text-muted">
           Your browser blocked storage. Your choices will last only until this page is reloaded.

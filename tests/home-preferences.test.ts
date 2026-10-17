@@ -1,5 +1,9 @@
 import { expect, it } from "vitest";
-import { parseHomeChoices, changeHomeChoice } from "../src/lib/home-preferences";
+import {
+  parseHomeChoices,
+  changeHomeChoice,
+  removeUnavailableChoices,
+} from "../src/lib/home-preferences";
 it("ignores malformed, oversized and unknown-version browser data and filters unknown identifiers", () => {
   for (const value of ["{", "x".repeat(5000), '{"version":2,"saved":["hf-01"]}'])
     expect(parseHomeChoices(value).saved).toEqual([]);
@@ -33,4 +37,18 @@ it("accepts managed property identities and caps browser-local saves", () => {
   expect(parseHomeChoices(JSON.stringify(next)).saved).toEqual([id]);
   expect(changeHomeChoice(next, "compare", id).next.compare).toEqual([id]);
   expect(changeHomeChoice(next, "saved", "hf-injected").next.saved).toEqual([id]);
+});
+
+it("removes unavailable saved and comparison identities without changing remaining order", () => {
+  const state = {
+    version: 1 as const,
+    saved: ["hf-01", "hf-02"],
+    compare: ["hf-02", "hf-03", "hf-01"],
+  };
+  expect(removeUnavailableChoices(state, ["hf-03", "hf-01"])).toEqual({
+    version: 1,
+    saved: ["hf-01"],
+    compare: ["hf-03", "hf-01"],
+  });
+  expect(state.compare).toHaveLength(3);
 });

@@ -4,6 +4,7 @@ import {
   HOME_STORAGE_KEY,
   parseHomeChoices,
   changeHomeChoice,
+  removeUnavailableChoices,
   type HomeChoices,
 } from "@/lib/home-preferences";
 const listeners = new Set<() => void>();
@@ -52,6 +53,9 @@ export function useHomeChoices() {
       const result = changeHomeChoice(parseHomeChoices(snapshot()), kind, id);
       if (!result.limited) write(result.next);
       return !result.limited;
+    },
+    removeUnavailable(availableIds: string[]) {
+      write(removeUnavailableChoices(parseHomeChoices(snapshot()), availableIds));
     },
     clear(kind: "saved" | "compare") {
       write({ ...parseHomeChoices(snapshot()), [kind]: [] });

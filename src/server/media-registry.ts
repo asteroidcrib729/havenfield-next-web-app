@@ -230,7 +230,7 @@ export async function updateMediaDetails(id: string, input: unknown, actor: stri
       throw new AppError(
         409,
         "version_conflict",
-        "Image details changed. Reopen the editor before saving.",
+        "Image details changed. Reload the media library before reopening this editor.",
       );
     const changed = await tx.execute(
       "UPDATE media SET alt=?,collection=?,focal_x=?,focal_y=?,version=version+1 WHERE id=? AND version=?",
@@ -244,7 +244,7 @@ export async function updateMediaDetails(id: string, input: unknown, actor: stri
       ],
     );
     if (!changed)
-      throw new AppError(409, "version_conflict", "Image details changed. Reopen the editor.");
+      throw new AppError(409, "version_conflict", "Image details changed. Reload the media library before reopening this editor.");
     await recordAction(tx, "media.details", id, actor);
   });
 }

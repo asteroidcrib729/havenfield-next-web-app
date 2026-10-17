@@ -36,3 +36,12 @@ export function changeHomeChoice(state: HomeChoices, kind: "saved" | "compare", 
     limited: false,
   };
 }
+
+export function removeUnavailableChoices(state: HomeChoices, availableIds: string[]): HomeChoices {
+  const available = new Set(availableIds);
+  return {
+    ...state,
+    saved: state.saved.filter((id) => available.has(id)),
+    compare: state.compare.filter((id) => available.has(id)),
+  };
+}
