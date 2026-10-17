@@ -1,0 +1,102 @@
+{
+  "checkedAt": "2026-10-17T16:18:12.823Z",
+  "project": "havenfield",
+  "cutoverDeployment": "dpl_A9yZiFMWAz1t6DDxN357N1KCbFSG",
+  "reviewMethod": "Read-only metadata and one-shot health requests using a fresh same-project development OIDC header scoped to each exact deployment origin. API exposes environment names, not historic secret values; old URL equality is not claimed.",
+  "stablePreview": {
+    "alias": "havenfieldre-preview.vercel.app",
+    "deployment": "dpl_3SfcP8Cnf2X8T1iwypEH3tLSz16S"
+  },
+  "checks": [
+    {
+      "deployment": "dpl_3SfcP8Cnf2X8T1iwypEH3tLSz16S",
+      "createdAt": "2026-10-17T13:20:41.588Z",
+      "predatesPreviewCutover": false,
+      "health": {
+        "status": 200,
+        "body": "ok"
+      },
+      "classification": "Post-cutover build; retain as history, use the currently verified stable Preview for editing",
+      "aliases": ["havenfieldre-preview.vercel.app"]
+    },
+    {
+      "deployment": "dpl_BRa61m1XUqUjBxTysbLsNYar3Hdx",
+      "createdAt": "2026-10-16T16:25:08.164Z",
+      "predatesPreviewCutover": false,
+      "health": {
+        "status": 200,
+        "body": "ok"
+      },
+      "classification": "Post-cutover build; retain as history, use the currently verified stable Preview for editing",
+      "aliases": []
+    },
+    {
+      "deployment": "dpl_CZ2dmvnhDT6n3BH3Y6CJST183x77",
+      "createdAt": "2026-10-16T16:17:02.704Z",
+      "predatesPreviewCutover": false,
+      "health": {
+        "status": null,
+        "body": "unreachable"
+      },
+      "classification": "Post-cutover build; retain as history, use the currently verified stable Preview for editing",
+      "aliases": []
+    },
+    {
+      "deployment": "dpl_64h6oL6S5mkXYQjsNPWVfWNBrRpo",
+      "createdAt": "2026-10-16T15:34:35.655Z",
+      "predatesPreviewCutover": false,
+      "health": {
+        "status": 200,
+        "body": "ok"
+      },
+      "classification": "Post-cutover build; retain as history, use the currently verified stable Preview for editing",
+      "aliases": ["havenfield-git-prisma-cloud-setup-farazhussain-5000s-projects.vercel.app"]
+    },
+    {
+      "deployment": "dpl_9ZQU6hFvjdGeG9Ckjz4skW76kqXB",
+      "createdAt": "2026-10-16T14:58:29.954Z",
+      "predatesPreviewCutover": false,
+      "health": {
+        "status": 200,
+        "body": "ok"
+      },
+      "classification": "Post-cutover build; retain as history, use the currently verified stable Preview for editing",
+      "aliases": []
+    },
+    {
+      "deployment": "dpl_A9yZiFMWAz1t6DDxN357N1KCbFSG",
+      "createdAt": "2026-10-14T21:13:59.306Z",
+      "predatesPreviewCutover": false,
+      "health": {
+        "status": 200,
+        "body": "ok"
+      },
+      "classification": "Post-cutover build; retain as history, use the currently verified stable Preview for editing",
+      "aliases": []
+    },
+    {
+      "deployment": "dpl_7xJkog4a178bxiiNXDH8C2F9J6Dh",
+      "createdAt": "2026-10-14T19:01:25.586Z",
+      "predatesPreviewCutover": true,
+      "health": {
+        "status": 503,
+        "body": "unavailable"
+      },
+      "classification": "Historical build predates database cutover; do not use for editing or rollback",
+      "aliases": []
+    },
+    {
+      "deployment": "dpl_HtVFasC8X7myY6KQ3hC4UFmkY4Ru",
+      "createdAt": "2026-10-14T18:53:47.401Z",
+      "predatesPreviewCutover": true,
+      "health": {
+        "status": 503,
+        "body": "unavailable"
+      },
+      "classification": "Historical build predates database cutover; do not use for editing or rollback",
+      "aliases": []
+    }
+  ],
+  "resourcesDeleted": false,
+  "conclusion": "Historical pre-cutover deployments must not be used after the rollback database retirement. Retain immutable history; new property-authoring code requires schema 3 and a freshly verified Preview. No additional paid resources or protection changes."
+}

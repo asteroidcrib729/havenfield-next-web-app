@@ -1,21 +1,15 @@
+import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Leaf, Sun } from "lucide-react";
 import { HeroFilm } from "@/components/hero-film";
 import { PropertyCard } from "@/components/property-card";
 import { SectionHeading } from "@/components/section-heading";
-import { properties } from "@/content/properties";
+import { getPublicProperties } from "@/server/properties";
 import { getPublishedPosts } from "@/server/blog";
 import type { BlogPost } from "@/lib/blog-types";
 export const dynamic = "force-dynamic";
-export default async function Home() {
-  let posts: BlogPost[] = [];
-  let journalUnavailable = false;
-  try {
-    posts = (await getPublishedPosts({ limit: 3 })).posts;
-  } catch {
-    journalUnavailable = true;
-  }
+export default function Home() {
   return (
     <>
       <section className="relative isolate min-h-[610px] overflow-hidden bg-ink text-white lg:min-h-[690px]">
@@ -54,31 +48,9 @@ export default async function Home() {
           </Link>
         </div>
       </div>
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
-        <div className="mb-12 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-          <SectionHeading
-            eyebrow="The collection · 01"
-            title="Find your kind of quiet."
-            description="A small collection of imagined places, each with its own character. Discover the space that speaks to your way of living."
-          />
-          <Link
-            href="/properties"
-            className="flex shrink-0 items-center gap-4 border-b border-ink pb-2 text-xs"
-          >
-            View all homes
-            <ArrowUpRight size={16} />
-          </Link>
-        </div>
-        <div className="grid gap-x-7 gap-y-12 md:grid-cols-3">
-          {properties.slice(0, 3).map((property) => (
-            <PropertyCard key={property.id} property={property} headingLevel={3} />
-          ))}
-        </div>
-        <p className="mt-8 text-[10px] text-muted">
-          Illustrative properties and USD prices for this portfolio concept. No listings are offered
-          for sale.
-        </p>
-      </section>
+      <Suspense fallback={<ContentPending label="Loading the collection" />}>
+        <HomeCollection />
+      </Suspense>
       <section className="border-y border-line bg-soft/65">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-[0.85fr_1.15fr] lg:px-10 lg:py-24">
           <div className="flex flex-col justify-center">
@@ -123,57 +95,9 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
-        <div className="mb-12 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-          <SectionHeading
-            eyebrow="The journal · 03"
-            title="A little more perspective."
-            description="Stories about thoughtful architecture, the places we share, and the rituals that make a home."
-          />
-          <Link
-            href="/journal"
-            className="flex shrink-0 items-center gap-4 border-b border-ink pb-2 text-xs"
-          >
-            Read the journal
-            <ArrowUpRight size={16} />
-          </Link>
-        </div>
-        {posts.length ? (
-          <div className="grid gap-9 md:grid-cols-3">
-            {posts.map((post) => (
-              <article key={post.id}>
-                <Link href={`/journal/${post.slug}`} className="group">
-                  <div className="relative aspect-[16/10] overflow-hidden bg-soft">
-                    <Image
-                      src={post.coverImage || "/media/interior.jpg"}
-                      alt={post.coverAlt || "Havenfield architecture concept"}
-                      fill
-                      unoptimized={post.coverImage.startsWith("https://")}
-                      sizes="(max-width:768px) 100vw, 33vw"
-                      className="object-cover transition-transform duration-700 motion-safe:group-hover:scale-105"
-                    />
-                  </div>
-                  <p className="mt-5 text-[10px] tracking-widest uppercase text-brand">
-                    {post.category}
-                  </p>
-                  <h3 className="mt-3 font-display text-2xl leading-snug">{post.title}</h3>
-                  <p className="mt-3 text-xs leading-6 text-muted">{post.excerpt}</p>
-                  <span className="mt-5 inline-flex items-center gap-3 text-xs">
-                    Read the story
-                    <ArrowUpRight size={14} />
-                  </span>
-                </Link>
-              </article>
-            ))}
-          </div>
-        ) : (
-          <div className="border border-line p-10 text-sm text-muted">
-            {journalUnavailable
-              ? "The journal is temporarily unavailable. Please check back soon."
-              : "The journal is taking shape. New perspectives will appear here."}
-          </div>
-        )}
-      </section>
+      <Suspense fallback={<ContentPending label="Loading the journal" />}>
+        <HomeJournal />
+      </Suspense>
       <section className="mx-auto grid max-w-7xl gap-8 border-y border-line px-6 py-12 md:grid-cols-[auto_1fr_auto] md:items-center lg:px-10">
         <div className="relative h-36 w-full overflow-hidden rounded-xl md:h-32 md:w-44">
           <Image
@@ -200,5 +124,119 @@ export default async function Home() {
         </Link>
       </section>
     </>
+  );
+}
+
+async function HomeCollection() {
+  const properties = await getPublicProperties();
+  return (
+    <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+      <div className="mb-12 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+        <SectionHeading
+          eyebrow="The collection · 01"
+          title="Find your kind of quiet."
+          description="A small collection of imagined places, each with its own character. Discover the space that speaks to your way of living."
+        />
+        <Link
+          href="/properties"
+          className="flex shrink-0 items-center gap-4 border-b border-ink pb-2 text-xs"
+        >
+          View all homes
+          <ArrowUpRight size={16} />
+        </Link>
+      </div>
+      <div className="grid gap-x-7 gap-y-12 md:grid-cols-3">
+        {properties.slice(0, 3).map((property) => (
+          <PropertyCard key={property.id} property={property} headingLevel={3} />
+        ))}
+      </div>
+      <p className="mt-8 text-[10px] text-muted">
+        Illustrative properties and USD prices for this portfolio concept. No listings are offered
+        for sale.
+      </p>
+    </section>
+  );
+}
+
+async function HomeJournal() {
+  let posts: BlogPost[] = [];
+  let journalUnavailable = false;
+  try {
+    posts = (await getPublishedPosts({ limit: 3 })).posts;
+  } catch {
+    journalUnavailable = true;
+  }
+
+  return (
+    <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+      <div className="mb-12 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+        <SectionHeading
+          eyebrow="The journal · 03"
+          title="A little more perspective."
+          description="Stories about thoughtful architecture, the places we share, and the rituals that make a home."
+        />
+        <Link
+          href="/journal"
+          className="flex shrink-0 items-center gap-4 border-b border-ink pb-2 text-xs"
+        >
+          Read the journal
+          <ArrowUpRight size={16} />
+        </Link>
+      </div>
+      {posts.length ? (
+        <div className="grid gap-9 md:grid-cols-3">
+          {posts.map((post) => (
+            <article key={post.id}>
+              <Link href={`/journal/${post.slug}`} className="group">
+                <div className="relative aspect-[16/10] overflow-hidden bg-soft">
+                  <Image
+                    src={post.coverImage || "/media/interior.jpg"}
+                    alt={post.coverAlt || "Havenfield architecture concept"}
+                    fill
+                    unoptimized={post.coverImage.startsWith("https://")}
+                    sizes="(max-width:768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-700 motion-safe:group-hover:scale-105"
+                  />
+                </div>
+                <p className="mt-5 text-[10px] tracking-widest uppercase text-brand">
+                  {post.category}
+                </p>
+                <h3 className="mt-3 font-display text-2xl leading-snug">{post.title}</h3>
+                <p className="mt-3 text-xs leading-6 text-muted">{post.excerpt}</p>
+                <span className="mt-5 inline-flex items-center gap-3 text-xs">
+                  Read the story
+                  <ArrowUpRight size={14} />
+                </span>
+              </Link>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div className="border border-line p-10 text-sm text-muted">
+          {journalUnavailable
+            ? "The journal is temporarily unavailable. Please check back soon."
+            : "The journal is taking shape. New perspectives will appear here."}
+        </div>
+      )}
+    </section>
+  );
+}
+
+function ContentPending({ label }: { label: string }) {
+  return (
+    <section aria-label={label} className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+      <p role="status" className="text-sm text-muted">
+        {label}...
+      </p>
+      <div aria-hidden="true" className="mt-8 grid gap-7 md:grid-cols-3">
+        {[1, 2, 3].map((item) => (
+          <div key={item} className="space-y-4">
+            <div className="aspect-[4/3] bg-soft" />
+            <div className="h-7 w-3/4 bg-soft" />
+            <div className="h-20 bg-soft" />
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }

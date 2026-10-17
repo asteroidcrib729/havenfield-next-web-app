@@ -1,13 +1,23 @@
 "use client";
 
+import type { PropertyImage } from "@/lib/property-types";
 import Image from "next/image";
 import { visualAlt } from "@/content/visuals";
 import { useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
-export function PropertyGallery({ images, name }: { images: string[]; name: string }) {
+export function PropertyGallery({
+  images,
+  name,
+  details,
+}: {
+  images: string[];
+  name: string;
+  details?: PropertyImage[];
+}) {
   const [active, setActive] = useState(0);
   if (!images.length) return null;
+  const detail = details?.find((image) => image.url === images[active]);
 
   return (
     <div
@@ -24,9 +34,11 @@ export function PropertyGallery({ images, name }: { images: string[]; name: stri
       <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-line">
         <Image
           src={images[active]}
-          alt={visualAlt[images[active]] || `${name}, concept view ${active + 1}`}
+          alt={detail?.alt || visualAlt[images[active]] || `${name}, concept view ${active + 1}`}
           fill
           priority={active === 0}
+          unoptimized={images[active].startsWith("https://")}
+          style={{ objectPosition: (detail?.focalX ?? 50) + "% " + (detail?.focalY ?? 50) + "%" }}
           sizes="(max-width: 768px) 100vw, 75vw"
           className="object-cover"
         />
@@ -53,7 +65,7 @@ export function PropertyGallery({ images, name }: { images: string[]; name: stri
         )}
       </div>
       <p className="mt-3 text-xs leading-6 text-muted">
-        Four AI-generated views explore the same fictional home. They are design concepts, not
+        AI-generated views explore the same fictional home. They are design concepts, not
         photographs of a real property.
       </p>
       {images.length > 1 && (
@@ -66,7 +78,14 @@ export function PropertyGallery({ images, name }: { images: string[]; name: stri
               aria-pressed={active === index}
               className={`relative h-20 w-28 shrink-0 overflow-hidden rounded-lg border-2 ${active === index ? "border-brand" : "border-transparent"}`}
             >
-              <Image src={source} alt="" fill sizes="112px" className="object-cover" />
+              <Image
+                src={source}
+                alt=""
+                fill
+                sizes="112px"
+                unoptimized={source.startsWith("https://")}
+                className="object-cover"
+              />
             </button>
           ))}
         </div>

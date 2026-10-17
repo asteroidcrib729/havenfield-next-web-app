@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-17T16:19:20.955Z",
+  "status": "local-validation-passed-hosted-release-pending",
+  "checks": {
+    "typecheck": true,
+    "lint": true,
+    "serviceTests": 75,
+    "postgresTests": 49,
+    "browserJourneys": 13,
+    "productionBuildViaBrowserRunner": true
+  },
+  "scope": [
+    "preserved property identities and inquiries",
+    "private draft/public catalog",
+    "optimistic property and media versions",
+    "gallery order, alt and focal points",
+    "revision restoration",
+    "upload and repository usage protection",
+    "format-3 export and recovery, legacy format-2 bundle compatibility",
+    "browser-local choices for managed IDs",
+    "320px populated authoring and media dialogs; axe"
+  ],
+  "notes": "Service and PostgreSQL tests overlap. Human screen-reader/native zoom testing and field INP not claimed."
+}

@@ -55,7 +55,7 @@ for (const asset of manifest.assets) {
   await writeFile(asset.outputPath, output);
   if (exactPrompts[asset.id]) asset.generationPrompt = exactPrompts[asset.id];
   asset.derivatives = [];
-  for (const width of [480, 768]) {
+  for (const width of asset.id === "HF03-19" ? [480] : []) {
     const path = asset.outputPath.replace(".webp", "-" + width + ".webp");
     const data = await sharp(bytes)
       .rotate()
@@ -88,6 +88,36 @@ await writeFile(
             a.alt,
           ]),
       ),
+      null,
+      2,
+    ) +
+    ";\n",
+);
+await writeFile(
+  "src/content/asset-library.ts",
+  "// Public read-only image index. Original prompts remain in development-plans.\nexport const repositoryAssets = " +
+    JSON.stringify(
+      manifest.assets
+        .filter((a: { approval: string }) => a.approval === "technical-review-passed")
+        .map(
+          (a: {
+            id: string;
+            outputPath: string;
+            alt: string;
+            group: string;
+            actualDimensions: { width: number; height: number };
+            focalPoint: { x: number; y: number };
+          }) => ({
+            id: a.id,
+            url: "/" + a.outputPath.replace(/^public\//, ""),
+            alt: a.alt,
+            collection: a.group,
+            width: a.actualDimensions.width,
+            height: a.actualDimensions.height,
+            focalX: a.focalPoint?.x ?? 50,
+            focalY: a.focalPoint?.y ?? 50,
+          }),
+        ),
       null,
       2,
     ) +

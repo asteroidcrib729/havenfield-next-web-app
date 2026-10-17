@@ -3,9 +3,15 @@
 import { useState, useRef, type FormEvent } from "react";
 import Link from "next/link";
 import { ArrowUpRight, CheckCircle2, LoaderCircle } from "lucide-react";
-import { properties } from "@/content/properties";
+import type { Property } from "@/lib/property-types";
 
-export function InquiryForm({ propertyId = "" }: { propertyId?: string }) {
+export function InquiryForm({
+  propertyId = "",
+  properties,
+}: {
+  propertyId?: string;
+  properties: Property[];
+}) {
   const [pending, setPending] = useState(false);
   const submission = useRef("");
   const submitting = useRef(false);

@@ -18,11 +18,13 @@ export async function GET(request: Request) {
         query: z.string().max(200),
         page: z.coerce.number().int().min(1).max(10_000),
         unused: z.boolean(),
+        collection: z.string().max(60),
       })
       .parse({
         query: params.get("query") || "",
         page: params.get("page") || 1,
         unused: params.get("unused") === "true",
+        collection: params.get("collection") || "",
       });
     return json(await listMedia(input));
   } catch (error) {

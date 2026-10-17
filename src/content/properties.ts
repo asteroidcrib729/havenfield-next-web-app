@@ -1,19 +1,6 @@
-export type Property = {
-  id: string;
-  slug: string;
-  name: string;
-  location: string;
-  region: string;
-  type: "Villa" | "Residence" | "Loft";
-  price: number;
-  bedrooms: number;
-  bathrooms: number;
-  area: number;
-  image: string;
-  gallery: string[];
-  description: string;
-  features: string[];
-};
+import type { Property } from "../lib/property-types";
+export type { Property } from "../lib/property-types";
+export { formatPrice } from "../lib/property-types";
 export const properties: Property[] = [
   {
     id: "hf-01",
@@ -132,10 +119,3 @@ export const properties: Property[] = [
     ],
   },
 ];
-export function formatPrice(price: number) {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    maximumFractionDigits: 0,
-  }).format(price);
-}

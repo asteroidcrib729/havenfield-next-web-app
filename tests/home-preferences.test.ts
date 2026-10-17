@@ -26,3 +26,11 @@ it("enforces three comparison slots while keeping saves independent and allowing
     "hf-04",
   ]);
 });
+
+it("accepts managed property identities and caps browser-local saves", () => {
+  const id = "hf-5ee692de-647d-4be2-9124-358922901c40";
+  const next = changeHomeChoice(parseHomeChoices(null), "saved", id).next;
+  expect(parseHomeChoices(JSON.stringify(next)).saved).toEqual([id]);
+  expect(changeHomeChoice(next, "compare", id).next.compare).toEqual([id]);
+  expect(changeHomeChoice(next, "saved", "hf-injected").next.saved).toEqual([id]);
+});

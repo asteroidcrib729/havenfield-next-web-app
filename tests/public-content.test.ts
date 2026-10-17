@@ -1,3 +1,7 @@
+vi.mock("../src/server/properties", async () => {
+  const { properties } = await import("../src/content/properties");
+  return { getPublicProperties: async () => properties };
+});
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { beforeEach, describe, expect, it, vi } from "vitest";

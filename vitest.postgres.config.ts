@@ -9,7 +9,7 @@ export default defineConfig({
   },
   test: {
     environment: "node",
-    include: ["tests/server.test.ts", "tests/postgres/**/*.test.ts"],
+    include: ["tests/properties.test.ts", "tests/server.test.ts", "tests/postgres/**/*.test.ts"],
     fileParallelism: false,
     testTimeout: 20_000,
     hookTimeout: 30_000,

@@ -1,4 +1,7 @@
+import { getPublicProperties } from "@/server/properties";
+import { propertySummary } from "@/lib/property-types";
 import { Suspense } from "react";
+import CollectionPending from "@/components/collection-pending";
 import type { Metadata } from "next";
 import { PropertyBrowser } from "@/components/property-browser";
 
@@ -27,9 +30,14 @@ export default function PropertiesPage() {
           are offered for sale.
         </p>
       </div>
-      <Suspense fallback={<p role="status">Loading collection filters…</p>}>
-        <PropertyBrowser />
+      <Suspense fallback={<CollectionPending />}>
+        <CollectionResults />
       </Suspense>
     </div>
   );
+}
+
+async function CollectionResults() {
+  const properties = (await getPublicProperties()).map(propertySummary);
+  return <PropertyBrowser properties={properties} />;
 }

@@ -51,8 +51,16 @@ const tables = {
     "owner",
     "created_at",
     "state",
+    "collection",
+    "focal_x",
+    "focal_y",
+    "version",
   ],
   media_references: ["media_id", "post_id", "kind"],
+  properties: ["id", "slug", "status", "version", "content", "created_at", "updated_at"],
+  property_revisions: ["id", "property_id", "version", "snapshot", "created_at"],
+  property_media_references: ["media_id", "property_id", "kind"],
+  catalog_state: ["id", "initialized"],
   publisher_actions: ["id", "actor", "action", "target", "created_at"],
   article_autosaves: [
     "key",
@@ -65,10 +73,16 @@ const tables = {
   ],
   inquiry_receipts: ["key", "fingerprint", "inquiry_id", "expires_at"],
 } as const;
+const newTables = [
+  "properties",
+  "property_revisions",
+  "property_media_references",
+  "catalog_state",
+];
 type Table = keyof typeof tables;
 type Row = Record<string, string | number | null>;
 interface Payload {
-  format: 2;
+  format: 2 | 3;
   exportedAt: string;
   migrations: { version: number; name: string; checksum: string }[];
   tables: Record<Table, Row[]>;
@@ -84,7 +98,7 @@ export function parseBackup(input: unknown): DatabaseBackup {
   if (
     !backup ||
     !backup.payload ||
-    ![1, 2].includes(backup.payload.format) ||
+    ![1, 2, 3].includes(backup.payload.format) ||
     backup.checksum !== digest(backup.payload) ||
     !Array.isArray(backup.payload.migrations) ||
     !backup.payload.migrations.length ||
@@ -98,7 +112,10 @@ export function parseBackup(input: unknown): DatabaseBackup {
       ["posts", "post_revisions", "slug_redirects", "inquiries"].sort().join()
     )
       throw new Error("Invalid legacy backup inventory");
-    for (const table of Object.keys(tables) as Table[]) old.payload.tables[table] ??= [];
+    for (const table of Object.keys(tables).filter(
+      (table) => !newTables.includes(table),
+    ) as Table[])
+      old.payload.tables[table] ??= [];
     old.payload.tables.inquiries = old.payload.tables.inquiries.map((row) => ({
       ...row,
       status: "new",
@@ -106,6 +123,28 @@ export function parseBackup(input: unknown): DatabaseBackup {
       expires_at: null,
     }));
     old.payload.format = 2;
+    old.checksum = digest(old.payload);
+    return parseBackup(old);
+  }
+  if (Number(backup.payload.format) === 2) {
+    const old = structuredClone(backup);
+    if (
+      Object.keys(old.payload.tables).sort().join() !==
+      Object.keys(tables)
+        .filter((table) => !newTables.includes(table))
+        .sort()
+        .join()
+    )
+      throw new Error("Invalid format-2 backup inventory");
+    for (const table of newTables) old.payload.tables[table as Table] = [];
+    old.payload.tables.media = old.payload.tables.media.map((row) => ({
+      ...row,
+      collection: "",
+      focal_x: 50,
+      focal_y: 50,
+      version: 1,
+    }));
+    old.payload.format = 3;
     old.checksum = digest(old.payload);
     return parseBackup(old);
   }
@@ -147,7 +186,7 @@ export async function exportDatabase(db: Database): Promise<DatabaseBackup> {
     const data = {} as Record<Table, Row[]>;
     for (const table of Object.keys(tables) as Table[])
       data[table] = await tx.query<Row>(
-        `SELECT ${tables[table].join(",")} FROM ${table} ORDER BY ${table === "slug_redirects" ? "slug" : table === "media_references" ? "media_id,post_id,kind" : table === "article_autosaves" || table === "inquiry_receipts" ? "key" : "id"}`,
+        `SELECT ${tables[table].join(",")} FROM ${table} ORDER BY ${table === "slug_redirects" ? "slug" : table === "property_media_references" ? "media_id,property_id,kind" : table === "media_references" ? "media_id,post_id,kind" : table === "article_autosaves" || table === "inquiry_receipts" ? "key" : "id"}`,
       );
     for (const row of data.inquiry_receipts) {
       const value = Number(row.expires_at);
@@ -156,7 +195,7 @@ export async function exportDatabase(db: Database): Promise<DatabaseBackup> {
       row.expires_at = value;
     }
     const payload: Payload = {
-      format: 2,
+      format: 3,
       exportedAt: new Date().toISOString(),
       migrations,
       tables: data,

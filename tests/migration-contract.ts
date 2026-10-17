@@ -13,16 +13,16 @@ export function definition(version: number, sql: string): Migration {
 }
 export async function freshAndIncremental(db: Database) {
   const initial = await loadMigrations();
-  expect((await migrateDatabase(db)).applied).toEqual([1, 2]);
+  expect((await migrateDatabase(db)).applied).toEqual(initial.map((item) => item.version));
   expect((await migrateDatabase(db)).applied).toEqual([]);
   const added = definition(
-    3,
+    initial.length + 1,
     "CREATE TABLE migration_probe (id TEXT PRIMARY KEY, value TEXT NOT NULL); INSERT INTO migration_probe(id,value) VALUES('probe','a; literal ? value');",
   );
-  expect((await migrateDatabase(db, [...initial, added])).applied).toEqual([3]);
+  expect((await migrateDatabase(db, [...initial, added])).applied).toEqual([initial.length + 1]);
   expect((await db.query("SELECT value FROM migration_probe"))[0].value).toBe("a; literal ? value");
   await expect(migrateDatabase(db, initial)).rejects.toThrow("newer version");
-  const changed = definition(3, added.sql + "\n-- changed");
+  const changed = definition(initial.length + 1, added.sql + "\n-- changed");
   await expect(migrateDatabase(db, [...initial, changed])).rejects.toThrow("was changed");
 }
 export async function failedMigration(db: Database) {
@@ -32,12 +32,12 @@ export async function failedMigration(db: Database) {
     migrateDatabase(db, [
       ...initial,
       definition(
-        3,
+        initial.length + 1,
         "CREATE TABLE migration_failure (id INTEGER); INSERT INTO missing_table(id) VALUES(1);",
       ),
     ]),
   ).rejects.toThrow();
-  expect(await db.query("SELECT version FROM schema_migrations")).toHaveLength(2);
+  expect(await db.query("SELECT version FROM schema_migrations")).toHaveLength(initial.length);
   await expect(db.query("SELECT * FROM migration_failure")).rejects.toThrow();
 }
 export async function legacyUpgrade(db: Database) {
@@ -78,7 +78,7 @@ export async function legacyUpgrade(db: Database) {
   const before = await db.query("SELECT * FROM posts");
   const report = await migrateDatabase(db);
   expect(report.adoptedLegacy).toBe(true);
-  expect(report.applied).toEqual([2]);
+  expect(report.applied).toEqual([2, 3]);
   expect(await db.query("SELECT * FROM posts")).toEqual(before);
   expect(await db.query("SELECT * FROM post_revisions")).toHaveLength(1);
   expect(await db.query("SELECT * FROM slug_redirects")).toHaveLength(1);

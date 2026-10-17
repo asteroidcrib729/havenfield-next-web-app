@@ -3,19 +3,14 @@ import { inquirySchema } from "../lib/blog-schema";
 import { clientAddress, rateLimit } from "./auth";
 import { getDatabase } from "./database";
 import { AppError } from "./errors";
-import { properties } from "../content/properties";
+import { inquiryPropertyExists } from "./properties";
+import { lockMediaWrites } from "./media-registry";
 import { recordAction } from "./audit";
 export async function createInquiry(
   request: Request,
   body: unknown,
 ): Promise<{ id: string; message: string }> {
   const input = inquirySchema.parse(body);
-  if (input.propertyId && !properties.some((property) => property.id === input.propertyId))
-    throw new AppError(
-      400,
-      "property_reference",
-      "Choose a home from the collection or a general inquiry",
-    );
   const db = await getDatabase();
   const key = input.idempotencyKey || randomUUID();
   const nowMs = Date.now();
@@ -71,6 +66,15 @@ export async function createInquiry(
           "This submission reference was already used for different details",
         );
       return receipt(String(winner.inquiry_id));
+    }
+    if (input.propertyId) {
+      await lockMediaWrites(tx);
+      if (!(await inquiryPropertyExists(tx, input.propertyId)))
+        throw new AppError(
+          400,
+          "property_reference",
+          "Choose a published home from the collection or a general inquiry",
+        );
     }
     await tx.execute(
       "INSERT INTO inquiries(id,name,email,phone,message,property_id,consent_at,created_at,status,updated_at,expires_at) VALUES(?,?,?,?,?,?,?,?,?,?,?)",

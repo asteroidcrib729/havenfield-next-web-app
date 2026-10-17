@@ -1,6 +1,4 @@
 import type { BlogPost } from "@/lib/blog-types";
-import { propertyStories } from "@/content/property-stories";
-import { relatedStorySlugs } from "@/content/content-links";
 import { HomeActions, HomeChoiceLinks } from "@/components/home-actions";
 import { getPublishedPostBySlug } from "@/server/blog";
 import { collectionReturn } from "@/lib/property-filters";
@@ -8,20 +6,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Bath, BedDouble, Check, Expand, MapPin } from "lucide-react";
-import { properties } from "@/content/properties";
+import { getPublicProperties, getPublicPropertyBySlug } from "@/server/properties";
+import { propertySummary } from "@/lib/property-types";
 import { PropertyGallery } from "@/components/property-gallery";
 
-export function generateStaticParams() {
-  return properties.map(({ slug }) => ({ slug }));
-}
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const property = properties.find((item) => item.slug === slug);
-  if (!property) return {};
+  const property = await getPublicPropertyBySlug(slug);
+  if (!property) notFound();
   return {
     title: property.name,
     description: property.description,
@@ -41,10 +37,10 @@ export default async function PropertyPage({
   searchParams: Promise<{ collection?: string }>;
 }) {
   const { slug } = await params;
-  const property = properties.find((item) => item.slug === slug);
+  const property = await getPublicPropertyBySlug(slug);
   if (!property) notFound();
   const candidates: (BlogPost | null)[] = await Promise.all(
-    relatedStorySlugs(property.id).map((slug) => getPublishedPostBySlug(slug)),
+    (property.relatedStories || []).map((slug) => getPublishedPostBySlug(slug)),
   ).catch(() => []);
   const stories = candidates.filter((post): post is BlogPost => post !== null).slice(0, 2);
   return (
@@ -84,6 +80,7 @@ export default async function PropertyPage({
       <PropertyGallery
         images={property.gallery.length ? property.gallery : [property.image]}
         name={property.name}
+        details={property.galleryItems}
       />
       <div className="mt-12 grid gap-12 lg:grid-cols-[1.4fr_1fr]">
         <div>
@@ -104,7 +101,7 @@ export default async function PropertyPage({
           <h2 className="mt-8 font-display text-3xl">A home with its own rhythm.</h2>
           <p className="mt-5 text-lg leading-relaxed text-muted">{property.description}</p>
           <div className="mt-9 space-y-8">
-            {propertyStories[property.id]?.map(([title, text]) => (
+            {property.stories?.map(({ title, text }) => (
               <section key={title}>
                 <h2 className="font-display text-2xl">{title}</h2>
                 <p className="mt-3 leading-7 text-muted">{text}</p>
@@ -162,7 +159,7 @@ export default async function PropertyPage({
         )}
       </section>
       <div className="mt-10">
-        <HomeChoiceLinks />
+        <HomeChoiceLinks properties={(await getPublicProperties()).map(propertySummary)} />
       </div>
     </div>
   );

@@ -23,3 +23,4 @@ next-env.d.ts
 # Format new migration files before first applying them; do not add a blanket SQL ignore.
 database/migrations/001-initial.sql
 database/migrations/002-product-operations.sql
+database/migrations/003-property-authoring.sql

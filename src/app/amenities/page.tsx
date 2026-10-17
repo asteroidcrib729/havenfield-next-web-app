@@ -1,3 +1,4 @@
+import { getPublicProperties } from "@/server/properties";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -41,7 +42,8 @@ const details = [
     text: "Flexible rooms can become a reading nook, a place to work, or a creative space as daily needs change.",
   },
 ];
-export default function AmenitiesPage() {
+export default async function AmenitiesPage() {
+  const homes = await getPublicProperties();
   return (
     <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
       <div className="max-w-3xl">
@@ -106,7 +108,11 @@ export default function AmenitiesPage() {
             <h2 className="mt-5 font-display text-3xl">{item.title}</h2>
             <p className="mt-4 text-sm leading-7 text-muted">{item.text}</p>
             <Link
-              href={`/properties/${item.href}`}
+              href={
+                homes.some((home) => home.slug === item.href)
+                  ? "/properties/" + item.href
+                  : "/properties"
+              }
               className="mt-5 inline-block min-h-11 text-sm underline underline-offset-4"
             >
               Explore this home

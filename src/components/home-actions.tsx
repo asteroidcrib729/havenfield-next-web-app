@@ -1,4 +1,5 @@
 "use client";
+import type { Property } from "@/lib/property-types";
 import Link from "next/link";
 import { useState } from "react";
 import { Heart, Columns3 } from "lucide-react";
@@ -17,11 +18,20 @@ export function HomeActions({ id, name }: { id: string; name: string }) {
           aria-pressed={choices.saved.includes(id)}
           className={button}
           onClick={() => {
-            choices.toggle("saved", id);
-            setNotice("");
+            setNotice(
+              choices.toggle("saved", id)
+                ? choices.saved.includes(id)
+                  ? "Home removed from saved homes."
+                  : "Home saved in this browser."
+                : "Save up to 50 homes. Remove one before adding another.",
+            );
           }}
         >
           <Heart
+            className={
+              "motion-safe:transition-transform motion-safe:duration-150 " +
+              (choices.saved.includes(id) ? "scale-110" : "scale-100")
+            }
             size={15}
             aria-hidden="true"
             fill={choices.saved.includes(id) ? "currentColor" : "none"}
@@ -53,17 +63,19 @@ export function HomeActions({ id, name }: { id: string; name: string }) {
     </div>
   );
 }
-export function HomeChoiceLinks() {
+export function HomeChoiceLinks({ properties }: { properties?: Property[] }) {
   const choices = useHomeChoices();
+  const available = (ids: string[]) =>
+    properties ? ids.filter((id) => properties.some((home) => home.id === id)) : ids;
   return (
     <div className="mb-7 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-line bg-soft/50 px-5 py-4 text-sm">
       <p>Keep a few possibilities in mind.</p>
       <div className="flex flex-wrap gap-5">
         <Link href="/saved" className="underline underline-offset-4">
-          Saved homes ({choices.saved.length})
+          Saved homes ({available(choices.saved).length})
         </Link>
         <Link href="/compare" className="underline underline-offset-4">
-          Compare homes ({choices.compare.length}/3)
+          Compare homes ({available(choices.compare).length}/3)
         </Link>
       </div>
       {choices.temporary ? (

@@ -131,6 +131,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
               New article
             </Link>
             {[
+              { href: "/admin/properties", label: "Properties" },
               { href: "/admin/media", label: "Media library" },
               { href: "/admin/inquiries", label: "Inquiry inbox" },
               { href: "/admin/system", label: "Operations" },
@@ -138,7 +139,13 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
               <Link
                 key={item.href}
                 href={item.href}
-                aria-current={path === item.href ? "page" : undefined}
+                aria-current={
+                  path === item.href
+                    ? "page"
+                    : path.startsWith(item.href + "/")
+                      ? "location"
+                      : undefined
+                }
                 className={`rounded-xl px-4 py-3 text-sm ${path === item.href ? "bg-ink text-white" : "hover:bg-white"}`}
               >
                 {item.label}

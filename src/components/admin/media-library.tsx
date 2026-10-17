@@ -1,4 +1,6 @@
 "use client";
+import { MediaDetails } from "./media-details";
+import { RepositoryLibrary } from "./repository-library";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -11,6 +13,10 @@ export function MediaLibrary({
 }: {
   onSelect?: (item: MediaItem, decorative: boolean) => void;
 }) {
+  const [source, setSource] = useState<"uploads" | "repository">("uploads"),
+    [collection, setCollection] = useState(""),
+    [editing, setEditing] = useState<MediaItem | null>(null),
+    [notice, setNotice] = useState("");
   const [data, setData] = useState<MediaList | null>(null),
     [query, setQuery] = useState(""),
     [page, setPage] = useState(1),
@@ -21,14 +27,17 @@ export function MediaLibrary({
     [alt, setAlt] = useState(""),
     [decorative, setDecorative] = useState(false),
     [target, setTarget] = useState<MediaItem | null>(null);
-  const [references, setReferences] = useState<{ id: string; title: string; kind: string }[]>([]),
+  const [references, setReferences] = useState<
+      { id: string; title: string; kind: string; href?: string }[]
+    >([]),
     [inspected, setInspected] = useState<string | null>(null);
   const upload = useRef<HTMLInputElement>(null);
   useEffect(() => {
+    if (source !== "uploads") return;
     let active = true;
     const timer = setTimeout(() => {
       adminApi<MediaList>(
-        `/api/admin/media?query=${encodeURIComponent(query)}&page=${page}&unused=${unused}`,
+        `/api/admin/media?query=${encodeURIComponent(query)}&page=${page}&unused=${unused}&collection=${encodeURIComponent(collection)}`,
       )
         .then((result) => {
           if (active) {
@@ -44,7 +53,7 @@ export function MediaLibrary({
       active = false;
       clearTimeout(timer);
     };
-  }, [query, page, unused, reload]);
+  }, [query, page, unused, reload, collection, source]);
   async function add() {
     const file = upload.current?.files?.[0];
     if (!file) {
@@ -104,6 +113,15 @@ export function MediaLibrary({
       setError(reason instanceof Error ? reason.message : "Could not load references.");
     }
   }
+  if (source === "repository")
+    return (
+      <div className="space-y-5">
+        <button className={buttonClass} onClick={() => setSource("uploads")}>
+          Show uploaded images
+        </button>
+        <RepositoryLibrary onSelect={onSelect} />
+      </div>
+    );
   return (
     <section className="min-w-0 space-y-6" aria-label="Media library">
       <div>
@@ -113,6 +131,33 @@ export function MediaLibrary({
           available until you review and delete them. Cleanup has a seven-day grace period.
         </p>
       </div>
+      <div className="flex flex-wrap items-end gap-4">
+        <button className={buttonClass} onClick={() => setSource("repository")}>
+          Show repository images
+        </button>
+        <label className="min-w-0 text-sm">
+          Filter image collection
+          <select
+            value={collection}
+            className={"mt-2 " + fieldClass}
+            onChange={(event) => {
+              setCollection(event.target.value);
+              setPage(1);
+            }}
+          >
+            <option value="">All uploaded collections</option>
+            <option value="__uncollected">Uncollected</option>
+            {data?.collections.map((value) => (
+              <option key={value}>{value}</option>
+            ))}
+          </select>
+        </label>
+      </div>
+      {notice && (
+        <p role="status" className="rounded-xl bg-brand/10 p-4 text-sm">
+          {notice}
+        </p>
+      )}
       {error && (
         <p role="alert" className="rounded-xl bg-red-50 p-4 text-red-800">
           {error}
@@ -203,6 +248,7 @@ export function MediaLibrary({
                     height={260}
                     unoptimized
                     className="h-40 w-full rounded-xl object-cover"
+                    style={{ objectPosition: item.focalX + "% " + item.focalY + "%" }}
                   />
                 ) : (
                   <p className="rounded-xl bg-paper p-5 text-sm">
@@ -212,9 +258,12 @@ export function MediaLibrary({
                 )}
                 <p className="break-all text-xs text-muted">
                   {item.width} × {item.height} · {Math.ceil(item.bytes / 1024)} KiB ·{" "}
-                  {item.references} article references
+                  {item.references} protected uses
                 </p>
-                <p className="text-sm">{item.alt || "Decorative image"}</p>
+                <p className="text-sm">
+                  <span>{item.alt || "Decorative image"}</span> {"\u00b7"}{" "}
+                  {item.collection || "Uncollected"}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {onSelect && item.state === "active" && (
                     <button
@@ -240,23 +289,7 @@ export function MediaLibrary({
                   </button>
                   {item.state === "active" && (
                     <button
-                      onClick={async () => {
-                        const value = window.prompt("Image alternative text", item.alt);
-                        if (value === null) return;
-                        try {
-                          await adminApi(`/api/admin/media/${item.id}`, {
-                            method: "PATCH",
-                            body: JSON.stringify({ alt: value }),
-                          });
-                          setReload((n) => n + 1);
-                        } catch (reason) {
-                          setError(
-                            reason instanceof Error
-                              ? reason.message
-                              : "Description could not be saved.",
-                          );
-                        }
-                      }}
+                      onClick={() => setEditing(item)}
                       className="rounded-full border border-line px-3 py-2 text-xs"
                     >
                       Edit description
@@ -269,7 +302,7 @@ export function MediaLibrary({
                       <ul className="space-y-2">
                         {references.map((ref) => (
                           <li key={`${ref.id}-${ref.kind}`}>
-                            <Link href={`/admin/posts/${ref.id}`} className="underline">
+                            <Link href={ref.href || "/admin/posts/" + ref.id} className="underline">
                               {ref.title}
                             </Link>{" "}
                             ({ref.kind})
@@ -277,7 +310,7 @@ export function MediaLibrary({
                         ))}
                       </ul>
                     ) : (
-                      <p>No article references.</p>
+                      <p>No article, property, revision or recovery references.</p>
                     )}
                   </div>
                 )}
@@ -302,10 +335,21 @@ export function MediaLibrary({
           </div>
         </>
       )}
+      {editing && (
+        <MediaDetails
+          item={editing}
+          onClose={() => setEditing(null)}
+          onSaved={() => {
+            setEditing(null);
+            setNotice("Image details saved. Existing placements retain their saved metadata.");
+            setReload((value) => value + 1);
+          }}
+        />
+      )}
       {target && (
         <ConfirmationDialog
           title="Delete this image?"
-          description="This permanently removes the owned storage object. Article and revision references are checked again before deletion."
+          description="This permanently removes the owned storage object. Article, property, revision and recovery references are checked again before deletion."
           confirmLabel="Delete permanently"
           cancelLabel="Keep image"
           destructive

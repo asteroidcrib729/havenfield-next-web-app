@@ -48,6 +48,9 @@ export function remapRecoveryMedia(
       snapshot.body = replace(snapshot.body || "");
       row.snapshot = JSON.stringify(snapshot);
     }
+  for (const row of backup.payload.tables.properties) row.content = replace(String(row.content));
+  for (const row of backup.payload.tables.property_revisions)
+    row.snapshot = replace(String(row.snapshot));
   backup.checksum = createHash("sha256").update(JSON.stringify(backup.payload)).digest("hex");
   return parseBackup(backup);
 }

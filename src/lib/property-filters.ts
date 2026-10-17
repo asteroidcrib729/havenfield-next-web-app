@@ -1,10 +1,9 @@
-import { properties } from "../content/properties";
-export function propertyFilters(params: URLSearchParams) {
+export function propertyFilters(params: URLSearchParams, regions?: string[]) {
   const choice = (key: string, values: string[], fallback = "") =>
     values.includes(params.get(key) || "") ? params.get(key)! : fallback;
   return {
     query: (params.get("query") || "").slice(0, 200),
-    region: choice("region", [...new Set(properties.map((p) => p.region))]),
+    region: regions ? choice("region", regions) : (params.get("region") || "").trim().slice(0, 60),
     type: choice("type", ["Villa", "Residence", "Loft"]),
     price: choice("price", ["750000", "1000000", "1500000", "2000000"]),
     bedrooms: choice("bedrooms", ["2", "3", "4"]),

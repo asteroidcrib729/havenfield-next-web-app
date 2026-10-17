@@ -1,6 +1,6 @@
-import { z } from "zod";
+import { mediaDetailsSchema } from "@/lib/property-schema";
 import { requireAdminSession, checkMutationOrigin } from "@/server/auth";
-import { deleteMedia, mediaReferences, updateMediaAlt } from "@/server/media-registry";
+import { deleteMedia, mediaReferences, updateMediaDetails } from "@/server/media-registry";
 import { apiError, json, readJson } from "@/server/http";
 export const runtime = "nodejs";
 type Context = { params: Promise<{ id: string }> };
@@ -16,11 +16,8 @@ export async function PATCH(request: Request, context: Context) {
   try {
     const session = await requireAdminSession();
     checkMutationOrigin(request);
-    const { alt } = z
-      .object({ alt: z.string().max(240) })
-      .strict()
-      .parse(await readJson(request, 4096));
-    await updateMediaAlt((await context.params).id, alt, session.email);
+    const input = mediaDetailsSchema.parse(await readJson(request, 4096));
+    await updateMediaDetails((await context.params).id, input, session.email);
     return json({ updated: true });
   } catch (error) {
     return apiError(error);

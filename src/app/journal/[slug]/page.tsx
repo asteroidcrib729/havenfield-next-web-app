@@ -1,5 +1,4 @@
-import { storyHomes } from "@/content/content-links";
-import { properties } from "@/content/properties";
+import { getPublicProperties } from "@/server/properties";
 import { PropertyCard } from "@/components/property-card";
 import { headers } from "next/headers";
 import { cache } from "react";
@@ -60,7 +59,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const related = (await getPublishedPosts({ category: post.category, limit: 4 })).posts
     .filter((item) => item.id !== post.id)
     .slice(0, 3);
-  const homes = properties.filter((home) => (storyHomes[post.slug] || []).includes(home.id));
+  const homes = (await getPublicProperties()).filter((home) =>
+    home.relatedStories?.includes(post.slug),
+  );
   const canonical = post.canonicalUrl || absoluteUrl(`/journal/${post.slug}`);
   const schema = {
     "@context": "https://schema.org",

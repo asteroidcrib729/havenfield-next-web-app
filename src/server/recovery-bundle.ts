@@ -53,15 +53,16 @@ export async function readRecoveryBundle(directory: string) {
       throw new Error("Invalid recovery file");
     return readFile(path);
   };
-  const backup = parseBackup(
-    JSON.parse((await bounded("database.json", 100 * 1024 * 1024)).toString("utf8")),
+  const rawBackup = JSON.parse(
+    (await bounded("database.json", 100 * 1024 * 1024)).toString("utf8"),
   );
+  const backup = parseBackup(rawBackup);
   const manifest = JSON.parse(
     (await bounded("manifest.json", 4 * 1024 * 1024)).toString("utf8"),
   ) as Manifest;
   if (
     manifest.format !== 1 ||
-    manifest.databaseChecksum !== backup.checksum ||
+    manifest.databaseChecksum !== rawBackup.checksum ||
     !Array.isArray(manifest.objects)
   )
     throw new Error("Recovery manifest does not match the database snapshot");

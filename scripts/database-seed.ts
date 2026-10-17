@@ -1,7 +1,9 @@
+import { seedPropertyInventory } from "../src/server/properties";
 import "./database-env";
 import { createPost } from "../src/server/blog";
 import { closeDatabase, getDatabase } from "../src/server/database";
 import { editorialSeed } from "../src/server/seed-content";
+await seedPropertyInventory();
 let inserted = 0;
 for (const input of editorialSeed) {
   const existing = await (

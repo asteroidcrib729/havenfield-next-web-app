@@ -1,3 +1,4 @@
+import { mediaDetailsSchema } from "../lib/property-schema";
 import { lstat, unlink } from "node:fs/promises";
 import { resolve, relative, isAbsolute } from "node:path";
 import type { Database } from "./database";
@@ -136,11 +137,17 @@ function fromRow(row: Record<string, unknown>): MediaItem {
     owner: String(row.owner),
     createdAt,
     state: row.state as MediaItem["state"],
+    collection: String(row.collection || ""),
+    focalX: Number(row.focal_x ?? 50),
+    focalY: Number(row.focal_y ?? 50),
+    version: Number(row.version || 1),
     references,
     cleanupEligible: references === 0 && Date.parse(createdAt) <= Date.now() - 7 * 86400_000,
   };
 }
-export async function listMedia(options: { query?: string; page?: number; unused?: boolean } = {}) {
+export async function listMedia(
+  options: { query?: string; page?: number; unused?: boolean; collection?: string } = {},
+) {
   const db = await getDatabase();
   const page = Math.max(1, Math.floor(options.page || 1));
   const limit = 12;
@@ -149,20 +156,30 @@ export async function listMedia(options: { query?: string; page?: number; unused
     .slice(0, 200)
     .toLowerCase()
     .replace(/[\\%_]/g, "\\$&")}%`;
-  const where =
+  let where =
     "m.state<>'deleted' AND (LOWER(m.alt) LIKE ? ESCAPE '\\' OR LOWER(m.id) LIKE ? ESCAPE '\\')" +
     (options.unused
-      ? " AND NOT EXISTS(SELECT 1 FROM media_references r WHERE r.media_id=m.id) AND NOT EXISTS(SELECT 1 FROM article_autosaves a WHERE a.snapshot LIKE '%' || m.url || '%')"
+      ? " AND NOT EXISTS(SELECT 1 FROM media_references r WHERE r.media_id=m.id) AND NOT EXISTS(SELECT 1 FROM property_media_references pr WHERE pr.media_id=m.id) AND NOT EXISTS(SELECT 1 FROM article_autosaves a WHERE a.snapshot LIKE '%' || m.url || '%')"
       : "");
+  const bindings: unknown[] = [query, query];
+  if (options.collection) {
+    where += " AND m.collection=?";
+    bindings.push(options.collection === "__uncollected" ? "" : options.collection);
+  }
   const total = Number(
-    (await db.query(`SELECT COUNT(*) AS total FROM media m WHERE ${where}`, [query, query]))[0]
-      .total,
+    (await db.query(`SELECT COUNT(*) AS total FROM media m WHERE ${where}`, bindings))[0].total,
   );
   const rows = await db.query(
-    `SELECT m.*,(SELECT COUNT(DISTINCT post_id) FROM media_references r WHERE r.media_id=m.id)+(SELECT COUNT(*) FROM article_autosaves a WHERE a.snapshot LIKE '%' || m.url || '%') AS reference_count FROM media m WHERE ${where} ORDER BY created_at DESC,id DESC LIMIT ? OFFSET ?`,
-    [query, query, limit, (page - 1) * limit],
+    `SELECT m.*,(SELECT COUNT(DISTINCT post_id) FROM media_references r WHERE r.media_id=m.id)+(SELECT COUNT(DISTINCT property_id) FROM property_media_references pr WHERE pr.media_id=m.id)+(SELECT COUNT(*) FROM article_autosaves a WHERE a.snapshot LIKE '%' || m.url || '%') AS reference_count FROM media m WHERE ${where} ORDER BY created_at DESC,id DESC LIMIT ? OFFSET ?`,
+    [...bindings, limit, (page - 1) * limit],
   );
-  return { items: rows.map(fromRow), total, page, limit };
+  const collections = (
+    await db.query(
+      "SELECT DISTINCT collection FROM media WHERE state<>? AND collection<>? ORDER BY collection LIMIT 100",
+      ["deleted", ""],
+    )
+  ).map((row) => String(row.collection));
+  return { items: rows.map(fromRow), total, page, limit, collections };
 }
 export async function mediaReferences(id: string) {
   const db = await getDatabase();
@@ -182,21 +199,57 @@ export async function mediaReferences(id: string) {
           kind: "recovery",
         });
   }
-  return references;
+  const propertyRows = await db.query(
+    "SELECT p.id,p.slug,p.content,r.kind FROM property_media_references r JOIN properties p ON p.id=r.property_id WHERE r.media_id=? ORDER BY p.id",
+    [id],
+  );
+  return [
+    ...references.map((ref) => ({
+      id: String(ref.id),
+      title: String(ref.title),
+      slug: String(ref.slug),
+      kind: String(ref.kind),
+      href: ref.id === "new" ? "/admin/posts/new" : "/admin/posts/" + ref.id,
+    })),
+    ...propertyRows.map((row) => ({
+      id: String(row.id),
+      title: JSON.parse(String(row.content)).name as string,
+      slug: String(row.slug),
+      kind: "property " + row.kind,
+      href: "/admin/properties/" + row.id,
+    })),
+  ];
+}
+export async function updateMediaDetails(id: string, input: unknown, actor: string) {
+  const value = mediaDetailsSchema.parse(input);
+  return (await getDatabase()).transaction(async (tx) => {
+    await lockMediaWrites(tx);
+    const [row] = await tx.query("SELECT * FROM media WHERE id=? AND state='active'", [id]);
+    if (!row) throw new AppError(404, "not_found", "Image not found");
+    if (value.version !== undefined && value.version !== Number(row.version))
+      throw new AppError(
+        409,
+        "version_conflict",
+        "Image details changed. Reopen the editor before saving.",
+      );
+    const changed = await tx.execute(
+      "UPDATE media SET alt=?,collection=?,focal_x=?,focal_y=?,version=version+1 WHERE id=? AND version=?",
+      [
+        value.alt,
+        value.collection ?? row.collection,
+        value.focalX ?? row.focal_x,
+        value.focalY ?? row.focal_y,
+        id,
+        row.version,
+      ],
+    );
+    if (!changed)
+      throw new AppError(409, "version_conflict", "Image details changed. Reopen the editor.");
+    await recordAction(tx, "media.details", id, actor);
+  });
 }
 export async function updateMediaAlt(id: string, alt: string, actor: string) {
-  if (alt.length > 240)
-    throw new AppError(400, "validation", "Image description must be at most 240 characters");
-  await (
-    await getDatabase()
-  ).transaction(async (tx) => {
-    const changed = await tx.execute("UPDATE media SET alt=? WHERE id=? AND state='active'", [
-      alt.trim(),
-      id,
-    ]);
-    if (!changed) throw new AppError(404, "not_found", "Image not found");
-    await recordAction(tx, "media.description", id, actor);
-  });
+  return updateMediaDetails(id, { alt }, actor);
 }
 export async function deleteMedia(id: string, actor: string, cleanup = false) {
   const db = await getDatabase();
@@ -207,15 +260,20 @@ export async function deleteMedia(id: string, actor: string, cleanup = false) {
     const refs = await tx.query("SELECT post_id FROM media_references WHERE media_id=? LIMIT 1", [
       id,
     ]);
+    const propertyRefs = await tx.query(
+      "SELECT property_id FROM property_media_references WHERE media_id=? LIMIT 1",
+      [id],
+    );
     const recovery = await tx.query("SELECT snapshot FROM article_autosaves");
     if (
       refs.length ||
+      propertyRefs.length ||
       recovery.some((saved) => decoded(String(saved.snapshot)).includes(decoded(String(row.url))))
     )
       throw new AppError(
         409,
         "media_in_use",
-        "This image is used by an article or revision; remove those references before deleting",
+        "This image is used by an article, property or retained revision; remove those references before deleting",
       );
     if (
       (cleanup || row.state === "uploading") &&

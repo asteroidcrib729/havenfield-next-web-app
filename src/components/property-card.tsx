@@ -3,7 +3,7 @@ import Image from "next/image";
 import { HomeActions } from "./home-actions";
 import Link from "next/link";
 import { ArrowUpRight, BedDouble, Expand } from "lucide-react";
-import { formatPrice, type Property } from "@/content/properties";
+import { formatPrice, type Property } from "@/lib/property-types";
 export function PropertyCard({
   property,
   priority = false,
@@ -25,7 +25,11 @@ export function PropertyCard({
         <div className="relative aspect-[4/3] overflow-hidden">
           <Image
             src={property.image}
-            alt={visualAlt[property.image] || property.name}
+            alt={property.imageAlt || visualAlt[property.image] || property.name}
+            unoptimized={property.image.startsWith("https://")}
+            style={{
+              objectPosition: (property.focalX ?? 50) + "% " + (property.focalY ?? 50) + "%",
+            }}
             fill
             priority={priority}
             sizes="(max-width: 768px) 100vw, (max-width: 1100px) 50vw, 33vw"

@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { properties } from "@/content/properties";
+import { getPublicProperties } from "@/server/properties";
 import { absoluteUrl } from "@/lib/site";
 import { getPublishedPosts } from "@/server/blog";
 
@@ -20,7 +20,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: "monthly" as const,
     priority: path === "" ? 1 : 0.7,
   }));
-  const homes = properties.map((property) => ({
+  const homes = (await getPublicProperties()).map((property) => ({
     url: absoluteUrl(`/properties/${property.slug}`),
     changeFrequency: "monthly" as const,
     priority: 0.8,

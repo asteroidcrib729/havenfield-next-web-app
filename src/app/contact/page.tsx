@@ -1,3 +1,5 @@
+import { getPublicProperties } from "@/server/properties";
+import { propertySummary } from "@/lib/property-types";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { InquiryForm } from "@/components/inquiry-form";
@@ -15,6 +17,7 @@ export default async function ContactPage({
   searchParams: Promise<{ property?: string }>;
 }) {
   const { property } = await searchParams;
+  const properties = (await getPublicProperties()).map(propertySummary);
   return (
     <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-2 lg:gap-20 lg:py-24">
       <div>
@@ -65,7 +68,7 @@ export default async function ContactPage({
           <ArrowUpRight size={17} />
         </Link>
       </div>
-      <InquiryForm propertyId={property} />
+      <InquiryForm propertyId={property} properties={properties} />
     </div>
   );
 }

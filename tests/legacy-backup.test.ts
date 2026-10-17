@@ -5,7 +5,7 @@ import { createHash } from "node:crypto";
 import { createDatabase } from "../src/server/database";
 import { exportDatabase, restoreDatabase } from "../src/server/backup";
 import { legacyUpgrade } from "./migration-contract";
-it("restores the historical format-1 schema export into version 2", async () => {
+it("restores the historical format-1 schema export into the current version", async () => {
   await mkdir(".data", { recursive: true });
   const root = await mkdtemp(resolve(".data/legacy-backup-test-"));
   const source = await createDatabase({
@@ -38,7 +38,7 @@ it("restores the historical format-1 schema export into version 2", async () => 
     };
     await restoreDatabase(target, backup);
     expect((await target.query("SELECT title FROM posts"))[0].title).toBe("Preserved article");
-    expect(await target.query("SELECT version FROM schema_migrations")).toHaveLength(2);
+    expect(await target.query("SELECT version FROM schema_migrations")).toHaveLength(3);
   } finally {
     await source.close();
     await target.close();

@@ -1,17 +1,17 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { properties, formatPrice } from "@/content/properties";
+import { formatPrice, type Property } from "@/lib/property-types";
 import { PropertyCard } from "./property-card";
 import { HomeChoiceLinks } from "./home-actions";
 import { useHomeChoices } from "./use-home-choices";
 const action = "min-h-11 rounded-full border border-line px-5 py-3 text-sm hover:border-brand";
-export function SavedHomes() {
+export function SavedHomes({ properties }: { properties: Property[] }) {
   const choices = useHomeChoices();
   const homes = properties.filter((home) => choices.saved.includes(home.id));
   return (
     <div>
-      <HomeChoiceLinks />
+      <HomeChoiceLinks properties={properties} />
       <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
         <p className="text-sm text-muted">
           {homes.length} saved {homes.length === 1 ? "home" : "homes"}. These choices stay in this
@@ -52,7 +52,7 @@ function Empty({ title, text }: { title: string; text: string }) {
     </div>
   );
 }
-export function CompareHomes() {
+export function CompareHomes({ properties }: { properties: Property[] }) {
   const choices = useHomeChoices();
   const homes = choices.compare
     .map((id) => properties.find((home) => home.id === id))
@@ -85,6 +85,9 @@ export function CompareHomes() {
               Choose another home
             </Link>
           </div>
+          <p className="mb-3 text-xs text-muted">
+            Scroll the table horizontally to compare every home.
+          </p>
           <div
             role="region"
             aria-label="Home comparison table"
@@ -105,6 +108,7 @@ export function CompareHomes() {
                       <Image
                         src={home.image}
                         alt=""
+                        unoptimized={home.image.startsWith("https://")}
                         width={320}
                         height={213}
                         sizes="(max-width: 768px) 200px, 300px"

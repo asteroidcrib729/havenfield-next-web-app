@@ -59,7 +59,7 @@ describe("real PostgreSQL persistence", () => {
       release();
       await owner;
     }
-    expect((await migrateDatabase(other)).applied).toEqual([1, 2]);
+    expect((await migrateDatabase(other)).applied).toEqual([1, 2, 3]);
   });
   it("uses separate backend connections and safely binds literal question marks", async () => {
     const { db, url } = await database();
@@ -72,7 +72,7 @@ describe("real PostgreSQL persistence", () => {
       literal: "?",
       bound: "value",
     });
-    expect(await loadMigrations()).toHaveLength(2);
+    expect(await loadMigrations()).toHaveLength(3);
   });
   it("restores application data into an empty PostgreSQL schema", async () => {
     await roundTrip((await database()).db, (await database()).db);

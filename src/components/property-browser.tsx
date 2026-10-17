@@ -5,13 +5,14 @@ import { HomeChoiceLinks } from "./home-actions";
 import { useSearchParams } from "next/navigation";
 import { propertyFilters } from "@/lib/property-filters";
 import { Search, SlidersHorizontal } from "lucide-react";
-import { properties } from "@/content/properties";
+import type { Property } from "@/lib/property-types";
 import { PropertyCard } from "@/components/property-card";
 
-export function PropertyBrowser() {
+export function PropertyBrowser({ properties }: { properties: Property[] }) {
   const params = useSearchParams();
   const { query, region, type, price, bedrooms, sort } = propertyFilters(
     new URLSearchParams(params.toString()),
+    properties.map((home) => home.region),
   );
   function change(key: string, value: string) {
     const next = new URLSearchParams(params.toString());
@@ -40,7 +41,7 @@ export function PropertyBrowser() {
     if (sort === "price-high") selected.sort((a, b) => b.price - a.price);
     if (sort === "space") selected.sort((a, b) => b.area - a.area);
     return selected;
-  }, [query, region, type, price, bedrooms, sort]);
+  }, [query, region, type, price, bedrooms, sort, properties]);
   function reset() {
     window.history.replaceState(null, "", "/properties");
   }
@@ -48,7 +49,7 @@ export function PropertyBrowser() {
     "mt-2 w-full rounded-lg border border-line bg-paper px-3 py-3 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-brand";
   return (
     <>
-      <HomeChoiceLinks />
+      <HomeChoiceLinks properties={properties} />
       <div className="rounded-2xl border border-line bg-white/50 p-5 sm:p-7">
         <div className="mb-5 flex items-center gap-2 text-sm font-medium">
           <SlidersHorizontal size={17} aria-hidden="true" />
@@ -168,11 +169,12 @@ export function PropertyBrowser() {
       </div>
       {results.length ? (
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {results.map((property) => (
+          {results.map((property, index) => (
             <PropertyCard
               key={property.id}
               property={property}
               collectionQuery={params.toString()}
+              priority={index === 0}
             />
           ))}
         </div>
