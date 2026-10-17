@@ -1,12 +1,14 @@
 # Free personal-portfolio backups
 
+Disposition updated 2026-10-17: independent Drive transfer and daily scheduling are optional operator follow-up under [the Plan 02 closure](development-plan-02-closure.md). Existing tools and verified local archives remain available. No cloud copy or automatic schedule is claimed, and these steps do not block Plan 03.
+
 Decision, 2026-10-16: use the owner's existing personal **Google Drive** account and a private `Havenfield Backups` folder. No payment, card authorization, paid trial, Google One subscription or Google Cloud billing is required for this approach. Google's [personal storage documentation](https://support.google.com/googleone/answer/9004014) describes the free allowance shared with Gmail and Photos. Check remaining space in your account before uploading.
 
 ## Section 01 — Scope and current status
 
 This is an independent destination from Vercel and Prisma. Only encrypted `.hfbackup` files belong in the Drive folder. Keep sharing **Restricted**. Do not upload raw recovery directories, `.env` files, access records or the recovery key. The source repository and its static assets remain a separate source/asset backup; runtime bundles include database records and registered uploaded image bytes.
 
-Fresh Production and Preview archives were encrypted and successfully decrypted locally on 2026-10-16. A historical bundle containing a real 234,042-byte hosted image also passed encryption/decryption. **Drive upload, download verification and automatic scheduling have not been completed.** A local encrypted archive alone does not close P02-01. The current session cannot control the owner's existing signed-in Chrome window or inherit its Google permissions.
+Fresh Production and Preview archives were encrypted and successfully decrypted locally on 2026-10-16. A historical bundle containing a real 234,042-byte hosted image also passed encryption/decryption. **Drive upload, download verification and automatic scheduling have not been completed.** A local encrypted archive alone is not proof of an independent cloud backup. P02-01 is explicitly deferred, not recorded as technically verified. The current session cannot control the owner's existing signed-in Chrome window or inherit its Google permissions.
 
 ## Section 02 — Upload using your existing Chrome session
 
@@ -51,7 +53,7 @@ For unattended uploads, Google Drive for desktop plus a Windows scheduled task i
 
 An always-on scheduled runner would need separately authorized Drive API credentials. That is optional here. Do not add database credentials or backup artifacts to the public repository, public workflow artifacts or public release downloads to avoid setting up private storage.
 
-## Section 05 — Remaining acceptance
+## Section 05 - Optional follow-up checklist
 
 - [x] Select a viable no-card independent destination.
 - [x] Implement authenticated encryption/decryption and corruption/overwrite/path safety checks.

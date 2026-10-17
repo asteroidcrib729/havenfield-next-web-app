@@ -1,6 +1,8 @@
 # Plan 02 audit: immediately deliverable follow-up
 
-Delivered 2026-10-16 (Asia/Karachi), following [the initial audit](development-plan-02-audit.md). **Current checklist: 57 checked of 64; seven remain open.** The deliveries close P02-02, P02-03, the presently applicable laboratory portion of P02-05 and P02-07's compatible Production rollback rehearsal. They do not declare complete Production release acceptance.
+**Delivery closed 2026-10-17: Plan 02 is delivered, with 57 verified original entries and seven explicit deferrals; zero blocking items remain.** [Closure and Plan 03 handoff](development-plan-02-closure.md) supersede earlier pending-gate wording. The dated sections below preserve the evidence at each earlier checkpoint.
+
+Historical implementation deliveries on 2026-10-16 brought the original checklist to 57 verified entries. [The 2026-10-17 closure](development-plan-02-closure.md) explicitly defers the remaining seven and completes the milestone.
 
 ## Section 01 — Delivered now
 
@@ -34,7 +36,7 @@ The Operations screen now exposes the last completed protected retention-mainten
 
 An automated populated-editor CSS 2× zoom/reflow check passed. This is not a native browser zoom session or a human assistive-technology review.
 
-## Section 04 — Seven acceptance entries still open
+## Section 04 - Seven open entries before closure (historical)
 
 - **P02-01:** Google Drive is selected and encrypted archives are prepared, but owner upload, independent download verification and actual daily backup/rotation remain open. Private hosted database/image recovery passes; recovered public-site delivery is not proven.
 - **P02-04:** a human keyboard/screen-reader/native-200%-zoom review with findings and corrections.

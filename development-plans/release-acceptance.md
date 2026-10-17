@@ -1,6 +1,6 @@
-# Release acceptance and remaining external gates
+# Release verification and optional follow-up
 
-Updated 2026-10-16. Production is live at [havenfieldre.vercel.app](https://havenfieldre.vercel.app), with separately bound Production/Preview Prisma Postgres databases and separate Blob stores. The original requested domain was unavailable; the owner selected the assigned portfolio domain. [Deployment evidence](deployment.md) records completed hosted checks. [Git delivery](github-publication.md) verifies public publication, passing clean-checkout CI and automatic Production deployment. Independent backups, hosted recovery, scheduled-job observation and human accessibility/performance acceptance remain open.
+Updated 2026-10-17. **Plan 02 is delivered.** [The closure record](development-plan-02-closure.md) records 57 verified original entries, seven explicit deferrals and zero blocking items. Earlier tables and dated updates below preserve technical evidence; their unperformed checks are optional follow-up, not Plan 03 prerequisites. No human screen-reader sign-off, automated independent backup or enterprise availability guarantee is claimed.
 
 ## Section 01 — Locally implemented scope
 

@@ -68,3 +68,7 @@ Removed only the synthetic Preview article and uploaded image created for the lo
 ## Free recovery and rollback iteration — 2026-10-16
 
 Removed only the Production rehearsal draft after restoring the original deployment. Its versionless deletion was safely refused; version-protected cleanup succeeded. Original article hashes and the three-article/three-revision inventories remain unchanged in both active environments. Removed the one synthetic private recovery object, temporary Prisma database and temporary private Vercel Blob store named `havenfield-recovery-check-20261016`, plus their `RECOVERY_CHECK_*` Development connection variables. Confirmed only the two original databases and stores remain. Recovery bundles, encrypted owner archives, the binary recovery key and private operator artifacts remain ignored locally. Added `.hfbackup` exclusions to Git, deployment uploads and formatting. No original source/assets, active database, active store, original article or inquiry was deleted.
+
+## Plan 02 closure - 2026-10-17
+
+Updated active delivery status, preserved historical verification evidence, marked all seven remaining original entries as explicit non-blocking deferrals and removed obsolete Plan 02 prerequisites from Plan 03. Added a read-only public smoke command. No runtime data, private backup, key, account configuration or existing safeguard was removed. The local project directory is now `havenfield-next-web-app`; its existing GitHub remote and clean starting state were verified before editing.

@@ -1,6 +1,8 @@
 # Development plan 02: completion audit
 
-**Current follow-up: 57/64 checked; seven acceptance entries remain open.** [Delivered work and current evidence](development-plan-02-delivery.md) supersede the initial checklist count below. The initial audit remains as a dated comparison. P02-07 is now closed by the owner-authorized [live rollback rehearsal](production-rollback-rehearsal.md); independent Drive backup verification, full recovered public-site delivery, established cold invocation and human accessibility remain open.
+**Delivery closed 2026-10-17: Plan 02 is delivered, with 57 verified original entries and seven explicit deferrals; zero blocking items remain.** [Closure and Plan 03 handoff](development-plan-02-closure.md) supersede earlier pending-gate wording. The dated sections below preserve the evidence at each earlier checkpoint.
+
+**Historical follow-up (2026-10-16): 57/64 checked; seven entries were open before scope closure.** The initial audit and follow-ups below are retained as dated evidence.
 
 Initial audit snapshot, 2026-10-16 (Asia/Karachi) against the current [Plan 02 checklist](development-plan-02.md), source, CI/release evidence and new-domain hosted checks. **Verdict: not fully complete. There are 53 checked items out of 64, with 11 unchecked composite acceptance items.** Checklist counts do not measure implementation effort, and earlier evidence was not all re-executed during the initial documentation review.
 

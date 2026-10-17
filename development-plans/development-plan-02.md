@@ -1,8 +1,8 @@
 # Development plan 02: complete the Havenfield product
 
-Current follow-up (2026-10-16): **57/64 checked; seven open**. [Immediate delivery evidence](development-plan-02-delivery.md) closes PostgreSQL policy/quota verification, hosted client-address validation, current hosted lab performance and a compatible Production rollback rehearsal. Field INP is not measured; human accessibility and recovery/operations gates remain open.
+Delivery status (2026-10-17): **DELIVERED.** The original checklist has **57 verified entries and seven explicitly deferred entries; zero blocking items remain**. [The closure record](development-plan-02-closure.md) defines the dispositions. [Plan 03](development-plan-03.md) is ready for execution.
 
-Created 2026-10-14; deployment and GitHub delivery updated 2026-10-15 (Asia/Karachi). Status: implemented, published with passing hosted CI and automatically deployed from GitHub to Vercel; full release acceptance still requires independent recovery, human accessibility and performance evidence. The [2026-10-16 completion audit](development-plan-02-audit.md) confirms 53 checked of 64 total items; 11 remain open. See the [execution record](development-plan-02-progress.md), [Git delivery](github-publication.md), [deployment](deployment.md) and [database recovery procedure](database-recovery.md).
+Created 2026-10-14; delivery closed 2026-10-17 (Asia/Karachi). Implementation, hosted CI, automatic Vercel deployment, private recovery and compatible Production rollback have recorded evidence. Earlier audits remain historical snapshots. The deferred checks below are not claimed verified and no longer block this milestone.
 
 Previous foundation: [development plan 01](development-plans-01.md). Supporting records: [implementation](implementation.md), [deployment](deployment.md), [database comparison](database-options.md), [cleanup](cleanup.md), [brand and assets](brand-and-assets.md), and [hero video generation](hero-video-generation.md).
 
@@ -18,9 +18,9 @@ Havenfield remains an independent fictional brand. Real listings, transactions, 
 | P1: complete the product | Media library, inquiry inbox, editorial reliability, public journey polish, SEO, accessibility and performance                                               | Publisher completes the whole workflow through the UI; all supported public journeys work      |
 | P2: later expansion      | Multiple publishers, property CMS, advanced search, optional email delivery and additional presentation features                                             | Separate scoped decision after P0/P1 acceptance                                                |
 
-Implementation includes the media/editor/inquiry workflows and operations/recovery tooling. Checked items denote verified implementation or the linked hosted acceptance evidence. Unchecked composite items retain their outstanding operator, hosted or human sign-off requirements. See [release acceptance](release-acceptance.md), [operator guide](operator-guide.md) and [performance/quotas](performance-and-quotas.md).
+Implementation includes the media/editor/inquiry workflows and operations/recovery tooling. Checked items have implementation or hosted evidence. The seven unchecked items are explicitly deferred by [the closure record](development-plan-02-closure.md), rather than presented as failed or pending delivery gates.
 
-**Start immediately with PostgreSQL integration tests and migration versioning.** Then establish the media data model and inquiry lifecycle before expanding the interface. Video replacement and additional paid asset generation are deferred; the current clip remains usable.
+The execution sequence below is retained as the original planning record. Plan 02 is closed; new implementation belongs to [Plan 03](development-plan-03.md).
 
 ## Section 02 — Verified baseline and concrete gaps
 
@@ -46,11 +46,11 @@ The recorded foundation checks passed 21 service/content tests and three browser
 - [x] Test genuinely concurrent edits, duplicate-slug creation and rate-limit updates using separate connections. Require one valid outcome and explicit conflict responses rather than lost updates.
 - [x] Replace the single replayed schema with ordered migrations, an applied-version/checksum ledger, transaction handling and a migration lock. Refuse changed applied migrations and concurrent migration execution.
 - [x] Test a fresh installation and an upgrade from the existing version-1 schema with content, revisions and redirects intact. Keep seeding idempotent and separate from migrations.
-- [ ] Establish independent database exports and a restoration command/procedure. Choose explicit backup frequency and retention, and restore into an isolated database before calling recovery ready.
+- [ ] Establish independent database exports and a restoration command/procedure. Choose explicit backup frequency and retention, and restore into an isolated database before calling recovery ready. **Deferred (P02-01): outside the delivered scope; not a Plan 03 blocker.**
 - [x] Include media metadata and object inventories in recovery planning; database backup alone does not preserve Blob objects.
 - [x] Configure the account-owned production PostgreSQL service and verify TLS, pooled connections, quotas and the explicit no-inactivity-pause requirement. Prisma Postgres is the documented candidate, subject to its current account policy and limits; do not claim unlimited free availability.
 
-Progress: version-2 database exports, historical-format upgrades, complete media inventories, checksummed byte bundles, isolated CLI restoration and seven-daily/four-weekly retention tooling pass locally. The owner is the initial backup operator. Independent protected storage, actual daily scheduling and hosted Blob restoration remain open (items 6/8 and hosted release gates).
+Delivered: version-2 exports, historical-format upgrades, checksummed image bundles, encryption/decryption, isolated restoration and retention tooling. Private hosted database/image recovery is verified. Independent Drive transfer and scheduled backups are optional deferred operator work; see [closure](development-plan-02-closure.md).
 
 **Acceptance:** fresh setup, repeat migration, version-1 upgrade, concurrent operation and restore tests pass against PostgreSQL. A restored article retains its body, publication state, revisions, redirects and valid media references.
 
@@ -117,7 +117,7 @@ Preserve the existing blog lifecycle, SEO fields, safe rendering and optimistic 
 ## Section 08 — P1: accessibility and measured performance
 
 - [x] Expand accessibility checks beyond the contact form to public navigation, property filters/galleries, article pages, login, populated editor, revision dialogs, media picker and inquiry inbox.
-- [ ] Perform manual keyboard and screen-reader checks for labels, announcements, focus order/restoration, modal containment, gallery changes, error summaries and video controls. Include 200% zoom and narrow populated states.
+- [ ] Perform manual keyboard and screen-reader checks for labels, announcements, focus order/restoration, modal containment, gallery changes, error summaries and video controls. Include 200% zoom and narrow populated states. **Deferred (P02-04): outside the delivered scope; not a Plan 03 blocker.**
 - [x] Preserve reduced-motion/data-saving behavior and verify that fallback media remains visible after a video load/decode failure.
 - [x] Measure a real mobile production run before setting budgets. Initial targets: Lighthouse performance/accessibility/SEO at least 90 on representative public routes; LCP at most 2.5 seconds, CLS at most 0.1, and INP at most 200 ms when sufficient field data exists. Treat lab results as measurements, not field guarantees.
 - [x] Optimize image sizes, fonts, hero loading and unnecessary client bundles in response to measured bottlenecks. Avoid a heavier animation stack without a demonstrated product benefit.
@@ -135,10 +135,10 @@ Local evidence: public Lighthouse medians are performance 93/93/96, accessibilit
 - [x] Test storage failures, database outages, interrupted uploads, concurrent edits and retries. Prefer tests proving user-visible recovery and data integrity over tests duplicating implementation details.
 - [x] Prepare release notes, application license/asset notices, updated setup instructions, environment matrix, migration instructions and operator guides under `development-plans/`; README remains the sole authored root Markdown file.
 - [x] Prepare the one root repository for GitHub: retain independent source/media provenance and font licenses, exclude secrets/runtime databases and review the staged scope. The owner authorized public delivery; four scoped commits are published to [havenfield-next-web-app](https://github.com/asteroidcrib729/havenfield-next-web-app). Snapshot/index/history secret scans pass; see [Git delivery](github-publication.md).
-- [ ] Configure an isolated Vercel Preview with hosted PostgreSQL and Blob. Verify real authenticated upload, publish, schedule, slug redirect, restore, inquiry and logout behavior, including cold invocation and persisted data after redeployment.
+- [ ] Configure an isolated Vercel Preview with hosted PostgreSQL and Blob. Verify real authenticated upload, publish, schedule, slug redirect, restore, inquiry and logout behavior, including cold invocation and persisted data after redeployment. **Deferred (P02-06): outside the delivered scope; not a Plan 03 blocker.**
 - [x] Prepare Production migration/deployment and a compatible application rollback. Demonstrate recovery from a bad release without silently discarding newly written content; destructive schema rollback is not the default. The [live rehearsal](production-rollback-rehearsal.md) used a simulated incident, verified newer draft/revision preservation under the actual previous deployment, restored the current deployment and re-enabled automatic delivery. No deliberately defective public release was deployed.
 - [x] Configure the canonical domain and HTTPS, verify headers/cookies/metadata, and record the deployed commit and successful smoke checks. The assigned portfolio domain serves the verified Git-triggered Production revision; [Git delivery](github-publication.md) records its SHA, CI and post-redeploy smoke checks. Search Console setup remains an owner-account task; submission does not guarantee indexing or ranking.
-- [ ] Establish error review, quota monitoring and backup/restore ownership, with a short operator checklist and incident procedure. Routine operation must not depend on editing production files manually.
+- [ ] Establish error review, quota monitoring and backup/restore ownership, with a short operator checklist and incident procedure. Routine operation must not depend on editing production files manually. **Deferred (P02-08): outside the delivered scope; not a Plan 03 blocker.**
 
 **Acceptance:** CI passes from a clean checkout; a real isolated Preview passes the full workflow; recovery is demonstrated; and the Production release has a documented deployed revision and verification record.
 
@@ -153,17 +153,21 @@ Local evidence: public Lighthouse medians are performance 93/93/96, accessibilit
 | 5     | Performance measurements, complete CI and release documentation       | Requires populated realistic test journeys                            |
 | 6     | Hosted Preview, backup restoration, Production smoke checks           | Requires account-owned services and private environment configuration |
 
-The owner subsequently authorized service provisioning and deployment. `havenfield.vercel.app` was unavailable; the owner selected `havenfield-portfolio.vercel.app`, which was the initial live origin with independent Production/Preview databases and Blob stores. On 2026-10-16 the owner changed it to `havenfieldre.vercel.app`; current canonical and origin checks pass. [Deployment evidence](deployment.md) supersedes the original absence of accounts. Independent backups and the remaining composite acceptance exercises stay open in [release acceptance](release-acceptance.md).
+The owner subsequently authorized provisioning, Git publication and deployment. Production uses `https://havenfieldre.vercel.app`. [Deployment evidence](deployment.md) records the implementation; [the closure](development-plan-02-closure.md) supersedes the remaining historical acceptance gates.
 
 Account-dependent work uses private provider/Vercel settings. Never paste database passwords, session secrets or Blob tokens into this plan, chat, Git or screenshots. Account provisioning and paid services remain explicit choices; useful local implementation proceeds before those choices are needed.
 
-Local feature execution is complete. Full Production release acceptance requires the remaining account-dependent, human accessibility and performance checks below; it has not been declared complete:
+Plan 02 delivery is complete. The original composite gate rows below retain their technical evidence and explicitly deferred verification. They are not active blockers and do not imply that unperformed checks passed:
 
 - [x] **G1 — Data:** PostgreSQL integration, incremental upgrades, concurrency and restore are proven.
 - [x] **G2 — Publisher:** complete editorial/media/inquiry workflows work through authenticated UI with recovery and audit records.
-- [ ] **G3 — Visitor:** public journeys are complete, original, responsive and accessible.
+- [ ] **G3 — Visitor:** public journeys are complete, original, responsive and accessible. **Deferred (G3): outside the delivered scope; not a Plan 03 blocker.**
 - [x] **G4 — Discovery:** production metadata, visibility, redirects, sitemap and RSS are consistent.
-- [ ] **G5 — Operations:** isolated environments, secure configuration, diagnostics and quota/backup ownership are established.
-- [ ] **G6 — Delivery:** clean-checkout CI and real hosted deployment/storage smoke checks pass, with release and rollback evidence.
+- [ ] **G5 — Operations:** isolated environments, secure configuration, diagnostics and quota/backup ownership are established. **Deferred (G5): outside the delivered scope; not a Plan 03 blocker.**
+- [ ] **G6 — Delivery:** clean-checkout CI and real hosted deployment/storage smoke checks pass, with release and rollback evidence. **Deferred (G6): outside the delivered scope; not a Plan 03 blocker.**
 
 Multiple editors/roles, database-managed property inventory, full-text search, notifications, analytics, internationalization, favorites/comparisons, interactive maps, and a separate Express API are future scope decisions. They are not silently added as blockers for the single-publisher portfolio product. Future numbered plans use `development-plan-03.md`, then `04`, under this directory.
+
+## Section 11 - Delivery closure
+
+Closed 2026-10-17: 57 verified original entries, seven explicit deferrals, zero blocking items. See [the closure and handoff](development-plan-02-closure.md). Use `npm.cmd run smoke:public` for a one-shot public readiness check. Continue new content/features in Plan 03.

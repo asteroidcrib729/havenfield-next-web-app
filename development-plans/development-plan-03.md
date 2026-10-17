@@ -1,26 +1,24 @@
 # Development plan 03: content, visual depth and product improvements
 
-Created 2026-10-16 (Asia/Karachi). Status: planned; execution has not started. Canonical production: [havenfieldre.vercel.app](https://havenfieldre.vercel.app). Previous milestone: [Plan 02](development-plan-02.md), with its [completion audit](development-plan-02-audit.md). The image deliverable below is **28 new, distinct generated source images**, followed by responsive derivatives; crops and format conversions do not count as additional images.
+Created 2026-10-16; handoff updated 2026-10-17 (Asia/Karachi). Status: **ready for execution; Plan 02 is delivered and no longer blocks this plan**. Canonical production: [havenfieldre.vercel.app](https://havenfieldre.vercel.app). [Plan 02 closure](development-plan-02-closure.md) records verified work and explicit deferrals. The image deliverable remains **28 new, distinct generated source images**; generation has not started, and crops/format conversions do not count as additional images.
 
 ## Section 01 — Starting point and release priorities
 
 Havenfield already has Next.js/React/TypeScript/Tailwind, four fictional properties, three original articles, an authenticated editorial studio, media/inquiry/recovery workflows, passing CI and Git-connected Vercel deployments. Both active databases belong to Prisma project `havenfield`, on separate `main` and `preview` branches. The former rollback project was deleted on 2026-10-16 after a private export and active-resource verification.
 
-The principal visual gap is reuse: four architectural photographs carry the public experience, the three article cards share one interior image, and property galleries mix images from different fictional homes. Complete the remaining Plan 02 acceptance work before calling the product fully accepted; the new visual/features work can proceed independently of gates that need owner accounts or human review.
+The principal visual gap is reuse: four architectural photographs carry the public experience, the three article cards share one interior image, and property galleries mix images from different fictional homes. Content, coherent imagery and useful product improvements are the next execution priorities.
 
 Keep the calm editorial identity, self-hosted Playfair Display/Poppins, original mark, fictional places and clear demonstration boundaries. Continue using TypeScript services and Next.js Route Handlers. A separate Express service needs an explicit architectural reason; it is not a prerequisite for these features.
 
-## Section 02 — Carry forward the unfinished Plan 02 work
+## Section 02 - Delivered baseline and optional follow-up
 
-- [ ] **P0:** Select protected independent backup storage and an actual scheduler; implement seven daily/four weekly rotation and demonstrate a restore into isolated hosted services, including live image bytes.
-- [ ] **P0:** Record the real Prisma/Vercel/Blob account limits, no-inactivity-pause policy, quota alerts and an operating budget; distinguish free allowance exhaustion from inactivity pausing.
-- [ ] **P0:** Verify Vercel client-address/header handling for throttling, using the real deployed request path without publishing visitor addresses or weakening origin/session checks.
-- [ ] **P0:** Complete hosted revision restoration, exact-time scheduled publication, cold invocation and actual scheduled maintenance observation. Preserve a referenced uploaded image across a redeploy and verify its delivery.
-- [ ] **P0:** Demonstrate an application-compatible rollback that preserves new content and document a recovery rehearsal with ownership and timestamps.
-- [ ] **P1:** Complete an actual human screen-reader and 200% zoom review of public and populated editorial screens; record browser/reader, findings and fixes.
-- [ ] **P1:** Measure at least three hosted mobile runs each for home, collection and a representative article. Target scores ≥90, LCP ≤2.5 s and CLS ≤0.1; treat field INP ≤200 ms as unproven until sufficient real traffic exists.
+Plan 02 is closed: 57 verified original entries, seven explicit deferrals and no blocking carryovers. [The closure record](development-plan-02-closure.md) is authoritative. Do not reintroduce its deferred checks as prerequisites for this plan.
 
-These carryovers are acceptance requirements, not evidence that the implemented workflows are missing. Do not check the three remaining Plan 02 composite gates merely because a new plan exists.
+Already delivered: separate database/media environments, current TLS/quota policy review, deployed client-address handling, real hosted editorial/media workflows, scheduled publication, image persistence after redeploy, mobile lab measurements, private hosted restoration and a compatible Production rollback. Reuse that implementation and evidence.
+
+Independent Drive transfer/scheduling, automated quota/backup alerts, human screen-reader sign-off, full recovered public-site image delivery and cold-invocation/scheduler-origin proof remain optional follow-up. The existing guides remain available; no new account setup, telemetry subscription, certification or recovery environment is required before content work begins. Field INP remains unmeasured until sufficient traffic exists.
+
+Keep security/isolation and appropriate regression checks for new work. Fix actual accessibility, data-loss, broken-route or functional defects when discovered. Use `npm.cmd run smoke:public` after deployments; do not continuously poll the free database. Continue within the **free-only/no-payment/no-card** budget. Verify any included generation allowance before using it; do not purchase credits, trials or upgrades if that allowance is insufficient.
 
 ## Section 03 — Twenty-eight-image generation register
 
@@ -96,19 +94,19 @@ Base prompt to specialize for each register entry:
 
 ## Section 08 — Execution order and acceptance
 
-| Iteration | Deliverable                                                                                                        | Gate                                                                            |
-| --------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
-| 03A       | Complete actionable Plan 02 operations gaps; confirm image budget, page briefs and four-image pilot                | No false release-complete claim; reviewed style and current provider limits     |
-| 03B       | Generate/approve all 28 images, build derivatives/manifest and integrate property-specific galleries               | Original consistent scenes, distinct covers, all page families assigned visuals |
-| 03C       | Expand property copy and publish reviewed journal drafts through the existing editor                               | Independent content, correct visibility/SEO and retained revisions              |
-| 03D       | Saved/compare and collection/discovery improvements                                                                | Responsive, accessible, URL/persistence behavior documented and tested          |
-| 03E       | Reviewed property-authoring/media improvements                                                                     | Migration/recovery and authorization evidence before moving live inventory      |
-| 03F       | Hosted performance/accessibility/recovery acceptance, refreshed full-page screenshots, README and release evidence | Passing CI and hosted flows; unresolved human/field gates explicitly listed     |
+| Iteration | Deliverable                                                                                          | Gate                                                                             |
+| --------- | ---------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| 03A       | Confirm the free image allowance, prepare page briefs/manifest and review a four-image pilot         | Plan 02 is closed; approved style and no new paid services                       |
+| 03B       | Generate/approve all 28 images, build derivatives/manifest and integrate property-specific galleries | Original consistent scenes, distinct covers, all page families assigned visuals  |
+| 03C       | Expand property copy and publish reviewed journal drafts through the existing editor                 | Independent content, correct visibility/SEO and retained revisions               |
+| 03D       | Saved/compare and collection/discovery improvements                                                  | Responsive, accessible, URL/persistence behavior documented and tested           |
+| 03E       | Reviewed property-authoring/media improvements                                                       | Migration/recovery and authorization evidence before moving live inventory       |
+| 03F       | Run hosted regression/performance checks, refresh full-page screenshots, README and release evidence | Passing CI and hosted flows; report optional human/field observations accurately |
 
 - [ ] Count 28 approved **new source images**, including sixteen property-specific views and three distinct existing-article covers; no recycled crop is counted as a new generation.
 - [ ] Confirm every page family in Section 05 has its assigned content/visual treatment; remove unused generated outputs from the publishable tree.
 - [ ] Run appropriate TypeScript/lint/service/PostgreSQL/browser checks for the code actually changed. Test saved/compare, filters, publication visibility and property/media migrations with meaningful scenarios.
-- [ ] Check populated public/editorial screens at 320–1440 px, reduced motion and 200% zoom, and complete the human review carried from Plan 02.
+- [ ] Check populated public/editorial screens at 320-1440 px, reduced motion, keyboard access and automated accessibility/reflow checks. Record human screen-reader/native zoom findings if available; do not claim an unperformed review passed.
 - [ ] Record hosted measurements and correct regressions caused by the larger image library; do not substitute one desktop screenshot for performance acceptance.
 - [ ] Update the first-person README screenshot, asset register, operator guidance and release records; keep authored root Markdown limited to README.
 - [ ] Scan staged files and complete Git history for secrets before committing/pushing; verify CI and the exact Git revision deployed by Vercel.

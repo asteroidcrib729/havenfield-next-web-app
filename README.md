@@ -42,21 +42,23 @@ npm.cmd run format:check
 npm.cmd run check
 npm.cmd run test:postgres
 npm.cmd run test:e2e
+npm.cmd run smoke:public
 ```
 
 Local browser checks use installed Edge, temporary synthetic credentials, and isolated databases/uploads that the runner cleans up. I deployed the application to Vercel with separate Production/Preview Prisma Postgres databases and Vercel Blob stores in Singapore. I keep the two active databases in the shared GitHub-linked Prisma project `havenfield`, on the `main` and `preview` branches. Both hosted environments passed publishing, media, inquiry, session, responsive-layout and CSP checks; the [deployment record](development-plans/deployment.md) includes the exact deployment and source manifest. Prisma's free allowance remains finite.
 
 I published this project to [GitHub](https://github.com/asteroidcrib729/havenfield-next-web-app) with passing clean-checkout CI and connected the existing Vercel project. Pushing to `main` now automatically deploys Production; other branches use Preview.
 
-Plan 02 is not fully accepted: [the current audit](development-plans/development-plan-02-audit.md) records the initial snapshot; [the follow-up](development-plans/development-plan-02-delivery.md) brings the checklist to 57 of 64 checked items, with seven remaining. A real Production rollback rehearsal preserved newer content, and an isolated private hosted recovery restored database records and image bytes. Independent scheduled backups, full recovered-site image delivery, established cold invocation and human accessibility review remain open release gates. Hosted mobile lab budgets pass; field INP remains unmeasured. I am planning the next content and product iteration in [Plan 03](development-plans/development-plan-03.md), including 28 new original images; these planned assets have not been generated yet.
+I have delivered [Plan 02](development-plans/development-plan-02.md): 57 original checklist entries are verified and seven additional verification items are explicitly deferred in [the closure record](development-plans/development-plan-02-closure.md). Independent scheduled cloud backups, human screen-reader sign-off, field INP and full recovered-site/cold-invocation evidence are not claimed. [Plan 03](development-plans/development-plan-03.md) is ready for content and product improvements, including 28 new original images; those planned images have not been generated yet.
 
-I use [encrypted backup commands and a private Google Drive folder](development-plans/free-backups.md) for the no-card backup approach. The prepared local archives are verified; the owner still needs to upload them and verify a downloaded copy. My [accessibility checklist](development-plans/accessibility-owner-review.md) records the human review separately from automated tests.
+I keep [encrypted backup commands and optional private Drive instructions](development-plans/free-backups.md), plus an [owner accessibility checklist](development-plans/accessibility-owner-review.md). These follow-up checks remain available without blocking the next development iteration.
 
 I keep all plans, progress, production instructions and asset records under [development-plans](development-plans/). Only this README belongs at the root as authored Markdown.
 
 - [Development plan 01](development-plans/development-plans-01.md)
 - [Development plan 02: product completion](development-plans/development-plan-02.md)
 - [Connected local Preview](development-plans/local-preview.md)
+- [Plan 02 delivery closure](development-plans/development-plan-02-closure.md)
 - [Plan 02 immediate delivery](development-plans/development-plan-02-delivery.md)
 - [Plan 02 completion audit](development-plans/development-plan-02-audit.md)
 - [Development plan 03: content, imagery and improvements](development-plans/development-plan-03.md)

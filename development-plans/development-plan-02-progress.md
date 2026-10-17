@@ -1,6 +1,8 @@
 # Development plan 02: execution record
 
-Updated 2026-10-16 (Asia/Karachi). Production is live at [havenfieldre.vercel.app](https://havenfieldre.vercel.app). Fifty-seven of 64 original checkboxes are verified; seven composite acceptance items remain open. The hosted deployment and compatible Production rollback rehearsal are complete; full product release acceptance is not claimed. See [the plan](development-plan-02.md), [current follow-up](development-plan-02-delivery.md), [deployment record](deployment.md) and [release acceptance](release-acceptance.md).
+**Delivery closed 2026-10-17: Plan 02 is delivered, with 57 verified original entries and seven explicit deferrals; zero blocking items remain.** [Closure and Plan 03 handoff](development-plan-02-closure.md) supersede earlier pending-gate wording. The dated sections below preserve the evidence at each earlier checkpoint.
+
+Updated 2026-10-17 (Asia/Karachi). Plan 02 is delivered; see [closure](development-plan-02-closure.md). The chronological sections below are historical records and do not reinstate deferred verification as a delivery requirement.
 
 ## Section 01 — Product behavior delivered
 

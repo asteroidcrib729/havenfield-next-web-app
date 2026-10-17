@@ -34,7 +34,8 @@
     "backup:prune": "tsx scripts/backup-prune.ts",
     "backup:key": "tsx scripts/backup-encrypted.ts key",
     "backup:encrypt": "tsx scripts/backup-encrypted.ts encrypt",
-    "backup:decrypt": "tsx scripts/backup-encrypted.ts decrypt"
+    "backup:decrypt": "tsx scripts/backup-encrypted.ts decrypt",
+    "smoke:public": "tsx scripts/smoke-public.ts"
   },
   "dependencies": {
     "@vercel/blob": "^2.8.1",

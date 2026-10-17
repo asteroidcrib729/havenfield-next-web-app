@@ -1,6 +1,6 @@
 # Owner accessibility review
 
-Prepared 2026-10-16. Reviewer: project owner. Status: **awaiting human review** (P02-04 and G3 remain open).
+Prepared 2026-10-16; disposition updated 2026-10-17. Reviewer: project owner. Status: **optional human review, not yet performed**. P02-04/G3 verification is deferred under [the delivery closure](development-plan-02-closure.md); this checklist does not block Plan 03.
 
 Allow about 25 minutes. Use your normal browser and Windows Narrator, or a screen reader you already know. [Microsoft's Narrator guide](https://support.microsoft.com/en-us/accessibility/windows/narrator/complete-guide-to-narrator) explains the controls. `Windows + Ctrl + Enter` toggles Narrator. Start on [Production](https://havenfieldre.vercel.app) for public pages and use [local Preview](http://localhost:3000) for editorial changes. Local Preview must be running with `npm.cmd run dev:preview`; it uses the separate Preview database.
 
