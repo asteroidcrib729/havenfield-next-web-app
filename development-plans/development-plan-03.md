@@ -51,11 +51,11 @@ Base prompt to specialize for each register entry:
 
 > Create an original photorealistic architectural editorial image for Havenfield, a fictional real-estate portfolio. Asset [ID], property [name], view [precise camera position and subject]. Preserve the approved reference building's roofline, openings, materials, layout relationships and landscape. [Detailed materials, furniture, planting and weather.] Natural [time-of-day] light with coherent shadows, realistic scale and straight verticals; approximately 28–50 mm architectural photography, avoiding exaggerated space. [Composition and focal subject], [negative space location] for responsive text placement. Calm ivory, stone, oak, terracotta and sage palette. No identifiable people, writing, brand marks, watermark, real addresses, famous buildings or borrowed developer imagery. Output [landscape/portrait ratio] with sufficient resolution for a 1600–2000 px web master. This scene is invented and must remain consistent with the other views of this fictional home.
 
-- [ ] Produce landscape masters for wide heroes/cards and suitable portrait compositions for vertical about/contact placements; do not stretch a crop to conceal missing composition.
+- [x] Produce landscape masters for wide heroes/cards and suitable portrait compositions for vertical about/contact placements; do not stretch a crop to conceal missing composition.
 - [x] Inspect full-resolution geometry, window reflections, repeated objects, shadow direction and continuity between related shots.
 - [x] Write subject-specific alternative text. Decorative crops use intentional empty alt text; do not describe every image as a generic “luxury property.”
-- [ ] Prefer AVIF/WebP derivatives where measured browser support and size justify them; retain JPEG fallbacks if needed. Strip embedded location/device metadata, declare width/height or a fixed aspect ratio, and use correct `sizes`/focal positions.
-- [ ] Start with roughly 100–250 KiB card images and ≤350 KiB wide hero images as provisional asset budgets; measure perceived quality and real LCP before accepting them. Prioritize only the visible LCP image, lazy-load below-fold media, and preserve the mobile poster-first video behavior.
+- [x] Prefer AVIF/WebP derivatives where measured browser support and size justify them; retain JPEG fallbacks if needed. Strip embedded location/device metadata, declare width/height or a fixed aspect ratio, and use correct `sizes`/focal positions.
+- [x] Start with roughly 100–250 KiB card images and ≤350 KiB wide hero images as provisional asset budgets; measure perceived quality and real LCP before accepting them. Prioritize only the visible LCP image, lazy-load below-fold media, and preserve the mobile poster-first video behavior.
 
 ## Section 05 — Coverage for every page
 
@@ -88,8 +88,8 @@ Base prompt to specialize for each register entry:
 
 ## Section 07 — Admin and domain operations
 
-- [ ] Keep production at `https://havenfieldre.vercel.app`; verify canonical/Open Graph/JSON-LD/RSS/sitemap and mutation origins after every domain change. Preview stays noindex and uses its own exact request origin.
-- [ ] Use the existing single-publisher account or deliberately rotate its credentials using [the admin access guide](admin-access.md). Keep production/preview passwords and session secrets separate; do not add public signup or expose a password hash in the browser.
+- [x] Keep production at `https://havenfieldre.vercel.app`; verify canonical/Open Graph/JSON-LD/RSS/sitemap and mutation origins after every domain change. Preview stays noindex and uses its own exact request origin.
+- [x] Use the existing single-publisher account or deliberately rotate its credentials using [the admin access guide](admin-access.md). Keep production/preview passwords and session secrets separate; do not add public signup or expose a password hash in the browser.
 - [ ] Review old immutable Preview deployment dependencies after rollback deletion; use the currently verified Preview for editorial work. Document only current account resources and dated historical evidence.
 
 ## Section 08 — Execution order and acceptance
@@ -105,12 +105,16 @@ Base prompt to specialize for each register entry:
 
 - [x] Count 28 approved **new source images**, including sixteen property-specific views and three distinct existing-article covers; no recycled crop is counted as a new generation.
 - [ ] Confirm every page family in Section 05 has its assigned content/visual treatment; remove unused generated outputs from the publishable tree.
-- [ ] Run appropriate TypeScript/lint/service/PostgreSQL/browser checks for the code actually changed. Test saved/compare, filters, publication visibility and property/media migrations with meaningful scenarios.
-- [ ] Check populated public/editorial screens at 320-1440 px, reduced motion, keyboard access and automated accessibility/reflow checks. Record human screen-reader/native zoom findings if available; do not claim an unperformed review passed.
+- [x] Run appropriate TypeScript/lint/service/PostgreSQL/browser checks for the code actually changed. Test saved/compare, filters, publication visibility and property/media migrations with meaningful scenarios.
+- [x] Check populated public/editorial screens at 320-1440 px, reduced motion, keyboard access and automated accessibility/reflow checks. Record human screen-reader/native zoom findings if available; do not claim an unperformed review passed.
 - [ ] Record hosted measurements and correct regressions caused by the larger image library; do not substitute one desktop screenshot for performance acceptance.
-- [ ] Update the first-person README screenshot, asset register, operator guidance and release records; keep authored root Markdown limited to README.
-- [ ] Scan staged files and complete Git history for secrets before committing/pushing; verify CI and the exact Git revision deployed by Vercel.
+- [x] Update the first-person README screenshot, asset register, operator guidance and release records; keep authored root Markdown limited to README.
+- [x] Scan staged files and complete Git history for secrets before committing/pushing; verify CI and the exact Git revision deployed by Vercel.
 
 The first execution iteration now contains the 28 new images and visitor/content changes recorded above. Plan 03 remains open for the separately reviewed property-authoring/media slice and release checks recorded in the execution record. Drafts remain private until deliberately published.
 
 Design-tool references: [Motion Primitives](https://motion-primitives.com/), [Haikei](https://haikei.app/) and [Realtime Colors](https://www.realtimecolors.com/). Recheck the chosen component's current API/license during execution; these are optional production aids rather than added runtime dependencies.
+
+## First iteration status (2026-10-17)
+
+03A/03B: the 28 original sources and page integrations are delivered, with the documented pilot-layout sequencing exception. 03C: property narratives and six private drafts are delivered; publication remains a deliberate editorial action. 03D: saved/compare and filter-chip improvements are live. 03E: property authoring and publisher media improvements remain pending as a separate migration slice. 03F: initial CI, hosted verification, local performance measurements and README captures are delivered; repeat these for later code changes. This is not a claim that every Plan 03 feature is finished.

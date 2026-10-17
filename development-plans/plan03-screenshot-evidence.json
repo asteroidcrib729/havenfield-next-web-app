@@ -1,0 +1,25 @@
+{
+  "capturedAt": "2026-10-17T13:33:37.727Z",
+  "origin": "https://havenfieldre.vercel.app",
+  "sourceCommit": "774741fe33a3d6490de734ec416c5a2c7d79bb4b",
+  "screenshots": [
+    {
+      "path": "development-plans/screenshots/home-desktop.png",
+      "width": 1440,
+      "height": 4035
+    },
+    {
+      "path": "development-plans/screenshots/home-mobile.png",
+      "width": 375,
+      "height": 7202
+    }
+  ],
+  "productionBrowser": {
+    "savedPersistsAfterReload": true,
+    "compareThreeLimit": true,
+    "comparisonRemoval": true,
+    "comparisonClear": true,
+    "serverMutations": false
+  },
+  "capturePolicy": "Fresh isolated browser; reduced-motion poster; no publisher session or personal data"
+}

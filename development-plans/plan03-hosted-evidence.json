@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-10-17T13:32:08.596Z",
+  "sourceCommit": "774741fe33a3d6490de734ec416c5a2c7d79bb4b",
+  "productionDeployment": "dpl_Ccn4AakzYKaHYhBiVynC4Ate9MTW",
+  "previewDeployment": "dpl_3SfcP8Cnf2X8T1iwypEH3tLSz16S",
+  "environments": [
+    {
+      "environment": "production",
+      "origin": "https://havenfieldre.vercel.app",
+      "health": 200,
+      "publisherLogin": 200,
+      "draftCount": 6,
+      "draftsPrivateAndNoindex": true,
+      "anonymousDraftStatuses": [404, 404, 404, 404, 404, 404],
+      "publishedArticles": 3,
+      "distinctCurrentCovers": 3,
+      "referenceImageHashMatches": true,
+      "canonicalMatches": true,
+      "canonical": "https://havenfieldre.vercel.app",
+      "robotsHeader": null,
+      "protectionAccess": "public origin; publisher session only for private reads"
+    },
+    {
+      "environment": "preview",
+      "origin": "https://havenfieldre-preview.vercel.app",
+      "health": 200,
+      "publisherLogin": 200,
+      "draftCount": 6,
+      "draftsPrivateAndNoindex": true,
+      "anonymousDraftStatuses": [404, 404, 404, 404, 404, 404],
+      "publishedArticles": 3,
+      "distinctCurrentCovers": 3,
+      "referenceImageHashMatches": true,
+      "canonicalMatches": true,
+      "canonical": "https://havenfieldre.vercel.app",
+      "robotsHeader": "noindex, nofollow",
+      "protectionAccess": "short-lived same-project development OIDC"
+    }
+  ],
+  "productionSeo": {
+    "rssStatus": 200,
+    "sitemapStatus": 200,
+    "articleStatus": 200,
+    "publishedFeedItems": 3,
+    "draftsExcluded": true,
+    "articleStructuredImage": "https://havenfieldre.vercel.app/media/plan03/journal-viewing.webp",
+    "articleCanonical": "https://havenfieldre.vercel.app/journal/a-clearer-guide-to-your-first-viewing"
+  },
+  "localPreview": {
+    "databaseStatusReady": true,
+    "environment": "preview",
+    "binding": "preview",
+    "dialect": "postgres",
+    "localPreview": true,
+    "idempotentDryRun": {
+      "createdDrafts": 0,
+      "existingDrafts": 6,
+      "updatedCovers": 0
+    }
+  }
+}

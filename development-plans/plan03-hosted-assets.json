@@ -1,0 +1,206 @@
+{
+  "checkedAt": "2026-10-17T13:20:25.130Z",
+  "origin": "https://havenfieldre.vercel.app",
+  "sourceCommit": "774741fe33a3d6490de734ec416c5a2c7d79bb4b",
+  "deploymentId": "dpl_Ccn4AakzYKaHYhBiVynC4Ate9MTW",
+  "approvedSources": 28,
+  "verifiedMasterCount": 28,
+  "checks": [
+    {
+      "id": "HF03-01",
+      "path": "/media/plan03/courtyard-arrival.webp",
+      "status": 200,
+      "bytes": 331474,
+      "sha256": "eb70e9802a029e9afba89381e7c822a9b19a6b41e4eb7775bb83e56e42723a9d"
+    },
+    {
+      "id": "HF03-02",
+      "path": "/media/plan03/courtyard-living.webp",
+      "status": 200,
+      "bytes": 266086,
+      "sha256": "83914ffd13be572790247bf2a1163bb0a2dd25de0625b7e0c1c5d1b82f4519ea"
+    },
+    {
+      "id": "HF03-03",
+      "path": "/media/plan03/courtyard-kitchen.webp",
+      "status": 200,
+      "bytes": 227038,
+      "sha256": "637431e0faa5e6a02c78ea301550d10b83833da8d32427dd58c7a67780fcca6e"
+    },
+    {
+      "id": "HF03-04",
+      "path": "/media/plan03/courtyard-courtyard.webp",
+      "status": 200,
+      "bytes": 313492,
+      "sha256": "c267d22d499bf7c7b58267561262515076a8a74e4a1b430ed1c99d594a9fb4d8"
+    },
+    {
+      "id": "HF03-05",
+      "path": "/media/plan03/saltwater-exterior.webp",
+      "status": 200,
+      "bytes": 314892,
+      "sha256": "744f6c331728ad7e4fc1099adcfc96372caf855db173ee8c7edb05fc9cc03331"
+    },
+    {
+      "id": "HF03-06",
+      "path": "/media/plan03/saltwater-lounge.webp",
+      "status": 200,
+      "bytes": 241316,
+      "sha256": "e0ae06af02259cbb12fe8b6c039e4229ac89410e5603dc2fc6bd0e94e7aa27ec"
+    },
+    {
+      "id": "HF03-07",
+      "path": "/media/plan03/saltwater-dining.webp",
+      "status": 200,
+      "bytes": 178850,
+      "sha256": "844909305d97aab461f50254c43c441af7dcbd32d81126b44ec429fbeff30858"
+    },
+    {
+      "id": "HF03-08",
+      "path": "/media/plan03/saltwater-bedroom.webp",
+      "status": 200,
+      "bytes": 212010,
+      "sha256": "967358c7539c1a2452d8d887a4f9bfe84f4fa5c6615739d9561063d84f77f568"
+    },
+    {
+      "id": "HF03-09",
+      "path": "/media/plan03/woodland-exterior.webp",
+      "status": 200,
+      "bytes": 289920,
+      "sha256": "ecd29328ab743ac97568ebe462206767993e5e1d173bc2f16afb37b7584e022e"
+    },
+    {
+      "id": "HF03-10",
+      "path": "/media/plan03/woodland-living.webp",
+      "status": 200,
+      "bytes": 333502,
+      "sha256": "0cd5050936b894de432fc410e804f50600ef32bbe77619c0f620bb6207a37322"
+    },
+    {
+      "id": "HF03-11",
+      "path": "/media/plan03/woodland-study.webp",
+      "status": 200,
+      "bytes": 282592,
+      "sha256": "46b4098c7e9aed09fc0ccf9b09e5b4f3deb912f1b3eff3fb2564644cc4abd453"
+    },
+    {
+      "id": "HF03-12",
+      "path": "/media/plan03/woodland-deck.webp",
+      "status": 200,
+      "bytes": 298856,
+      "sha256": "77ee42f67d47a2eb8f9c7766cdb743844fd2ff14269c50caf5194e3bee4441a1"
+    },
+    {
+      "id": "HF03-13",
+      "path": "/media/plan03/atelier-exterior.webp",
+      "status": 200,
+      "bytes": 292820,
+      "sha256": "444de5f75ba9a5ab706fc7aa9035b51f3dee4aefba50f7bcf41607b82397634f"
+    },
+    {
+      "id": "HF03-14",
+      "path": "/media/plan03/atelier-studio.webp",
+      "status": 200,
+      "bytes": 228258,
+      "sha256": "a99506a0393f3d81752c67f79da99daf85d3d6c31edc75a5f87d37e585049095"
+    },
+    {
+      "id": "HF03-15",
+      "path": "/media/plan03/atelier-workroom.webp",
+      "status": 200,
+      "bytes": 323408,
+      "sha256": "cabc143f924699f0ed5257fb61e1127dac50aead1be22c9e0b98c66eda8c7711"
+    },
+    {
+      "id": "HF03-16",
+      "path": "/media/plan03/atelier-rooftop.webp",
+      "status": 200,
+      "bytes": 294760,
+      "sha256": "d678d3aec8b2d5d6322f126b7883fa2a06a02b170545d833896676a8d619733d"
+    },
+    {
+      "id": "HF03-17",
+      "path": "/media/plan03/home-arrival.webp",
+      "status": 200,
+      "bytes": 289638,
+      "sha256": "3ff0fb3379550e2b39b67bab11d069878bdef703e16969f065acecd4da1572c0"
+    },
+    {
+      "id": "HF03-18",
+      "path": "/media/plan03/home-breakfast.webp",
+      "status": 200,
+      "bytes": 182548,
+      "sha256": "49ec646fb29de2617bc926f35939750083bdc8512533d35fd22cf48c54e14001"
+    },
+    {
+      "id": "HF03-19",
+      "path": "/media/plan03/about-materials.webp",
+      "status": 200,
+      "bytes": 181964,
+      "sha256": "072c0c828fbef8bc8d7ec2ddacd7c64466b97d8764bc0765a3ed0c219234a5f6"
+    },
+    {
+      "id": "HF03-20",
+      "path": "/media/plan03/about-workshop.webp",
+      "status": 200,
+      "bytes": 181308,
+      "sha256": "1e9fecfb09a9f274b0c1d3fbb98e6052c8395021f3e554d80a9344e6a72819cc"
+    },
+    {
+      "id": "HF03-21",
+      "path": "/media/plan03/amenities-garden.webp",
+      "status": 200,
+      "bytes": 339668,
+      "sha256": "74a6e5cd5220d4a582438d9ddf06ff0d4c4c9c603914403e514567d1f666ffae"
+    },
+    {
+      "id": "HF03-22",
+      "path": "/media/plan03/amenities-terrace.webp",
+      "status": 200,
+      "bytes": 295854,
+      "sha256": "c665e263d424cf9dea9478b3642e61602079649a3c18115f4abfb2ee2fa78edc"
+    },
+    {
+      "id": "HF03-23",
+      "path": "/media/plan03/amenities-path.webp",
+      "status": 200,
+      "bytes": 348264,
+      "sha256": "7d0fc20837257dd15aca997256937fc303a76e4315f41d6ed41060d6b69a59d5"
+    },
+    {
+      "id": "HF03-24",
+      "path": "/media/plan03/journal-masthead.webp",
+      "status": 200,
+      "bytes": 139418,
+      "sha256": "a90c0b0f228c2e4d4f114c7d744962f4b7a987aebc83e8eb74fbf6ecad65cd9e"
+    },
+    {
+      "id": "HF03-25",
+      "path": "/media/plan03/journal-viewing.webp",
+      "status": 200,
+      "bytes": 212602,
+      "sha256": "0b7939fdd53c9799f181e25373469cefc07dcd210161a3f638c54e914512200f"
+    },
+    {
+      "id": "HF03-26",
+      "path": "/media/plan03/journal-plan.webp",
+      "status": 200,
+      "bytes": 191926,
+      "sha256": "6dc5b472598eec0f3eaae01bc03a90d903d50c8010bd4d047c97de6545bac404"
+    },
+    {
+      "id": "HF03-27",
+      "path": "/media/plan03/journal-everyday.webp",
+      "status": 200,
+      "bytes": 283350,
+      "sha256": "d1bedf7949f2db4172b568dc801c8347ebd1906633eecd5a15dc6b9c8adc62a9"
+    },
+    {
+      "id": "HF03-28",
+      "path": "/media/plan03/contact-studio.webp",
+      "status": 200,
+      "bytes": 307988,
+      "sha256": "7d130f54e1da6e74ca9d58f00e4b3fe197ddeaa560f7d160f5a8fde43c438e17"
+    }
+  ]
+}
