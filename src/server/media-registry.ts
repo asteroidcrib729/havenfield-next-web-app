@@ -244,7 +244,11 @@ export async function updateMediaDetails(id: string, input: unknown, actor: stri
       ],
     );
     if (!changed)
-      throw new AppError(409, "version_conflict", "Image details changed. Reload the media library before reopening this editor.");
+      throw new AppError(
+        409,
+        "version_conflict",
+        "Image details changed. Reload the media library before reopening this editor.",
+      );
     await recordAction(tx, "media.details", id, actor);
   });
 }

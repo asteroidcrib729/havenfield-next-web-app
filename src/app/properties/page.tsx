@@ -12,7 +12,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/properties" },
 };
 
-export default function PropertiesPage() {
+export default async function PropertiesPage() {
+  const properties = (await getPublicProperties()).map(propertySummary);
   return (
     <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
       <div className="mb-12 max-w-3xl">
@@ -31,13 +32,8 @@ export default function PropertiesPage() {
         </p>
       </div>
       <Suspense fallback={<CollectionPending />}>
-        <CollectionResults />
+        <PropertyBrowser properties={properties} />
       </Suspense>
     </div>
   );
-}
-
-async function CollectionResults() {
-  const properties = (await getPublicProperties()).map(propertySummary);
-  return <PropertyBrowser properties={properties} />;
 }
