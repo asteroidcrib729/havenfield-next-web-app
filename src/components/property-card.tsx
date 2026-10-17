@@ -1,4 +1,6 @@
+import { visualAlt } from "@/content/visuals";
 import Image from "next/image";
+import { HomeActions } from "./home-actions";
 import Link from "next/link";
 import { ArrowUpRight, BedDouble, Expand } from "lucide-react";
 import { formatPrice, type Property } from "@/content/properties";
@@ -6,11 +8,14 @@ export function PropertyCard({
   property,
   priority = false,
   collectionQuery = "",
+  headingLevel = 2,
 }: {
   property: Property;
   priority?: boolean;
   collectionQuery?: string;
+  headingLevel?: 2 | 3;
 }) {
+  const Heading = headingLevel === 3 ? "h3" : "h2";
   return (
     <article className="group min-w-0">
       <Link
@@ -20,7 +25,7 @@ export function PropertyCard({
         <div className="relative aspect-[4/3] overflow-hidden">
           <Image
             src={property.image}
-            alt={`${property.name}, an illustrative ${property.type.toLowerCase()} concept`}
+            alt={visualAlt[property.image] || property.name}
             fill
             priority={priority}
             sizes="(max-width: 768px) 100vw, (max-width: 1100px) 50vw, 33vw"
@@ -36,12 +41,15 @@ export function PropertyCard({
           <p className="mb-2 text-[10px] tracking-widest uppercase text-muted">
             {property.location} · {property.region}
           </p>
-          <Link
-            href={`/properties/${property.slug}${collectionQuery ? `?collection=${encodeURIComponent(collectionQuery)}` : ""}`}
-            className="font-display text-2xl"
-          >
-            {property.name}
-          </Link>
+          <Heading>
+            {" "}
+            <Link
+              href={`/properties/${property.slug}${collectionQuery ? `?collection=${encodeURIComponent(collectionQuery)}` : ""}`}
+              className="font-display text-2xl"
+            >
+              {property.name}
+            </Link>
+          </Heading>
         </div>
         <Link
           href={`/properties/${property.slug}${collectionQuery ? `?collection=${encodeURIComponent(collectionQuery)}` : ""}`}
@@ -63,6 +71,9 @@ export function PropertyCard({
             {property.area} m²
           </span>
         </div>
+      </div>
+      <div className="mt-4">
+        <HomeActions id={property.id} name={property.name} />
       </div>
     </article>
   );

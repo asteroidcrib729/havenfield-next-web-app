@@ -9,6 +9,7 @@ const links = [
   ["Our approach", "/about"],
   ["Amenities", "/amenities"],
   ["Journal", "/journal"],
+  ["Saved homes", "/saved"],
 ];
 export function Header() {
   const pathname = usePathname();
@@ -31,7 +32,7 @@ export function Header() {
     <header className="relative z-30 border-b border-line bg-paper">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-6 lg:px-10">
         <Logo />
-        <nav aria-label="Main navigation" className="hidden items-center gap-8 lg:flex">
+        <nav aria-label="Main navigation" className="hidden items-center gap-5 xl:gap-8 lg:flex">
           {links.map(([label, href]) => (
             <Link
               key={href}

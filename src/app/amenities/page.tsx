@@ -57,8 +57,8 @@ export default function AmenitiesPage() {
       </div>
       <div className="relative mt-12 aspect-[16/8] overflow-hidden rounded-2xl">
         <Image
-          src="/media/woodland.jpg"
-          alt="Illustrated woodland home surrounded by a green landscape"
+          src="/media/plan03/amenities-garden.webp"
+          alt="Quiet shared garden with an olive tree and timber seating"
           fill
           priority
           sizes="(max-width: 1280px) 100vw, 1280px"
@@ -76,6 +76,44 @@ export default function AmenitiesPage() {
           </article>
         ))}
       </div>
+      <section className="mb-16 grid gap-8 md:grid-cols-2">
+        {[
+          {
+            image: "amenities-terrace",
+            alt: "Stone terrace beside a narrow reflecting water channel",
+            title: "An outdoor room",
+            text: "The Courtyard House explores a sheltered terrace and reflecting pool. Its inward-facing garden makes a place to pause away from the arrival path.",
+            href: "the-courtyard-house",
+          },
+          {
+            image: "amenities-path",
+            alt: "Shaded level path beside timber bicycle storage",
+            title: "A useful way out",
+            text: "Saltwater Residence includes bicycle storage in its imagined coastal setting. A clear route matters as much as the space at the end of it.",
+            href: "saltwater-residence",
+          },
+        ].map((item) => (
+          <article key={item.image}>
+            <div className="relative aspect-[3/2] overflow-hidden rounded-2xl">
+              <Image
+                src={`/media/plan03/${item.image}.webp`}
+                alt={item.alt}
+                fill
+                sizes="(max-width:768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+            <h2 className="mt-5 font-display text-3xl">{item.title}</h2>
+            <p className="mt-4 text-sm leading-7 text-muted">{item.text}</p>
+            <Link
+              href={`/properties/${item.href}`}
+              className="mt-5 inline-block min-h-11 text-sm underline underline-offset-4"
+            >
+              Explore this home
+            </Link>
+          </article>
+        ))}
+      </section>
       <div className="flex flex-col justify-between gap-6 rounded-2xl border border-line bg-white/50 p-8 md:flex-row md:items-center">
         <div>
           <h2 className="font-display text-3xl">Find the details that feel like you.</h2>

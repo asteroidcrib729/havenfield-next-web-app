@@ -1,3 +1,6 @@
+import { storyHomes } from "@/content/content-links";
+import { properties } from "@/content/properties";
+import { PropertyCard } from "@/components/property-card";
 import { headers } from "next/headers";
 import { cache } from "react";
 import type { Metadata } from "next";
@@ -57,6 +60,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const related = (await getPublishedPosts({ category: post.category, limit: 4 })).posts
     .filter((item) => item.id !== post.id)
     .slice(0, 3);
+  const homes = properties.filter((home) => (storyHomes[post.slug] || []).includes(home.id));
   const canonical = post.canonicalUrl || absoluteUrl(`/journal/${post.slug}`);
   const schema = {
     "@context": "https://schema.org",
@@ -149,6 +153,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           it is not professional property or investment advice.
         </p>
       </article>
+      {homes.length > 0 && (
+        <section className="mt-16 border-t border-line pt-10">
+          <h2 className="font-display text-4xl">See the idea at home.</h2>
+          <p className="mt-4 text-sm leading-7 text-muted">
+            Related fictional homes from the collection.
+          </p>
+          <div className="mt-8 grid gap-8 md:grid-cols-2">
+            {homes.map((home) => (
+              <PropertyCard key={home.id} property={home} headingLevel={3} />
+            ))}
+          </div>
+        </section>
+      )}
       {related.length > 0 && (
         <section className="mt-20 border-t border-line pt-10">
           <h2 className="font-display text-4xl">Keep exploring.</h2>

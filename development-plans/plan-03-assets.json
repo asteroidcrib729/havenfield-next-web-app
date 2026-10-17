@@ -1,0 +1,1613 @@
+{
+  "version": 1,
+  "created": "2026-10-17",
+  "distinctSourceTarget": 28,
+  "approvedSources": 28,
+  "generationPolicy": "Built-in session tool; no external API or purchased credits. Tool quota/cost are not exposed and are not asserted as verified balances.",
+  "assets": [
+    {
+      "id": "HF03-01",
+      "group": "courtyard",
+      "propertySlug": "the-courtyard-house",
+      "subject": "arrival",
+      "identity": "Pale limestone single-storey U-shaped home wrapping a planted courtyard and narrow reflecting pool; oak pivot entrance, slender bronze glazing, warm plaster, Mediterranean planting, flat parapet roof.",
+      "scene": "Exterior arrival across pale gravel and low planting, entrance to the left and courtyard glimpsed through the center",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Identity: Pale limestone single-storey U-shaped home wrapping a planted courtyard and narrow reflecting pool; oak pivot entrance, slender bronze glazing, warm plaster, Mediterranean planting, flat parapet roof. Scene: Exterior arrival across pale gravel and low planting, entrance to the left and courtyard glimpsed through the center.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use the provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-01.png",
+      "outputPath": "public/media/plan03/courtyard-arrival.webp",
+      "sha256": "eb70e9802a029e9afba89381e7c822a9b19a6b41e4eb7775bb83e56e42723a9d",
+      "approval": "technical-review-passed",
+      "alt": "Limestone entrance and planted courtyard at The Courtyard House",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/properties/the-courtyard-house", "/properties", "/"],
+      "pilot": true,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/courtyard-arrival-480.webp",
+          "width": 480,
+          "bytes": 38170,
+          "sha256": "87ef4414dc96d842d3d733bbf9f996d6c7df2377ed50f46c61a7945c44e7ed38"
+        },
+        {
+          "path": "public/media/plan03/courtyard-arrival-768.webp",
+          "width": 768,
+          "bytes": 87938,
+          "sha256": "397b6875c341bffcd8402ec594ed2487721725ba751707bdd3f5e3b7f4c8473a"
+        }
+      ],
+      "sourceSha256": "df0dbb36de284ebb812d2ef58358d89255a68e9628e208fb789f0df3954820e4",
+      "bytes": 331474,
+      "generatedOn": "2026-10-17",
+      "promptRecord": "Normalized pilot brief; exact tool prompt not retained"
+    },
+    {
+      "id": "HF03-02",
+      "group": "courtyard",
+      "propertySlug": "the-courtyard-house",
+      "subject": "living",
+      "identity": "Pale limestone single-storey U-shaped home wrapping a planted courtyard and narrow reflecting pool; oak pivot entrance, slender bronze glazing, warm plaster, Mediterranean planting, flat parapet roof.",
+      "scene": "Living room facing the planted courtyard through bronze sliding glazing, low linen seating and warm plaster walls",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Identity: Pale limestone single-storey U-shaped home wrapping a planted courtyard and narrow reflecting pool; oak pivot entrance, slender bronze glazing, warm plaster, Mediterranean planting, flat parapet roof. Scene: Living room facing the planted courtyard through bronze sliding glazing, low linen seating and warm plaster walls.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use the provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-02.png",
+      "outputPath": "public/media/plan03/courtyard-living.webp",
+      "sha256": "83914ffd13be572790247bf2a1163bb0a2dd25de0625b7e0c1c5d1b82f4519ea",
+      "approval": "technical-review-passed",
+      "alt": "Courtyard-facing living room with linen seating",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/properties/the-courtyard-house", "/properties", "/"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/courtyard-living-480.webp",
+          "width": 480,
+          "bytes": 29328,
+          "sha256": "30e4c85e1bb0cab42e4ff7f717d8344e59deca98d74ffe06e1adc5db3fb56583"
+        },
+        {
+          "path": "public/media/plan03/courtyard-living-768.webp",
+          "width": 768,
+          "bytes": 68868,
+          "sha256": "dc798446e6a1081d97654800ce752c4adbdfff75acd3dc0bb660f2b892230231"
+        }
+      ],
+      "sourceSha256": "3252e0750b1c1ad993d886d046e421766ab31f970e46252b45ae27d0a3a27f39",
+      "bytes": 266086,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Generate one NEW photorealistic architectural editorial photograph, asset HF03-02, for Havenfield's fictional Courtyard House. The attached image is a building-identity reference, not a canvas to preserve. Keep its limestone, flat roof, bronze glazing, olive-tree courtyard and narrow reflecting pool consistent. From inside the courtyard-facing living room: low ivory linen sofa, one oak side table, pale plaster and limestone floor. Bronze floor-to-ceiling sliders open toward the very same olive tree and narrow reflecting pool seen in the reference. Deep flat roof overhang, credible intimate proportions. Camera eye level looking outward from the living area. Warm natural late-morning light, coherent shadows, 35mm architectural photography, straight verticals, realistic human scale. 3:2 landscape about 1536x1024. Single seamless photograph, no collage, no people, text, signage, logos or watermarks. Invented architectural concept, not a real home listing.",
+      "promptRecord": "Exact submitted generation prompt",
+      "referenceAssetId": "HF03-01"
+    },
+    {
+      "id": "HF03-03",
+      "group": "courtyard",
+      "propertySlug": "the-courtyard-house",
+      "subject": "kitchen",
+      "identity": "Pale limestone single-storey U-shaped home wrapping a planted courtyard and narrow reflecting pool; oak pivot entrance, slender bronze glazing, warm plaster, Mediterranean planting, flat parapet roof.",
+      "scene": "Oak kitchen and dining area with pale stone island, useful compact proportions and a view toward the same courtyard",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Identity: Pale limestone single-storey U-shaped home wrapping a planted courtyard and narrow reflecting pool; oak pivot entrance, slender bronze glazing, warm plaster, Mediterranean planting, flat parapet roof. Scene: Oak kitchen and dining area with pale stone island, useful compact proportions and a view toward the same courtyard.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use the provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-03.png",
+      "outputPath": "public/media/plan03/courtyard-kitchen.webp",
+      "sha256": "637431e0faa5e6a02c78ea301550d10b83833da8d32427dd58c7a67780fcca6e",
+      "approval": "technical-review-passed",
+      "alt": "Oak kitchen and dining space beside the planted courtyard",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/properties/the-courtyard-house", "/properties", "/"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/courtyard-kitchen-480.webp",
+          "width": 480,
+          "bytes": 24250,
+          "sha256": "0e4ac09a9d2bb3f4662ef23d74f1395d4ae15e0cbcc849071a4d5da3521e4df7"
+        },
+        {
+          "path": "public/media/plan03/courtyard-kitchen-768.webp",
+          "width": 768,
+          "bytes": 56754,
+          "sha256": "d43c1212fa13f433afdfa7790f49ad4c80cb9e9d65b1cf46077d41a9b1ac2892"
+        }
+      ],
+      "sourceSha256": "c69c696fe3fdb0893951fd30b24f1d27f5ec9071f410158c0b0fdef76caaacad",
+      "bytes": 227038,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Generate one NEW photorealistic architectural editorial photograph, asset HF03-03, for Havenfield's fictional Courtyard House. The attached image is a building-identity reference, not a canvas to preserve. Keep its limestone, flat roof, bronze glazing, olive-tree courtyard and narrow reflecting pool consistent. From inside the oak kitchen and dining room: a small rectangular pale-stone island, flat natural-oak cabinetry and an oak dining table for six. The same bronze-framed courtyard glazing, single-storey flat roof and planted olive-tree courtyard glimpsed to the right. No huge mansion proportions, no decorative excess. Camera at eye level across kitchen toward dining. Warm natural late-morning light, coherent shadows, 35mm architectural photography, straight verticals, realistic human scale. 3:2 landscape about 1536x1024. Single seamless photograph, no collage, no people, text, signage, logos or watermarks. Invented architectural concept, not a real home listing.",
+      "promptRecord": "Exact submitted generation prompt",
+      "referenceAssetId": "HF03-01"
+    },
+    {
+      "id": "HF03-04",
+      "group": "courtyard",
+      "propertySlug": "the-courtyard-house",
+      "subject": "courtyard",
+      "identity": "Pale limestone single-storey U-shaped home wrapping a planted courtyard and narrow reflecting pool; oak pivot entrance, slender bronze glazing, warm plaster, Mediterranean planting, flat parapet roof.",
+      "scene": "Planted courtyard beside the narrow reflecting pool, stone overhang and the same bronze glazing",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Identity: Pale limestone single-storey U-shaped home wrapping a planted courtyard and narrow reflecting pool; oak pivot entrance, slender bronze glazing, warm plaster, Mediterranean planting, flat parapet roof. Scene: Planted courtyard beside the narrow reflecting pool, stone overhang and the same bronze glazing.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use the provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-04.png",
+      "outputPath": "public/media/plan03/courtyard-courtyard.webp",
+      "sha256": "c267d22d499bf7c7b58267561262515076a8a74e4a1b430ed1c99d594a9fb4d8",
+      "approval": "technical-review-passed",
+      "alt": "Planted courtyard and reflecting pool framed by limestone",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/properties/the-courtyard-house", "/properties", "/"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/courtyard-courtyard-480.webp",
+          "width": 480,
+          "bytes": 37370,
+          "sha256": "6d18392f65913dc9110080792913894a5e4a2c88bf4f1a5571d5649a54f1e558"
+        },
+        {
+          "path": "public/media/plan03/courtyard-courtyard-768.webp",
+          "width": 768,
+          "bytes": 86482,
+          "sha256": "6cb2069ddeb399060b4adaba56ee311231209890fcb74f5f860c1fe7bf9cb9e7"
+        }
+      ],
+      "sourceSha256": "350006cc2e8295dbe915e0e1d2de596560bf117c3c2c2eb4279e362bd2321dc5",
+      "bytes": 313492,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Generate one NEW photorealistic architectural editorial photograph, asset HF03-04, for Havenfield's fictional Courtyard House. The attached image is a building-identity reference, not a canvas to preserve. Keep its limestone, flat roof, bronze glazing, olive-tree courtyard and narrow reflecting pool consistent. From the courtyard beside the narrow reflecting pool: the same limestone single-storey U-shaped home, oak pivot entrance and flat connecting parapet from the reference, mature olive tree, low sage planting, bronze glazing and a shaded stone bench. Change camera position to look diagonally across the pool toward living-room glazing. Preserve building materials and roofline. Warm natural late-morning light, coherent shadows, 35mm architectural photography, straight verticals, realistic human scale. 3:2 landscape about 1536x1024. Single seamless photograph, no collage, no people, text, signage, logos or watermarks. Invented architectural concept, not a real home listing.",
+      "promptRecord": "Exact submitted generation prompt",
+      "referenceAssetId": "HF03-01"
+    },
+    {
+      "id": "HF03-05",
+      "group": "saltwater",
+      "propertySlug": "saltwater-residence",
+      "subject": "exterior",
+      "identity": "Compact two-storey cream-plaster coastal residence; deep oak pergola, pale limestone terrace, slender bronze glazing, sheltered balcony, sandy grasses, quiet invented sea horizon.",
+      "scene": "Exterior and sheltered terrace at late morning, sea horizon to the right and the oak pergola clearly visible",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Identity: Compact two-storey cream-plaster coastal residence; deep oak pergola, pale limestone terrace, slender bronze glazing, sheltered balcony, sandy grasses, quiet invented sea horizon. Scene: Exterior and sheltered terrace at late morning, sea horizon to the right and the oak pergola clearly visible.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use the provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-05.png",
+      "outputPath": "public/media/plan03/saltwater-exterior.webp",
+      "sha256": "744f6c331728ad7e4fc1099adcfc96372caf855db173ee8c7edb05fc9cc03331",
+      "approval": "technical-review-passed",
+      "alt": "Cream-plaster coastal residence with a sheltered timber terrace",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/properties/saltwater-residence", "/properties", "/"],
+      "pilot": true,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/saltwater-exterior-480.webp",
+          "width": 480,
+          "bytes": 30516,
+          "sha256": "f5e241469b938cdc6fb84777f61490d3e862bfbb9081d484dc3c15c6d589197f"
+        },
+        {
+          "path": "public/media/plan03/saltwater-exterior-768.webp",
+          "width": 768,
+          "bytes": 75518,
+          "sha256": "b4a177659e38803f4711f910d5857bfc54bf0d2b2c9fc73211bb8785c8c2d9a0"
+        }
+      ],
+      "sourceSha256": "f054f89e4f0c0a0b676b088abf07b3957b912e1e293aa2c907dd930c5957099b",
+      "bytes": 314892,
+      "generatedOn": "2026-10-17",
+      "promptRecord": "Normalized pilot brief; exact tool prompt not retained"
+    },
+    {
+      "id": "HF03-06",
+      "group": "saltwater",
+      "propertySlug": "saltwater-residence",
+      "subject": "lounge",
+      "identity": "Compact two-storey cream-plaster coastal residence; deep oak pergola, pale limestone terrace, slender bronze glazing, sheltered balcony, sandy grasses, quiet invented sea horizon.",
+      "scene": "Horizon-facing lounge under the same oak pergola, textured plaster and small linen sofa, sea through bronze glazing",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Identity: Compact two-storey cream-plaster coastal residence; deep oak pergola, pale limestone terrace, slender bronze glazing, sheltered balcony, sandy grasses, quiet invented sea horizon. Scene: Horizon-facing lounge under the same oak pergola, textured plaster and small linen sofa, sea through bronze glazing.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use the provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-06.png",
+      "outputPath": "public/media/plan03/saltwater-lounge.webp",
+      "sha256": "e0ae06af02259cbb12fe8b6c039e4229ac89410e5603dc2fc6bd0e94e7aa27ec",
+      "approval": "technical-review-passed",
+      "alt": "Sheltered coastal lounge looking toward the sea",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/properties/saltwater-residence", "/properties", "/"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/saltwater-lounge-480.webp",
+          "width": 480,
+          "bytes": 25500,
+          "sha256": "c530f95ce167f596553e79acc9801acc2ad4b7ce086568f24cb788bc75585033"
+        },
+        {
+          "path": "public/media/plan03/saltwater-lounge-768.webp",
+          "width": 768,
+          "bytes": 58666,
+          "sha256": "255c40a578497b3e579d35050622e757e7dfc4f20e6ca06e22d63aeaa799962b"
+        }
+      ],
+      "sourceSha256": "57529378caf0207e0396df9a9649236034156658d2a2f4a6544ea8cfa33864f7",
+      "bytes": 241316,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Create ONE new photorealistic architectural editorial image for Havenfield's invented Saltwater Residence, asset HF03-06. Use the attached exterior as a building-identity reference. Preserve its cream plaster, compact proportions, bronze glazing, oak pergolas and coastal landscape. Inside the compact ground-floor lounge, natural linen sofa and low oak table, the same deep oak pergola outside bronze-framed glazing, pale limestone terrace and sea horizon visible. Keep the reference home's cream plaster and sheltered coastal orientation. Camera looking from the back corner toward the terrace. Warm natural daylight, coherent shadows, 35mm photography, straight verticals, calm human-scale editorial architecture. 3:2 landscape about 1536x1024. One photograph, no collage, people, writing, logos or watermarks. This is an invented home concept, not a real listing.",
+      "promptRecord": "Exact submitted generation prompt",
+      "referenceAssetId": "HF03-05"
+    },
+    {
+      "id": "HF03-07",
+      "group": "saltwater",
+      "propertySlug": "saltwater-residence",
+      "subject": "dining",
+      "identity": "Compact two-storey cream-plaster coastal residence; deep oak pergola, pale limestone terrace, slender bronze glazing, sheltered balcony, sandy grasses, quiet invented sea horizon.",
+      "scene": "Compact oak kitchen and dining alcove with pale stone worktop and soft sea light",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Identity: Compact two-storey cream-plaster coastal residence; deep oak pergola, pale limestone terrace, slender bronze glazing, sheltered balcony, sandy grasses, quiet invented sea horizon. Scene: Compact oak kitchen and dining alcove with pale stone worktop and soft sea light.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use the provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-07.png",
+      "outputPath": "public/media/plan03/saltwater-dining.webp",
+      "sha256": "844909305d97aab461f50254c43c441af7dcbd32d81126b44ec429fbeff30858",
+      "approval": "technical-review-passed",
+      "alt": "Compact kitchen and dining alcove in the coastal residence",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/properties/saltwater-residence", "/properties", "/"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/saltwater-dining-480.webp",
+          "width": 480,
+          "bytes": 21468,
+          "sha256": "f54fa0ef25d93efe2a700a74246f4630d18b6d4fcfbe3e3abca71a3d828e6937"
+        },
+        {
+          "path": "public/media/plan03/saltwater-dining-768.webp",
+          "width": 768,
+          "bytes": 47156,
+          "sha256": "2c3712ce800242e3a6e2b736357f69058bcade5f54ac4ccab4dbd225dfc405a4"
+        }
+      ],
+      "sourceSha256": "aa8f5de6bb8e6f77fb1d5fa14924f096606736ba870f50221a5af85b428c0c49",
+      "bytes": 178850,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Create ONE new photorealistic architectural editorial image for Havenfield's invented Saltwater Residence, asset HF03-07. Use the attached exterior as a building-identity reference. Preserve its cream plaster, compact proportions, bronze glazing, oak pergolas and coastal landscape. Compact kitchen/dining alcove in the same home: pale oak cabinetry, limestone worktop, modest dining table for four, soft indirect sea light, slender bronze glazing and the same timber pergola visible through a side opening. A useful small room, not a grand kitchen. Warm natural daylight, coherent shadows, 35mm photography, straight verticals, calm human-scale editorial architecture. 3:2 landscape about 1536x1024. One photograph, no collage, people, writing, logos or watermarks. This is an invented home concept, not a real listing.",
+      "promptRecord": "Exact submitted generation prompt",
+      "referenceAssetId": "HF03-05"
+    },
+    {
+      "id": "HF03-08",
+      "group": "saltwater",
+      "propertySlug": "saltwater-residence",
+      "subject": "bedroom",
+      "identity": "Compact two-storey cream-plaster coastal residence; deep oak pergola, pale limestone terrace, slender bronze glazing, sheltered balcony, sandy grasses, quiet invented sea horizon.",
+      "scene": "Quiet bedroom opening onto the sheltered balcony, pale oak shutters and the same sea horizon",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Identity: Compact two-storey cream-plaster coastal residence; deep oak pergola, pale limestone terrace, slender bronze glazing, sheltered balcony, sandy grasses, quiet invented sea horizon. Scene: Quiet bedroom opening onto the sheltered balcony, pale oak shutters and the same sea horizon.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use the provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-08.png",
+      "outputPath": "public/media/plan03/saltwater-bedroom.webp",
+      "sha256": "967358c7539c1a2452d8d887a4f9bfe84f4fa5c6615739d9561063d84f77f568",
+      "approval": "technical-review-passed",
+      "alt": "Coastal bedroom opening onto a sheltered balcony",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/properties/saltwater-residence", "/properties", "/"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/saltwater-bedroom-480.webp",
+          "width": 480,
+          "bytes": 23228,
+          "sha256": "c29a340995ccacfe15abf62ab0f1eda9b31a01f96c6fb405a6726bf6ef3619f3"
+        },
+        {
+          "path": "public/media/plan03/saltwater-bedroom-768.webp",
+          "width": 768,
+          "bytes": 54598,
+          "sha256": "dbc20c52b2065a3cc525dc45b884b068b827676e46f4b1e498e519e9e837f366"
+        }
+      ],
+      "sourceSha256": "effff8fc8151d9b0a292b6cc4efb6dab545d762ab34c329d3f4a648dc990f918",
+      "bytes": 212010,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Create ONE new photorealistic architectural editorial image for Havenfield's invented Saltwater Residence, asset HF03-08. Use the attached exterior as a building-identity reference. Preserve its cream plaster, compact proportions, bronze glazing, oak pergolas and coastal landscape. Upper-floor quiet bedroom with a linen bed, pale oak shutters and bronze-framed doors opening onto the reference home's sheltered balcony. The same cream-plaster wall, oak balcony beams and distant sea horizon. Photograph from inside the bedroom toward the balcony, realistic proportions. Warm natural daylight, coherent shadows, 35mm photography, straight verticals, calm human-scale editorial architecture. 3:2 landscape about 1536x1024. One photograph, no collage, people, writing, logos or watermarks. This is an invented home concept, not a real listing.",
+      "promptRecord": "Exact submitted generation prompt",
+      "referenceAssetId": "HF03-05"
+    },
+    {
+      "id": "HF03-09",
+      "group": "woodland",
+      "propertySlug": "woodland-pavilion",
+      "subject": "exterior",
+      "identity": "Single-storey dark-stained timber pavilion with low charcoal standing-seam roof; broad sliding glazing, step-free gravel arrival, oak interiors and a covered timber deck in a mossy invented woodland.",
+      "scene": "Exterior from the step-free gravel path with the low roof and covered forest deck visible",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Identity: Single-storey dark-stained timber pavilion with low charcoal standing-seam roof; broad sliding glazing, step-free gravel arrival, oak interiors and a covered timber deck in a mossy invented woodland. Scene: Exterior from the step-free gravel path with the low roof and covered forest deck visible.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use the provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-09.png",
+      "outputPath": "public/media/plan03/woodland-exterior.webp",
+      "sha256": "ecd29328ab743ac97568ebe462206767993e5e1d173bc2f16afb37b7584e022e",
+      "approval": "technical-review-passed",
+      "alt": "Dark timber pavilion beside a step-free woodland path",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/properties/woodland-pavilion", "/properties", "/"],
+      "pilot": true,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/woodland-exterior-480.webp",
+          "width": 480,
+          "bytes": 52158,
+          "sha256": "f39dc019baee5ebf113297ca789ab4392c44e6c18b02921769eb85ec1c8ce47c"
+        },
+        {
+          "path": "public/media/plan03/woodland-exterior-768.webp",
+          "width": 768,
+          "bytes": 126604,
+          "sha256": "2f10ba0f3e6b1692e480b1bb4a0b493d732052f363a5c6f0db762e8bcf5044a1"
+        }
+      ],
+      "sourceSha256": "66ae8f4570285aeaba432256d491e717c951942bfd35ac32f7a0084955b9c86e",
+      "bytes": 289920,
+      "generatedOn": "2026-10-17",
+      "promptRecord": "Normalized pilot brief; exact tool prompt not retained"
+    },
+    {
+      "id": "HF03-10",
+      "group": "woodland",
+      "propertySlug": "woodland-pavilion",
+      "subject": "living",
+      "identity": "Single-storey dark-stained timber pavilion with low charcoal standing-seam roof; broad sliding glazing, step-free gravel arrival, oak interiors and a covered timber deck in a mossy invented woodland.",
+      "scene": "Oak-and-linen living room facing the same woodland through broad sliding glazing",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Identity: Single-storey dark-stained timber pavilion with low charcoal standing-seam roof; broad sliding glazing, step-free gravel arrival, oak interiors and a covered timber deck in a mossy invented woodland. Scene: Oak-and-linen living room facing the same woodland through broad sliding glazing.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use the provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-10.png",
+      "outputPath": "public/media/plan03/woodland-living.webp",
+      "sha256": "0cd5050936b894de432fc410e804f50600ef32bbe77619c0f620bb6207a37322",
+      "approval": "technical-review-passed",
+      "alt": "Oak living room facing the woodland canopy",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/properties/woodland-pavilion", "/properties", "/"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/woodland-living-480.webp",
+          "width": 480,
+          "bytes": 36682,
+          "sha256": "75a0ba3fa64df498fbfbb20b78595a1d04d953e1bbc9063f83a37dca40f40488"
+        },
+        {
+          "path": "public/media/plan03/woodland-living-768.webp",
+          "width": 768,
+          "bytes": 87564,
+          "sha256": "313f7f65c91663fe64d985cf46a565ee47225f8caae3019d11c79b372600be6b"
+        }
+      ],
+      "sourceSha256": "feba939dbd1e9a8ff9f36b35bf6a0a05602fc4b0d95b1445437462ebff31cbd9",
+      "bytes": 333502,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Create one original photorealistic architectural photograph for Havenfield's invented Woodland Pavilion, asset HF03-10. The attached exterior is a building-identity reference: preserve dark vertical timber, low charcoal metal roof, oak-lined interior and mossy woodland setting. Inside the living room, looking through the same broad sliding glazing toward mossy woodland and the covered deck. Oak ceiling, linen sofa, small dark reading lamp, warm oak floor, low charcoal roof edge outside. An intimate grounded space, not a giant hall. Soft natural daylight through trees, coherent shadows, 35mm editorial architecture photography, straight verticals, realistic human scale. Landscape 3:2 about 1536x1024, single photograph without panels, people, text, logos or watermarks. Fictional concept, not a real listing.",
+      "promptRecord": "Exact submitted generation prompt",
+      "referenceAssetId": "HF03-09"
+    },
+    {
+      "id": "HF03-11",
+      "group": "woodland",
+      "propertySlug": "woodland-pavilion",
+      "subject": "study",
+      "identity": "Single-storey dark-stained timber pavilion with low charcoal standing-seam roof; broad sliding glazing, step-free gravel arrival, oak interiors and a covered timber deck in a mossy invented woodland.",
+      "scene": "Reading nook and small study beside broad glazing, oak bookshelves without legible titles and a linen armchair",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Identity: Single-storey dark-stained timber pavilion with low charcoal standing-seam roof; broad sliding glazing, step-free gravel arrival, oak interiors and a covered timber deck in a mossy invented woodland. Scene: Reading nook and small study beside broad glazing, oak bookshelves without legible titles and a linen armchair.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use the provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-11.png",
+      "outputPath": "public/media/plan03/woodland-study.webp",
+      "sha256": "46b4098c7e9aed09fc0ccf9b09e5b4f3deb912f1b3eff3fb2564644cc4abd453",
+      "approval": "technical-review-passed",
+      "alt": "Woodland reading nook with oak shelves and a linen chair",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/properties/woodland-pavilion", "/properties", "/"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/woodland-study-480.webp",
+          "width": 480,
+          "bytes": 39998,
+          "sha256": "1241e0119c87675383ee082e4bdad862d859c5614a0142e9c73fc5e20b748033"
+        },
+        {
+          "path": "public/media/plan03/woodland-study-768.webp",
+          "width": 768,
+          "bytes": 87498,
+          "sha256": "82b4458eadefac28d94cf254d4762c30791fdeb3ed8b99ac9a861c368812fa76"
+        }
+      ],
+      "sourceSha256": "7f6b9639b5239f62a5aa6182eba922207c9369b0e93da2d81499692b482043aa",
+      "bytes": 282592,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Create one original photorealistic architectural photograph for Havenfield's invented Woodland Pavilion, asset HF03-11. The attached exterior is a building-identity reference: preserve dark vertical timber, low charcoal metal roof, oak-lined interior and mossy woodland setting. Inside a quiet woodland-facing reading nook and small study: oak bookshelves without readable text, a linen armchair and useful writing desk, warm oak ceiling, the same charcoal timber framing and broad window onto moss and trees. Photograph diagonally across the room at human eye level. Soft natural daylight through trees, coherent shadows, 35mm editorial architecture photography, straight verticals, realistic human scale. Landscape 3:2 about 1536x1024, single photograph without panels, people, text, logos or watermarks. Fictional concept, not a real listing.",
+      "promptRecord": "Exact submitted generation prompt",
+      "referenceAssetId": "HF03-09"
+    },
+    {
+      "id": "HF03-12",
+      "group": "woodland",
+      "propertySlug": "woodland-pavilion",
+      "subject": "deck",
+      "identity": "Single-storey dark-stained timber pavilion with low charcoal standing-seam roof; broad sliding glazing, step-free gravel arrival, oak interiors and a covered timber deck in a mossy invented woodland.",
+      "scene": "Covered timber deck beneath the same low charcoal roof, simple outdoor bench and mossy forest floor",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Identity: Single-storey dark-stained timber pavilion with low charcoal standing-seam roof; broad sliding glazing, step-free gravel arrival, oak interiors and a covered timber deck in a mossy invented woodland. Scene: Covered timber deck beneath the same low charcoal roof, simple outdoor bench and mossy forest floor.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use the provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-12.png",
+      "outputPath": "public/media/plan03/woodland-deck.webp",
+      "sha256": "77ee42f67d47a2eb8f9c7766cdb743844fd2ff14269c50caf5194e3bee4441a1",
+      "approval": "technical-review-passed",
+      "alt": "Covered timber deck overlooking moss and trees",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/properties/woodland-pavilion", "/properties", "/"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/woodland-deck-480.webp",
+          "width": 480,
+          "bytes": 46946,
+          "sha256": "f7c1546afb7280c75a5a830103e47e3c5b5aa6639a8104f65bc3b9a358abca38"
+        },
+        {
+          "path": "public/media/plan03/woodland-deck-768.webp",
+          "width": 768,
+          "bytes": 108660,
+          "sha256": "6b677a0bae3a58f9363656827ac5da225c9aeb452ae916451b83d2d81ae4aae1"
+        }
+      ],
+      "sourceSha256": "28d3e896f72a445f51cff00d2e5a477dfa2299ce51b1f0c06b8b29e433d465a0",
+      "bytes": 298856,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Create one original photorealistic architectural photograph for Havenfield's invented Woodland Pavilion, asset HF03-12. The attached exterior is a building-identity reference: preserve dark vertical timber, low charcoal metal roof, oak-lined interior and mossy woodland setting. From the covered timber deck beneath the same pavilion's low charcoal standing-seam roof, looking diagonally back at its dark vertical timber walls and broad glazing. Simple oak bench, one outdoor chair, mature trees and moss. Preserve the reference roofline and construction, no high stair or elevated platform. Soft natural daylight through trees, coherent shadows, 35mm editorial architecture photography, straight verticals, realistic human scale. Landscape 3:2 about 1536x1024, single photograph without panels, people, text, logos or watermarks. Fictional concept, not a real listing.",
+      "promptRecord": "Exact submitted generation prompt",
+      "referenceAssetId": "HF03-09"
+    },
+    {
+      "id": "HF03-13",
+      "group": "atelier",
+      "propertySlug": "atelier-loft",
+      "subject": "exterior",
+      "identity": "Fictional red-brick warehouse conversion, three tall arched black steel windows across a top-floor loft, weathered brick reveals, exposed dark steel beams, warm oak and a shared planted rooftop garden; invented quiet city block.",
+      "scene": "Street and courtyard arrival showing the red-brick warehouse conversion and three arched top-floor windows, no signs or vehicles",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Identity: Fictional red-brick warehouse conversion, three tall arched black steel windows across a top-floor loft, weathered brick reveals, exposed dark steel beams, warm oak and a shared planted rooftop garden; invented quiet city block. Scene: Street and courtyard arrival showing the red-brick warehouse conversion and three arched top-floor windows, no signs or vehicles.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use the provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-13.png",
+      "outputPath": "public/media/plan03/atelier-exterior.webp",
+      "sha256": "444de5f75ba9a5ab706fc7aa9035b51f3dee4aefba50f7bcf41607b82397634f",
+      "approval": "technical-review-passed",
+      "alt": "Red-brick warehouse conversion with tall arched loft windows",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/properties/atelier-loft", "/properties", "/"],
+      "pilot": true,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/atelier-exterior-480.webp",
+          "width": 480,
+          "bytes": 48510,
+          "sha256": "84d847c6788357a0024b14e3ac8b0f9bd7b16dd33f934b051e282c12a236f638"
+        },
+        {
+          "path": "public/media/plan03/atelier-exterior-768.webp",
+          "width": 768,
+          "bytes": 123724,
+          "sha256": "b81de89066493ecb043da43489fb853be70e075995bcb7289c2a993fb87d5cad"
+        }
+      ],
+      "sourceSha256": "0683f003e615ad723ffca59458721e12a1a01cd808a18e653a3b9fd5dbedb308",
+      "bytes": 292820,
+      "generatedOn": "2026-10-17",
+      "promptRecord": "Normalized pilot brief; exact tool prompt not retained"
+    },
+    {
+      "id": "HF03-14",
+      "group": "atelier",
+      "propertySlug": "atelier-loft",
+      "subject": "studio",
+      "identity": "Fictional red-brick warehouse conversion, three tall arched black steel windows across a top-floor loft, weathered brick reveals, exposed dark steel beams, warm oak and a shared planted rooftop garden; invented quiet city block.",
+      "scene": "Top-floor living and studio area beneath exposed steel beams with the same three arched windows",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Identity: Fictional red-brick warehouse conversion, three tall arched black steel windows across a top-floor loft, weathered brick reveals, exposed dark steel beams, warm oak and a shared planted rooftop garden; invented quiet city block. Scene: Top-floor living and studio area beneath exposed steel beams with the same three arched windows.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use the provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-14.png",
+      "outputPath": "public/media/plan03/atelier-studio.webp",
+      "sha256": "a99506a0393f3d81752c67f79da99daf85d3d6c31edc75a5f87d37e585049095",
+      "approval": "technical-review-passed",
+      "alt": "Loft living studio with linen seating beneath three arched windows",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/properties/atelier-loft", "/properties", "/"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/atelier-studio-480.webp",
+          "width": 480,
+          "bytes": 26438,
+          "sha256": "f642931fe64b486ccae31b46c0a3ef66e86ee1061f3a3f115bed2dc5abc4820b"
+        },
+        {
+          "path": "public/media/plan03/atelier-studio-768.webp",
+          "width": 768,
+          "bytes": 58512,
+          "sha256": "d3430c90e6d479b9a1088ab7e6a805a3ff29c6970b097d568ed752be6855f976"
+        }
+      ],
+      "sourceSha256": "3ce38520ccf96135e6ea682a24aef18b01135872b31e9aea18b3ed333ba849ab",
+      "bytes": 228258,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Create one original photorealistic architectural editorial photograph, asset HF03-14, Havenfield fictional Atelier Loft. Use the reference exterior as the building identity; preserve red brick, black steel arched windows and restrained conversion character. Top-floor living studio, view from oak dining table toward the three tall arched black steel windows, warm white limewash, exposed red-brick end wall, linen sofa and quiet reading corner; believable compact 142-square-metre apartment. Late-afternoon natural soft daylight, straight verticals, 35mm architectural photography, honest human scale, sophisticated muted oak, ivory, terracotta and sage palette. Landscape 3:2, 1536x1024. No people, legible writing, logos, watermarks, addresses or famous buildings. One coherent scene, no collage. This is invented architecture, not a real sale listing.",
+      "promptRecord": "Exact submitted generation prompt",
+      "referenceAssetId": "HF03-13"
+    },
+    {
+      "id": "HF03-15",
+      "group": "atelier",
+      "propertySlug": "atelier-loft",
+      "subject": "workroom",
+      "identity": "Fictional red-brick warehouse conversion, three tall arched black steel windows across a top-floor loft, weathered brick reveals, exposed dark steel beams, warm oak and a shared planted rooftop garden; invented quiet city block.",
+      "scene": "Flexible oak work and dining table beside the same arched windows, books and neutral ceramics without text",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Identity: Fictional red-brick warehouse conversion, three tall arched black steel windows across a top-floor loft, weathered brick reveals, exposed dark steel beams, warm oak and a shared planted rooftop garden; invented quiet city block. Scene: Flexible oak work and dining table beside the same arched windows, books and neutral ceramics without text.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use the provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-15.png",
+      "outputPath": "public/media/plan03/atelier-workroom.webp",
+      "sha256": "cabc143f924699f0ed5257fb61e1127dac50aead1be22c9e0b98c66eda8c7711",
+      "approval": "technical-review-passed",
+      "alt": "Flexible work and dining area beside tall loft windows",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/properties/atelier-loft", "/properties", "/"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/atelier-workroom-480.webp",
+          "width": 480,
+          "bytes": 33320,
+          "sha256": "a1e1ab31fa30fb71951e903ac0b0daf3a6998cf47aba8f55d59d3b3515ad85f9"
+        },
+        {
+          "path": "public/media/plan03/atelier-workroom-768.webp",
+          "width": 768,
+          "bytes": 81136,
+          "sha256": "9269193acbbc7b21c9c070fd882c4176f1fd58adc92d27644bbf8b1637f42f57"
+        }
+      ],
+      "sourceSha256": "ffa2fcc03a057b742e9bbde75a983c591bcca0ac83ca20e61709df79eb8c4827",
+      "bytes": 323408,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Create one original photorealistic architectural editorial photograph, asset HF03-15, Havenfield fictional Atelier Loft. Use the reference exterior as the building identity; preserve red brick, black steel arched windows and restrained conversion character. Flexible work and dining room in this top-floor loft, one arched black steel window on red-brick wall, freestanding oak desk, low bookshelves with blank book spines, folding timber screen and practical four-person table, no computers with text. Late-afternoon natural soft daylight, straight verticals, 35mm architectural photography, honest human scale, sophisticated muted oak, ivory, terracotta and sage palette. Landscape 3:2, 1536x1024. No people, legible writing, logos, watermarks, addresses or famous buildings. One coherent scene, no collage. This is invented architecture, not a real sale listing.",
+      "promptRecord": "Exact submitted generation prompt",
+      "referenceAssetId": "HF03-13"
+    },
+    {
+      "id": "HF03-16",
+      "group": "atelier",
+      "propertySlug": "atelier-loft",
+      "subject": "rooftop",
+      "identity": "Fictional red-brick warehouse conversion, three tall arched black steel windows across a top-floor loft, weathered brick reveals, exposed dark steel beams, warm oak and a shared planted rooftop garden; invented quiet city block.",
+      "scene": "Shared rooftop garden above the same brick warehouse, timber benches and planted containers, invented skyline",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Identity: Fictional red-brick warehouse conversion, three tall arched black steel windows across a top-floor loft, weathered brick reveals, exposed dark steel beams, warm oak and a shared planted rooftop garden; invented quiet city block. Scene: Shared rooftop garden above the same brick warehouse, timber benches and planted containers, invented skyline.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use the provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-16.png",
+      "outputPath": "public/media/plan03/atelier-rooftop.webp",
+      "sha256": "d678d3aec8b2d5d6322f126b7883fa2a06a02b170545d833896676a8d619733d",
+      "approval": "technical-review-passed",
+      "alt": "Shared rooftop garden above the fictional brick warehouse",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/properties/atelier-loft", "/properties", "/"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/atelier-rooftop-480.webp",
+          "width": 480,
+          "bytes": 43604,
+          "sha256": "e4502d3abbc698a41790f085771fcdf249e099cc0b793ee76fa01ff5cd4be39f"
+        },
+        {
+          "path": "public/media/plan03/atelier-rooftop-768.webp",
+          "width": 768,
+          "bytes": 103698,
+          "sha256": "7655e9327e19de62dc88b5311ac0dc2ba41914de439f704dfbedd5637da767c9"
+        }
+      ],
+      "sourceSha256": "234bf32b2e4616971558c69a7c6f2b6440a2cc3a2f1f92b264226a0411ea2a32",
+      "bytes": 294760,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Create one original photorealistic architectural editorial photograph, asset HF03-16, Havenfield fictional Atelier Loft. Use the reference exterior as the building identity; preserve red brick, black steel arched windows and restrained conversion character. Shared roof garden above the same three-storey red-brick conversion, pale gravel and timber walkway, modest raised planting beds, simple bench, brick parapet, restrained city roofscape beyond; the arched top-floor window roofline remains coherent. Late-afternoon natural soft daylight, straight verticals, 35mm architectural photography, honest human scale, sophisticated muted oak, ivory, terracotta and sage palette. Landscape 3:2, 1536x1024. No people, legible writing, logos, watermarks, addresses or famous buildings. One coherent scene, no collage. This is invented architecture, not a real sale listing.",
+      "promptRecord": "Exact submitted generation prompt",
+      "referenceAssetId": "HF03-13"
+    },
+    {
+      "id": "HF03-17",
+      "group": "editorial",
+      "propertySlug": null,
+      "subject": "home-arrival",
+      "identity": "Independent invented editorial scene",
+      "scene": "Sheltered limestone arrival path and planted landscape leading to a warm oak doorway",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Scene: Sheltered limestone arrival path and planted landscape leading to a warm oak doorway.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-17.png",
+      "outputPath": "public/media/plan03/home-arrival.webp",
+      "sha256": "3ff0fb3379550e2b39b67bab11d069878bdef703e16969f065acecd4da1572c0",
+      "approval": "technical-review-passed",
+      "alt": "Sheltered arrival path with limestone and planting",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/", "/properties"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/home-arrival-480.webp",
+          "width": 480,
+          "bytes": 41164,
+          "sha256": "738dd6ef44f2c89a46703e45f3d926afbe6c8e62fa4125f3d37af341e279b0bf"
+        },
+        {
+          "path": "public/media/plan03/home-arrival-768.webp",
+          "width": 768,
+          "bytes": 99058,
+          "sha256": "e8e0b40c81938174c55c8e6e7d2472a032ebb9035369e3ab3ee9621f5bea70ec"
+        }
+      ],
+      "sourceSha256": "c1deda6ccc5f5d2c70c4a5cfb600ad9b645cde19cb70fc7e1838d662953d20ca",
+      "bytes": 289638,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Original photorealistic architectural editorial photograph for Havenfield, fictional homes and perspectives, asset HF03-17. Sheltered limestone entrance to an invented contemporary home, a small oak pivot door beneath a deep canopy, gravel path curving through grasses and one olive tree. Wide composition, entrance on right, quiet planting foreground, gentle morning light. Believable scale, restrained warm ivory, stone, oak and sage palette, subtle shadow detail, elegant magazine photography, 50mm lens. Landscape 3:2 1536x1024, composition suitable for responsive cropping. No people, readable text, logos, watermark, address, famous building, collage or excessive HDR. One original invented scene.",
+      "promptRecord": "Exact submitted generation prompt"
+    },
+    {
+      "id": "HF03-18",
+      "group": "editorial",
+      "propertySlug": null,
+      "subject": "home-breakfast",
+      "identity": "Independent invented editorial scene",
+      "scene": "Intimate breakfast table, linen, handmade ceramics and warm morning light through an oak window",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Scene: Intimate breakfast table, linen, handmade ceramics and warm morning light through an oak window.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-18.png",
+      "outputPath": "public/media/plan03/home-breakfast.webp",
+      "sha256": "49ec646fb29de2617bc926f35939750083bdc8512533d35fd22cf48c54e14001",
+      "approval": "technical-review-passed",
+      "alt": "Breakfast table in soft morning light",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/home-breakfast-480.webp",
+          "width": 480,
+          "bytes": 25562,
+          "sha256": "6fc26c1b6cb7d16f31392a778faa59d206404ea8781f7be27906fd956b7e5363"
+        },
+        {
+          "path": "public/media/plan03/home-breakfast-768.webp",
+          "width": 768,
+          "bytes": 54270,
+          "sha256": "f3c5457cc3baf5b454d298de76fe96696848e4626673a217cc13c5b1bf77fbee"
+        }
+      ],
+      "sourceSha256": "4e7df8e2ff37dedd0d987090331ca7e1ef65edf6ad635f06a8f9f07cb2c085db",
+      "bytes": 182548,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Original photorealistic architectural editorial photograph for Havenfield, fictional homes and perspectives, asset HF03-18. Intimate everyday breakfast scene in a modest oak and limewash kitchen: two simple ceramic cups, folded linen, bowl of pears on a small round table; window seat and soft garden view, lived-in calm without clutter, morning light. No branded packaging. Believable scale, restrained warm ivory, stone, oak and sage palette, subtle shadow detail, elegant magazine photography, 50mm lens. Landscape 3:2 1536x1024, composition suitable for responsive cropping. No people, readable text, logos, watermark, address, famous building, collage or excessive HDR. One original invented scene.",
+      "promptRecord": "Exact submitted generation prompt"
+    },
+    {
+      "id": "HF03-19",
+      "group": "editorial",
+      "propertySlug": null,
+      "subject": "about-materials",
+      "identity": "Independent invented editorial scene",
+      "scene": "Tactile close study of limestone, pale oak and hand-finished plaster on an architectural worktable",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Scene: Tactile close study of limestone, pale oak and hand-finished plaster on an architectural worktable.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-19.png",
+      "outputPath": "public/media/plan03/about-materials.webp",
+      "sha256": "072c0c828fbef8bc8d7ec2ddacd7c64466b97d8764bc0765a3ed0c219234a5f6",
+      "approval": "technical-review-passed",
+      "alt": "Limestone, oak and plaster material samples",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/about", "/admin/login", "/privacy", "/terms", "/cookies"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/about-materials-480.webp",
+          "width": 480,
+          "bytes": 18168,
+          "sha256": "e301ca802af9034131ffdedf91daea77befcd92a9ca9f83331ce50d05612e3d7"
+        },
+        {
+          "path": "public/media/plan03/about-materials-768.webp",
+          "width": 768,
+          "bytes": 45092,
+          "sha256": "05a1d268100423e89e550faf01cd2b6294dece9b54eca620309ac80eebb29ea0"
+        }
+      ],
+      "sourceSha256": "3258224a99b0c33bb49fea298d2376b15c0adcd9f6ac6516c00e64721c2bc79a",
+      "bytes": 181964,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Original photorealistic architectural editorial photograph for Havenfield, fictional homes and perspectives, asset HF03-19. Architectural material study, pale limestone sample, oak offcut, hand-finished plaster tile and small sage leaf on ivory linen, carefully balanced sculptural arrangement, tactile natural imperfections, soft lateral daylight, generous quiet background. Not a flat catalog grid. Believable scale, restrained warm ivory, stone, oak and sage palette, subtle shadow detail, elegant magazine photography, 50mm lens. Landscape 3:2 1536x1024, composition suitable for responsive cropping. No people, readable text, logos, watermark, address, famous building, collage or excessive HDR. One original invented scene.",
+      "promptRecord": "Exact submitted generation prompt"
+    },
+    {
+      "id": "HF03-20",
+      "group": "editorial",
+      "propertySlug": null,
+      "subject": "about-workshop",
+      "identity": "Independent invented editorial scene",
+      "scene": "Architectural workshop table with small unlabelled material samples, a neutral building model and no people or text",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Scene: Architectural workshop table with small unlabelled material samples, a neutral building model and no people or text.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-20.png",
+      "outputPath": "public/media/plan03/about-workshop.webp",
+      "sha256": "1e9fecfb09a9f274b0c1d3fbb98e6052c8395021f3e554d80a9344e6a72819cc",
+      "approval": "technical-review-passed",
+      "alt": "Architectural model and material samples on a workshop table",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/about"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/about-workshop-480.webp",
+          "width": 480,
+          "bytes": 28072,
+          "sha256": "98c2d6699f956e95bb9ab55fc21c9bc6242ce74c38fb8fa361da2d59ae97c6fc"
+        },
+        {
+          "path": "public/media/plan03/about-workshop-768.webp",
+          "width": 768,
+          "bytes": 57720,
+          "sha256": "c8ca1a9818df06df33e2e798ac5f0bec1c035e639b0e2b222a6e6e10e0a74358"
+        }
+      ],
+      "sourceSha256": "abc1f54cd97df8d4ef5f182a37e576ab15fb62af03fb78534d23fab77f4b5366",
+      "bytes": 181308,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Original photorealistic architectural editorial photograph, Havenfield fictional portfolio asset HF03-20. Architectural workshop table beside tall studio window: blank unmarked sketch paper, small unlabelled cardboard house study models, oak and limestone samples, brass ruler without readable numerals, ceramic pencil cup, one leafy branch. Diagonal tabletop composition, no people or hands. Natural soft daylight, coherent shadows, straight verticals, 40mm lens, sophisticated tactile warm ivory, limestone, natural oak, sage palette. Landscape 3:2 1536x1024, room for responsive cropping. No identifiable people, writing, brand marks, watermark, real addresses, famous buildings, collage or exaggerated scale. One original invented scene.",
+      "promptRecord": "Exact submitted generation prompt"
+    },
+    {
+      "id": "HF03-21",
+      "group": "editorial",
+      "propertySlug": null,
+      "subject": "amenities-garden",
+      "identity": "Independent invented editorial scene",
+      "scene": "Shaded shared garden with timber seating, useful pathways and drought-tolerant planting",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Scene: Shaded shared garden with timber seating, useful pathways and drought-tolerant planting.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-21.png",
+      "outputPath": "public/media/plan03/amenities-garden.webp",
+      "sha256": "74a6e5cd5220d4a582438d9ddf06ff0d4c4c9c603914403e514567d1f666ffae",
+      "approval": "technical-review-passed",
+      "alt": "Shared garden with timber seating and shaded paths",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/amenities"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/amenities-garden-480.webp",
+          "width": 480,
+          "bytes": 55384,
+          "sha256": "814ed5a6181fd9fd708bae52f82b0023d741e58a9addd6b4a9b8a7dff3d344ee"
+        },
+        {
+          "path": "public/media/plan03/amenities-garden-768.webp",
+          "width": 768,
+          "bytes": 140448,
+          "sha256": "627496326cc385d2934f9b95209bed518ada73ab58031a2120365eb97a542467"
+        }
+      ],
+      "sourceSha256": "e72ea30b32f1c555b70737ca861157e61e511e081ff26b3a0fe46d5e774d5f5c",
+      "bytes": 339668,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Original photorealistic architectural editorial photograph, Havenfield fictional portfolio asset HF03-21. Quiet shared garden between invented low limestone homes: curved planted border, mature olive tree, simple timber bench on level pale gravel, restrained grasses, two empty chairs and ample green shade. Human-scale garden, no resort excess. Natural soft daylight, coherent shadows, straight verticals, 40mm lens, sophisticated tactile warm ivory, limestone, natural oak, sage palette. Landscape 3:2 1536x1024, room for responsive cropping. No identifiable people, writing, brand marks, watermark, real addresses, famous buildings, collage or exaggerated scale. One original invented scene.",
+      "promptRecord": "Exact submitted generation prompt"
+    },
+    {
+      "id": "HF03-22",
+      "group": "editorial",
+      "propertySlug": null,
+      "subject": "amenities-terrace",
+      "identity": "Independent invented editorial scene",
+      "scene": "Quiet stone terrace beside a reflective pool, light planting and linen lounge chair",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Scene: Quiet stone terrace beside a reflective pool, light planting and linen lounge chair.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-22.png",
+      "outputPath": "public/media/plan03/amenities-terrace.webp",
+      "sha256": "c665e263d424cf9dea9478b3642e61602079649a3c18115f4abfb2ee2fa78edc",
+      "approval": "technical-review-passed",
+      "alt": "Stone terrace beside a reflective pool",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/amenities"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/amenities-terrace-480.webp",
+          "width": 480,
+          "bytes": 43626,
+          "sha256": "00dc4831c7ce091e6784c2c810b0a4da4ee5eb3af2a2f6799d57b05fd9ab5a0e"
+        },
+        {
+          "path": "public/media/plan03/amenities-terrace-768.webp",
+          "width": 768,
+          "bytes": 104236,
+          "sha256": "836f70c71be13faf8d71e4182f011cc0dc4ac1292af46684f6a2401a340070db"
+        }
+      ],
+      "sourceSha256": "969ff20cf3937511380bb811c647348d3baa6ef6e0d21ad9478a1cb856db3b9e",
+      "bytes": 295854,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Original photorealistic architectural editorial photograph, Havenfield fictional portfolio asset HF03-22. Reflective narrow water channel beside a quiet pale stone terrace, empty woven chair under oak pergola, warm plaster wall, soft grasses and dappled late-afternoon shadows. One carefully composed architectural retreat scene, no infinity pool or skyline. Natural soft daylight, coherent shadows, straight verticals, 40mm lens, sophisticated tactile warm ivory, limestone, natural oak, sage palette. Landscape 3:2 1536x1024, room for responsive cropping. No identifiable people, writing, brand marks, watermark, real addresses, famous buildings, collage or exaggerated scale. One original invented scene.",
+      "promptRecord": "Exact submitted generation prompt"
+    },
+    {
+      "id": "HF03-23",
+      "group": "editorial",
+      "propertySlug": null,
+      "subject": "amenities-path",
+      "identity": "Independent invented editorial scene",
+      "scene": "Walkable shaded path with simple covered bicycle storage, no logos or people",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Scene: Walkable shaded path with simple covered bicycle storage, no logos or people.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-23.png",
+      "outputPath": "public/media/plan03/amenities-path.webp",
+      "sha256": "7d0fc20837257dd15aca997256937fc303a76e4315f41d6ed41060d6b69a59d5",
+      "approval": "technical-review-passed",
+      "alt": "Shaded garden path beside covered bicycle storage",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/amenities"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/amenities-path-480.webp",
+          "width": 480,
+          "bytes": 48276,
+          "sha256": "117756a4b5328612803ae7e5fe8d826271e08dde5a3b18dded89f6ef0eac6e88"
+        },
+        {
+          "path": "public/media/plan03/amenities-path-768.webp",
+          "width": 768,
+          "bytes": 118910,
+          "sha256": "ddc6700de73a320dfbb35e6c6466d2ddf0467d83d9662cc9141f73a052b19633"
+        }
+      ],
+      "sourceSha256": "1f612e82e97385fab185354ec852f6986014ef8ea7ff6ce8a834c1fc5f9e4161",
+      "bytes": 348264,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Original photorealistic architectural editorial photograph, Havenfield fictional portfolio asset HF03-23. Level shaded pedestrian path between a warm plaster garden wall and quiet planting, discreet timber bicycle shelter with two ordinary unbranded bicycles parked upright, dappled morning light, clear useful route, no steps. Believable human scale, coherent geometry, straight verticals, 40mm photography, natural daylight and subtle shadows, warm ivory, limestone, oak and muted sage. Landscape 3:2 1536x1024, suitable for responsive crops. No people, legible text, logos, watermark, famous buildings, real addresses, collage or exaggerated wide angle. One original scene.",
+      "promptRecord": "Exact submitted generation prompt"
+    },
+    {
+      "id": "HF03-24",
+      "group": "editorial",
+      "propertySlug": null,
+      "subject": "journal-masthead",
+      "identity": "Independent invented editorial scene",
+      "scene": "Editorial still life of blank notebook, clay vessel, oak and architecture material samples, generous negative space",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Scene: Editorial still life of blank notebook, clay vessel, oak and architecture material samples, generous negative space.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-24.png",
+      "outputPath": "public/media/plan03/journal-masthead.webp",
+      "sha256": "a90c0b0f228c2e4d4f114c7d744962f4b7a987aebc83e8eb74fbf6ecad65cd9e",
+      "approval": "technical-review-passed",
+      "alt": "Blank notebook and architectural material samples",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/journal"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/journal-masthead-480.webp",
+          "width": 480,
+          "bytes": 19870,
+          "sha256": "27d12ce232a3bbea742ed8c0d0a815f0227384cf72c19aaf071c8a41b023f74c"
+        },
+        {
+          "path": "public/media/plan03/journal-masthead-768.webp",
+          "width": 768,
+          "bytes": 40370,
+          "sha256": "0c702bcf734f9df732e5b222ee44990a73a6af23551662d2dfc6ab240630fe4f"
+        }
+      ],
+      "sourceSha256": "c6894faaeb5f4faf80bd2f725f307891be518ba43ccbbdd10ce49107aa54ae84",
+      "bytes": 139418,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Original photorealistic architectural editorial photograph, Havenfield fictional portfolio asset HF03-24. Editorial still life for a thoughtful homes journal: open blank cream notebook, one charcoal pencil, sculptural ceramic vessel with leafy branch and small oak architectural model on limestone desk, indirect window light, off-centre arrangement with generous blank wall. Believable human scale, coherent geometry, straight verticals, 40mm photography, natural daylight and subtle shadows, warm ivory, limestone, oak and muted sage. Landscape 3:2 1536x1024, suitable for responsive crops. No people, legible text, logos, watermark, famous buildings, real addresses, collage or exaggerated wide angle. One original scene.",
+      "promptRecord": "Exact submitted generation prompt"
+    },
+    {
+      "id": "HF03-25",
+      "group": "editorial",
+      "propertySlug": null,
+      "subject": "journal-viewing",
+      "identity": "Independent invented editorial scene",
+      "scene": "Thoughtful viewing perspective from a quiet interior threshold, daylight across a floor and clear sightlines",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Scene: Thoughtful viewing perspective from a quiet interior threshold, daylight across a floor and clear sightlines.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-25.png",
+      "outputPath": "public/media/plan03/journal-viewing.webp",
+      "sha256": "0b7939fdd53c9799f181e25373469cefc07dcd210161a3f638c54e914512200f",
+      "approval": "technical-review-passed",
+      "alt": "Daylight and sightlines seen from an interior threshold",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/journal/a-clearer-guide-to-your-first-viewing"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/journal-viewing-480.webp",
+          "width": 480,
+          "bytes": 24450,
+          "sha256": "8e1372e1a16f1ae69b258942fb336d8daf15a45ca8c5216203a24e17a2b6232f"
+        },
+        {
+          "path": "public/media/plan03/journal-viewing-768.webp",
+          "width": 768,
+          "bytes": 55270,
+          "sha256": "d935d0ba3f3d657d0c57f0578c4b2ffd1b13a0f51e102c33873cbb53ef23347e"
+        }
+      ],
+      "sourceSha256": "66ca9473e05b254dd96f20e0c7941b96e16047557c748574e842db726e558fe9",
+      "bytes": 212602,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Original photorealistic architectural editorial photograph, Havenfield fictional portfolio asset HF03-25. A useful first-viewing scene in an invented contemporary home, view from entrance across a modest living room to garden window, clear walking route, practical oak storage by door, sunlight showing window reveals, linen armchair at side, no people or staged sales objects. Believable human scale, coherent geometry, straight verticals, 40mm photography, natural daylight and subtle shadows, warm ivory, limestone, oak and muted sage. Landscape 3:2 1536x1024, suitable for responsive crops. No people, legible text, logos, watermark, famous buildings, real addresses, collage or exaggerated wide angle. One original scene.",
+      "promptRecord": "Exact submitted generation prompt"
+    },
+    {
+      "id": "HF03-26",
+      "group": "editorial",
+      "propertySlug": null,
+      "subject": "journal-plan",
+      "identity": "Independent invented editorial scene",
+      "scene": "Connected interior rooms showing an understandable circulation route through aligned doorways, no diagrams or text",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Scene: Connected interior rooms showing an understandable circulation route through aligned doorways, no diagrams or text.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-26.png",
+      "outputPath": "public/media/plan03/journal-plan.webp",
+      "sha256": "6dc5b472598eec0f3eaae01bc03a90d903d50c8010bd4d047c97de6545bac404",
+      "approval": "technical-review-passed",
+      "alt": "Aligned doorways connecting flexible living spaces",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/journal"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/journal-plan-480.webp",
+          "width": 480,
+          "bytes": 20372,
+          "sha256": "e0ea9ef4fc83b7afc79a2930f57cbc1758db03b7b7bff700b022f5b990eb5852"
+        },
+        {
+          "path": "public/media/plan03/journal-plan-768.webp",
+          "width": 768,
+          "bytes": 47848,
+          "sha256": "b044e5ff09cf7785fd4ce3f7b518f5d2801374cd5fbc68d2697423fc67cbe328"
+        }
+      ],
+      "sourceSha256": "5c44e933000ca57cb32049d5e924d35912f645a54f7c8455b1f641eb5e71b577",
+      "bytes": 191926,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Original photorealistic architectural editorial photograph for Havenfield fictional portfolio, asset HF03-26. Connected floor-plan circulation expressed as a real interior photograph, camera in oak-lined entrance passage looking through aligned open doorways toward kitchen island, dining table and garden, one quiet side room glimpsed, clear paths and honest proportions, no drawn plan or labels. Human-scale 40mm photography, coherent geometry and shadows, straight verticals, tactile oak, stone, ivory and sage palette, calm sophisticated magazine art direction. Landscape 3:2 1536x1024, crop-friendly composition. No identifiable people, writing, logos, watermarks, real addresses, famous architecture, collage or exaggerated room size. One original invented scene.",
+      "promptRecord": "Exact submitted generation prompt"
+    },
+    {
+      "id": "HF03-27",
+      "group": "editorial",
+      "propertySlug": null,
+      "subject": "journal-everyday",
+      "identity": "Independent invented editorial scene",
+      "scene": "Flexible everyday home scene with a work table, linen seating and a quiet reading corner",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Scene: Flexible everyday home scene with a work table, linen seating and a quiet reading corner.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-27.png",
+      "outputPath": "public/media/plan03/journal-everyday.webp",
+      "sha256": "d1bedf7949f2db4172b568dc801c8347ebd1906633eecd5a15dc6b9c8adc62a9",
+      "approval": "technical-review-passed",
+      "alt": "Flexible living space with a work table and reading corner",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/journal"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/journal-everyday-480.webp",
+          "width": 480,
+          "bytes": 26846,
+          "sha256": "c7c58b62abb1eee445b327d9094e22ffa633bd96015538d2103ab4eae9ddb0bf"
+        },
+        {
+          "path": "public/media/plan03/journal-everyday-768.webp",
+          "width": 768,
+          "bytes": 67096,
+          "sha256": "13161d76fa6cfd6405fa3b2a7f5817f412dff2391258e2f548c533670290a17d"
+        }
+      ],
+      "sourceSha256": "b8d649e271770eab05338c376e431a24ae1f3ac6ccc05386a8e6b6f75c82d33a",
+      "bytes": 283350,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Original photorealistic architectural editorial photograph for Havenfield fictional portfolio, asset HF03-27. Flexible everyday home scene distinct from other interiors: compact warm plaster living room, modest oak dining table for four, window bench for reading, low integrated storage, folded throw and one open unmarked book, leafy small courtyard outside, soft overcast daylight. Human-scale 40mm photography, coherent geometry and shadows, straight verticals, tactile oak, stone, ivory and sage palette, calm sophisticated magazine art direction. Landscape 3:2 1536x1024, crop-friendly composition. No identifiable people, writing, logos, watermarks, real addresses, famous architecture, collage or exaggerated room size. One original invented scene.",
+      "promptRecord": "Exact submitted generation prompt"
+    },
+    {
+      "id": "HF03-28",
+      "group": "editorial",
+      "propertySlug": null,
+      "subject": "contact-studio",
+      "identity": "Independent invented editorial scene",
+      "scene": "Welcoming invented studio threshold, oak door and garden bench, quiet planting, no address or signage",
+      "promptVersion": 1,
+      "prompt": "Create one original photorealistic architectural editorial photograph for Havenfield, an independent fictional property collection. Not a collage, grid, contact sheet or rendering diagram. Believable human-scale spaces, straight verticals, 35 mm architectural photography, natural daylight, coherent shadows, restrained warm limestone, oak, plaster and sage palette. No people, writing, logos, watermarks, real addresses, famous landmarks or exaggerated room sizes. Landscape 3:2, approximately 1536 by 1024 pixels, composed for a 1600-pixel web master. This invented place must not depict a real listing. Scene: Welcoming invented studio threshold, oak door and garden bench, quiet planting, no address or signage.",
+      "provider": "Built-in image_gen",
+      "model": "Tool-managed; not exposed",
+      "budget": {
+        "separatePurchase": false,
+        "externalApiBilling": false,
+        "quotaRemaining": null,
+        "quotedCost": null,
+        "policy": "Use provided built-in tool only; stop on quota errors. No purchase or CLI/API fallback."
+      },
+      "requestedDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourcePath": ".data/plan03/sources/hf03-28.png",
+      "outputPath": "public/media/plan03/contact-studio.webp",
+      "sha256": "7d130f54e1da6e74ca9d58f00e4b3fe197ddeaa560f7d160f5a8fde43c438e17",
+      "approval": "technical-review-passed",
+      "alt": "Oak studio doorway and garden bench",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "routes": ["/contact"],
+      "pilot": false,
+      "derivatives": [
+        {
+          "path": "public/media/plan03/contact-studio-480.webp",
+          "width": 480,
+          "bytes": 36396,
+          "sha256": "78fde29400975ac71df66abedcf3b97a9be511a49357fec35ca7a7d70cec88bc"
+        },
+        {
+          "path": "public/media/plan03/contact-studio-768.webp",
+          "width": 768,
+          "bytes": 82670,
+          "sha256": "4b2f12fa09cf8e4e196ea7b519959ac3994cba775f6c8e2b1b8aa890abd90a5b"
+        }
+      ],
+      "sourceSha256": "ec0746d4870b000b4d4b6e9cec8ef55bc5ccc79beaceff1aecf21b02ec890141",
+      "bytes": 307988,
+      "generatedOn": "2026-10-17",
+      "generationPrompt": "Original photorealistic architectural editorial photograph for Havenfield fictional portfolio, asset HF03-28. Welcoming imagined design studio threshold viewed from garden path, warm plaster doorway open toward small oak desk, simple timber bench beside door, restrained potted greenery, no nameplate or street number, quiet morning light, inviting but unoccupied. Human-scale 40mm photography, coherent geometry and shadows, straight verticals, tactile oak, stone, ivory and sage palette, calm sophisticated magazine art direction. Landscape 3:2 1536x1024, crop-friendly composition. No identifiable people, writing, logos, watermarks, real addresses, famous architecture, collage or exaggerated room size. One original invented scene.",
+      "promptRecord": "Exact submitted generation prompt"
+    }
+  ]
+}

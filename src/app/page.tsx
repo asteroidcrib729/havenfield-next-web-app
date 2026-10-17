@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Compass, Leaf, Sun } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Leaf, Sun } from "lucide-react";
 import { HeroFilm } from "@/components/hero-film";
 import { PropertyCard } from "@/components/property-card";
 import { SectionHeading } from "@/components/section-heading";
@@ -71,7 +71,7 @@ export default async function Home() {
         </div>
         <div className="grid gap-x-7 gap-y-12 md:grid-cols-3">
           {properties.slice(0, 3).map((property) => (
-            <PropertyCard key={property.id} property={property} />
+            <PropertyCard key={property.id} property={property} headingLevel={3} />
           ))}
         </div>
         <p className="mt-8 text-[10px] text-muted">
@@ -95,8 +95,8 @@ export default async function Home() {
           <div className="grid min-w-0 gap-4 sm:grid-cols-2">
             <div className="relative min-h-72 overflow-hidden sm:row-span-2">
               <Image
-                src="/media/interior.jpg"
-                alt="Original imagined living room with natural materials and generous daylight"
+                src="/media/plan03/home-breakfast.webp"
+                alt="Oak breakfast table and window seat in a sunlit kitchen concept"
                 fill
                 sizes="(max-width: 1024px) 100vw, 35vw"
                 className="object-cover"
@@ -175,7 +175,15 @@ export default async function Home() {
         )}
       </section>
       <section className="mx-auto grid max-w-7xl gap-8 border-y border-line px-6 py-12 md:grid-cols-[auto_1fr_auto] md:items-center lg:px-10">
-        <Compass size={36} strokeWidth={1} />
+        <div className="relative h-36 w-full overflow-hidden rounded-xl md:h-32 md:w-44">
+          <Image
+            src="/media/plan03/home-arrival.webp"
+            alt="Sheltered limestone arrival framed by an olive tree"
+            fill
+            sizes="(max-width:768px) 100vw, 176px"
+            className="object-cover"
+          />
+        </div>
         <div>
           <p className="font-display text-3xl">What does home mean to you?</p>
           <p className="mt-3 text-xs leading-6 text-muted">

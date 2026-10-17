@@ -1,4 +1,5 @@
 "use client";
+import { BrandDetail } from "@/components/brand-detail";
 export default function ErrorPage({
   reset,
 }: {
@@ -7,6 +8,9 @@ export default function ErrorPage({
 }) {
   return (
     <section className="mx-auto max-w-3xl px-6 py-28 text-center">
+      <div className="flex justify-center">
+        <BrandDetail />
+      </div>
       <h1 className="font-display text-4xl">A moment to reconnect.</h1>
       <p className="mt-6 text-muted">We couldn’t load this page. Please try again shortly.</p>
       <button onClick={reset} className="mt-8 bg-ink px-6 py-3 text-paper">

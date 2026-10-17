@@ -1,0 +1,124 @@
+{
+  "medians": [
+    {
+      "route": "/properties",
+      "scores": { "performance": 97, "accessibility": 100, "seo": 100 },
+      "metrics": {
+        "lcpMs": 2220.3104,
+        "cls": 0.07290400972053462,
+        "tbtMs": 65,
+        "transferBytes": 560351
+      }
+    }
+  ],
+  "measuredAt": "2026-10-17T13:14:07.909Z",
+  "lighthouseVersion": "13.5.0",
+  "environment": "Local Next.js production build, disposable seeded SQLite, headless Chromium/Edge, Lighthouse mobile simulated throttling; no hosted or field data",
+  "results": [
+    {
+      "iteration": 1,
+      "route": "/properties",
+      "scores": { "performance": 97, "accessibility": 100, "seo": 100 },
+      "metrics": {
+        "lcpMs": 2220.3104,
+        "cls": 0.07290400972053462,
+        "tbtMs": 65,
+        "transferBytes": 560351
+      },
+      "concerns": [
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.94,
+          "value": "2.2 s"
+        },
+        {
+          "id": "total-blocking-time",
+          "title": "Total Blocking Time",
+          "score": 0.99,
+          "value": "70 ms"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.74,
+          "value": "180 ms"
+        },
+        {
+          "id": "cumulative-layout-shift",
+          "title": "Cumulative Layout Shift",
+          "score": 0.96,
+          "value": "0.073"
+        },
+        { "id": "interactive", "title": "Time to Interactive", "score": 0.94, "value": "3.2 s" },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "value": "Est savings of 28 KiB"
+        },
+        {
+          "id": "bf-cache",
+          "title": "Page prevented back/forward cache restoration",
+          "score": 0,
+          "value": "2 failure reasons"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "value": "Est savings of 103 KiB"
+        },
+        {
+          "id": "legacy-javascript-insight",
+          "title": "Legacy JavaScript",
+          "score": 0.5,
+          "value": "Est savings of 14 KiB"
+        },
+        { "id": "network-dependency-tree-insight", "title": "Network dependency tree", "score": 0 },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "value": "Est savings of 90 ms"
+        }
+      ],
+      "lcpDetails": {
+        "type": "list",
+        "items": [
+          {
+            "type": "table",
+            "headings": [
+              { "key": "label", "valueType": "text", "label": "Subpart" },
+              { "key": "duration", "valueType": "ms", "label": "Duration" }
+            ],
+            "items": [
+              { "subpart": "timeToFirstByte", "label": "Time to first byte", "duration": 246.953 },
+              {
+                "subpart": "elementRenderDelay",
+                "label": "Element render delay",
+                "duration": 135.582
+              }
+            ]
+          },
+          {
+            "type": "node",
+            "lhId": "page-0-H1",
+            "path": "1,HTML,1,BODY,3,MAIN,1,DIV,0,DIV,1,H1",
+            "selector": "main#main-content > div.mx-auto > div.mb-12 > h1.mt-4",
+            "boundingRect": {
+              "top": 187,
+              "bottom": 307,
+              "left": 20,
+              "right": 392,
+              "width": 372,
+              "height": 120
+            },
+            "snippet": "<h1 class=\"mt-4 font-display text-5xl leading-tight sm:text-7xl\">",
+            "nodeLabel": "Places to make a life of your own."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -72,6 +72,15 @@ test("responsive routes, reduced motion and accessible forms", async ({ page }) 
       "/contact",
       "/journal",
       "/admin/login",
+      "/saved",
+      "/compare",
+      "/privacy",
+      "/terms",
+      "/cookies",
+      "/properties/the-courtyard-house",
+      "/properties/saltwater-residence",
+      "/properties/woodland-pavilion",
+      "/properties/atelier-loft",
     ]) {
       await page.goto(route);
       await expect(page.locator("h1")).toBeVisible();

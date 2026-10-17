@@ -1,4 +1,5 @@
 "use client";
+import { BrandDetail } from "@/components/brand-detail";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Logo } from "@/components/logo";
@@ -38,6 +39,7 @@ export default function LoginPage() {
           <Logo />
         </div>
         <div className="rounded-3xl border border-line bg-white p-7 sm:p-10">
+          <BrandDetail />
           <p className="mb-3 text-xs uppercase tracking-[.2em] text-brand">Editorial desk</p>
           <h1 className="font-display text-3xl">A place for your stories.</h1>
           <p className="mb-7 mt-3 text-sm leading-6 text-muted">

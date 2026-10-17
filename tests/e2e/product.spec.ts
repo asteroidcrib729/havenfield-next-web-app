@@ -31,7 +31,7 @@ test("shareable discovery, keyboard gallery/navigation and CSP", async ({ page }
   await page.getByRole("link", { name: "View Woodland Pavilion", exact: true }).click();
   await page.getByRole("button", { name: "Next photograph" }).focus();
   await page.keyboard.press("ArrowRight");
-  await expect(page.getByText("2 / 3")).toBeVisible();
+  await expect(page.getByText("2 / 4")).toBeVisible();
   await accessible(page);
   await page.getByRole("link", { name: "Back to the collection" }).click();
   await expect(page.getByLabel("Setting")).toHaveValue("Woodland");

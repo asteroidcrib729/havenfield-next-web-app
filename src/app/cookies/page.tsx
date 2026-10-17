@@ -1,3 +1,4 @@
+import { BrandDetail } from "@/components/brand-detail";
 import type { Metadata } from "next";
 import Link from "next/link";
 export const metadata: Metadata = {
@@ -9,9 +10,21 @@ export const metadata: Metadata = {
 export default function CookiesPage() {
   return (
     <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8">
+      <BrandDetail />
       <p className="text-xs uppercase tracking-[0.2em] text-brand">Project information</p>
       <h1 className="mt-4 font-display text-5xl">Cookies</h1>
       <div className="mt-10 space-y-8 leading-relaxed text-muted">
+        <section>
+          <h2 className="font-display text-2xl text-ink">Saved homes and comparison</h2>
+          <p className="mt-3">
+            Choosing Save or Compare stores only fictional home identifiers in this browser. No
+            account, contact details or server-side profile is created. Saved homes and up to three
+            comparison choices can be removed on their respective pages, or by clearing this site's
+            browser storage. Clearing saved homes does not clear a separate comparison selection.
+            Other browsers and devices have their own choices. If browser storage is blocked,
+            choices last only in the current page session.
+          </p>
+        </section>
         <section>
           <h2 className="font-display text-2xl text-ink">Public browsing</h2>
           <p className="mt-3">

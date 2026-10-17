@@ -12,6 +12,8 @@ export const editorialSeed: BlogPostInput[] = [
   {
     ...shared,
     slug: "a-home-that-fits-your-everyday",
+    coverImage: "/media/plan03/journal-everyday.webp",
+    coverAlt: "Flexible living space with a work table and reading corner",
     title: "A home that fits your everyday",
     excerpt:
       "Look past the floor plan and ask how a place supports the ordinary moments that make a life.",
@@ -52,6 +54,8 @@ Havenfield is a fictional portfolio experience. Its listings illustrate a though
   {
     ...shared,
     slug: "the-value-of-a-thoughtful-floor-plan",
+    coverImage: "/media/plan03/journal-plan.webp",
+    coverAlt: "Aligned doorways connecting flexible living spaces",
     title: "The value of a thoughtful floor plan",
     excerpt:
       "Good layouts make space work harder. Here is how to spot the details that turn square metres into everyday comfort.",
@@ -94,6 +98,8 @@ The homes and plans in Havenfield are fictional examples for this portfolio. Obt
   {
     ...shared,
     slug: "a-clearer-guide-to-your-first-viewing",
+    coverImage: "/media/plan03/journal-viewing.webp",
+    coverAlt: "Daylight and sightlines seen from an interior threshold",
     title: "A clearer guide to your first viewing",
     excerpt:
       "A simple viewing checklist helps you ask useful questions, compare homes fairly, and leave with fewer unknowns.",

@@ -8,7 +8,7 @@ I built Havenfield as an independent real estate portfolio: a fictional property
 
 I captured this full-page desktop view from the live site on 16 October 2026 (1440 × 3919 pixels); a [full-page mobile capture](development-plans/screenshots/home-mobile.png) is available too.
 
-The application includes shareable property search/filtering, keyboard galleries, a consented demo inquiry workflow, and a journal. My authenticated editorial studio supports draft/published/scheduled articles, interrupted-writing recovery, safe Markdown previews, a reusable media library with reference protection, SEO metadata, normalized categories/tags, revisions/restoration, slug redirects, private previews, and deletion. I can review, archive and delete inquiries, inspect publisher actions, and export a checksummed database-and-image recovery bundle. Public RSS, sitemap and article structured data follow publication visibility.
+The application includes shareable property search/filtering, browser-local saved homes, a comparison view for up to three homes, keyboard galleries, a consented demo inquiry workflow, and a journal. My authenticated editorial studio supports draft/published/scheduled articles, interrupted-writing recovery, safe Markdown previews, a reusable media library with reference protection, SEO metadata, normalized categories/tags, revisions/restoration, slug redirects, private previews, and deletion. I can review, archive and delete inquiries, inspect publisher actions, and export a checksummed database-and-image recovery bundle. Public RSS, sitemap and article structured data follow publication visibility.
 
 All brand copy, property data, article text, logos, and media are newly created. I retained the existing local Playfair Display and Poppins font files with their license notices. The hero film is new AI-generated architectural footage made with Higgsfield/Hailuo, optimized to a silent six-second landscape clip. Legacy HTML, PHP, Composer packages and stylesheets are removed.
 
@@ -49,7 +49,7 @@ Local browser checks use installed Edge, temporary synthetic credentials, and is
 
 I published this project to [GitHub](https://github.com/asteroidcrib729/havenfield-next-web-app) with passing clean-checkout CI and connected the existing Vercel project. Pushing to `main` now automatically deploys Production; other branches use Preview.
 
-I have delivered [Plan 02](development-plans/development-plan-02.md): 57 original checklist entries are verified and seven additional verification items are explicitly deferred in [the closure record](development-plans/development-plan-02-closure.md). Independent scheduled cloud backups, human screen-reader sign-off, field INP and full recovered-site/cold-invocation evidence are not claimed. [Plan 03](development-plans/development-plan-03.md) is ready for content and product improvements, including 28 new original images; those planned images have not been generated yet.
+I have delivered [Plan 02](development-plans/development-plan-02.md): 57 original checklist entries are verified and seven additional verification items are explicitly deferred in [the closure record](development-plans/development-plan-02-closure.md). Independent scheduled cloud backups, human screen-reader sign-off, field INP and full recovered-site/cold-invocation evidence are not claimed. I have started [Plan 03](development-plans/development-plan-03.md) with 28 new original images, matching four-view property galleries, expanded home stories, six private journal drafts and saved/compare improvements. The [execution record](development-plans/development-plan-03-progress.md) tracks validation and the remaining property-authoring/media slice.
 
 I keep [encrypted backup commands and optional private Drive instructions](development-plans/free-backups.md), plus an [owner accessibility checklist](development-plans/accessibility-owner-review.md). These follow-up checks remain available without blocking the next development iteration.
 
@@ -62,6 +62,8 @@ I keep all plans, progress, production instructions and asset records under [dev
 - [Plan 02 immediate delivery](development-plans/development-plan-02-delivery.md)
 - [Plan 02 completion audit](development-plans/development-plan-02-audit.md)
 - [Development plan 03: content, imagery and improvements](development-plans/development-plan-03.md)
+- [Plan 03 content operations and image prompts](development-plans/plan03-content-operations.md)
+- [Plan 03 execution record](development-plans/development-plan-03-progress.md)
 - [Administrator access and credential setup](development-plans/admin-access.md)
 - [Plan 02 execution record](development-plans/development-plan-02-progress.md)
 - [Database migrations and recovery](development-plans/database-recovery.md)

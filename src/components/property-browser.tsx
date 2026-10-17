@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import { HomeChoiceLinks } from "./home-actions";
 import { useSearchParams } from "next/navigation";
 import { propertyFilters } from "@/lib/property-filters";
 import { Search, SlidersHorizontal } from "lucide-react";
@@ -47,6 +48,7 @@ export function PropertyBrowser() {
     "mt-2 w-full rounded-lg border border-line bg-paper px-3 py-3 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-brand";
   return (
     <>
+      <HomeChoiceLinks />
       <div className="rounded-2xl border border-line bg-white/50 p-5 sm:p-7">
         <div className="mb-5 flex items-center gap-2 text-sm font-medium">
           <SlidersHorizontal size={17} aria-hidden="true" />
@@ -132,6 +134,29 @@ export function PropertyBrowser() {
             </select>
           </label>
         </div>
+      </div>
+      <div role="group" aria-label="Active filters" className="mt-5 flex flex-wrap gap-2">
+        {[
+          ["query", query ? "Search: " + query : ""],
+          ["region", region],
+          ["type", type],
+          ["price", price ? "Up to $" + Number(price).toLocaleString("en-US") : ""],
+          ["bedrooms", bedrooms ? bedrooms + "+ bedrooms" : ""],
+        ]
+          .filter(([, value]) => value)
+          .map(([key, label]) => (
+            <button
+              key={key}
+              className="min-h-11 rounded-full border border-line bg-white/70 px-4 py-2 text-xs hover:border-brand"
+              aria-label={"Remove filter: " + label}
+              onClick={() => change(key, "")}
+            >
+              {label}
+              <span aria-hidden="true" className="ml-3">
+                ×
+              </span>
+            </button>
+          ))}
       </div>
       <div className="my-7 flex items-center justify-between gap-4">
         <p className="text-sm text-muted" role="status">

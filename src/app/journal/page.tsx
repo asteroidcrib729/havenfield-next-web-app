@@ -70,6 +70,16 @@ export default async function JournalPage({
           a space into a home.
         </p>
       </div>
+      <div className="relative mb-10 aspect-[3/2] sm:aspect-[3/1] overflow-hidden rounded-2xl">
+        <Image
+          src="/media/plan03/journal-masthead.webp"
+          alt="Open notebook, ceramic vessel and architectural model on a stone desk"
+          fill
+          priority
+          sizes="(max-width:1280px) 100vw, 1280px"
+          className="object-cover"
+        />
+      </div>
       <form
         action="/journal"
         className="grid items-end gap-4 rounded-2xl border border-line bg-white/40 p-5 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_auto]"

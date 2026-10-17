@@ -3,7 +3,6 @@ export function Logo({ light = false }: { light?: boolean }) {
   return (
     <Link
       href="/"
-      aria-label="Havenfield Homes & perspectives — Home"
       className={`inline-flex items-center gap-3 ${light ? "text-paper" : "text-ink"}`}
     >
       <svg width="32" height="36" viewBox="0 0 32 36" fill="none" aria-hidden="true">
@@ -15,7 +14,7 @@ export function Logo({ light = false }: { light?: boolean }) {
         <path d="M0 35h32" stroke="currentColor" />
       </svg>
       <span className="text-[17px] tracking-[0.17em] uppercase">
-        Havenfield
+        Havenfield{" "}
         <span className="mt-1 block text-[8px] tracking-[0.34em]">Homes & perspectives</span>
       </span>
     </Link>

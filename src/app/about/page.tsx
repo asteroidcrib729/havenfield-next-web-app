@@ -31,8 +31,8 @@ export default function AboutPage() {
         </div>
         <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
           <Image
-            src="/media/courtyard.jpg"
-            alt="Concept illustration of a sunlit courtyard and quiet contemporary home"
+            src="/media/plan03/about-materials.webp"
+            alt="Limestone, oak and plaster samples with a sage leaf on linen"
             fill
             priority
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -71,6 +71,32 @@ export default function AboutPage() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+      <section className="mx-auto grid max-w-7xl gap-10 px-5 pt-16 sm:px-8 lg:grid-cols-2 lg:items-center">
+        <div className="relative aspect-[3/2] overflow-hidden rounded-2xl">
+          <Image
+            src="/media/plan03/about-workshop.webp"
+            alt="Architecture models and material samples on an unoccupied workshop table"
+            fill
+            sizes="(max-width:1024px) 100vw, 50vw"
+            className="object-cover"
+          />
+        </div>
+        <div>
+          <p className="text-xs uppercase tracking-[0.2em] text-brand">
+            From a question to a place
+          </p>
+          <h2 className="mt-4 font-display text-4xl">Start small. Think through the day.</h2>
+          <p className="mt-5 leading-7 text-muted">
+            We begin each imagined home with an ordinary routine: arriving with shopping, opening a
+            window, finding a quiet place to read. A material palette follows that story, rather
+            than leading it.
+          </p>
+          <p className="mt-4 leading-7 text-muted">
+            Next come the connections between rooms and garden. The final concept is checked against
+            the same question: does every space have a useful part to play?
+          </p>
         </div>
       </section>
       <section className="mx-auto max-w-4xl px-5 py-20 text-center sm:px-8">

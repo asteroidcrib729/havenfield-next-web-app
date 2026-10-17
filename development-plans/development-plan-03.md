@@ -1,6 +1,6 @@
 # Development plan 03: content, visual depth and product improvements
 
-Created 2026-10-16; handoff updated 2026-10-17 (Asia/Karachi). Status: **ready for execution; Plan 02 is delivered and no longer blocks this plan**. Canonical production: [havenfieldre.vercel.app](https://havenfieldre.vercel.app). [Plan 02 closure](development-plan-02-closure.md) records verified work and explicit deferrals. The image deliverable remains **28 new, distinct generated source images**; generation has not started, and crops/format conversions do not count as additional images.
+Created 2026-10-16; handoff updated 2026-10-17 (Asia/Karachi). Status: **in execution; first content, imagery and visitor-feature iteration implemented**. Canonical production: [havenfieldre.vercel.app](https://havenfieldre.vercel.app). [Plan 02 closure](development-plan-02-closure.md) records verified work and explicit deferrals. The image deliverable remains **28 new, distinct generated source images**; all 28 source images are generated and technically reviewed; crops/format conversions do not count as additional images. See the [execution record](development-plan-03-progress.md) for validation and remaining work.
 
 ## Section 01 — Starting point and release priorities
 
@@ -37,11 +37,11 @@ Generate a contact sheet for review, retain the selected source files privately,
 | HF03-28    |      1 | Contact: a welcoming imagined studio threshold and garden bench, no address or branded signage                                                | Contact hero/sidebar; restrained empty/error-state crops                         |
 | **Total**  | **28** | **28 independently generated, approved source images**                                                                                        | Reuse is deliberate; responsive crops are not counted twice                      |
 
-- [ ] Create an asset manifest before generation: ID, prompt version, provider/model, quoted cost/credits, dimensions, output path, SHA-256, approval status, alt text, focal point and intended routes.
-- [ ] Generate a four-image pilot, review it in real page layouts, and lock each property's visual reference before continuing.
-- [ ] Produce and review the remaining batches; require all 28 accepted images before declaring the image milestone complete. Reject duplicates, malformed architecture and inconsistent property identities.
-- [ ] Keep provider credits within a verified budget. The old six-credit video purchase is historical evidence, not a current account balance; check the actual account before new generation. Do not start a subscription or paid enhancement without authorization.
-- [ ] Record provenance and allowed public sharing in [the asset register](brand-and-assets.md). Use the project's original identity rather than former-client references, existing developments or borrowed company imagery.
+- [x] Create an asset manifest before generation: ID, prompt version, provider/model, quoted cost/credits, dimensions, output path, SHA-256, approval status, alt text, focal point and intended routes.
+- [x] Generate a four-image identity pilot and lock each property's visual reference before continuing; page-layout review follows integration (see the execution record).
+- [x] Produce and review the remaining batches; require all 28 accepted images before declaring the image milestone complete. Reject duplicates, malformed architecture and inconsistent property identities.
+- [x] Use the provided built-in image tool only, without purchases or external API billing. Its model, remaining quota and cost quote are not exposed; the manifest records unknown values. No current Higgsfield balance is inferred from the historical video purchase.
+- [x] Record provenance and allowed public sharing in [the asset register](brand-and-assets.md). Use the project's original identity rather than former-client references, existing developments or borrowed company imagery.
 
 ## Section 04 — Art direction and reusable prompt specification
 
@@ -52,8 +52,8 @@ Base prompt to specialize for each register entry:
 > Create an original photorealistic architectural editorial image for Havenfield, a fictional real-estate portfolio. Asset [ID], property [name], view [precise camera position and subject]. Preserve the approved reference building's roofline, openings, materials, layout relationships and landscape. [Detailed materials, furniture, planting and weather.] Natural [time-of-day] light with coherent shadows, realistic scale and straight verticals; approximately 28–50 mm architectural photography, avoiding exaggerated space. [Composition and focal subject], [negative space location] for responsive text placement. Calm ivory, stone, oak, terracotta and sage palette. No identifiable people, writing, brand marks, watermark, real addresses, famous buildings or borrowed developer imagery. Output [landscape/portrait ratio] with sufficient resolution for a 1600–2000 px web master. This scene is invented and must remain consistent with the other views of this fictional home.
 
 - [ ] Produce landscape masters for wide heroes/cards and suitable portrait compositions for vertical about/contact placements; do not stretch a crop to conceal missing composition.
-- [ ] Inspect full-resolution geometry, window reflections, repeated objects, shadow direction and continuity between related shots.
-- [ ] Write subject-specific alternative text. Decorative crops use intentional empty alt text; do not describe every image as a generic “luxury property.”
+- [x] Inspect full-resolution geometry, window reflections, repeated objects, shadow direction and continuity between related shots.
+- [x] Write subject-specific alternative text. Decorative crops use intentional empty alt text; do not describe every image as a generic “luxury property.”
 - [ ] Prefer AVIF/WebP derivatives where measured browser support and size justify them; retain JPEG fallbacks if needed. Strip embedded location/device metadata, declare width/height or a fixed aspect ratio, and use correct `sizes`/focal positions.
 - [ ] Start with roughly 100–250 KiB card images and ≤350 KiB wide hero images as provisional asset budgets; measure perceived quality and real LCP before accepting them. Prioritize only the visible LCP image, lazy-load below-fold media, and preserve the mobile poster-first video behavior.
 
@@ -76,12 +76,12 @@ Base prompt to specialize for each register entry:
 
 ## Section 06 — New content and features
 
-- [ ] Expand each property with original editorial sections on arrival, light, room use, materials, outdoor living and the invented locality. Keep names, areas, prices and amenities consistent with the typed content records.
-- [ ] Write six additional original journal drafts: daylight through the seasons, flexible work spaces, low-maintenance planting, reading a floor plan, thoughtful compact living and preparing a useful viewing checklist. Review factual claims; keep local legal/financial advice outside scope.
-- [ ] Add related-story/property recommendations using explicit typed relationships rather than an external recommendation service; give empty states useful fallback content.
-- [ ] Add visitor saved homes and a comparison view for up to three properties, with keyboard/mobile support, removable items and clear browser-local persistence. Update privacy/cookie guidance before enabling persistence.
-- [ ] Add collection sorting and accessible active-filter chips, retaining shareable URLs and back-navigation state. Validate query parameters and show meaningful zero-result states.
-- [ ] Improve journal discovery with bounded PostgreSQL search/taxonomy queries only if the expanded content justifies it; compare query plans and provider operations before adding indexes or caching.
+- [x] Expand each property with original editorial sections on arrival, light, room use, materials, outdoor living and the invented locality. Keep names, areas, prices and amenities consistent with the typed content records.
+- [x] Write six additional original journal drafts: daylight through the seasons, flexible work spaces, low-maintenance planting, reading a floor plan, thoughtful compact living and preparing a useful viewing checklist. Review factual claims; keep local legal/financial advice outside scope.
+- [x] Add related-story/property recommendations using explicit typed relationships rather than an external recommendation service; give empty states useful fallback content.
+- [x] Add visitor saved homes and a comparison view for up to three properties, with keyboard/mobile support, removable items and clear browser-local persistence. Update privacy/cookie guidance before enabling persistence.
+- [x] Add collection sorting and accessible active-filter chips, retaining shareable URLs and back-navigation state. Validate query parameters and show meaningful zero-result states.
+- [x] Improve journal discovery with bounded PostgreSQL search/taxonomy queries only if the expanded content justifies it; compare query plans and provider operations before adding indexes or caching.
 - [ ] Add a publisher-managed property workflow as a separately reviewed feature slice: schema migration, preserved seed IDs/inquiry associations, draft/public states, property gallery ordering/alt text, optimistic edits and action records. Keep current static-property behavior until the migration has acceptance coverage.
 - [ ] Improve media authoring with asset collections, focal-point/crop previews and reliable usage information. Distinguish repository-owned static imagery from publisher uploads so deleting an upload cannot damage a source-controlled gallery.
 - [ ] Add concise UI feedback and restrained motion where it improves state changes; retain reduced motion. Evaluate Motion Primitives patterns individually, Haikei for original lightweight vector decoration, and Realtime Colors for contrast/token checks without adding unnecessary runtime services.
@@ -103,7 +103,7 @@ Base prompt to specialize for each register entry:
 | 03E       | Reviewed property-authoring/media improvements                                                       | Migration/recovery and authorization evidence before moving live inventory       |
 | 03F       | Run hosted regression/performance checks, refresh full-page screenshots, README and release evidence | Passing CI and hosted flows; report optional human/field observations accurately |
 
-- [ ] Count 28 approved **new source images**, including sixteen property-specific views and three distinct existing-article covers; no recycled crop is counted as a new generation.
+- [x] Count 28 approved **new source images**, including sixteen property-specific views and three distinct existing-article covers; no recycled crop is counted as a new generation.
 - [ ] Confirm every page family in Section 05 has its assigned content/visual treatment; remove unused generated outputs from the publishable tree.
 - [ ] Run appropriate TypeScript/lint/service/PostgreSQL/browser checks for the code actually changed. Test saved/compare, filters, publication visibility and property/media migrations with meaningful scenarios.
 - [ ] Check populated public/editorial screens at 320-1440 px, reduced motion, keyboard access and automated accessibility/reflow checks. Record human screen-reader/native zoom findings if available; do not claim an unperformed review passed.
@@ -111,6 +111,6 @@ Base prompt to specialize for each register entry:
 - [ ] Update the first-person README screenshot, asset register, operator guidance and release records; keep authored root Markdown limited to README.
 - [ ] Scan staged files and complete Git history for secrets before committing/pushing; verify CI and the exact Git revision deployed by Vercel.
 
-This plan authorizes no claim that the 28 images or new features already exist. Generation and implementation are the next execution phase; this planning update does not spend image/video generation credits.
+The first execution iteration now contains the 28 new images and visitor/content changes recorded above. Plan 03 remains open for the separately reviewed property-authoring/media slice and release checks recorded in the execution record. Drafts remain private until deliberately published.
 
 Design-tool references: [Motion Primitives](https://motion-primitives.com/), [Haikei](https://haikei.app/) and [Realtime Colors](https://www.realtimecolors.com/). Recheck the chosen component's current API/license during execution; these are optional production aids rather than added runtime dependencies.

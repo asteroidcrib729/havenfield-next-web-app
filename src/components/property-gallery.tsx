@@ -1,18 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import { visualAlt } from "@/content/visuals";
 import { useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export function PropertyGallery({ images, name }: { images: string[]; name: string }) {
   const [active, setActive] = useState(0);
   if (!images.length) return null;
-  const descriptions: Record<string, string> = {
-    "/media/courtyard.jpg": "Limestone courtyard concept with planting and a reflecting pool",
-    "/media/coastal.jpg": "Coastal architecture concept facing open water",
-    "/media/woodland.jpg": "Woodland pavilion concept among mature trees",
-    "/media/interior.jpg": "Warm timber interior concept with tall windows",
-  };
+
   return (
     <div
       onKeyDown={(event) => {
@@ -28,9 +24,9 @@ export function PropertyGallery({ images, name }: { images: string[]; name: stri
       <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-line">
         <Image
           src={images[active]}
-          alt={descriptions[images[active]] || `${name}, concept view ${active + 1}`}
+          alt={visualAlt[images[active]] || `${name}, concept view ${active + 1}`}
           fill
-          priority
+          priority={active === 0}
           sizes="(max-width: 768px) 100vw, 75vw"
           className="object-cover"
         />
@@ -57,8 +53,8 @@ export function PropertyGallery({ images, name }: { images: string[]; name: stri
         )}
       </div>
       <p className="mt-3 text-xs leading-6 text-muted">
-        Concept moodboard: these illustrations explore architecture, interiors and settings. They do
-        not depict different views of the same building.
+        Four AI-generated views explore the same fictional home. They are design concepts, not
+        photographs of a real property.
       </p>
       {images.length > 1 && (
         <div className="mt-3 flex gap-3 overflow-x-auto pb-2">

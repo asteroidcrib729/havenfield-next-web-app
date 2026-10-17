@@ -1,3 +1,4 @@
+import { BrandDetail } from "@/components/brand-detail";
 import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of the demonstration",
@@ -7,8 +8,9 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8">
+      <BrandDetail />
       <p className="text-xs uppercase tracking-[0.2em] text-brand">Project information</p>
-      <h1 className="mt-4 font-display text-5xl">Terms of the demonstration</h1>
+      <h1 className="mt-4 font-display text-4xl sm:text-5xl">Terms of the demonstration</h1>
       <div className="mt-10 space-y-8 leading-relaxed text-muted">
         <section>
           <h2 className="font-display text-2xl text-ink">A fictional collection</h2>

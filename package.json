@@ -35,7 +35,9 @@
     "backup:key": "tsx scripts/backup-encrypted.ts key",
     "backup:encrypt": "tsx scripts/backup-encrypted.ts encrypt",
     "backup:decrypt": "tsx scripts/backup-encrypted.ts decrypt",
-    "smoke:public": "tsx scripts/smoke-public.ts"
+    "smoke:public": "tsx scripts/smoke-public.ts",
+    "assets:process": "tsx scripts/process-plan03-assets.ts",
+    "content:plan03": "tsx scripts/plan03-content.ts"
   },
   "dependencies": {
     "@vercel/blob": "^2.8.1",

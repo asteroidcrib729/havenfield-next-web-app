@@ -1,3 +1,8 @@
+import type { BlogPost } from "@/lib/blog-types";
+import { propertyStories } from "@/content/property-stories";
+import { relatedStorySlugs } from "@/content/content-links";
+import { HomeActions, HomeChoiceLinks } from "@/components/home-actions";
+import { getPublishedPostBySlug } from "@/server/blog";
 import { collectionReturn } from "@/lib/property-filters";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -38,6 +43,10 @@ export default async function PropertyPage({
   const { slug } = await params;
   const property = properties.find((item) => item.slug === slug);
   if (!property) notFound();
+  const candidates: (BlogPost | null)[] = await Promise.all(
+    relatedStorySlugs(property.id).map((slug) => getPublishedPostBySlug(slug)),
+  ).catch(() => []);
+  const stories = candidates.filter((post): post is BlogPost => post !== null).slice(0, 2);
   return (
     <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:py-20">
       <Link
@@ -69,6 +78,9 @@ export default async function PropertyPage({
           </p>
         </div>
       </div>
+      <div className="mb-7">
+        <HomeActions id={property.id} name={property.name} />
+      </div>
       <PropertyGallery
         images={property.gallery.length ? property.gallery : [property.image]}
         name={property.name}
@@ -91,6 +103,14 @@ export default async function PropertyPage({
           </div>
           <h2 className="mt-8 font-display text-3xl">A home with its own rhythm.</h2>
           <p className="mt-5 text-lg leading-relaxed text-muted">{property.description}</p>
+          <div className="mt-9 space-y-8">
+            {propertyStories[property.id]?.map(([title, text]) => (
+              <section key={title}>
+                <h2 className="font-display text-2xl">{title}</h2>
+                <p className="mt-3 leading-7 text-muted">{text}</p>
+              </section>
+            ))}
+          </div>
           <h2 className="mt-9 font-display text-2xl">Thoughtful details</h2>
           <ul className="mt-5 grid gap-4 sm:grid-cols-2">
             {property.features.map((feature) => (
@@ -119,6 +139,30 @@ export default async function PropertyPage({
             valuation, or investment advice.
           </p>
         </aside>
+      </div>
+      <section className="mt-14 border-t border-line pt-10">
+        <h2 className="font-display text-3xl">Another perspective</h2>
+        <div className="mt-6 grid gap-6 sm:grid-cols-2">
+          {stories.map((post) => (
+            <Link
+              key={post.id}
+              href={`/journal/${post.slug}`}
+              className="rounded-xl border border-line p-6"
+            >
+              <p className="text-xs text-brand">{post.category}</p>
+              <h3 className="mt-3 font-display text-2xl">{post.title}</h3>
+              <p className="mt-3 text-sm leading-6 text-muted">{post.excerpt}</p>
+            </Link>
+          ))}
+        </div>
+        {!stories.length && (
+          <Link href="/journal" className="mt-5 inline-block min-h-11 underline underline-offset-4">
+            Explore the journal
+          </Link>
+        )}
+      </section>
+      <div className="mt-10">
+        <HomeChoiceLinks />
       </div>
     </div>
   );

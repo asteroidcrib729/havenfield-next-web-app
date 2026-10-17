@@ -26,8 +26,13 @@ export const properties: Property[] = [
     bedrooms: 4,
     bathrooms: 3,
     area: 286,
-    image: "/media/courtyard.jpg",
-    gallery: ["/media/courtyard.jpg", "/media/interior.jpg", "/media/coastal.jpg"],
+    image: "/media/plan03/courtyard-arrival.webp",
+    gallery: [
+      "/media/plan03/courtyard-arrival.webp",
+      "/media/plan03/courtyard-living.webp",
+      "/media/plan03/courtyard-kitchen.webp",
+      "/media/plan03/courtyard-courtyard.webp",
+    ],
     description:
       "An imagined limestone home arranged around a quiet, planted courtyard. Deep window reveals hold the afternoon shade; long views connect the living room to a reflecting pool. The plan offers space to gather without giving up places to retreat.",
     features: [
@@ -50,8 +55,13 @@ export const properties: Property[] = [
     bedrooms: 3,
     bathrooms: 2,
     area: 194,
-    image: "/media/coastal.jpg",
-    gallery: ["/media/coastal.jpg", "/media/interior.jpg", "/media/courtyard.jpg"],
+    image: "/media/plan03/saltwater-exterior.webp",
+    gallery: [
+      "/media/plan03/saltwater-exterior.webp",
+      "/media/plan03/saltwater-lounge.webp",
+      "/media/plan03/saltwater-dining.webp",
+      "/media/plan03/saltwater-bedroom.webp",
+    ],
     description:
       "A fictional coastal residence shaped by open horizons. A sheltered terrace extends the living space while textured stone and timber lend warmth to a simple interior. Every room has a useful purpose; the view gets the attention.",
     features: [
@@ -74,8 +84,13 @@ export const properties: Property[] = [
     bedrooms: 3,
     bathrooms: 3,
     area: 238,
-    image: "/media/woodland.jpg",
-    gallery: ["/media/woodland.jpg", "/media/interior.jpg", "/media/courtyard.jpg"],
+    image: "/media/plan03/woodland-exterior.webp",
+    gallery: [
+      "/media/plan03/woodland-exterior.webp",
+      "/media/plan03/woodland-living.webp",
+      "/media/plan03/woodland-study.webp",
+      "/media/plan03/woodland-deck.webp",
+    ],
     description:
       "An imagined pavilion at the edge of a woodland. A low roof and quiet material palette make room for the landscape, with a reading nook, a generous kitchen and an outdoor room for long evenings. It is a study in keeping the essentials close.",
     features: [
@@ -98,8 +113,13 @@ export const properties: Property[] = [
     bedrooms: 2,
     bathrooms: 2,
     area: 142,
-    image: "/media/interior.jpg",
-    gallery: ["/media/interior.jpg", "/media/coastal.jpg", "/media/woodland.jpg"],
+    image: "/media/plan03/atelier-exterior.webp",
+    gallery: [
+      "/media/plan03/atelier-exterior.webp",
+      "/media/plan03/atelier-studio.webp",
+      "/media/plan03/atelier-workroom.webp",
+      "/media/plan03/atelier-rooftop.webp",
+    ],
     description:
       "A fictional city loft for creative everyday life. Tall windows, warm timber and a flexible work area support both focused mornings and relaxed evenings. Carefully placed storage keeps the open plan calm and practical.",
     features: [

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { InquiryForm } from "@/components/inquiry-form";
 import { ArrowUpRight, MessageCircle, ShieldCheck } from "lucide-react";
@@ -25,6 +26,15 @@ export default async function ContactPage({
           Explore how an inquiry could feel: personal, clear, and considered. Tell this fictional
           studio what caught your eye.
         </p>
+        <div className="relative mt-8 aspect-[3/2] overflow-hidden rounded-2xl">
+          <Image
+            src="/media/plan03/contact-studio.webp"
+            alt="Open studio doorway and garden bench in an invented courtyard"
+            fill
+            sizes="(max-width:1024px) 100vw, 50vw"
+            className="object-cover"
+          />
+        </div>
         <div className="mt-10 space-y-8 border-t border-line pt-8">
           <div className="flex gap-4">
             <MessageCircle className="mt-1 shrink-0 text-brand" size={22} />
