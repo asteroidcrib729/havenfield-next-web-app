@@ -1,0 +1,13 @@
+{
+  "createdAt": "2026-10-17T18:36:20.441Z",
+  "path": "public/media/havenfield-walkthrough.mp4",
+  "durationSeconds": 69.708333,
+  "bytes": 1848006,
+  "sha256": "6c6f56d4bbb8206b12ab1a761d2019993a367208f399f2ebf35c552e51b1a55d",
+  "width": 1280,
+  "height": 720,
+  "codec": "h264",
+  "audio": false,
+  "source": "Recorded real application in isolated local browser/database, synthetic account and inquiries; no password entered on screen",
+  "textAlternative": "walkthrough-transcript.md"
+}

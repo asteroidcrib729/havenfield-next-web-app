@@ -78,7 +78,7 @@ export async function legacyUpgrade(db: Database) {
   const before = await db.query("SELECT * FROM posts");
   const report = await migrateDatabase(db);
   expect(report.adoptedLegacy).toBe(true);
-  expect(report.applied).toEqual([2, 3]);
+  expect(report.applied).toEqual([2, 3, 4]);
   expect(await db.query("SELECT * FROM posts")).toEqual(before);
   expect(await db.query("SELECT * FROM post_revisions")).toHaveLength(1);
   expect(await db.query("SELECT * FROM slug_redirects")).toHaveLength(1);

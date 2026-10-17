@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixture";
 import AxeBuilder from "@axe-core/playwright";
 async function signIn(page: import("@playwright/test").Page) {
   await page.goto("/admin/login");
@@ -158,8 +158,10 @@ test("publisher recovers interrupted writing, reuses media and operates the inbo
   await page.getByLabel("Search inquiries").fill("product-inbox@example.test");
   const inquiry = page.locator("article").filter({ hasText: "product-inbox@example.test" });
   await expect(inquiry).toHaveCount(1);
-  await inquiry.getByRole("combobox").selectOption("reviewed");
-  await expect(inquiry.getByRole("combobox")).toHaveValue("reviewed");
+  await inquiry.getByLabel("State for Product Visitor").selectOption("reviewed");
+  await inquiry.getByRole("button", { name: "Save conversation" }).click();
+  await expect(page.getByText("Conversation saved.", { exact: true })).toBeVisible();
+  await expect(inquiry.getByLabel("State for Product Visitor")).toHaveValue("reviewed");
   await accessible(page);
   await inquiry.getByRole("button", { name: "Delete inquiry" }).click();
   await expect(page.getByRole("button", { name: "Keep records" })).toBeFocused();

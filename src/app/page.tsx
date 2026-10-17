@@ -13,6 +13,22 @@ export default function Home() {
   return (
     <>
       <section className="relative isolate min-h-[610px] overflow-hidden bg-ink text-white lg:min-h-[690px]">
+        <picture>
+          <source
+            media="(max-width: 767px)"
+            srcSet="/media/hero-mobile-480.webp 480w, /media/hero-mobile-768.webp 768w"
+            sizes="100vw"
+          />
+          <Image
+            src="/media/hero-desktop.webp"
+            alt="Imagined limestone courtyard home beside an olive tree and reflecting pool"
+            fill
+            unoptimized
+            loading="eager"
+            fetchPriority="high"
+            className="object-cover"
+          />
+        </picture>
         <HeroFilm />
         <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-black/65 via-black/25 to-black/10" />
         <div className="relative mx-auto flex max-w-7xl flex-col px-6 pt-24 pb-24 sm:pt-28 lg:px-10 lg:pt-32">

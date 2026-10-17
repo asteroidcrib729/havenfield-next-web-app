@@ -61,7 +61,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           Skip to content
         </a>
         <Header />
-        <main id="main-content" className="min-h-[70vh]">
+        <main id="main-content" className="min-h-[70vh] print:min-h-0">
           {children}
         </main>
         <Footer />

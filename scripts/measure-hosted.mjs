@@ -101,9 +101,14 @@ try {
     medians,
     results,
   };
-  const file = process.argv.includes("--baseline")
-    ? "development-plans/plan03-hosted-performance-baseline.json"
-    : "development-plans/plan03-hosted-performance.json";
+  const chosen = arg("output");
+  if (chosen && !/^development-plans\/plan04-[a-z-]+\.json$/.test(chosen))
+    throw Error("Invalid performance output");
+  const file =
+    chosen ||
+    (process.argv.includes("--baseline")
+      ? "development-plans/plan03-hosted-performance-baseline.json"
+      : "development-plans/plan03-hosted-performance.json");
   await mkdir("development-plans", { recursive: true });
   await writeFile(
     file,

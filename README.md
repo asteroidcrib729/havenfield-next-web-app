@@ -2,6 +2,10 @@
 
 My live portfolio is at [havenfieldre.vercel.app](https://havenfieldre.vercel.app).
 
+[Explore the studio tour](https://havenfieldre.vercel.app/studio-demo) · [Project case study](development-plans/case-study.md) · [Watch the application walkthrough](https://havenfieldre.vercel.app/media/havenfield-walkthrough.mp4)
+
+Visitors can explore four illustrative floor plans and print a property brochure or save it as a PDF. My private inquiry inbox includes conversation stages, internal notes, property filtering, version checks and filtered CSV exports. The public studio tour uses fixed fictional samples and never exposes private records.
+
 I built Havenfield as an independent real estate portfolio: a fictional property collection, original architectural imagery, and an editorial studio for publishing stories about homes and design. I rebuilt the site with Next.js, React, strict TypeScript, and Tailwind CSS, with TypeScript REST endpoints and relational persistence.
 
 ![Full Havenfield landing page on the live production website](development-plans/screenshots/home-desktop.png)
@@ -11,6 +15,8 @@ I captured this full-page desktop view from the live site on 17 October 2026 (14
 The application includes shareable property search/filtering, browser-local saved homes, a comparison view for up to three homes, keyboard galleries, a consented demo inquiry workflow, and a journal. My authenticated editorial studio includes a property catalog with private drafts, publication, ordered galleries, per-image alternative text and focal points, versioned edits, revision restoration and inquiry-safe deletion. It also supports draft/published/scheduled articles, interrupted-writing recovery, safe Markdown previews, a reusable media library with reference protection, SEO metadata, normalized categories/tags, revisions/restoration, slug redirects, private previews, and deletion. I can review, archive and delete inquiries, inspect publisher actions, and export a checksummed database-and-image recovery bundle. Public RSS, sitemap and article structured data follow publication visibility.
 
 All brand copy, property data, article text, logos, and media are newly created. I retained the existing local Playfair Display and Poppins font files with their license notices. The hero film is new AI-generated architectural footage made with Higgsfield/Hailuo, optimized to a silent six-second landscape clip. Legacy HTML, PHP, Composer packages and stylesheets are removed.
+
+[Development plan 04](development-plans/development-plan-04.md) · [Demonstration and publishing guide](development-plans/plan04-operator-guide.md)
 
 ## Run locally
 

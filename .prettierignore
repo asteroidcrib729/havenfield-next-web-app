@@ -24,3 +24,5 @@ next-env.d.ts
 database/migrations/001-initial.sql
 database/migrations/002-product-operations.sql
 database/migrations/003-property-authoring.sql
+
+database/migrations/004-inquiry-conversations.sql

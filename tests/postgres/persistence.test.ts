@@ -1,3 +1,4 @@
+import { inquiryConversationContract } from "../inquiry-workflow-contract";
 import { afterEach, describe, expect, it } from "vitest";
 import { randomUUID } from "node:crypto";
 import { Pool } from "pg";
@@ -59,7 +60,7 @@ describe("real PostgreSQL persistence", () => {
       release();
       await owner;
     }
-    expect((await migrateDatabase(other)).applied).toEqual([1, 2, 3]);
+    expect((await migrateDatabase(other)).applied).toEqual([1, 2, 3, 4]);
   });
   it("uses separate backend connections and safely binds literal question marks", async () => {
     const { db, url } = await database();
@@ -72,7 +73,7 @@ describe("real PostgreSQL persistence", () => {
       literal: "?",
       bound: "value",
     });
-    expect(await loadMigrations()).toHaveLength(3);
+    expect(await loadMigrations()).toHaveLength(4);
   });
   it("restores application data into an empty PostgreSQL schema", async () => {
     await roundTrip((await database()).db, (await database()).db);
@@ -80,4 +81,11 @@ describe("real PostgreSQL persistence", () => {
   it("refuses corruption and rolls back a broken restore", async () => {
     await rejectsBrokenBackup((await database()).db, (await database()).db);
   });
+});
+
+it("preserves inquiry conversations, conflict checks and recovery on PostgreSQL", async () => {
+  const source = await database(),
+    target = await database();
+  await migrateDatabase(source.db);
+  await inquiryConversationContract(source.db, target.db);
 });

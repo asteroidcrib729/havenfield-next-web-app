@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { inquiryPatch } from "@/lib/inquiry-workflow";
 import { requireAdminSession, checkMutationOrigin } from "@/server/auth";
 import { changeInquiry, deleteInquiry } from "@/server/inquiries";
 import { apiError, json, readJson } from "@/server/http";
@@ -8,11 +8,8 @@ export async function PATCH(request: Request, context: Context) {
   try {
     const session = await requireAdminSession();
     checkMutationOrigin(request);
-    const { status } = z
-      .object({ status: z.enum(["new", "reviewed", "archived"]) })
-      .strict()
-      .parse(await readJson(request, 4096));
-    await changeInquiry((await context.params).id, status, session.email);
+    const { status, ...details } = inquiryPatch.parse(await readJson(request, 32000));
+    await changeInquiry((await context.params).id, status, session.email, details);
     return json({ updated: true });
   } catch (error) {
     return apiError(error);

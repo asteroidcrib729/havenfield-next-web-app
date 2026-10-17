@@ -37,6 +37,9 @@ const tables = {
     "status",
     "updated_at",
     "expires_at",
+    "stage",
+    "notes",
+    "version",
   ],
   media: [
     "id",
@@ -82,7 +85,7 @@ const newTables = [
 type Table = keyof typeof tables;
 type Row = Record<string, string | number | null>;
 interface Payload {
-  format: 2 | 3;
+  format: 2 | 3 | 4;
   exportedAt: string;
   migrations: { version: number; name: string; checksum: string }[];
   tables: Record<Table, Row[]>;
@@ -98,7 +101,7 @@ export function parseBackup(input: unknown): DatabaseBackup {
   if (
     !backup ||
     !backup.payload ||
-    ![1, 2, 3].includes(backup.payload.format) ||
+    ![1, 2, 3, 4].includes(backup.payload.format) ||
     backup.checksum !== digest(backup.payload) ||
     !Array.isArray(backup.payload.migrations) ||
     !backup.payload.migrations.length ||
@@ -145,6 +148,20 @@ export function parseBackup(input: unknown): DatabaseBackup {
       version: 1,
     }));
     old.payload.format = 3;
+    old.checksum = digest(old.payload);
+    return parseBackup(old);
+  }
+  if (Number(backup.payload.format) === 3) {
+    const old = structuredClone(backup);
+    if (!Array.isArray(old.payload.tables.inquiries))
+      throw new Error("Invalid legacy inquiry rows");
+    old.payload.tables.inquiries = old.payload.tables.inquiries.map((row) => ({
+      ...row,
+      stage: "new",
+      notes: "",
+      version: 1,
+    }));
+    old.payload.format = 4;
     old.checksum = digest(old.payload);
     return parseBackup(old);
   }
@@ -195,7 +212,7 @@ export async function exportDatabase(db: Database): Promise<DatabaseBackup> {
       row.expires_at = value;
     }
     const payload: Payload = {
-      format: 3,
+      format: 4,
       exportedAt: new Date().toISOString(),
       migrations,
       tables: data,

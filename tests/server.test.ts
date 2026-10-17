@@ -596,7 +596,7 @@ describe("complete media and recovery workflows", () => {
   });
   it("exports new operations records and restores them atomically", async () => {
     const backup = await exportDatabase(await getDatabase());
-    expect(backup.payload.format).toBe(3);
+    expect(backup.payload.format).toBe(4);
     expect(backup.payload.tables.publisher_actions.length).toBeGreaterThan(0);
     const target = await createDatabase({
       url: "",

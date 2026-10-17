@@ -39,7 +39,8 @@
     "assets:process": "tsx scripts/process-plan03-assets.ts",
     "content:plan03": "tsx scripts/plan03-content.ts",
     "properties:seed": "tsx scripts/property-seed.ts",
-    "measure:hosted": "node scripts/measure-hosted.mjs"
+    "measure:hosted": "node scripts/measure-hosted.mjs",
+    "content:plan04": "tsx scripts/plan04-content.ts"
   },
   "dependencies": {
     "@vercel/blob": "^2.8.1",

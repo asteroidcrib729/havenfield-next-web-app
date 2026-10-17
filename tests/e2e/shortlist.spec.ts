@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixture";
 import AxeBuilder from "@axe-core/playwright";
 test("saved homes persist, synchronize across tabs and clear independently", async ({
   page,

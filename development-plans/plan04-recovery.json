@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-17T18:29:24.722Z",
+  "target": "Disposable local SQLite databases only; live databases read for export only",
+  "checks": [
+    {
+      "environment": "preview",
+      "snapshot": "before",
+      "originalFormat": 3,
+      "restoredFormat": 4,
+      "allTablesEqual": true,
+      "tableCount": 13
+    },
+    {
+      "environment": "preview",
+      "snapshot": "after",
+      "originalFormat": 4,
+      "restoredFormat": 4,
+      "allTablesEqual": true,
+      "tableCount": 13
+    },
+    {
+      "environment": "preview",
+      "snapshot": "delivery",
+      "originalFormat": 4,
+      "restoredFormat": 4,
+      "allTablesEqual": true,
+      "tableCount": 13
+    },
+    {
+      "environment": "production",
+      "snapshot": "before",
+      "originalFormat": 3,
+      "restoredFormat": 4,
+      "allTablesEqual": true,
+      "tableCount": 13
+    },
+    {
+      "environment": "production",
+      "snapshot": "after",
+      "originalFormat": 4,
+      "restoredFormat": 4,
+      "allTablesEqual": true,
+      "tableCount": 13
+    },
+    {
+      "environment": "production",
+      "snapshot": "delivery",
+      "originalFormat": 4,
+      "restoredFormat": 4,
+      "allTablesEqual": true,
+      "tableCount": 13
+    }
+  ]
+}

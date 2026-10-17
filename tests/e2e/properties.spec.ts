@@ -1,4 +1,4 @@
-import { test, expect, type Page } from "@playwright/test";
+import { test, expect, type Page } from "./fixture";
 import AxeBuilder from "@axe-core/playwright";
 async function signIn(page: Page) {
   await page.goto("/admin/login");

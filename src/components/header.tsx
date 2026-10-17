@@ -29,7 +29,7 @@ export function Header() {
   }, [open]);
   if (pathname.startsWith("/admin")) return null;
   return (
-    <header className="relative z-30 border-b border-line bg-paper">
+    <header className="print:hidden relative z-30 border-b border-line bg-paper">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-6 lg:px-10">
         <Logo />
         <nav aria-label="Main navigation" className="hidden items-center gap-5 xl:gap-8 lg:flex">

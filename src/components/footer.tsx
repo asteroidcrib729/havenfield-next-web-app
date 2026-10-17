@@ -7,7 +7,7 @@ export function Footer() {
   const path = usePathname();
   if (path.startsWith("/admin")) return null;
   return (
-    <footer className="mt-24 bg-ink text-paper">
+    <footer className="print:hidden mt-24 bg-ink text-paper">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <div className="grid gap-12 border-b border-paper/20 pb-14 md:grid-cols-[1.5fr_1fr_1fr]">
           <div>
@@ -47,6 +47,7 @@ export function Footer() {
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Demo terms</Link>
             <Link href="/cookies">Cookies</Link>
+            <Link href="/studio-demo">Studio tour</Link>
             <Link href="/admin/login">Editorial studio</Link>
           </div>
         </div>

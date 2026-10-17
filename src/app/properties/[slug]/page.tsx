@@ -1,3 +1,4 @@
+import { FloorPlan } from "@/components/floor-plan";
 import type { BlogPost } from "@/lib/blog-types";
 import { HomeActions, HomeChoiceLinks } from "@/components/home-actions";
 import { getPublishedPostBySlug } from "@/server/blog";
@@ -77,6 +78,12 @@ export default async function PropertyPage({
       <div className="mb-7">
         <HomeActions id={property.id} name={property.name} />
       </div>
+      <Link
+        href={`/properties/${property.slug}/brochure`}
+        className="mb-7 inline-block rounded-full border border-line px-5 py-3 text-sm"
+      >
+        View printable brochure
+      </Link>
       <PropertyGallery
         images={property.gallery.length ? property.gallery : [property.image]}
         name={property.name}
@@ -108,6 +115,7 @@ export default async function PropertyPage({
               </section>
             ))}
           </div>
+          <FloorPlan property={property} />
           <h2 className="mt-9 font-display text-2xl">Thoughtful details</h2>
           <ul className="mt-5 grid gap-4 sm:grid-cols-2">
             {property.features.map((feature) => (

@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-10-17T18:32:38.661Z",
+  "migration": [
+    {
+      "environment": "preview",
+      "operation": "migrate",
+      "checkedAt": "2026-10-17T18:22:43.582Z",
+      "beforeVersion": 3,
+      "preserved": true,
+      "backupFormat": 4,
+      "migration": {
+        "applied": [4],
+        "adoptedLegacy": false,
+        "currentVersion": 4
+      },
+      "currentVersion": 4,
+      "counts": {
+        "posts": 9,
+        "post_revisions": 12,
+        "slug_redirects": 0,
+        "inquiries": 0,
+        "media": 5,
+        "media_references": 0,
+        "properties": 4,
+        "property_revisions": 4,
+        "property_media_references": 0,
+        "catalog_state": 1,
+        "publisher_actions": 61,
+        "article_autosaves": 0,
+        "inquiry_receipts": 2
+      }
+    },
+    {
+      "environment": "production",
+      "operation": "migrate",
+      "checkedAt": "2026-10-17T18:22:48.220Z",
+      "beforeVersion": 3,
+      "preserved": true,
+      "backupFormat": 4,
+      "migration": {
+        "applied": [4],
+        "adoptedLegacy": false,
+        "currentVersion": 4
+      },
+      "currentVersion": 4,
+      "counts": {
+        "posts": 9,
+        "post_revisions": 12,
+        "slug_redirects": 0,
+        "inquiries": 0,
+        "media": 3,
+        "media_references": 0,
+        "properties": 4,
+        "property_revisions": 4,
+        "property_media_references": 0,
+        "catalog_state": 1,
+        "publisher_actions": 43,
+        "article_autosaves": 0,
+        "inquiry_receipts": 0
+      }
+    }
+  ],
+  "publication": [
+    {
+      "environment": "preview",
+      "apply": true,
+      "published": [
+        "daylight-through-the-seasons",
+        "read-a-floor-plan-in-everyday-routes",
+        "small-spaces-with-room-to-live"
+      ],
+      "alreadyPublic": []
+    },
+    {
+      "environment": "production",
+      "apply": true,
+      "published": [
+        "daylight-through-the-seasons",
+        "read-a-floor-plan-in-everyday-routes",
+        "small-spaces-with-room-to-live"
+      ],
+      "alreadyPublic": []
+    }
+  ],
+  "backupPolicy": "Original format-3, post-migration format-4 and publication snapshots retained privately in ignored .data/backups/plan04; restored into disposable local databases.",
+  "recovery": "plan04-recovery.json"
+}

@@ -38,7 +38,7 @@ it("restores the historical format-1 schema export into the current version", as
     };
     await restoreDatabase(target, backup);
     expect((await target.query("SELECT title FROM posts"))[0].title).toBe("Preserved article");
-    expect(await target.query("SELECT version FROM schema_migrations")).toHaveLength(3);
+    expect(await target.query("SELECT version FROM schema_migrations")).toHaveLength(4);
   } finally {
     await source.close();
     await target.close();

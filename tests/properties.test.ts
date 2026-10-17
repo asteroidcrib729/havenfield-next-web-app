@@ -378,7 +378,7 @@ describe("managed property contracts on the active isolated adapter", () => {
         actor,
       ),
       backup = await exportDatabase(await getDatabase());
-    expect(backup.payload.format).toBe(3);
+    expect(backup.payload.format).toBe(4);
     const bundle = resolve(directory, "bundle");
     await createRecoveryBundle(backup, bundle, readOwnedObject);
     const verified = await readRecoveryBundle(bundle);
@@ -436,7 +436,7 @@ describe("managed property contracts on the active isolated adapter", () => {
     await createRecoveryBundle(backup, bundle, readOwnedObject);
     const verified = await readRecoveryBundle(bundle);
     expect(verified.objects.size).toBe(1);
-    expect(parseBackup(backup).payload.format).toBe(3);
+    expect(parseBackup(backup).payload.format).toBe(4);
     expect(verified.backup.payload.tables.media[0]).toMatchObject({
       collection: "",
       focal_x: 50,
