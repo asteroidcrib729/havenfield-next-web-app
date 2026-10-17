@@ -1,6 +1,6 @@
 # Plan 03 execution record
 
-Started 2026-10-17 (Asia/Karachi). Plan 02 remains delivered. Plan 03 is **in progress**, with the first content and visitor-feature iteration implemented; property authoring and media workflow improvements remain separate work.
+Started 2026-10-17 (Asia/Karachi). Plan 02 remains delivered. Plan 03 is **delivered**. All 29 checklist entries are complete; [the closure record](development-plan-03-closure.md) is authoritative. Earlier sections retain dated iteration evidence.
 
 ## Delivered in this iteration
 
@@ -28,7 +28,7 @@ The importer preserves existing slugs and owner edits, skips existing drafts and
 
 The browser suite covers saving/reload/cross-tab clearing, comparison/removal/limit, 320 px containment and automated accessibility, filter-chip URL preservation, blocked-storage navigation/reload, keyboard galleries and existing inquiry/editorial workflows. It also checks public route reflow at 320, 375, 768 and 1440 px. Human screen-reader, native zoom and field INP are not claimed.
 
-## Remaining Plan 03 work
+## Historical follow-up identified after the first iteration
 
 1. Publisher-managed property schema and editor: migration preserving IDs/inquiries, draft/public states, gallery ordering and alt editing, optimistic versions, action records, recovery and authorization acceptance.
 2. Publisher media collections, focal/crop preview and stronger usage presentation. Static source-controlled images remain outside upload deletion.
@@ -54,3 +54,11 @@ The README captures are public-only fresh-browser screenshots from the live site
 The remaining feature slice is implemented and has passed TypeScript, lint, 75 SQLite/service tests, 49 PostgreSQL tests and all 13 browser journeys. These suites overlap; their counts are not unique scenarios. Migration 003, stable original property identities, optimistic editing, private drafts, publication, gallery alt/order/focal settings, revisions, inquiry preservation and upload reference protection are covered. The browser checks caught and fixed a streamed-200 draft response; collection loading now sits inside the collection page and draft detail routes return 404. Homepage content streams below the hero without blocking its first render.
 
 Preview schema 3 and the four original homes are initialized after a private format-2 export; a new format-3 export includes properties and revisions. Production migration, new deployments, hosted authoring verification, every-page visual review and hosted performance measurement are still release work at this checkpoint. See [property/media operations](property-and-media-authoring.md), [design-tool review](plan03-design-review.md), [asset cleanup](plan03-asset-cleanup.json) and [immutable Preview review](plan03-preview-dependency-review.json). Fifty-five unused derivatives were removed after reference/hash/boundary checks, saving 3,153,868 bytes; all 28 masters and the used material vignette remain. Two pre-cutover immutable Preview builds now report unavailable; neither has an alias. They are historical records, not editing or rollback targets. No resources were deleted or paid services added.
+
+## Final delivery - 2026-10-17
+
+All remaining implementation is delivered: publisher property authoring, media collections/crop previews/reference protection, UI feedback and reduced motion, immutable Preview review, every-page family review and hosted performance checks. Both databases use schema 3; four seed identities and prior records are preserved. New exports include properties, revisions and gallery protection; both real hosted exports restored exactly into disposable local databases. Local Preview still uses the independent Preview database.
+
+Final validation: 76 service tests, 49 PostgreSQL tests and 14 browser journeys, with overlap between suites. Hosted checks exercise property creation, draft exclusion, publication, gallery order, stale edits, revision restoration, usage protection and cleanup. Sixty loaded-screen checks passed across 320/1440 px; authenticated captures remain private. Final browser checks also verify unavailable-choice cleanup, public filtering, reflow and missing-property 404. The six original journal drafts remain private in both environments.
+
+Performance tuning removed a noncritical collection-image preload, combined catalog readiness/content reads, streamed below-fold article recommendations and removed the catalog-loading replacement responsible for an intermittent layout shift. All nine final measurements have zero CLS. [The complete lab record](plan03-hosted-performance.json) includes individual scores, outliers and the homepage LCP limitation; no field performance guarantee is made. A late conflict-message edit initially failed CI formatting; the correction and full CI succeeded at application source 1fb3cadd2d965653ce8dcf7e004d8f1b9a82dcc6. The final documentation commit is verified separately in the delivery message.

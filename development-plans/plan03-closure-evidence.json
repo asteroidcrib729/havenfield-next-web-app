@@ -1,0 +1,87 @@
+{
+  "closedAt": "2026-10-17T17:01:10.021Z",
+  "status": "delivered",
+  "verifiedApplicationCommit": "1fb3cadd2d965653ce8dcf7e004d8f1b9a82dcc6",
+  "featureCi": {
+    "id": 39051288768,
+    "conclusion": "success",
+    "url": "https://github.com/asteroidcrib729/havenfield-next-web-app/actions/runs/39051288768"
+  },
+  "checklist": {
+    "complete": 29,
+    "total": 29
+  },
+  "validation": {
+    "serviceTests": 76,
+    "postgresTests": 49,
+    "browserJourneys": 14,
+    "typecheck": true,
+    "lint": true,
+    "build": true
+  },
+  "environments": {
+    "production": "https://havenfieldre.vercel.app",
+    "preview": "https://havenfieldre-preview.vercel.app",
+    "bothSchemaVersion": 3,
+    "originalPropertyIdsPreserved": true,
+    "localPreviewVerified": "plan03-local-preview.json"
+  },
+  "deployableGitTreeSha256": "af74970f8ba9823fae893407cf38986fffce6bf3cd20709765a582eb648ede94",
+  "visualAudit": {
+    "publicChecks": 40,
+    "privateChecks": 20,
+    "axeViolations": 0,
+    "horizontalOverflow": 0,
+    "brokenImages": 0
+  },
+  "contrast": [
+    {
+      "text": "ink",
+      "surface": "paper",
+      "ratio": 13.41
+    },
+    {
+      "text": "ink",
+      "surface": "white",
+      "ratio": 14.48
+    },
+    {
+      "text": "muted",
+      "surface": "paper",
+      "ratio": 5.11
+    },
+    {
+      "text": "muted",
+      "surface": "white",
+      "ratio": 5.52
+    },
+    {
+      "text": "brand",
+      "surface": "paper",
+      "ratio": 5.45
+    },
+    {
+      "text": "brand",
+      "surface": "white",
+      "ratio": 5.89
+    }
+  ],
+  "performance": "plan03-hosted-performance.json",
+  "privateBackupsRestored": "plan03-property-recovery.json",
+  "budget": {
+    "newPaidResources": 0,
+    "purchases": 0,
+    "cardAuthorizations": 0
+  },
+  "editorialState": {
+    "publishedArticles": 3,
+    "privateOriginalDraftsPerEnvironment": 6,
+    "publication": "Deliberate editorial action; no automatic draft publication"
+  },
+  "limits": [
+    "Lab results vary; homepage median LCP remains above the aspirational 2.5-second target in this final session.",
+    "Human screen-reader/native zoom review and field INP are not claimed.",
+    "Plan 02 explicit deferrals remain optional."
+  ],
+  "finalDocumentationDelivery": "The delivery message verifies the subsequent record commit and its exact CI/deployments; this file identifies tested application code without recursively recording its own future commit."
+}

@@ -32,11 +32,11 @@ Before initialization, the application renders the four original seed homes. Onc
 
 Property edits are explicitly saved. They do not have article-style autosave recovery. The editor warns about unsaved in-page navigation/browser departure and blocks sign-out while dirty. Keep the page open after a failed save; expired sessions require signing in separately before retrying. Version conflicts preserve current writing and require a deliberate reload or manual merge. No public signup or extra publisher accounts were introduced.
 
-Existing inquiry receipts remain valid if a home is later unpublished. New submissions must select a currently published home. Saved-home IDs remain browser-local; unpublished/deleted homes disappear from the rendered shortlist without exposing private records.
+Existing inquiry receipts remain valid if a home is later unpublished. New submissions must select a currently published home. Saved-home IDs remain browser-local; unpublished/deleted homes disappear from the rendered shortlist without exposing private records. Use Remove unavailable choices to remove stale IDs and free comparison slots while retaining available selections.
 
 ## Section 03 - Media collections, crops and protection
 
-**Media library** separates owned uploads from 28 original repository images. Uploaded descriptions and collection names are searchable/filterable. **Edit description** opens a keyboard-accessible image-details dialog with wide, card and portrait crop previews. Focal defaults apply when adding a property photograph; existing gallery placements retain their own saved alt/focal values. Article descriptions and crops keep their existing behavior. Metadata saves use a version check so a stale dialog cannot overwrite a newer edit.
+**Media library** separates owned uploads from 28 original repository images. Uploaded descriptions and collection names are searchable/filterable. **Edit description** opens a keyboard-accessible image-details dialog with wide, card and portrait crop previews. Focal defaults apply when adding a property photograph; existing gallery placements retain their own saved alt/focal values. Article descriptions and crops keep their existing behavior. Metadata saves use a version check so a stale dialog cannot overwrite a newer edit. If another tab changes metadata, reload the library before reopening the editor.
 
 Repository files and their metadata are read-only. Their usage inspector includes retained article/property/recovery references and fixed public-page placements. New or changed source-controlled imagery goes through the repository asset pipeline, not upload deletion.
 

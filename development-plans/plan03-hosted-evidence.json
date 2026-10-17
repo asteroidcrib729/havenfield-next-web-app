@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-10-17T16:32:20.018Z",
-  "sourceCommit": "dca37c60648995063e19ccfb7ff6dbb70d940839",
-  "productionDeployment": "dpl_JDdbKy7CX3BTypGPfiGP1X7JVfvh",
-  "previewDeployment": "dpl_7jxgjchgwRuGLUKwcbN6ivtgv5GL",
+  "checkedAt": "2026-10-17T16:58:33.467Z",
+  "sourceCommit": "1fb3cadd2d965653ce8dcf7e004d8f1b9a82dcc6",
+  "productionDeployment": "dpl_2uKSspECU9fsPZpE2RfRJRQUbWa9",
+  "previewDeployment": "dpl_ASxX8iVFLViTVsBFgHjS7mPEEDxe",
   "environments": [
     {
       "environment": "production",

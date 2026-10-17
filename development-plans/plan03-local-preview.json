@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-10-17T16:38:07.514Z",
+  "environment": "preview",
+  "localPreview": true,
+  "pooledConnectionMatchesActivePreview": true,
+  "productionConnectionDifferent": true,
+  "binding": "preview",
+  "schemaVersion": 3,
+  "propertyIds": ["hf-01", "hf-02", "hf-03", "hf-04"]
+}

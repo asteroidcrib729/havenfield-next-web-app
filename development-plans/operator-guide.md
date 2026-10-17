@@ -1,6 +1,6 @@
 # Havenfield operator guide
 
-Updated 2026-10-17. Verified canonical origin: `https://havenfieldre.vercel.app`. Production and an independent protected Preview are deployed. The [deployment record](deployment.md) identifies their resources and verification; [release acceptance](release-acceptance.md) retains backup, accessibility and performance gates. Public GitHub delivery, hosted CI and native automatic deployments are verified in [Git delivery](github-publication.md).
+Updated 2026-10-17. Verified canonical origin: `https://havenfieldre.vercel.app`. Production and an independent protected Preview are deployed. The [deployment record](deployment.md) identifies their resources and verification; [release acceptance](release-acceptance.md) records completed checks and explicit optional follow-up. Public GitHub delivery, hosted CI and native automatic deployments are verified in [Git delivery](github-publication.md).
 
 Both active databases now belong to the GitHub-linked Prisma project `havenfield`: `havenfield-production` on `main`, and `havenfield-preview` on `preview`. The currently verified protected Preview is [the new-domain Preview](https://havenfieldre-preview.vercel.app). The old `havenfield-preview-rollback` project was deleted on 2026-10-16 after a fresh private export. Older immutable Preview deployment URLs can contain its now-retired connection and must not be used for new editorial work. See [project consolidation](prisma-project-consolidation.md) before using or retiring them.
 
@@ -107,7 +107,7 @@ Production uses `https://havenfieldre.vercel.app`. Vercel Production `SITE_URL` 
 
 ## Section 12 — Free backup and rollback follow-up (2026-10-16)
 
-The owner selected no payments/cards and their existing personal Google account. Follow [free encrypted backups](free-backups.md) for the prepared archives, separate recovery key, manual browser upload and remaining daily-schedule requirement. Follow [human accessibility review](accessibility-owner-review.md) for owner testing. The [real Production rollback rehearsal](production-rollback-rehearsal.md) preserved a newer hidden draft/revisions and restored automatic deployment assignment. A temporary hosted database/private-image recovery passed; its resources and separately prefixed Development variables were removed. P02-07 is closed; P02-01, P02-04 and the remaining P02-06 conditions stay open.
+The owner selected no payments/cards and their existing personal Google account. Follow [free encrypted backups](free-backups.md) for the prepared archives, separate recovery key, manual browser upload and remaining daily-schedule requirement. Follow [human accessibility review](accessibility-owner-review.md) for owner testing. The [real Production rollback rehearsal](production-rollback-rehearsal.md) preserved a newer hidden draft/revisions and restored automatic deployment assignment. A temporary hosted database/private-image recovery passed; its resources and separately prefixed Development variables were removed. That checkpoint closed P02-07; the later Plan 02 closure makes the other listed conditions optional follow-up.
 
 ## Section 13 - Delivered baseline and on-demand checks
 

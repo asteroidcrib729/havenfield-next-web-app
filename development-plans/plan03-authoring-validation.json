@@ -1,12 +1,12 @@
 {
   "checkedAt": "2026-10-17T16:19:20.955Z",
-  "status": "local-validation-passed-hosted-release-pending",
+  "status": "delivered",
   "checks": {
     "typecheck": true,
     "lint": true,
-    "serviceTests": 75,
+    "serviceTests": 76,
     "postgresTests": 49,
-    "browserJourneys": 13,
+    "browserJourneys": 14,
     "productionBuildViaBrowserRunner": true
   },
   "scope": [
@@ -20,5 +20,10 @@
     "browser-local choices for managed IDs",
     "320px populated authoring and media dialogs; axe"
   ],
-  "notes": "Service and PostgreSQL tests overlap. Human screen-reader/native zoom testing and field INP not claimed."
+  "notes": "Service and PostgreSQL tests overlap. Human screen-reader/native zoom testing and field INP not claimed.",
+  "hostedEvidence": [
+    "plan03-property-hosted-production.json",
+    "plan03-property-hosted-preview.json",
+    "plan03-final-browser-followup.json"
+  ]
 }

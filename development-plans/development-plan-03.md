@@ -1,6 +1,6 @@
 # Development plan 03: content, visual depth and product improvements
 
-Created 2026-10-16; handoff updated 2026-10-17 (Asia/Karachi). Status: **in execution; first content, imagery and visitor-feature iteration implemented**. Canonical production: [havenfieldre.vercel.app](https://havenfieldre.vercel.app). [Plan 02 closure](development-plan-02-closure.md) records verified work and explicit deferrals. The image deliverable remains **28 new, distinct generated source images**; all 28 source images are generated and technically reviewed; crops/format conversions do not count as additional images. See the [execution record](development-plan-03-progress.md) for validation and remaining work.
+Created 2026-10-16; handoff updated 2026-10-17 (Asia/Karachi). Status: **delivered; 29 of 29 checklist entries complete**. Canonical production: [havenfieldre.vercel.app](https://havenfieldre.vercel.app). [Plan 02 closure](development-plan-02-closure.md) records verified work and explicit deferrals. The image deliverable remains **28 new, distinct generated source images**; all 28 source images are generated and technically reviewed; crops/format conversions do not count as additional images. See the [execution record](development-plan-03-progress.md) for validation and dated iteration history.
 
 ## Section 01 — Starting point and release priorities
 
@@ -82,39 +82,43 @@ Base prompt to specialize for each register entry:
 - [x] Add visitor saved homes and a comparison view for up to three properties, with keyboard/mobile support, removable items and clear browser-local persistence. Update privacy/cookie guidance before enabling persistence.
 - [x] Add collection sorting and accessible active-filter chips, retaining shareable URLs and back-navigation state. Validate query parameters and show meaningful zero-result states.
 - [x] Improve journal discovery with bounded PostgreSQL search/taxonomy queries only if the expanded content justifies it; compare query plans and provider operations before adding indexes or caching.
-- [ ] Add a publisher-managed property workflow as a separately reviewed feature slice: schema migration, preserved seed IDs/inquiry associations, draft/public states, property gallery ordering/alt text, optimistic edits and action records. Keep current static-property behavior until the migration has acceptance coverage.
-- [ ] Improve media authoring with asset collections, focal-point/crop previews and reliable usage information. Distinguish repository-owned static imagery from publisher uploads so deleting an upload cannot damage a source-controlled gallery.
-- [ ] Add concise UI feedback and restrained motion where it improves state changes; retain reduced motion. Evaluate Motion Primitives patterns individually, Haikei for original lightweight vector decoration, and Realtime Colors for contrast/token checks without adding unnecessary runtime services.
+- [x] Add a publisher-managed property workflow as a separately reviewed feature slice: schema migration, preserved seed IDs/inquiry associations, draft/public states, property gallery ordering/alt text, optimistic edits and action records. Keep current static-property behavior until the migration has acceptance coverage.
+- [x] Improve media authoring with asset collections, focal-point/crop previews and reliable usage information. Distinguish repository-owned static imagery from publisher uploads so deleting an upload cannot damage a source-controlled gallery.
+- [x] Add concise UI feedback and restrained motion where it improves state changes; retain reduced motion. Evaluate Motion Primitives patterns individually, Haikei for original lightweight vector decoration, and Realtime Colors for contrast/token checks without adding unnecessary runtime services.
 
 ## Section 07 — Admin and domain operations
 
 - [x] Keep production at `https://havenfieldre.vercel.app`; verify canonical/Open Graph/JSON-LD/RSS/sitemap and mutation origins after every domain change. Preview stays noindex and uses its own exact request origin.
 - [x] Use the existing single-publisher account or deliberately rotate its credentials using [the admin access guide](admin-access.md). Keep production/preview passwords and session secrets separate; do not add public signup or expose a password hash in the browser.
-- [ ] Review old immutable Preview deployment dependencies after rollback deletion; use the currently verified Preview for editorial work. Document only current account resources and dated historical evidence.
+- [x] Review old immutable Preview deployment dependencies after rollback deletion; use the currently verified Preview for editorial work. Document only current account resources and dated historical evidence.
 
 ## Section 08 — Execution order and acceptance
 
-| Iteration | Deliverable                                                                                          | Gate                                                                             |
-| --------- | ---------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| 03A       | Confirm the free image allowance, prepare page briefs/manifest and review a four-image pilot         | Plan 02 is closed; approved style and no new paid services                       |
-| 03B       | Generate/approve all 28 images, build derivatives/manifest and integrate property-specific galleries | Original consistent scenes, distinct covers, all page families assigned visuals  |
-| 03C       | Expand property copy and publish reviewed journal drafts through the existing editor                 | Independent content, correct visibility/SEO and retained revisions               |
-| 03D       | Saved/compare and collection/discovery improvements                                                  | Responsive, accessible, URL/persistence behavior documented and tested           |
-| 03E       | Reviewed property-authoring/media improvements                                                       | Migration/recovery and authorization evidence before moving live inventory       |
-| 03F       | Run hosted regression/performance checks, refresh full-page screenshots, README and release evidence | Passing CI and hosted flows; report optional human/field observations accurately |
+| Iteration | Deliverable                                                                                           | Gate                                                                             |
+| --------- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| 03A       | Confirm the free image allowance, prepare page briefs/manifest and review a four-image pilot          | Plan 02 is closed; approved style and no new paid services                       |
+| 03B       | Generate/approve all 28 images, build derivatives/manifest and integrate property-specific galleries  | Original consistent scenes, distinct covers, all page families assigned visuals  |
+| 03C       | Expand property copy and prepare six original journal drafts; publish deliberately through the editor | Independent content, correct visibility/SEO and retained revisions               |
+| 03D       | Saved/compare and collection/discovery improvements                                                   | Responsive, accessible, URL/persistence behavior documented and tested           |
+| 03E       | Reviewed property-authoring/media improvements                                                        | Migration/recovery and authorization evidence before moving live inventory       |
+| 03F       | Run hosted regression/performance checks, refresh full-page screenshots, README and release evidence  | Passing CI and hosted flows; report optional human/field observations accurately |
 
 - [x] Count 28 approved **new source images**, including sixteen property-specific views and three distinct existing-article covers; no recycled crop is counted as a new generation.
-- [ ] Confirm every page family in Section 05 has its assigned content/visual treatment; remove unused generated outputs from the publishable tree.
+- [x] Confirm every page family in Section 05 has its assigned content/visual treatment; remove unused generated outputs from the publishable tree.
 - [x] Run appropriate TypeScript/lint/service/PostgreSQL/browser checks for the code actually changed. Test saved/compare, filters, publication visibility and property/media migrations with meaningful scenarios.
 - [x] Check populated public/editorial screens at 320-1440 px, reduced motion, keyboard access and automated accessibility/reflow checks. Record human screen-reader/native zoom findings if available; do not claim an unperformed review passed.
-- [ ] Record hosted measurements and correct regressions caused by the larger image library; do not substitute one desktop screenshot for performance acceptance.
+- [x] Record hosted measurements and correct regressions caused by the larger image library; do not substitute one desktop screenshot for performance acceptance.
 - [x] Update the first-person README screenshot, asset register, operator guidance and release records; keep authored root Markdown limited to README.
 - [x] Scan staged files and complete Git history for secrets before committing/pushing; verify CI and the exact Git revision deployed by Vercel.
 
-The first execution iteration now contains the 28 new images and visitor/content changes recorded above. Plan 03 remains open for the separately reviewed property-authoring/media slice and release checks recorded in the execution record. Drafts remain private until deliberately published.
+All Plan 03 implementation and release items are delivered. [The closure record](development-plan-03-closure.md) maps the final six items to evidence. The six journal drafts remain private by deliberate editorial choice; publication is not an unimplemented feature.
 
 Design-tool references: [Motion Primitives](https://motion-primitives.com/), [Haikei](https://haikei.app/) and [Realtime Colors](https://www.realtimecolors.com/). Recheck the chosen component's current API/license during execution; these are optional production aids rather than added runtime dependencies.
 
-## First iteration status (2026-10-17)
+## Historical first iteration status (2026-10-17)
 
 03A/03B: the 28 original sources and page integrations are delivered, with the documented pilot-layout sequencing exception. 03C: property narratives and six private drafts are delivered; publication remains a deliberate editorial action. 03D: saved/compare and filter-chip improvements are live. 03E: property authoring and publisher media improvements remain pending as a separate migration slice. 03F: initial CI, hosted verification, local performance measurements and README captures are delivered; repeat these for later code changes. This is not a claim that every Plan 03 feature is finished.
+
+## Final delivery (2026-10-17)
+
+Property/media authoring, schema-3 recovery, preserved identities/inquiries, interaction feedback, immutable Preview review, unused-output cleanup, hosted performance verification and page-family review are complete. See [closure](development-plan-03-closure.md), [property/media instructions](property-and-media-authoring.md) and [release evidence](plan03-closure-evidence.json). The historical status above describes the earlier milestone only. No new paid resources or credentials were required.

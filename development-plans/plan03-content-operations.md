@@ -6,7 +6,7 @@ The image [manifest](plan-03-assets.json), [contact sheet](assets/plan03-contact
 
 Retain original PNGs privately. The ignored `.data/plan03/source-map.json` maps stable image IDs to source paths; `.data/plan03/generation-prompts.json` holds exact submitted prompts where retained. Run `npm.cmd run assets:process` locally, then `npm.cmd run format`. A clean checkout intentionally contains no raw sources or private source map. Public WebP files already work without regenerating them.
 
-The processor verifies original-file consistency, strips metadata through reencoding, enforces master size budgets, builds responsive derivatives and recreates the runtime alt-text index/contact sheet. The source and optimized hashes in the register distinguish actual new images from crops. The four pilot prompts are normalized briefs; the other 24 exact prompts are recorded. Reference IDs link each gallery view to its property pilot.
+The processor verifies original-file consistency, strips metadata through reencoding, enforces master size budgets, builds the directly used material-vignette derivative; Next Image provides responsive sizes for the retained masters and recreates the runtime alt-text index/contact sheet. The source and optimized hashes in the register distinguish actual new images from crops. The four pilot prompts are normalized briefs; the other 24 exact prompts are recorded. Reference IDs link each gallery view to its property pilot.
 
 No existing developer, photographer, listing or former-client media was used as a reference. Generated outputs are shared as project concept assets; no claim of exclusive rights or an actual building is made. Font licenses remain separate. The original hero film and its historical credit record remain unchanged.
 

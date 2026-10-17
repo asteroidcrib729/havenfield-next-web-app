@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-17T16:30:32.753Z",
+  "checkedAt": "2026-10-17T16:45:57.560Z",
   "origins": {
     "public": "https://havenfieldre.vercel.app",
     "private": "https://havenfieldre-preview.vercel.app"
@@ -555,7 +555,6 @@
   },
   "screenshots": "Public contact sheets are shareable. Full route captures and all private publisher screens stay in ignored cache; no publisher identity/draft content published.",
   "reviewScope": "Rendered screens at 320 and 1440 px, reduced motion, decoded imagery, automated axe and reflow. Human screen-reader/native zoom review and field metrics not claimed.",
-  "sourceCommit": "dca37c60648995063e19ccfb7ff6dbb70d940839",
-  "productionDeployment": "dpl_JDdbKy7CX3BTypGPfiGP1X7JVfvh",
-  "previewDeployment": "dpl_7jxgjchgwRuGLUKwcbN6ivtgv5GL"
+  "sourceCommit": "a9dd5851dc8754caaef4b4afef8836ca1717e438",
+  "followup": "plan03-final-browser-followup.json"
 }

@@ -1,41 +1,41 @@
 {
-  "measuredAt": "2026-10-17T16:27:55.234Z",
+  "measuredAt": "2026-10-17T16:55:46.501Z",
   "origin": "https://havenfieldre.vercel.app",
-  "sourceCommit": "dca37c60648995063e19ccfb7ff6dbb70d940839",
+  "sourceCommit": "1fb3cadd2d965653ce8dcf7e004d8f1b9a82dcc6",
   "runsPerRoute": 3,
   "lighthouseVersion": "13.5.0",
   "environment": "Public hosted Vercel Production; local headless Chromium/Edge with Lighthouse mobile simulated throttling, default fresh browser storage; real remote responses. Lab results, not field INP or an availability guarantee.",
   "medians": [
     {
       "route": "/",
-      "scores": { "performance": 98, "accessibility": 100, "seo": 100 },
+      "scores": { "performance": 93, "accessibility": 100, "seo": 100 },
       "metrics": {
-        "lcpMs": 2140.103,
+        "lcpMs": 2915.0829,
         "cls": 0,
-        "tbtMs": 57.5,
-        "transferBytes": 515388,
+        "tbtMs": 85,
+        "transferBytes": 515860,
         "ttfbMs": 46
       }
     },
     {
       "route": "/properties",
-      "scores": { "performance": 92, "accessibility": 100, "seo": 100 },
+      "scores": { "performance": 97, "accessibility": 100, "seo": 100 },
       "metrics": {
-        "lcpMs": 2976.7012999999997,
+        "lcpMs": 2146.717,
         "cls": 0,
-        "tbtMs": 94.99999999999977,
-        "transferBytes": 556621,
-        "ttfbMs": 45
+        "tbtMs": 126.5,
+        "transferBytes": 556785,
+        "ttfbMs": 46
       }
     },
     {
       "route": "/journal/a-clearer-guide-to-your-first-viewing",
-      "scores": { "performance": 95, "accessibility": 100, "seo": 100 },
+      "scores": { "performance": 94, "accessibility": 100, "seo": 100 },
       "metrics": {
-        "lcpMs": 2623.6327,
+        "lcpMs": 2438.0454,
         "cls": 0,
-        "tbtMs": 103,
-        "transferBytes": 323490,
+        "tbtMs": 171.5,
+        "transferBytes": 255917,
         "ttfbMs": 46
       }
     }
@@ -44,38 +44,45 @@
     {
       "iteration": 1,
       "route": "/",
-      "scores": { "performance": 98, "accessibility": 100, "seo": 100 },
+      "scores": { "performance": 99, "accessibility": 100, "seo": 100 },
       "metrics": {
-        "lcpMs": 2267.3215,
+        "lcpMs": 1929.3110000000001,
         "cls": 0,
-        "tbtMs": 124,
-        "transferBytes": 515963,
+        "tbtMs": 84,
+        "transferBytes": 516231,
         "ttfbMs": 46
       },
       "concerns": [
         {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.99,
+          "value": "1.2 s"
+        },
+        {
           "id": "largest-contentful-paint",
           "title": "Largest Contentful Paint",
-          "score": 0.94,
-          "value": "2.3 s"
+          "score": 0.98,
+          "value": "1.9 s"
         },
+        { "id": "speed-index", "title": "Speed Index", "score": 0.99, "value": "2.2 s" },
         {
           "id": "total-blocking-time",
           "title": "Total Blocking Time",
-          "score": 0.97,
-          "value": "120 ms"
+          "score": 0.99,
+          "value": "80 ms"
         },
         {
           "id": "max-potential-fid",
           "title": "Max Potential First Input Delay",
-          "score": 0.76,
-          "value": "170 ms"
+          "score": 0.62,
+          "value": "210 ms"
         },
-        { "id": "interactive", "title": "Time to Interactive", "score": 0.99, "value": "2.3 s" },
+        { "id": "interactive", "title": "Time to Interactive", "score": 0.98, "value": "2.5 s" },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
-          "score": 0,
+          "score": 0.5,
           "value": "Est savings of 28 KiB"
         },
         {
@@ -93,7 +100,7 @@
         {
           "id": "legacy-javascript-insight",
           "title": "Legacy JavaScript",
-          "score": 0,
+          "score": 0.5,
           "value": "Est savings of 14 KiB"
         },
         { "id": "network-dependency-tree-insight", "title": "Network dependency tree", "score": 0 },
@@ -101,7 +108,7 @@
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
           "score": 0,
-          "value": "Est savings of 90 ms"
+          "value": "Est savings of 70 ms"
         }
       ],
       "lcpDetails": {
@@ -114,25 +121,21 @@
               { "key": "duration", "valueType": "ms", "label": "Duration" }
             ],
             "items": [
-              {
-                "subpart": "timeToFirstByte",
-                "label": "Time to first byte",
-                "duration": 145.5909999961853
-              },
+              { "subpart": "timeToFirstByte", "label": "Time to first byte", "duration": 147.388 },
               {
                 "subpart": "resourceLoadDelay",
                 "label": "Resource load delay",
-                "duration": 282.10000000381467
+                "duration": 637.819
               },
               {
                 "subpart": "resourceLoadDuration",
                 "label": "Resource load duration",
-                "duration": 689.776
+                "duration": 383.642
               },
               {
                 "subpart": "elementRenderDelay",
                 "label": "Element render delay",
-                "duration": 53.509
+                "duration": 55.281
               }
             ]
           },
@@ -158,46 +161,40 @@
     {
       "iteration": 1,
       "route": "/properties",
-      "scores": { "performance": 92, "accessibility": 100, "seo": 100 },
+      "scores": { "performance": 97, "accessibility": 100, "seo": 100 },
       "metrics": {
-        "lcpMs": 2981.7502999999997,
+        "lcpMs": 2146.717,
         "cls": 0,
-        "tbtMs": 94.49999999999977,
-        "transferBytes": 556621,
-        "ttfbMs": 47
+        "tbtMs": 126.5,
+        "transferBytes": 556778,
+        "ttfbMs": 46
       },
       "concerns": [
         {
-          "id": "first-contentful-paint",
-          "title": "First Contentful Paint",
-          "score": 0.99,
-          "value": "1.1 s"
-        },
-        {
           "id": "largest-contentful-paint",
           "title": "Largest Contentful Paint",
-          "score": 0.78,
-          "value": "3.0 s"
+          "score": 0.95,
+          "value": "2.1 s"
         },
-        { "id": "speed-index", "title": "Speed Index", "score": 0.84, "value": "3.8 s" },
+        { "id": "speed-index", "title": "Speed Index", "score": 0.98, "value": "2.4 s" },
         {
           "id": "total-blocking-time",
           "title": "Total Blocking Time",
-          "score": 0.98,
-          "value": "90 ms"
+          "score": 0.96,
+          "value": "130 ms"
         },
         {
           "id": "max-potential-fid",
           "title": "Max Potential First Input Delay",
-          "score": 0.85,
-          "value": "150 ms"
+          "score": 0.7,
+          "value": "190 ms"
         },
-        { "id": "interactive", "title": "Time to Interactive", "score": 0.95, "value": "3.1 s" },
+        { "id": "interactive", "title": "Time to Interactive", "score": 0.99, "value": "2.2 s" },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "value": "Est savings of 28 KiB"
+          "value": "Est savings of 29 KiB"
         },
         {
           "id": "bf-cache",
@@ -209,7 +206,7 @@
           "id": "image-delivery-insight",
           "title": "Improve image delivery",
           "score": 0.5,
-          "value": "Est savings of 244 KiB"
+          "value": "Est savings of 103 KiB"
         },
         {
           "id": "legacy-javascript-insight",
@@ -217,12 +214,11 @@
           "score": 0,
           "value": "Est savings of 14 KiB"
         },
-        { "id": "network-dependency-tree-insight", "title": "Network dependency tree", "score": 0 },
         {
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
           "score": 0,
-          "value": "Est savings of 90 ms"
+          "value": "Est savings of 40 ms"
         }
       ],
       "lcpDetails": {
@@ -235,11 +231,15 @@
               { "key": "duration", "valueType": "ms", "label": "Duration" }
             ],
             "items": [
-              { "subpart": "timeToFirstByte", "label": "Time to first byte", "duration": 51.904 },
+              {
+                "subpart": "timeToFirstByte",
+                "label": "Time to first byte",
+                "duration": 49.8260000038147
+              },
               {
                 "subpart": "elementRenderDelay",
                 "label": "Element render delay",
-                "duration": 2313.361
+                "duration": 1317.5089999961854
               }
             ]
           },
@@ -265,41 +265,35 @@
     {
       "iteration": 1,
       "route": "/journal/a-clearer-guide-to-your-first-viewing",
-      "scores": { "performance": 96, "accessibility": 100, "seo": 100 },
+      "scores": { "performance": 94, "accessibility": 100, "seo": 100 },
       "metrics": {
-        "lcpMs": 2309.6322,
+        "lcpMs": 2438.0454,
         "cls": 0,
-        "tbtMs": 103,
-        "transferBytes": 255095,
-        "ttfbMs": 46
+        "tbtMs": 164,
+        "transferBytes": 255917,
+        "ttfbMs": 45
       },
       "concerns": [
         {
-          "id": "first-contentful-paint",
-          "title": "First Contentful Paint",
-          "score": 0.99,
-          "value": "1.1 s"
-        },
-        {
           "id": "largest-contentful-paint",
           "title": "Largest Contentful Paint",
-          "score": 0.93,
-          "value": "2.3 s"
+          "score": 0.91,
+          "value": "2.4 s"
         },
-        { "id": "speed-index", "title": "Speed Index", "score": 0.83, "value": "3.8 s" },
+        { "id": "speed-index", "title": "Speed Index", "score": 0.82, "value": "3.9 s" },
         {
           "id": "total-blocking-time",
           "title": "Total Blocking Time",
-          "score": 0.98,
-          "value": "100 ms"
+          "score": 0.93,
+          "value": "160 ms"
         },
         {
           "id": "max-potential-fid",
           "title": "Max Potential First Input Delay",
-          "score": 0.83,
-          "value": "150 ms"
+          "score": 0.55,
+          "value": "230 ms"
         },
-        { "id": "interactive", "title": "Time to Interactive", "score": 0.99, "value": "2.3 s" },
+        { "id": "interactive", "title": "Time to Interactive", "score": 0.98, "value": "2.5 s" },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
@@ -328,7 +322,7 @@
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
           "score": 0,
-          "value": "Est savings of 100 ms"
+          "value": "Est savings of 60 ms"
         }
       ],
       "lcpDetails": {
@@ -341,21 +335,25 @@
               { "key": "duration", "valueType": "ms", "label": "Duration" }
             ],
             "items": [
-              { "subpart": "timeToFirstByte", "label": "Time to first byte", "duration": 49.854 },
+              {
+                "subpart": "timeToFirstByte",
+                "label": "Time to first byte",
+                "duration": 60.477999996185304
+              },
               {
                 "subpart": "resourceLoadDelay",
                 "label": "Resource load delay",
-                "duration": 206.113
+                "duration": 285.6420000038147
               },
               {
                 "subpart": "resourceLoadDuration",
                 "label": "Resource load duration",
-                "duration": 242.051
+                "duration": 193.425
               },
               {
                 "subpart": "elementRenderDelay",
                 "label": "Element render delay",
-                "duration": 1932.512
+                "duration": 1920.875
               }
             ]
           },
@@ -381,29 +379,35 @@
     {
       "iteration": 2,
       "route": "/",
-      "scores": { "performance": 98, "accessibility": 100, "seo": 100 },
+      "scores": { "performance": 93, "accessibility": 100, "seo": 100 },
       "metrics": {
-        "lcpMs": 2119.7168,
+        "lcpMs": 2915.0829,
         "cls": 0,
-        "tbtMs": 57.5,
-        "transferBytes": 514484,
+        "tbtMs": 85,
+        "transferBytes": 514990,
         "ttfbMs": 46
       },
       "concerns": [
         {
           "id": "largest-contentful-paint",
           "title": "Largest Contentful Paint",
-          "score": 0.96,
-          "value": "2.1 s"
+          "score": 0.8,
+          "value": "2.9 s"
         },
-        { "id": "speed-index", "title": "Speed Index", "score": 0.86, "value": "3.7 s" },
+        { "id": "speed-index", "title": "Speed Index", "score": 0.84, "value": "3.8 s" },
+        {
+          "id": "total-blocking-time",
+          "title": "Total Blocking Time",
+          "score": 0.99,
+          "value": "90 ms"
+        },
         {
           "id": "max-potential-fid",
           "title": "Max Potential First Input Delay",
-          "score": 0.79,
-          "value": "170 ms"
+          "score": 0.71,
+          "value": "190 ms"
         },
-        { "id": "interactive", "title": "Time to Interactive", "score": 0.99, "value": "2.2 s" },
+        { "id": "interactive", "title": "Time to Interactive", "score": 0.96, "value": "3.0 s" },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
@@ -426,123 +430,6 @@
           "id": "legacy-javascript-insight",
           "title": "Legacy JavaScript",
           "score": 0.5,
-          "value": "Est savings of 14 KiB"
-        },
-        { "id": "network-dependency-tree-insight", "title": "Network dependency tree", "score": 0 },
-        {
-          "id": "render-blocking-insight",
-          "title": "Render-blocking requests",
-          "score": 0,
-          "value": "Est savings of 100 ms"
-        }
-      ],
-      "lcpDetails": {
-        "type": "list",
-        "items": [
-          {
-            "type": "table",
-            "headings": [
-              { "key": "label", "valueType": "text", "label": "Subpart" },
-              { "key": "duration", "valueType": "ms", "label": "Duration" }
-            ],
-            "items": [
-              { "subpart": "timeToFirstByte", "label": "Time to first byte", "duration": 50.325 },
-              {
-                "subpart": "resourceLoadDelay",
-                "label": "Resource load delay",
-                "duration": 183.036
-              },
-              {
-                "subpart": "resourceLoadDuration",
-                "label": "Resource load duration",
-                "duration": 148.263
-              },
-              {
-                "subpart": "elementRenderDelay",
-                "label": "Element render delay",
-                "duration": 1963.656
-              }
-            ]
-          },
-          {
-            "type": "node",
-            "lhId": "page-0-IMG",
-            "path": "1,HTML,1,BODY,3,MAIN,0,SECTION,0,IMG",
-            "selector": "body.bg-paper > main#main-content > section.relative > img.object-cover",
-            "boundingRect": {
-              "top": 91,
-              "bottom": 777,
-              "left": 0,
-              "right": 412,
-              "width": 412,
-              "height": 686
-            },
-            "snippet": "<img alt=\"Imagined limestone courtyard home beside an olive tree and reflecting pool\" fetchpriority=\"high\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"100vw\" srcset=\"/_next/image?url=%2Fmedia%2Fhavenfield-hero-poster.jpg&amp;w=640&amp;q=60 640w, /_…\" src=\"https://havenfieldre.vercel.app/_next/image?url=%2Fmedia%2Fhavenfield-hero…\">",
-            "nodeLabel": "Imagined limestone courtyard home beside an olive tree and reflecting pool"
-          }
-        ]
-      }
-    },
-    {
-      "iteration": 2,
-      "route": "/properties",
-      "scores": { "performance": 92, "accessibility": 100, "seo": 100 },
-      "metrics": {
-        "lcpMs": 2976.7012999999997,
-        "cls": 0,
-        "tbtMs": 131.99999999999977,
-        "transferBytes": 555365,
-        "ttfbMs": 45
-      },
-      "concerns": [
-        {
-          "id": "first-contentful-paint",
-          "title": "First Contentful Paint",
-          "score": 0.99,
-          "value": "1.1 s"
-        },
-        {
-          "id": "largest-contentful-paint",
-          "title": "Largest Contentful Paint",
-          "score": 0.78,
-          "value": "3.0 s"
-        },
-        { "id": "speed-index", "title": "Speed Index", "score": 0.85, "value": "3.7 s" },
-        {
-          "id": "total-blocking-time",
-          "title": "Total Blocking Time",
-          "score": 0.96,
-          "value": "130 ms"
-        },
-        {
-          "id": "max-potential-fid",
-          "title": "Max Potential First Input Delay",
-          "score": 0.71,
-          "value": "190 ms"
-        },
-        { "id": "interactive", "title": "Time to Interactive", "score": 0.95, "value": "3.1 s" },
-        {
-          "id": "unused-javascript",
-          "title": "Reduce unused JavaScript",
-          "score": 0,
-          "value": "Est savings of 28 KiB"
-        },
-        {
-          "id": "bf-cache",
-          "title": "Page prevented back/forward cache restoration",
-          "score": 0,
-          "value": "2 failure reasons"
-        },
-        {
-          "id": "image-delivery-insight",
-          "title": "Improve image delivery",
-          "score": 0.5,
-          "value": "Est savings of 244 KiB"
-        },
-        {
-          "id": "legacy-javascript-insight",
-          "title": "Legacy JavaScript",
-          "score": 0,
           "value": "Est savings of 14 KiB"
         },
         { "id": "network-dependency-tree-insight", "title": "Network dependency tree", "score": 0 },
@@ -563,11 +450,121 @@
               { "key": "duration", "valueType": "ms", "label": "Duration" }
             ],
             "items": [
-              { "subpart": "timeToFirstByte", "label": "Time to first byte", "duration": 49.266 },
+              { "subpart": "timeToFirstByte", "label": "Time to first byte", "duration": 50.261 },
+              {
+                "subpart": "resourceLoadDelay",
+                "label": "Resource load delay",
+                "duration": 272.855
+              },
+              {
+                "subpart": "resourceLoadDuration",
+                "label": "Resource load duration",
+                "duration": 140.269
+              },
               {
                 "subpart": "elementRenderDelay",
                 "label": "Element render delay",
-                "duration": 2312.493
+                "duration": 1953.024
+              }
+            ]
+          },
+          {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,3,MAIN,0,SECTION,0,IMG",
+            "selector": "body.bg-paper > main#main-content > section.relative > img.object-cover",
+            "boundingRect": {
+              "top": 91,
+              "bottom": 777,
+              "left": 0,
+              "right": 412,
+              "width": 412,
+              "height": 686
+            },
+            "snippet": "<img alt=\"Imagined limestone courtyard home beside an olive tree and reflecting pool\" fetchpriority=\"high\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"100vw\" srcset=\"/_next/image?url=%2Fmedia%2Fhavenfield-hero-poster.jpg&amp;w=640&amp;q=60 640w, /_…\" src=\"https://havenfieldre.vercel.app/_next/image?url=%2Fmedia%2Fhavenfield-hero…\">",
+            "nodeLabel": "Imagined limestone courtyard home beside an olive tree and reflecting pool"
+          }
+        ]
+      }
+    },
+    {
+      "iteration": 2,
+      "route": "/properties",
+      "scores": { "performance": 94, "accessibility": 100, "seo": 100 },
+      "metrics": {
+        "lcpMs": 2246.1277,
+        "cls": 0,
+        "tbtMs": 232.5,
+        "transferBytes": 556785,
+        "ttfbMs": 46
+      },
+      "concerns": [
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.94,
+          "value": "2.2 s"
+        },
+        { "id": "speed-index", "title": "Speed Index", "score": 0.98, "value": "2.3 s" },
+        {
+          "id": "total-blocking-time",
+          "title": "Total Blocking Time",
+          "score": 0.86,
+          "value": "230 ms"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.4,
+          "value": "280 ms"
+        },
+        { "id": "interactive", "title": "Time to Interactive", "score": 0.99, "value": "2.3 s" },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "value": "Est savings of 29 KiB"
+        },
+        {
+          "id": "bf-cache",
+          "title": "Page prevented back/forward cache restoration",
+          "score": 0,
+          "value": "2 failure reasons"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "value": "Est savings of 103 KiB"
+        },
+        {
+          "id": "legacy-javascript-insight",
+          "title": "Legacy JavaScript",
+          "score": 0,
+          "value": "Est savings of 14 KiB"
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "value": "Est savings of 30 ms"
+        }
+      ],
+      "lcpDetails": {
+        "type": "list",
+        "items": [
+          {
+            "type": "table",
+            "headings": [
+              { "key": "label", "valueType": "text", "label": "Subpart" },
+              { "key": "duration", "valueType": "ms", "label": "Duration" }
+            ],
+            "items": [
+              { "subpart": "timeToFirstByte", "label": "Time to first byte", "duration": 50.64 },
+              {
+                "subpart": "elementRenderDelay",
+                "label": "Element render delay",
+                "duration": 1301.833
               }
             ]
           },
@@ -593,41 +590,34 @@
     {
       "iteration": 2,
       "route": "/journal/a-clearer-guide-to-your-first-viewing",
-      "scores": { "performance": 93, "accessibility": 100, "seo": 100 },
+      "scores": { "performance": 97, "accessibility": 100, "seo": 100 },
       "metrics": {
-        "lcpMs": 2703.9922,
+        "lcpMs": 2031.741,
         "cls": 0,
-        "tbtMs": 154,
-        "transferBytes": 325918,
+        "tbtMs": 171.5,
+        "transferBytes": 255988,
         "ttfbMs": 46
       },
       "concerns": [
         {
-          "id": "first-contentful-paint",
-          "title": "First Contentful Paint",
-          "score": 0.99,
-          "value": "1.1 s"
-        },
-        {
           "id": "largest-contentful-paint",
           "title": "Largest Contentful Paint",
-          "score": 0.85,
-          "value": "2.7 s"
+          "score": 0.97,
+          "value": "2.0 s"
         },
-        { "id": "speed-index", "title": "Speed Index", "score": 0.84, "value": "3.8 s" },
         {
           "id": "total-blocking-time",
           "title": "Total Blocking Time",
-          "score": 0.94,
-          "value": "150 ms"
+          "score": 0.92,
+          "value": "170 ms"
         },
         {
           "id": "max-potential-fid",
           "title": "Max Potential First Input Delay",
-          "score": 0.65,
-          "value": "200 ms"
+          "score": 0.28,
+          "value": "330 ms"
         },
-        { "id": "interactive", "title": "Time to Interactive", "score": 0.97, "value": "2.7 s" },
+        { "id": "interactive", "title": "Time to Interactive", "score": 0.98, "value": "2.4 s" },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
@@ -641,22 +631,16 @@
           "value": "2 failure reasons"
         },
         {
-          "id": "image-delivery-insight",
-          "title": "Improve image delivery",
-          "score": 0,
-          "value": "Est savings of 14 KiB"
-        },
-        {
           "id": "legacy-javascript-insight",
           "title": "Legacy JavaScript",
-          "score": 0,
+          "score": 0.5,
           "value": "Est savings of 14 KiB"
         },
         {
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
           "score": 0,
-          "value": "Est savings of 80 ms"
+          "value": "Est savings of 60 ms"
         }
       ],
       "lcpDetails": {
@@ -669,27 +653,31 @@
               { "key": "duration", "valueType": "ms", "label": "Duration" }
             ],
             "items": [
-              { "subpart": "timeToFirstByte", "label": "Time to first byte", "duration": 50.295 },
+              {
+                "subpart": "timeToFirstByte",
+                "label": "Time to first byte",
+                "duration": 50.5750000038147
+              },
               {
                 "subpart": "resourceLoadDelay",
                 "label": "Resource load delay",
-                "duration": 278.621
+                "duration": 227.7709999961853
               },
               {
                 "subpart": "resourceLoadDuration",
                 "label": "Resource load duration",
-                "duration": 488.352
+                "duration": 70.452
               },
               {
                 "subpart": "elementRenderDelay",
                 "label": "Element render delay",
-                "duration": 1558.618
+                "duration": 94.327
               }
             ]
           },
           {
             "type": "node",
-            "lhId": "page-1-IMG",
+            "lhId": "page-0-IMG",
             "path": "1,HTML,1,BODY,3,MAIN,0,DIV,3,DIV,0,IMG",
             "selector": "main#main-content > div.mx-auto > div.relative > img.object-cover",
             "boundingRect": {
@@ -709,13 +697,13 @@
     {
       "iteration": 3,
       "route": "/",
-      "scores": { "performance": 97, "accessibility": 100, "seo": 100 },
+      "scores": { "performance": 89, "accessibility": 100, "seo": 100 },
       "metrics": {
-        "lcpMs": 2140.103,
+        "lcpMs": 3002.5236,
         "cls": 0,
-        "tbtMs": 53,
-        "transferBytes": 515388,
-        "ttfbMs": 45
+        "tbtMs": 230,
+        "transferBytes": 515860,
+        "ttfbMs": 47
       },
       "concerns": [
         {
@@ -727,17 +715,23 @@
         {
           "id": "largest-contentful-paint",
           "title": "Largest Contentful Paint",
-          "score": 0.95,
-          "value": "2.1 s"
+          "score": 0.78,
+          "value": "3.0 s"
         },
-        { "id": "speed-index", "title": "Speed Index", "score": 0.85, "value": "3.7 s" },
+        { "id": "speed-index", "title": "Speed Index", "score": 0.84, "value": "3.8 s" },
+        {
+          "id": "total-blocking-time",
+          "title": "Total Blocking Time",
+          "score": 0.86,
+          "value": "230 ms"
+        },
         {
           "id": "max-potential-fid",
           "title": "Max Potential First Input Delay",
-          "score": 0.82,
-          "value": "160 ms"
+          "score": 0.24,
+          "value": "360 ms"
         },
-        { "id": "interactive", "title": "Time to Interactive", "score": 0.99, "value": "2.2 s" },
+        { "id": "interactive", "title": "Time to Interactive", "score": 0.95, "value": "3.1 s" },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
@@ -767,7 +761,7 @@
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
           "score": 0,
-          "value": "Est savings of 100 ms"
+          "value": "Est savings of 80 ms"
         }
       ],
       "lcpDetails": {
@@ -780,21 +774,21 @@
               { "key": "duration", "valueType": "ms", "label": "Duration" }
             ],
             "items": [
-              { "subpart": "timeToFirstByte", "label": "Time to first byte", "duration": 49.534 },
+              { "subpart": "timeToFirstByte", "label": "Time to first byte", "duration": 60.776 },
               {
                 "subpart": "resourceLoadDelay",
                 "label": "Resource load delay",
-                "duration": 236.084
+                "duration": 190.615
               },
               {
                 "subpart": "resourceLoadDuration",
                 "label": "Resource load duration",
-                "duration": 205.764
+                "duration": 292.018
               },
               {
                 "subpart": "elementRenderDelay",
                 "label": "Element render delay",
-                "duration": 1897.119
+                "duration": 1859.461
               }
             ]
           },
@@ -820,40 +814,39 @@
     {
       "iteration": 3,
       "route": "/properties",
-      "scores": { "performance": 93, "accessibility": 100, "seo": 100 },
+      "scores": { "performance": 100, "accessibility": 100, "seo": 100 },
       "metrics": {
-        "lcpMs": 2940.1339,
+        "lcpMs": 1701.7169,
         "cls": 0,
-        "tbtMs": 94.99999999999977,
-        "transferBytes": 556640,
-        "ttfbMs": 45
+        "tbtMs": 63,
+        "transferBytes": 560621,
+        "ttfbMs": 50
       },
       "concerns": [
         {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.99,
+          "value": "1.1 s"
+        },
+        {
           "id": "largest-contentful-paint",
           "title": "Largest Contentful Paint",
-          "score": 0.79,
-          "value": "2.9 s"
-        },
-        { "id": "speed-index", "title": "Speed Index", "score": 0.85, "value": "3.7 s" },
-        {
-          "id": "total-blocking-time",
-          "title": "Total Blocking Time",
-          "score": 0.98,
-          "value": "90 ms"
+          "score": 0.99,
+          "value": "1.7 s"
         },
         {
           "id": "max-potential-fid",
           "title": "Max Potential First Input Delay",
-          "score": 0.84,
-          "value": "150 ms"
+          "score": 0.75,
+          "value": "180 ms"
         },
-        { "id": "interactive", "title": "Time to Interactive", "score": 0.96, "value": "3.0 s" },
+        { "id": "interactive", "title": "Time to Interactive", "score": 0.99, "value": "2.1 s" },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "value": "Est savings of 27 KiB"
+          "value": "Est savings of 29 KiB"
         },
         {
           "id": "bf-cache",
@@ -865,20 +858,19 @@
           "id": "image-delivery-insight",
           "title": "Improve image delivery",
           "score": 0.5,
-          "value": "Est savings of 244 KiB"
+          "value": "Est savings of 103 KiB"
         },
         {
           "id": "legacy-javascript-insight",
           "title": "Legacy JavaScript",
-          "score": 0,
+          "score": 0.5,
           "value": "Est savings of 14 KiB"
         },
-        { "id": "network-dependency-tree-insight", "title": "Network dependency tree", "score": 0 },
         {
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
           "score": 0,
-          "value": "Est savings of 80 ms"
+          "value": "Est savings of 100 ms"
         }
       ],
       "lcpDetails": {
@@ -891,11 +883,11 @@
               { "key": "duration", "valueType": "ms", "label": "Duration" }
             ],
             "items": [
-              { "subpart": "timeToFirstByte", "label": "Time to first byte", "duration": 49.098 },
+              { "subpart": "timeToFirstByte", "label": "Time to first byte", "duration": 64.588 },
               {
                 "subpart": "elementRenderDelay",
                 "label": "Element render delay",
-                "duration": 2303.993
+                "duration": 631.365
               }
             ]
           },
@@ -921,40 +913,40 @@
     {
       "iteration": 3,
       "route": "/journal/a-clearer-guide-to-your-first-viewing",
-      "scores": { "performance": 95, "accessibility": 100, "seo": 100 },
+      "scores": { "performance": 81, "accessibility": 100, "seo": 100 },
       "metrics": {
-        "lcpMs": 2623.6327,
+        "lcpMs": 2723.895,
         "cls": 0,
-        "tbtMs": 59,
-        "transferBytes": 323490,
-        "ttfbMs": 45
+        "tbtMs": 535,
+        "transferBytes": 255865,
+        "ttfbMs": 46
       },
       "concerns": [
         {
-          "id": "first-contentful-paint",
-          "title": "First Contentful Paint",
-          "score": 0.99,
-          "value": "1.1 s"
-        },
-        {
           "id": "largest-contentful-paint",
           "title": "Largest Contentful Paint",
-          "score": 0.87,
-          "value": "2.6 s"
+          "score": 0.85,
+          "value": "2.7 s"
         },
-        { "id": "speed-index", "title": "Speed Index", "score": 0.84, "value": "3.8 s" },
+        { "id": "speed-index", "title": "Speed Index", "score": 0.83, "value": "3.8 s" },
+        {
+          "id": "total-blocking-time",
+          "title": "Total Blocking Time",
+          "score": 0.55,
+          "value": "540 ms"
+        },
         {
           "id": "max-potential-fid",
           "title": "Max Potential First Input Delay",
-          "score": 0.78,
-          "value": "170 ms"
+          "score": 0.07,
+          "value": "530 ms"
         },
         { "id": "interactive", "title": "Time to Interactive", "score": 0.97, "value": "2.7 s" },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "value": "Est savings of 23 KiB"
+          "value": "Est savings of 30 KiB"
         },
         {
           "id": "bf-cache",
@@ -966,19 +958,19 @@
           "id": "image-delivery-insight",
           "title": "Improve image delivery",
           "score": 0,
-          "value": "Est savings of 75 KiB"
+          "value": "Est savings of 25 KiB"
         },
         {
           "id": "legacy-javascript-insight",
           "title": "Legacy JavaScript",
-          "score": 0,
+          "score": 0.5,
           "value": "Est savings of 14 KiB"
         },
         {
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
           "score": 0,
-          "value": "Est savings of 100 ms"
+          "value": "Est savings of 110 ms"
         }
       ],
       "lcpDetails": {
@@ -991,27 +983,27 @@
               { "key": "duration", "valueType": "ms", "label": "Duration" }
             ],
             "items": [
-              { "subpart": "timeToFirstByte", "label": "Time to first byte", "duration": 51.183 },
+              { "subpart": "timeToFirstByte", "label": "Time to first byte", "duration": 50.409 },
               {
                 "subpart": "resourceLoadDelay",
                 "label": "Resource load delay",
-                "duration": 187.855
+                "duration": 188.231
               },
               {
                 "subpart": "resourceLoadDuration",
                 "label": "Resource load duration",
-                "duration": 195.593
+                "duration": 118.506
               },
               {
                 "subpart": "elementRenderDelay",
                 "label": "Element render delay",
-                "duration": 1938.229
+                "duration": 2068.62
               }
             ]
           },
           {
             "type": "node",
-            "lhId": "page-1-IMG",
+            "lhId": "page-0-IMG",
             "path": "1,HTML,1,BODY,3,MAIN,0,DIV,3,DIV,0,IMG",
             "selector": "main#main-content > div.mx-auto > div.relative > img.object-cover",
             "boundingRect": {

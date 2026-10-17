@@ -1,7 +1,7 @@
 {
-  "capturedAt": "2026-10-17T16:32:50.984Z",
+  "capturedAt": "2026-10-17T16:58:55.900Z",
   "origin": "https://havenfieldre.vercel.app",
-  "sourceCommit": "dca37c60648995063e19ccfb7ff6dbb70d940839",
+  "sourceCommit": "1fb3cadd2d965653ce8dcf7e004d8f1b9a82dcc6",
   "screenshots": [
     {
       "path": "development-plans/screenshots/home-desktop.png",
@@ -11,7 +11,7 @@
     {
       "path": "development-plans/screenshots/home-mobile.png",
       "width": 375,
-      "height": 6679
+      "height": 7202
     }
   ],
   "productionBrowser": {
