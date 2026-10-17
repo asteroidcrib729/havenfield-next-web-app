@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-17T16:24:52.336Z",
+  "tests": [
+    {
+      "environment": "production",
+      "sourceFormat": 3,
+      "sourceChecksum": "4e35500f3acdaff993970baab7d7637b619e51fbb913cf0ccb1bb30278730173",
+      "allTablesEqual": true,
+      "properties": 4,
+      "revisions": 4,
+      "restoreDestination": "owned disposable local SQLite; no live overwrite"
+    },
+    {
+      "environment": "preview",
+      "sourceFormat": 3,
+      "sourceChecksum": "9116098c8e2719c358293a0b3b02fb5d9e88f822c13f4639bfe8f4c98faafb89",
+      "allTablesEqual": true,
+      "properties": 4,
+      "revisions": 4,
+      "restoreDestination": "owned disposable local SQLite; no live overwrite"
+    }
+  ],
+  "scope": "Actual schema-3 hosted exports restored into disposable local databases; PostgreSQL/property-media recovery and URL remapping separately covered by automated integration tests. No recovered hosted website or cloud-backup verification claimed."
+}

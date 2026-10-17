@@ -176,13 +176,33 @@ describe("managed property contracts on the active isolated adapter", () => {
     expect(draft.id).toMatch(/^hf-[a-f0-9-]{36}$/);
     expect((await getPublicProperties()).some((home) => home.id === draft.id)).toBe(false);
     const published = await saveProperty(
-      { ...initial, status: "published", galleryItems: [...initial.galleryItems].reverse() },
+      {
+        ...initial,
+        status: "published",
+        relatedStories: ["hidden-editorial-association"],
+        galleryItems: [...initial.galleryItems].reverse(),
+      },
       actor,
       draft.id,
       1,
     );
     const visible = (await getPublicProperties()).find((home) => home.id === draft.id);
     expect(visible?.image).toBe(initial.galleryItems.at(-1)?.url);
+    expect(
+      (
+        await (
+          await publicGET(
+            new Request("http://localhost:3000/api/properties?query=hidden-editorial-association"),
+          )
+        ).json()
+      ).total,
+    ).toBe(0);
+    const feed = await (
+      await publicGET(new Request("http://localhost:3000/api/properties"))
+    ).json();
+    expect(
+      feed.properties.find((p: { id: string }) => p.id === draft.id).relatedStories,
+    ).toBeUndefined();
     await expect(saveProperty(initial, actor, draft.id, 1)).rejects.toMatchObject({
       code: "version_conflict",
     });

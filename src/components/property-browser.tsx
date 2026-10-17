@@ -169,12 +169,11 @@ export function PropertyBrowser({ properties }: { properties: Property[] }) {
       </div>
       {results.length ? (
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {results.map((property, index) => (
+          {results.map((property) => (
             <PropertyCard
               key={property.id}
               property={property}
               collectionQuery={params.toString()}
-              priority={index === 0}
             />
           ))}
         </div>

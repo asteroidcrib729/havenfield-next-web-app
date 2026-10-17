@@ -72,3 +72,7 @@ Removed only the Production rehearsal draft after restoring the original deploym
 ## Plan 02 closure - 2026-10-17
 
 Updated active delivery status, preserved historical verification evidence, marked all seven remaining original entries as explicit non-blocking deferrals and removed obsolete Plan 02 prerequisites from Plan 03. Added a read-only public smoke command. No runtime data, private backup, key, account configuration or existing safeguard was removed. The local project directory is now `havenfield-next-web-app`; its existing GitHub remote and clean starting state were verified before editing.
+
+## Plan 03 image-output cleanup - 2026-10-17
+
+Removed 55 unused 480/768-pixel derivatives after checking all source references, each file SHA-256 and resolved containment under public/media/plan03. This saves 3,153,868 bytes in the public tree. All 28 approved WebP masters, private original sources, the used about-materials-480 vignette and historical article/recovery JPEGs remain. Next Image generates responsive sizes from the masters. The processor and manifest now produce/record only the directly used derivative; [the cleanup manifest](plan03-asset-cleanup.json) lists every removed path/hash. No original brand assets, credentials, database rows, article history or owner files were removed during this cleanup.

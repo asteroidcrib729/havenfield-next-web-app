@@ -29,7 +29,7 @@ The PostgreSQL scale test and performance measurement script use the shared Pret
 
 ## Section 03 — Applied migration exception
 
-`database/migrations/001-initial.sql` and `002-product-operations.sql` have already been applied. `src/server/migrations.ts` verifies their normalized SQL checksums against the database ledger, so even whitespace-only formatting would reject deployed database startup. `.prettierignore` names only these two immutable files; it does not exclude the migration directory or all SQL.
+`database/migrations/001-initial.sql`, `002-product-operations.sql` and `003-property-authoring.sql` have already been applied. `src/server/migrations.ts` verifies their normalized SQL checksums against the database ledger, so even whitespace-only formatting would reject deployed database startup. `.prettierignore` names only these three immutable files; it does not exclude the migration directory or all SQL.
 
 For a new migration, create its numbered SQL file, run `npm.cmd run format`, review the SQL and test it before applying it anywhere. Once applied, preserve its exact contents and add that specific filename to the immutable-file list in `.prettierignore` as part of the reviewed migration release. Make subsequent schema changes in another migration rather than editing applied SQL. Formatting does not modify database rows or rewrite stored checksums.
 

@@ -124,7 +124,10 @@ export async function seedPropertyInventory(database?: Database) {
 }
 export const getPublicProperties = cache(async (): Promise<Property[]> => {
   const db = await getDatabase();
-  if (!(await inventoryReady(db)))
+  const rows = await db.query(
+    "SELECT p.*,s.initialized AS inventory_initialized FROM catalog_state s LEFT JOIN properties p ON p.status='published' WHERE s.id=1 ORDER BY p.created_at,p.id LIMIT 100",
+  );
+  if (Number(rows[0]?.inventory_initialized) !== 1)
     return seedProperties.map((home) =>
       publicProperty({
         ...seedPropertyInput(home),
@@ -134,11 +137,7 @@ export const getPublicProperties = cache(async (): Promise<Property[]> => {
         updatedAt: "",
       }),
     );
-  return (
-    await db.query(
-      "SELECT * FROM properties WHERE status='published' ORDER BY created_at,id LIMIT 100",
-    )
-  ).map((row) => publicProperty(rowProperty(row)));
+  return rows.filter((row) => row.id !== null).map((row) => publicProperty(rowProperty(row)));
 });
 export const getPublicPropertyBySlug = cache(
   async (slug: string) => (await getPublicProperties()).find((home) => home.slug === slug) || null,

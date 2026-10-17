@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-10-17T16:26:03.405Z",
+  "environment": "production",
+  "origin": "https://havenfieldre.vercel.app",
+  "sourceCommit": "dca37c60648995063e19ccfb7ff6dbb70d940839",
+  "checks": [
+    "health",
+    "anonymous private API denial",
+    "publisher login",
+    "four preserved property IDs and 28 repository images",
+    "uploaded media, collection/focal metadata and stale metadata rejection",
+    "draft excluded from detail, public feed and sitemap",
+    "current and revision media protection with correct editor links",
+    "published detail/sitemap, gallery ordering, wrong-origin rejection and stale property conflict",
+    "revision restoration creates version 3 and restores draft visibility",
+    "retained property revisions continue protecting uploads",
+    "canonical and environment indexing policy",
+    "synthetic property deleted",
+    "synthetic owned object deleted",
+    "publisher logout"
+  ],
+  "allPassed": true,
+  "cleanup": "Synthetic property, retained test revisions and owned storage object deleted. Deliberate publisher actions and a deleted media registry record remain.",
+  "access": "public origin plus authenticated publisher session"
+}

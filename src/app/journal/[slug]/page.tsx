@@ -1,7 +1,8 @@
 import { getPublicProperties } from "@/server/properties";
 import { PropertyCard } from "@/components/property-card";
 import { headers } from "next/headers";
-import { cache } from "react";
+import { cache, Suspense } from "react";
+import type { BlogPost } from "@/lib/blog-types";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -56,12 +57,6 @@ export async function generateMetadata({
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = await findPost(slug);
-  const related = (await getPublishedPosts({ category: post.category, limit: 4 })).posts
-    .filter((item) => item.id !== post.id)
-    .slice(0, 3);
-  const homes = (await getPublicProperties()).filter((home) =>
-    home.relatedStories?.includes(post.slug),
-  );
   const canonical = post.canonicalUrl || absoluteUrl(`/journal/${post.slug}`);
   const schema = {
     "@context": "https://schema.org",
@@ -154,6 +149,22 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           it is not professional property or investment advice.
         </p>
       </article>
+      <Suspense fallback={<div aria-hidden="true" className="mt-16 min-h-32" />}>
+        <ArticleDiscovery post={post} />
+      </Suspense>
+    </div>
+  );
+}
+
+async function ArticleDiscovery({ post }: { post: BlogPost }) {
+  const [articles, inventory] = await Promise.all([
+    getPublishedPosts({ category: post.category, limit: 4 }),
+    getPublicProperties(),
+  ]);
+  const related = articles.posts.filter((item) => item.id !== post.id).slice(0, 3);
+  const homes = inventory.filter((home) => home.relatedStories?.includes(post.slug));
+  return (
+    <>
       {homes.length > 0 && (
         <section className="mt-16 border-t border-line pt-10">
           <h2 className="font-display text-4xl">See the idea at home.</h2>
@@ -185,6 +196,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           </div>
         </section>
       )}
-    </div>
+    </>
   );
 }

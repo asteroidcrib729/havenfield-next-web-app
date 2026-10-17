@@ -1,0 +1,561 @@
+{
+  "checkedAt": "2026-10-17T16:30:32.753Z",
+  "origins": {
+    "public": "https://havenfieldre.vercel.app",
+    "private": "https://havenfieldre-preview.vercel.app"
+  },
+  "results": [
+    {
+      "route": "/",
+      "width": 320,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/properties",
+      "width": 320,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/properties/the-courtyard-house",
+      "width": 320,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/properties/saltwater-residence",
+      "width": 320,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/properties/woodland-pavilion",
+      "width": 320,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/properties/atelier-loft",
+      "width": 320,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/about",
+      "width": 320,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/amenities",
+      "width": 320,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/journal",
+      "width": 320,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/journal/a-clearer-guide-to-your-first-viewing",
+      "width": 320,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/journal/the-value-of-a-thoughtful-floor-plan",
+      "width": 320,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/journal/a-home-that-fits-your-everyday",
+      "width": 320,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/contact",
+      "width": 320,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/saved",
+      "width": 320,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/compare",
+      "width": 320,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/privacy",
+      "width": 320,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/terms",
+      "width": 320,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/cookies",
+      "width": 320,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin/login",
+      "width": 320,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/missing-plan03-review",
+      "width": 320,
+      "status": 404,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/properties",
+      "width": 1440,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/properties/the-courtyard-house",
+      "width": 1440,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/properties/saltwater-residence",
+      "width": 1440,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/properties/woodland-pavilion",
+      "width": 1440,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/properties/atelier-loft",
+      "width": 1440,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/about",
+      "width": 1440,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/amenities",
+      "width": 1440,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/journal",
+      "width": 1440,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/journal/a-clearer-guide-to-your-first-viewing",
+      "width": 1440,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/journal/the-value-of-a-thoughtful-floor-plan",
+      "width": 1440,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/journal/a-home-that-fits-your-everyday",
+      "width": 1440,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/contact",
+      "width": 1440,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/saved",
+      "width": 1440,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/compare",
+      "width": 1440,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/privacy",
+      "width": 1440,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/terms",
+      "width": 1440,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/cookies",
+      "width": 1440,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin/login",
+      "width": 1440,
+      "status": 200,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/missing-plan03-review",
+      "width": 1440,
+      "status": 404,
+      "privatePage": false,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin",
+      "width": 320,
+      "status": 200,
+      "privatePage": true,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin/posts/new",
+      "width": 320,
+      "status": 200,
+      "privatePage": true,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin/posts/[id]",
+      "width": 320,
+      "status": 200,
+      "privatePage": true,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin/preview/[id]",
+      "width": 320,
+      "status": 200,
+      "privatePage": true,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin/properties",
+      "width": 320,
+      "status": 200,
+      "privatePage": true,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin/properties/new",
+      "width": 320,
+      "status": 200,
+      "privatePage": true,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin/properties/hf-01",
+      "width": 320,
+      "status": 200,
+      "privatePage": true,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin/media",
+      "width": 320,
+      "status": 200,
+      "privatePage": true,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin/inquiries",
+      "width": 320,
+      "status": 200,
+      "privatePage": true,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin/system",
+      "width": 320,
+      "status": 200,
+      "privatePage": true,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin",
+      "width": 1440,
+      "status": 200,
+      "privatePage": true,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin/posts/new",
+      "width": 1440,
+      "status": 200,
+      "privatePage": true,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin/posts/[id]",
+      "width": 1440,
+      "status": 200,
+      "privatePage": true,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin/preview/[id]",
+      "width": 1440,
+      "status": 200,
+      "privatePage": true,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin/properties",
+      "width": 1440,
+      "status": 200,
+      "privatePage": true,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin/properties/new",
+      "width": 1440,
+      "status": 200,
+      "privatePage": true,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin/properties/hf-01",
+      "width": 1440,
+      "status": 200,
+      "privatePage": true,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin/media",
+      "width": 1440,
+      "status": 200,
+      "privatePage": true,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin/inquiries",
+      "width": 1440,
+      "status": 200,
+      "privatePage": true,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    },
+    {
+      "route": "/admin/system",
+      "width": 1440,
+      "status": 200,
+      "privatePage": true,
+      "overflow": false,
+      "brokenImages": 0,
+      "axeViolations": 0
+    }
+  ],
+  "summary": {
+    "publicChecks": 40,
+    "privateChecks": 20,
+    "axeViolations": 0,
+    "horizontalOverflow": 0,
+    "brokenImages": 0
+  },
+  "screenshots": "Public contact sheets are shareable. Full route captures and all private publisher screens stay in ignored cache; no publisher identity/draft content published.",
+  "reviewScope": "Rendered screens at 320 and 1440 px, reduced motion, decoded imagery, automated axe and reflow. Human screen-reader/native zoom review and field metrics not claimed.",
+  "sourceCommit": "dca37c60648995063e19ccfb7ff6dbb70d940839",
+  "productionDeployment": "dpl_JDdbKy7CX3BTypGPfiGP1X7JVfvh",
+  "previewDeployment": "dpl_7jxgjchgwRuGLUKwcbN6ivtgv5GL"
+}

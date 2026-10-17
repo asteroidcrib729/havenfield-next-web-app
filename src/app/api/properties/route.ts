@@ -9,18 +9,20 @@ export async function GET(request: Request) {
     const query = (params.get("query") || "").trim().toLowerCase().slice(0, 200);
     const type = params.get("type");
     const region = params.get("region");
-    const results = properties.filter(
-      (property) =>
-        (!query || JSON.stringify(property).toLowerCase().includes(query)) &&
-        (!type || property.type === type) &&
-        (!region || property.region === region),
-    );
-    return json({
-      properties: results.map((home) => {
+    const results = properties
+      .map((home) => {
         const { relatedStories, ...publicHome } = home;
         void relatedStories;
         return publicHome;
-      }),
+      })
+      .filter(
+        (property) =>
+          (!query || JSON.stringify(property).toLowerCase().includes(query)) &&
+          (!type || property.type === type) &&
+          (!region || property.region === region),
+      );
+    return json({
+      properties: results,
       total: results.length,
     });
   } catch (error) {

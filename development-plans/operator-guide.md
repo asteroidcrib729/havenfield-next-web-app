@@ -1,6 +1,6 @@
 # Havenfield operator guide
 
-Updated 2026-10-16. Verified canonical origin: `https://havenfieldre.vercel.app`. Production and an independent protected Preview are deployed. The [deployment record](deployment.md) identifies their resources and verification; [release acceptance](release-acceptance.md) retains backup, accessibility and performance gates. Public GitHub delivery, hosted CI and native automatic deployments are verified in [Git delivery](github-publication.md).
+Updated 2026-10-17. Verified canonical origin: `https://havenfieldre.vercel.app`. Production and an independent protected Preview are deployed. The [deployment record](deployment.md) identifies their resources and verification; [release acceptance](release-acceptance.md) retains backup, accessibility and performance gates. Public GitHub delivery, hosted CI and native automatic deployments are verified in [Git delivery](github-publication.md).
 
 Both active databases now belong to the GitHub-linked Prisma project `havenfield`: `havenfield-production` on `main`, and `havenfield-preview` on `preview`. The currently verified protected Preview is [the new-domain Preview](https://havenfieldre-preview.vercel.app). The old `havenfield-preview-rollback` project was deleted on 2026-10-16 after a fresh private export. Older immutable Preview deployment URLs can contain its now-retired connection and must not be used for new editorial work. See [project consolidation](prisma-project-consolidation.md) before using or retiring them.
 
@@ -33,7 +33,7 @@ Verified remote TLS is required. The process pool has at most two connections, t
 
 ## Section 02 — Editorial operations
 
-Sign in at `/admin/login`. The navigation offers articles, new article, media library, inquiry inbox and operations.
+Sign in at `/admin/login`. The navigation offers articles, new article, properties, media library, inquiry inbox and operations. [Property and media authoring](property-and-media-authoring.md) covers the separate catalog editor, fixed slugs, draft/public visibility, gallery placement metadata, version conflicts, revisions and inquiry protection.
 
 Draft changes receive a server recovery snapshot after 1.5 seconds of inactivity. A recovery snapshot is separate from the article and never publishes it. Only an opaque reference is kept in tab session storage. Reloading the same tab offers recovery; a conflicting article version offers readable writing for manual merging. Closing all tabs loses the local recovery reference; these snapshots are not a general cross-device drafts browser. Use an explicit save for durable article management. Published/scheduled edits always require explicit saves.
 
@@ -45,7 +45,7 @@ Publication time is entered in the browser's local time zone and stored as UTC. 
 
 Uploads accept decoded, static JPEG/PNG/WebP, at most 4 MiB and 24 million input pixels. They are rotated, resized within 2400 pixels, stripped of embedded metadata and converted to WebP. Images are public even in drafts. Never upload confidential material to this workflow.
 
-The registry records ownership, generated key, dimensions, bytes, alternative text and operation state. Covers require descriptions. Inline images can be deliberately decorative. The library searches descriptions/identities, paginates, reuses images and displays article/revision/recovery references. Removing one article cannot remove an image used by another. Historical revisions retain references until the article is deleted.
+The registry records ownership, generated key, dimensions, bytes, alternative text, collection, focal defaults, version and operation state. Covers require descriptions. Inline images can be deliberately decorative. The library searches descriptions/identities, paginates, reuses images and displays article/property/revision/recovery references. The read-only repository library lists 28 original images separately from owned uploads. Removing one article cannot remove an image used by another. Historical revisions retain references until the corresponding article/property is deleted; a property with inquiry history cannot be deleted.
 
 Storage writes start with a durable `uploading` record and end with `active`. Storage deletion first marks `deleting`, then removes the object, then marks `deleted`. Failed operations remain reviewable and retryable. Inspect storage and recent actions before retrying. Pending uploads and reviewed unused cleanup have a seven-day grace period; active unreferenced images can also be explicitly deleted. Automatic retention never deletes media.
 
@@ -112,3 +112,7 @@ The owner selected no payments/cards and their existing personal Google account.
 ## Section 13 - Delivered baseline and on-demand checks
 
 Plan 02 is [delivered with explicit deferrals](development-plan-02-closure.md), not blocked on new services or owner approvals. Run `npm.cmd run smoke:public` after a deployment or reported incident. It checks public HTML pages, database readiness, the article API and a real article page once, without credentials or mutations. An optional origin argument supports another public deployment or local Preview: `npm.cmd run smoke:public -- http://localhost:3000`. Protected Preview requires its normal access path and is not bypassed by this command. For editor operations use `/admin/system`; `npm.cmd run db:status` checks the configured local database binding. Avoid continuous polling. Backup instructions and human review remain optional follow-up; do not claim they have run automatically.
+
+## Section 11 - Plan 03 catalog release
+
+Schema 3 and explicit catalog initialization preserve the original four home IDs and inquiry associations. New exports use format 3; earlier export formats remain readable as described in [database recovery](database-recovery.md). Use the current stable Preview alias for editing. [The dated immutable deployment review](plan03-preview-dependency-review.json) found two unavailable pre-cutover builds without aliases; no resource deletion or protection change was needed. The separately verified current Preview replaces earlier historical URLs. Earlier sections describing open Plan 02 gates are historical checkpoints; [Plan 02 closure](development-plan-02-closure.md) remains authoritative and those checks are optional follow-up.
