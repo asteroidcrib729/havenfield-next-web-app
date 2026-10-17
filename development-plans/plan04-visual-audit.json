@@ -1,0 +1,87 @@
+{
+  "capturedAt": "2026-10-17T18:48:04.955Z",
+  "origin": "https://havenfieldre.vercel.app",
+  "sourceCommit": "b6c4b6b2d93b22046cd349bd633aa59d633e5819",
+  "screenshots": [
+    {
+      "path": "development-plans/screenshots/home-desktop.png",
+      "width": 1440,
+      "height": 4035
+    },
+    {
+      "path": "development-plans/screenshots/home-mobile.png",
+      "width": 375,
+      "height": 7156
+    },
+    {
+      "path": "development-plans/screenshots/studio-demo-desktop.png",
+      "width": 1440,
+      "height": 2044
+    },
+    {
+      "path": "development-plans/screenshots/brochure-desktop.png",
+      "width": 1440,
+      "height": 2521
+    }
+  ],
+  "checks": [
+    {
+      "route": "/",
+      "width": 1440,
+      "brokenImages": 0,
+      "overflow": false,
+      "axeViolations": 0
+    },
+    {
+      "route": "/",
+      "width": 375,
+      "brokenImages": 0,
+      "overflow": false,
+      "axeViolations": 0
+    },
+    {
+      "route": "/studio-demo",
+      "width": 1440,
+      "brokenImages": 0,
+      "overflow": false,
+      "axeViolations": 0
+    },
+    {
+      "route": "/studio-demo",
+      "width": 375,
+      "brokenImages": 0,
+      "overflow": false,
+      "axeViolations": 0
+    },
+    {
+      "route": "/studio-demo",
+      "width": 320,
+      "brokenImages": 0,
+      "overflow": false,
+      "axeViolations": 0
+    },
+    {
+      "route": "/properties/the-courtyard-house/brochure",
+      "width": 1440,
+      "brokenImages": 0,
+      "overflow": false,
+      "axeViolations": 0
+    },
+    {
+      "route": "/properties/the-courtyard-house/brochure",
+      "width": 375,
+      "brokenImages": 0,
+      "overflow": false,
+      "axeViolations": 0
+    },
+    {
+      "route": "/properties/the-courtyard-house/brochure",
+      "width": 320,
+      "brokenImages": 0,
+      "overflow": false,
+      "axeViolations": 0
+    }
+  ],
+  "walkthroughStatus": 206,
+  "policy": "Fresh public browser, reduced motion, fonts and images decoded, scrolled into view and painted; no publisher session or personal data. Automated accessibility checks do not replace human review."
+}

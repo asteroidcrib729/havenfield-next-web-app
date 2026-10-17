@@ -76,3 +76,7 @@ Updated active delivery status, preserved historical verification evidence, mark
 ## Plan 03 image-output cleanup - 2026-10-17
 
 Removed 55 unused 480/768-pixel derivatives after checking all source references, each file SHA-256 and resolved containment under public/media/plan03. This saves 3,153,868 bytes in the public tree. All 28 approved WebP masters, private original sources, the used about-materials-480 vignette and historical article/recovery JPEGs remain. Next Image generates responsive sizes from the masters. The processor and manifest now produce/record only the directly used derivative; [the cleanup manifest](plan03-asset-cleanup.json) lists every removed path/hash. No original brand assets, credentials, database rows, article history or owner files were removed during this cleanup.
+
+## Plan 04 delivery cleanup - 2026-10-17
+
+Preserved all original application records during additive schema 4 migration and retained private pre/post/publication snapshots. Hosted synthetic inquiry records were deleted after checks. Removed two failed generated WebM recordings after verifying the delivered MP4 checksum and preserving its successful raw source. Removed this iteration's stopped disposable PostgreSQL fixture only after verifying its exact workspace path, PostgreSQL version and absence of a running postmaster PID file. [Cleanup evidence](plan04-cleanup.json) records the removed recording hashes. No owner files, live database/store or original brand media were deleted.

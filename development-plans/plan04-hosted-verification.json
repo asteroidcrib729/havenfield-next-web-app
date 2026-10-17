@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-17T18:42:13.722Z",
+  "environments": [
+    {
+      "environment": "production",
+      "origin": "https://havenfieldre.vercel.app",
+      "checks": [
+        "public read-only synthetic studio and anonymous export refusal",
+        "four published-home brochures and illustrative plan disclosures",
+        "three new published articles visible in pages/sitemap/RSS; other three remain private",
+        "server-rendered responsive hero and environment indexing",
+        "publisher authentication; notes/stages persistence; dynamic property filter; wrong-origin and stale-version refusal; private formula-safe CSV",
+        "synthetic inquiry deleted",
+        "publisher logout"
+      ],
+      "allPassed": true
+    },
+    {
+      "environment": "preview",
+      "origin": "https://havenfieldre-preview.vercel.app",
+      "checks": [
+        "public read-only synthetic studio and anonymous export refusal",
+        "four published-home brochures and illustrative plan disclosures",
+        "three new published articles visible in pages/sitemap/RSS; other three remain private",
+        "server-rendered responsive hero and environment indexing",
+        "publisher authentication; notes/stages persistence; dynamic property filter; wrong-origin and stale-version refusal; private formula-safe CSV",
+        "synthetic inquiry deleted",
+        "publisher logout"
+      ],
+      "allPassed": true
+    }
+  ],
+  "privateAccess": "Same-project short-lived development OIDC restricted to the exact Preview origin; publisher sessions kept private",
+  "testData": "Invented inquiries deleted; normal audit and expiring retry receipts retained"
+}

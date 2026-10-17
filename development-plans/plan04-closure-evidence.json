@@ -1,0 +1,98 @@
+{
+  "closedAt": "2026-10-17T18:49:11.628Z",
+  "status": "delivered",
+  "verifiedApplicationCommit": "b6c4b6b2d93b22046cd349bd633aa59d633e5819",
+  "checklist": {
+    "complete": 7,
+    "total": 7
+  },
+  "featureCi": {
+    "id": 39059049736,
+    "conclusion": "success",
+    "url": "https://github.com/asteroidcrib729/havenfield-next-web-app/actions/runs/39059049736"
+  },
+  "applicationTreeSha256": "10b9dae45602c01e37dd22cd0433ecbd34f90b6be7946b94d93dca64183a1a80",
+  "environments": {
+    "production": "https://havenfieldre.vercel.app",
+    "preview": "https://havenfieldre-preview.vercel.app",
+    "bothSchemaVersion": 4,
+    "independentDatabases": true,
+    "localPreviewVerified": "plan04-local-preview.json"
+  },
+  "validation": {
+    "serviceTests": 81,
+    "postgresTests": 50,
+    "browserJourneys": 17,
+    "explicitRecordingPass": 1,
+    "finalAffectedBrowserReruns": 3,
+    "hostedLoadedScreens": 8,
+    "formatting": true,
+    "types": true,
+    "lint": true,
+    "build": true,
+    "dependencyAuditHighOrCritical": 0
+  },
+  "homepageMobile": {
+    "before": {
+      "route": "/",
+      "scores": {
+        "performance": 91,
+        "accessibility": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "lcpMs": 2924.26,
+        "cls": 0,
+        "tbtMs": 180,
+        "transferBytes": 516074,
+        "ttfbMs": 45
+      }
+    },
+    "after": {
+      "route": "/",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "lcpMs": 2128.902,
+        "cls": 0,
+        "tbtMs": 122,
+        "transferBytes": 516108,
+        "ttfbMs": 46
+      }
+    },
+    "qualification": "Three-run mobile lab medians; scores vary; not field INP"
+  },
+  "editorial": {
+    "publishedPerEnvironment": 6,
+    "remainingOriginalPrivateDraftsPerEnvironment": 3
+  },
+  "walkthrough": {
+    "seconds": 69.708333,
+    "width": 1280,
+    "height": 720,
+    "bytes": 1848006,
+    "textAlternative": "walkthrough-transcript.md"
+  },
+  "security": {
+    "stagedGitleaksFindings": 0,
+    "privateValuesCompared": 28,
+    "privateValueMatches": 0,
+    "publicStudioPrivateReads": false,
+    "publicStudioWrites": false
+  },
+  "budget": {
+    "newPaidResources": 0,
+    "purchases": 0,
+    "cardAuthorizations": 0
+  },
+  "evidence": {
+    "hosted": "plan04-hosted-verification.json",
+    "visual": "plan04-visual-audit.json",
+    "recovery": "plan04-recovery.json",
+    "database": "plan04-database-and-content.json"
+  },
+  "finalDelivery": "A subsequent documentation-only commit records this evidence. The final response verifies its exact Git/CI/deployments. Its deployable application tree is unchanged."
+}

@@ -2,6 +2,8 @@
 
 Updated 2026-10-17 (Asia/Karachi). [Free encrypted backups](free-backups.md) adds encryption and owner Drive-upload instructions. An isolated hosted database/private-image restoration passed; recovery of a deployed public website and independent Drive download verification remain open. See [current evidence](free-operations-evidence.json).
 
+Current release: schema 4 and backup format 4. Conversation stages, private notes and inquiry versions are included; formats 1-3 normalize during restore. [Plan 04 recovery evidence](plan04-recovery.json) records six actual snapshot restores. Previously deferred independent backup scheduling remains optional portfolio maintenance.
+
 ## Section 01 — Versioned schema operations
 
 The authoritative migrations are the immutable, consecutively numbered SQL files in `database/migrations/`. `database/schema.sql` is retained as the historical version-1 fixture used by upgrade tests, not as the active migration source.

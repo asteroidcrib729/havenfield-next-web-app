@@ -1,6 +1,6 @@
 # Production and local Preview connections
 
-Verified 2026-10-16 (Asia/Karachi). The website runs on Vercel; its two PostgreSQL databases run in Prisma project `havenfield`.
+Verified again 2026-10-17 (Asia/Karachi). The website runs on Vercel; its two PostgreSQL databases run in Prisma project `havenfield`.
 
 ## Section 01 — Why Prisma shows “No deploy”
 
@@ -65,3 +65,7 @@ The audit exercised actual local publisher login, a Preview Blob upload, revisio
 The stable Preview alias retains Vercel Authentication and noindex. Use its exact configured origin for publisher writes. An immutable deployment hostname with a different origin is useful for inspection, but its publisher writes are intentionally rejected when `SITE_URL` is the stable alias. New manual Preview deployments must move the alias deliberately; a Production push must not move it to Production. Verify alias ownership when changing deployment configuration.
 
 See [the audit follow-up](development-plan-02-delivery.md) for completion evidence and remaining acceptance gates.
+
+## Plan 04 verification
+
+Both active databases now use schema 4. The local pooled profile still matches the independent Preview database and differs from Production. [Binding evidence](plan04-local-preview.json) and [migration/publication evidence](plan04-database-and-content.json) record the latest checks.

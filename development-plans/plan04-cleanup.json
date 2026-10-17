@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-17T18:46:17.420Z",
+  "failedPartialRecordingsRemoved": [
+    {
+      "file": "page@8bfe812f962de61c608d82a58c927186.webm",
+      "bytes": 6981427,
+      "sha256": "7bf5c3bbde343ccad8be8c6e11a42fef047155d9cf50558f694e6b3b4cf23c3f"
+    },
+    {
+      "file": "page@e06c88892641eb106e689f8f3159620b.webm",
+      "bytes": 1835008,
+      "sha256": "7db57f7270d25f04363fac00ec9de523ea56585736a650d4380874f1e5d45ea3"
+    }
+  ],
+  "successfulSourceRecordingPreserved": true,
+  "deliveredMovieChecksumVerified": true,
+  "stoppedDisposablePostgresFixtureRemoved": true,
+  "scope": "Only this iteration's failed generated recordings and stopped owned PostgreSQL test fixture. No owner files or live resources."
+}

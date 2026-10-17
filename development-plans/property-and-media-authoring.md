@@ -4,7 +4,7 @@ Updated 2026-10-17 (Asia/Karachi). This is the Plan 03 property/catalog migratio
 
 ## Section 01 - Catalog initialization
 
-Migration `003-property-authoring.sql` adds the catalog, revision history, upload references and media collection/focal/version fields. It preserves the earlier migrations and existing article, inquiry and upload records. Hosted requests never apply migrations.
+Migration `003-property-authoring.sql` adds the catalog, revision history, upload references and media collection/focal/version fields, plus inquiry conversation stages, notes and versions. It preserves the earlier migrations and existing article, inquiry and upload records. Hosted requests never apply migrations.
 
 Using the intended private environment profile, check the binding, export a backup, apply migrations, then explicitly initialize the catalog:
 
@@ -44,7 +44,7 @@ Owned uploads cannot be deleted while referenced by a current property gallery o
 
 ## Section 04 - Recovery and deployment
 
-Database export format **3** includes catalog readiness, properties, revisions, property/media protection and media collection/focal/version fields. Recovery remaps uploaded URLs inside property content and revision snapshots when moving stores. Format 1 and 2 exports are checksum-validated before normalization; legacy bundles retain their original manifest checksum validation. Restore still refuses nonempty or unknown targets.
+Database export format **4** includes catalog readiness, properties, revisions, property/media protection and media collection/focal/version fields. It also includes inquiry conversation stages, private notes and inquiry versions. Recovery remaps uploaded URLs inside property content and revision snapshots when moving stores. Format 1, 2 and 3 exports are checksum-validated before normalization; legacy bundles retain their original manifest checksum validation. Restore still refuses nonempty or unknown targets.
 
 An older format-2 export has no authored property catalog. After restoring it into the current schema, explicitly initialize the original inventory before editing. Keep the matching repository revision and migration files with the recovery instructions.
 

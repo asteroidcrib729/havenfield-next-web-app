@@ -44,3 +44,9 @@ These are implementation capabilities, not claims about client revenue or conver
 The property imagery and floor plans are illustrative, not measured architectural documentation. Inquiry requests do not send email or book a viewing. Browser-local saved homes do not follow a person between devices. The application uses a single private publisher account rather than a multi-tenant administration product.
 
 I chose these boundaries so the demonstration stays usable, understandable and affordable on the existing free infrastructure.
+
+## Selected screens
+
+![Public read-only studio tour](screenshots/studio-demo-desktop.png)
+
+![Current property brochure and illustrative arrangement](screenshots/brochure-desktop.png)
